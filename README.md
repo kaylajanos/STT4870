@@ -47,7 +47,7 @@
 * [Slidify](http://slidify.org/index.html)
 
 ## GIT
-* [GiTHub Help Page](https://help.github.com/)
+* [GitHub Help Page](https://help.github.com/)
 * [GiT Tutorials (bitbucket)](https://www.atlassian.com/git/tutorial)
 * [Create a Project](http://gitimmersion.com/lab_03.html)
 * [GiT Cheatsheet](http://www.ndpsoftware.com/git-cheatsheet.html)
