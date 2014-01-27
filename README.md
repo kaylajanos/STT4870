@@ -50,5 +50,5 @@
 * [GiTHub Help Page](https://help.github.com/)
 * [GiT Tutorials (bitbucket)](https://www.atlassian.com/git/tutorial)
 * [Create a Project](http://gitimmersion.com/lab_03.html)
-* [GiT Cheatsheet](http://www.ndpsoftware.com/git-cheatsheet.html)
+* [Git Cheatsheet](http://www.ndpsoftware.com/git-cheatsheet.html)
 * [Free Code School Intro to Git](https://www.codeschool.com/courses/try-git)
