@@ -46,7 +46,7 @@
 * [R Presentations](https://support.rstudio.com/hc/en-us/sections/200130218-R-Presentations)
 * [Slidify](http://slidify.org/index.html)
 
-## GIT
+## Git
 * [GiTHub Help Page](https://help.github.com/)
 * [GiT Tutorials (bitbucket)](https://www.atlassian.com/git/tutorial)
 * [Create a Project](http://gitimmersion.com/lab_03.html)
