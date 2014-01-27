@@ -13,7 +13,7 @@ Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
 
 ```{r label = SETUP, echo = FALSE}
-opts_chunk$set(comment = NA, engine = "sh", fig.align="center", fig.height = 4, fig.width = 4, dev ="png")
+opts_chunk$set(comment = NA, engine = "bash", fig.align="center", fig.height = 4, fig.width = 4, dev ="png")
 ```
 
 If you have never used git before, you need to do some setup first.  Run the following
