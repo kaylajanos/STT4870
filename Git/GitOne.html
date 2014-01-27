@@ -183,7 +183,7 @@ hljs.initHighlightingOnLoad();
 
 <h3>Alan T. Arnholt</h3>
 
-<p>Last compiled Monday, January 27, 2014 - 12:09:28..</p>
+<p>Last compiled Monday, January 27, 2014 - 14:16:05..</p>
 
 <p>Download and install the lastest version of <a href="http://git-scm.com/downloads">Git.</a></p>
 
@@ -241,11 +241,13 @@ to click on File -&gt; New Project </p>
 </code></pre>
 
 <pre><code># On branch master
-# Untracked files:
-#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+# Changes not staged for commit:
+#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
 #
-#   ./
-nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+#   modified:   GitOne.Rmd
+#
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
 </code></pre>
 
 <p>The <code>git status</code> shows us what files are not staged for a commit.  Before files can be
@@ -258,13 +260,8 @@ taken of the commit with the message &ldquo;staging all files&rdquo;.</p>
 git commit  -m &quot;staging all files&quot;
 </code></pre>
 
-<pre><code>[master 9976f09] staging all files
- 5 files changed, 128 insertions(+)
- create mode 100644 Git/GitOne.Rmd
- create mode 100644 Git/images/CreateGitRepo.png
- create mode 100644 Git/images/NewProject.png
- create mode 100644 Git/images/ProjectVersionControl.png
- create mode 100644 Git/images/VersionControl.png
+<pre><code>[master 6112724] staging all files
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 </code></pre>
 
 <p>Check the status after the last commit.</p>
@@ -297,23 +294,23 @@ nothing to commit (working directory clean)
 <pre><code class="bash">git log  -3
 </code></pre>
 
-<pre><code>commit 9976f090cd7702bbc340963e05a5c74d1726ffca
+<pre><code>commit 6112724bfa87e9e1653aced641f7db61e83cb446
 Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
-Date:   Mon Jan 27 12:09:28 2014 -0500
+Date:   Mon Jan 27 14:16:05 2014 -0500
 
     staging all files
 
-commit 3a619eb46caf0697a1487e3b03e5f88be69d5005
+commit 32f0929b929ee664de54f1eea73ccf1e605ad700
 Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
-Date:   Wed Jan 1 10:44:22 2014 -0500
+Date:   Mon Jan 27 14:13:05 2014 -0500
 
-    add url to More math into LaTeX
+    trying on windows
 
-commit 3485112af06fcc6696519faa88dfb18d18259cff
+commit c81aca380cc96dcc233b455db3430cbd43669493
 Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
-Date:   Tue Dec 31 20:51:31 2013 -0500
+Date:   Mon Jan 27 12:11:46 2014 -0500
 
-    add useful urls
+    git material
 </code></pre>
 
 <p>That was ugly. Let us try some formatting.</p>
@@ -321,9 +318,9 @@ Date:   Tue Dec 31 20:51:31 2013 -0500
 <pre><code class="bash">git log --pretty=oneline -3
 </code></pre>
 
-<pre><code>9976f090cd7702bbc340963e05a5c74d1726ffca staging all files
-3a619eb46caf0697a1487e3b03e5f88be69d5005 add url to More math into LaTeX
-3485112af06fcc6696519faa88dfb18d18259cff add useful urls
+<pre><code>6112724bfa87e9e1653aced641f7db61e83cb446 staging all files
+32f0929b929ee664de54f1eea73ccf1e605ad700 trying on windows
+c81aca380cc96dcc233b455db3430cbd43669493 git material
 </code></pre>
 
 <p>The previous output was to brief for my likes.  Let us try some further formatting.</p>
@@ -331,9 +328,9 @@ Date:   Tue Dec 31 20:51:31 2013 -0500
 <pre><code class="bash">git log --pretty=format:&quot;%h %ad- %s [%an]&quot; -3
 </code></pre>
 
-<pre><code>9976f09 Mon Jan 27 12:09:28 2014 -0500- staging all files [Alan Arnholt]
-3a619eb Wed Jan 1 10:44:22 2014 -0500- add url to More math into LaTeX [Alan Arnholt]
-3485112 Tue Dec 31 20:51:31 2013 -0500- add useful urls [Alan Arnholt]
+<pre><code>6112724 Mon Jan 27 14:16:05 2014 -0500- staging all files [Alan Arnholt]
+32f0929 Mon Jan 27 14:13:05 2014 -0500- trying on windows [Alan Arnholt]
+c81aca3 Mon Jan 27 12:11:46 2014 -0500- git material [Alan Arnholt]
 </code></pre>
 
 <p>Maybe even some statistics?</p>
@@ -341,22 +338,20 @@ Date:   Tue Dec 31 20:51:31 2013 -0500
 <pre><code class="bash">git log --pretty=format:&quot;%h %ad- %s [%an]&quot; -3 --stat
 </code></pre>
 
-<pre><code>9976f09 Mon Jan 27 12:09:28 2014 -0500- staging all files [Alan Arnholt]
- Git/GitOne.Rmd                       | 128 +++++++++++++++++++++++++++++++++++
- Git/images/CreateGitRepo.png         | Bin 0 -&gt; 91309 bytes
- Git/images/NewProject.png            | Bin 0 -&gt; 51988 bytes
- Git/images/ProjectVersionControl.png | Bin 0 -&gt; 44534 bytes
- Git/images/VersionControl.png        | Bin 0 -&gt; 34971 bytes
- 5 files changed, 128 insertions(+)
+<pre><code>6112724 Mon Jan 27 14:16:05 2014 -0500- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-3a619eb Wed Jan 1 10:44:22 2014 -0500- add url to More math into LaTeX [Alan Arnholt]
- README.md | 1 +
- 1 file changed, 1 insertion(+)
+32f0929 Mon Jan 27 14:13:05 2014 -0500- trying on windows [Alan Arnholt]
+ Git/GitOne.Rmd |   2 +-
+ Git/GitOne.md  | 140 +--------------------------------------------------------
+ 2 files changed, 2 insertions(+), 140 deletions(-)
 
-3485112 Tue Dec 31 20:51:31 2013 -0500- add useful urls [Alan Arnholt]
- .gitignore |  4 ++++
- README.md  | 55 ++++++++++++++++++++++++++++++++++++++++++++++++++++---
- 2 files changed, 56 insertions(+), 3 deletions(-)
+c81aca3 Mon Jan 27 12:11:46 2014 -0500- git material [Alan Arnholt]
+ Git/GitOne.html       | 373 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ Git/GitOne.md         | 232 +++++++++++++++++++++++++++++++
+ Git/figure/Rgraph.png | Bin 0 -&gt; 9406 bytes
+ 3 files changed, 605 insertions(+)
 </code></pre>
 
 <p>Now, just to show how cool this is, we will mix in a little <code>R</code>.</p>
