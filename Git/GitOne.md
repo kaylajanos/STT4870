@@ -5,7 +5,7 @@
 
 
 
-Last compiled Monday, January 27, 2014 - 14:16:05..
+Last compiled Sunday, February 02, 2014 - 07:15:26..
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
@@ -85,6 +85,10 @@ git status
 #
 #	modified:   GitOne.Rmd
 #
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	cache/
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
@@ -100,8 +104,15 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master 6112724] staging all files
- 1 file changed, 1 insertion(+), 1 deletion(-)
+[master ccded6e] staging all files
+ 8 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.RData
+ create mode 100644 Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.rdb
+ create mode 100644 Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.rdx
+ create mode 100644 Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.RData
+ create mode 100644 Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdb
+ create mode 100644 Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdx
+ create mode 100644 Git/cache/__packages
 ```
 
 
@@ -114,8 +125,15 @@ git status
 ```
 # On branch master
 # Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
 #
-nothing to commit (working directory clean)
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.RData
+#	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdb
+#	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdx
+nothing added to commit but untracked files present (use "git add" to track)
 ```
 
 Push changes to the remote repository. 
@@ -132,7 +150,19 @@ git status
 
 ```
 # On branch master
-nothing to commit (working directory clean)
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.RData
+#	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdb
+#	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdx
+#	cache/PUSH_4a4f909daa6525f7416b0e0df208f325.RData
+#	cache/PUSH_4a4f909daa6525f7416b0e0df208f325.rdb
+#	cache/PUSH_4a4f909daa6525f7416b0e0df208f325.rdx
+#	cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.RData
+#	cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdb
+#	cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdx
+nothing added to commit but untracked files present (use "git add" to track)
 ```
 
 Show the last three commits with
@@ -142,23 +172,29 @@ git log  -3
 ```
 
 ```
-commit 6112724bfa87e9e1653aced641f7db61e83cb446
+commit ccded6e86105504b25f7a67143f7cf998ef6a4bf
 Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Mon Jan 27 14:16:05 2014 -0500
+Date:   Sun Feb 2 07:15:26 2014 -0500
 
     staging all files
 
-commit 32f0929b929ee664de54f1eea73ccf1e605ad700
+commit 4ce278f591a4b9cc2118b681d0d38c9d2d332cb9
 Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Mon Jan 27 14:13:05 2014 -0500
+Date:   Mon Jan 27 17:01:46 2014 -0500
 
-    trying on windows
+    Brian's fix
 
-commit c81aca380cc96dcc233b455db3430cbd43669493
+commit 2709296611a0c634f5e3146f25c4d080c59cac8d
+Merge: c0a7e73 477f655
 Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Mon Jan 27 12:11:46 2014 -0500
+Date:   Mon Jan 27 16:59:57 2014 -0500
 
-    git material
+    update?
+    
+    Merge branch 'master' of https://github.com/alanarnholt/STT4870
+    
+    Conflicts:
+    	README.md
 ```
 
 
@@ -170,9 +206,9 @@ git log --pretty=oneline -3
 ```
 
 ```
-6112724bfa87e9e1653aced641f7db61e83cb446 staging all files
-32f0929b929ee664de54f1eea73ccf1e605ad700 trying on windows
-c81aca380cc96dcc233b455db3430cbd43669493 git material
+ccded6e86105504b25f7a67143f7cf998ef6a4bf staging all files
+4ce278f591a4b9cc2118b681d0d38c9d2d332cb9 Brian's fix
+2709296611a0c634f5e3146f25c4d080c59cac8d update?
 ```
 
 
@@ -184,9 +220,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
-6112724 Mon Jan 27 14:16:05 2014 -0500- staging all files [Alan Arnholt]
-32f0929 Mon Jan 27 14:13:05 2014 -0500- trying on windows [Alan Arnholt]
-c81aca3 Mon Jan 27 12:11:46 2014 -0500- git material [Alan Arnholt]
+ccded6e Sun Feb 2 07:15:26 2014 -0500- staging all files [Alan Arnholt]
+4ce278f Mon Jan 27 17:01:46 2014 -0500- Brian's fix [Alan Arnholt]
+2709296 Mon Jan 27 16:59:57 2014 -0500- update? [Alan Arnholt]
 ```
 
 
@@ -198,20 +234,22 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
-6112724 Mon Jan 27 14:16:05 2014 -0500- staging all files [Alan Arnholt]
- Git/GitOne.Rmd | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ccded6e Sun Feb 2 07:15:26 2014 -0500- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd                                            |   2 +-
+ Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.RData | Bin 0 -> 199 bytes
+ Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.rdb   |   0
+ Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.rdx   | Bin 0 -> 113 bytes
+ Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.RData   | Bin 0 -> 336 bytes
+ Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdb     |   0
+ Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdx     | Bin 0 -> 113 bytes
+ Git/cache/__packages                                      |   2 ++
+ 8 files changed, 3 insertions(+), 1 deletion(-)
 
-32f0929 Mon Jan 27 14:13:05 2014 -0500- trying on windows [Alan Arnholt]
- Git/GitOne.Rmd |   2 +-
- Git/GitOne.md  | 140 +--------------------------------------------------------
- 2 files changed, 2 insertions(+), 140 deletions(-)
+4ce278f Mon Jan 27 17:01:46 2014 -0500- Brian's fix [Alan Arnholt]
+ README.md | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
 
-c81aca3 Mon Jan 27 12:11:46 2014 -0500- git material [Alan Arnholt]
- Git/GitOne.html       | 373 ++++++++++++++++++++++++++++++++++++++++++++++++++
- Git/GitOne.md         | 232 +++++++++++++++++++++++++++++++
- Git/figure/Rgraph.png | Bin 0 -> 9406 bytes
- 3 files changed, 605 insertions(+)
+2709296 Mon Jan 27 16:59:57 2014 -0500- update? [Alan Arnholt]
 ```
 
 
