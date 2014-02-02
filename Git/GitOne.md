@@ -5,7 +5,7 @@
 
 
 
-Last compiled Sunday, February 02, 2014 - 10:59:26.
+Last compiled Sunday, February 02, 2014 - 11:00:51.
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
@@ -80,15 +80,44 @@ git status
 ```
 # On branch master
 # Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
+#   (use "git add/rm <file>..." to update what will be committed)
 #   (use "git checkout -- <file>..." to discard changes in working directory)
 #
-#	modified:   GitOne.Rmd
+#	modified:   GitOne.html
+#	modified:   GitOne.md
+#	deleted:    cache/ADD_37d613968d89bfc0fc573bd5f4d62239.RData
+#	deleted:    cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdb
+#	deleted:    cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdx
+#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.RData
+#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.rdb
+#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.rdx
+#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.RData
+#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.rdb
+#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.rdx
+#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.RData
+#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.rdb
+#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.rdx
+#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.RData
+#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.rdb
+#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.rdx
+#	deleted:    cache/PUSH_4a4f909daa6525f7416b0e0df208f325.RData
+#	deleted:    cache/PUSH_4a4f909daa6525f7416b0e0df208f325.rdb
+#	deleted:    cache/PUSH_4a4f909daa6525f7416b0e0df208f325.rdx
+#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.RData
+#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.rdb
+#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.rdx
+#	deleted:    cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.RData
+#	deleted:    cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdb
+#	deleted:    cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdx
+#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.RData
+#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.rdb
+#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.rdx
+#	deleted:    cache/STATUS_c084c907b84567e22073c1b7e27f7062.RData
+#	deleted:    cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdb
+#	deleted:    cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdx
+#	modified:   cache/__packages
+#	deleted:    figure/Rgraph.png
 #
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	cache/
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
@@ -104,15 +133,9 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master ccded6e] staging all files
- 8 files changed, 3 insertions(+), 1 deletion(-)
- create mode 100644 Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.RData
- create mode 100644 Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.rdb
- create mode 100644 Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.rdx
- create mode 100644 Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.RData
- create mode 100644 Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdb
- create mode 100644 Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdx
- create mode 100644 Git/cache/__packages
+[master 3d5bf25] staging all files
+ 4 files changed, 3 insertions(+), 4 deletions(-)
+ rewrite Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.RData (100%)
 ```
 
 
@@ -127,13 +150,38 @@ git status
 # Your branch is ahead of 'origin/master' by 1 commit.
 #   (use "git push" to publish your local commits)
 #
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
 #
-#	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.RData
-#	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdb
-#	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdx
-nothing added to commit but untracked files present (use "git add" to track)
+#	modified:   cache/ADD_37d613968d89bfc0fc573bd5f4d62239.RData
+#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.RData
+#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.rdb
+#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.rdx
+#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.RData
+#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.rdb
+#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.rdx
+#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.RData
+#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.rdb
+#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.rdx
+#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.RData
+#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.rdb
+#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.rdx
+#	deleted:    cache/PUSH_4a4f909daa6525f7416b0e0df208f325.RData
+#	deleted:    cache/PUSH_4a4f909daa6525f7416b0e0df208f325.rdb
+#	deleted:    cache/PUSH_4a4f909daa6525f7416b0e0df208f325.rdx
+#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.RData
+#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.rdb
+#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.rdx
+#	deleted:    cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.RData
+#	deleted:    cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdb
+#	deleted:    cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdx
+#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.RData
+#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.rdb
+#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.rdx
+#	deleted:    figure/Rgraph.png
+#
+no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 Push changes to the remote repository. 
@@ -150,19 +198,33 @@ git status
 
 ```
 # On branch master
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
 #
-#	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.RData
-#	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdb
-#	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdx
-#	cache/PUSH_4a4f909daa6525f7416b0e0df208f325.RData
-#	cache/PUSH_4a4f909daa6525f7416b0e0df208f325.rdb
-#	cache/PUSH_4a4f909daa6525f7416b0e0df208f325.rdx
-#	cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.RData
-#	cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdb
-#	cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdx
-nothing added to commit but untracked files present (use "git add" to track)
+#	modified:   cache/ADD_37d613968d89bfc0fc573bd5f4d62239.RData
+#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.RData
+#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.rdb
+#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.rdx
+#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.RData
+#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.rdb
+#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.rdx
+#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.RData
+#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.rdb
+#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.rdx
+#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.RData
+#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.rdb
+#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.rdx
+#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.RData
+#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.rdb
+#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.rdx
+#	modified:   cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.RData
+#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.RData
+#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.rdb
+#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.rdx
+#	deleted:    figure/Rgraph.png
+#
+no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 Show the last three commits with
@@ -172,29 +234,23 @@ git log  -3
 ```
 
 ```
-commit ccded6e86105504b25f7a67143f7cf998ef6a4bf
+commit 3d5bf25b532410058b38ccdb85afa31d2e880187
 Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Sun Feb 2 07:15:26 2014 -0500
+Date:   Sun Feb 2 11:00:51 2014 -0500
 
     staging all files
 
-commit 4ce278f591a4b9cc2118b681d0d38c9d2d332cb9
+commit c5ae08f2243ff819da31165c4e65479397908084
 Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Mon Jan 27 17:01:46 2014 -0500
+Date:   Sun Feb 2 10:57:46 2014 -0500
 
-    Brian's fix
+    update time stamp
 
-commit 2709296611a0c634f5e3146f25c4d080c59cac8d
-Merge: c0a7e73 477f655
+commit f621e528e029803fa0da13f337897d3e1915979b
 Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Mon Jan 27 16:59:57 2014 -0500
+Date:   Sun Feb 2 10:42:19 2014 -0500
 
-    update?
-    
-    Merge branch 'master' of https://github.com/alanarnholt/STT4870
-    
-    Conflicts:
-    	README.md
+    update time stamp is all
 ```
 
 
@@ -206,9 +262,9 @@ git log --pretty=oneline -3
 ```
 
 ```
-ccded6e86105504b25f7a67143f7cf998ef6a4bf staging all files
-4ce278f591a4b9cc2118b681d0d38c9d2d332cb9 Brian's fix
-2709296611a0c634f5e3146f25c4d080c59cac8d update?
+3d5bf25b532410058b38ccdb85afa31d2e880187 staging all files
+c5ae08f2243ff819da31165c4e65479397908084 update time stamp
+f621e528e029803fa0da13f337897d3e1915979b update time stamp is all
 ```
 
 
@@ -220,9 +276,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
-ccded6e Sun Feb 2 07:15:26 2014 -0500- staging all files [Alan Arnholt]
-4ce278f Mon Jan 27 17:01:46 2014 -0500- Brian's fix [Alan Arnholt]
-2709296 Mon Jan 27 16:59:57 2014 -0500- update? [Alan Arnholt]
+3d5bf25 Sun Feb 2 11:00:51 2014 -0500- staging all files [Alan Arnholt]
+c5ae08f Sun Feb 2 10:57:46 2014 -0500- update time stamp [Alan Arnholt]
+f621e52 Sun Feb 2 10:42:19 2014 -0500- update time stamp is all [Alan Arnholt]
 ```
 
 
@@ -234,22 +290,22 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
-ccded6e Sun Feb 2 07:15:26 2014 -0500- staging all files [Alan Arnholt]
- Git/GitOne.Rmd                                            |   2 +-
- Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.RData | Bin 0 -> 199 bytes
- Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.rdb   |   0
- Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.rdx   | Bin 0 -> 113 bytes
- Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.RData   | Bin 0 -> 336 bytes
- Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdb     |   0
- Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdx     | Bin 0 -> 113 bytes
- Git/cache/__packages                                      |   2 ++
- 8 files changed, 3 insertions(+), 1 deletion(-)
+3d5bf25 Sun Feb 2 11:00:51 2014 -0500- staging all files [Alan Arnholt]
+ Git/GitOne.html                                         |   4 ++--
+ Git/GitOne.md                                           |   2 +-
+ Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.RData | Bin 336 -> 699 bytes
+ Git/cache/__packages                                    |   1 -
+ 4 files changed, 3 insertions(+), 4 deletions(-)
 
-4ce278f Mon Jan 27 17:01:46 2014 -0500- Brian's fix [Alan Arnholt]
- README.md | 7 +++----
- 1 file changed, 3 insertions(+), 4 deletions(-)
+c5ae08f Sun Feb 2 10:57:46 2014 -0500- update time stamp [Alan Arnholt]
+ Git/GitOne.html | 2 +-
+ Git/GitOne.md   | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
 
-2709296 Mon Jan 27 16:59:57 2014 -0500- update? [Alan Arnholt]
+f621e52 Sun Feb 2 10:42:19 2014 -0500- update time stamp is all [Alan Arnholt]
+ Git/GitOne.html | 2 +-
+ Git/GitOne.md   | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
 ```
 
 
