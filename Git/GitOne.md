@@ -5,7 +5,7 @@
 
 
 
-Last compiled Sunday, February 02, 2014 - 07:16:47.
+Last compiled Sunday, February 02, 2014 - 10:30:12.
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
@@ -258,8 +258,14 @@ Now, just to show how cool this is, we will mix in a little `R`.
 
 ```r
 library(ggplot2)
-ggplot(data = CO2, aes(x = Type, y = uptake)) + geom_boxplot()
+ggplot(data = CO2, aes(x = Type, y = uptake, fill = Type)) + geom_boxplot() + 
+    facet_grid(Treatment ~ .) + theme_bw()
 ```
 
 <img src="figure/Rgraph.png" title="plot of chunk Rgraph" alt="plot of chunk Rgraph" style="display: block; margin: auto;" />
 
+
+### So you want to collaborate?
+
+At this point, you have forked a repo and would like to contribute to
+someone's project.  A great place to start is by reading [https://help.github.com/articles/using-pull-requests](https://help.github.com/articles/using-pull-requests).
