@@ -3,7 +3,7 @@
 
 
 ```{r Systime, echo = FALSE, comment = NA, engine = "R"}
-DT <- format(Sys.time(), "%A, %B %d, %Y - %X.")
+DT <- format(Sys.time(), "%A, %B %d, %Y - %X")
 ```
 
 Last compiled `r DT`.
