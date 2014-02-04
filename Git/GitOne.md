@@ -377,6 +377,12 @@ ggplot(data = CO2, aes(x = Type, y = uptake, fill = Type)) + geom_boxplot() +
 <img src="figure/Rgraph.png" title="plot of chunk Rgraph" alt="plot of chunk Rgraph" style="display: block; margin: auto;" />
 
 
+I love graphs!  The following graph created with `ggplot2` uses Greek letters in
+the facet panels.  
+
+<img src="figure/ggplot2Graphs.png" title="plot of chunk ggplot2Graphs" alt="plot of chunk ggplot2Graphs" style="display: block; margin: auto;" />
+
+
 ### So you want to collaborate?
 
 At this point, you have forked a repo and would like to contribute to
