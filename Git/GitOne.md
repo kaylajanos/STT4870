@@ -7,7 +7,7 @@
 
 
 
-Last compiled Tuesday, February 04, 2014 - 15:13:16.
+Last compiled Tuesday, February 04, 2014 - 4:44:54 PM.
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
