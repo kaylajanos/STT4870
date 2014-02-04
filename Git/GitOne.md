@@ -5,21 +5,51 @@
 
 
 
-Last compiled Sunday, February 02, 2014 - 11:00:51.
+
+
+
+Last compiled Tuesday, February 04, 2014 - 14:01:34.
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
+<img class=center src="./images/GitDownload.png" height='480'/>
+
+## Mac Users
+Install the downloaded file by clicking on the downloaded `*.dmg` file then clicking on the `*.pkg` file. 
+
+<img class=center src="./images/MacGitDownload.png" height='200'/>
+
+If you get a message indicating the file is from an untrusted source, ignore the warning and click on the **Open** button.  If there is no option to **Open**, hold down the CTRL key, select `*.pkg` file, then choose *Open With -> Installer (default)*.
+
+## Windows users
+
+Once the downloaded is complete, right click on the downloaded file to install it as administrator.  Use the default options at each step of the installation if you are unsure 
+what you are doing.  When the installation arrives at the screen adjusting your PATH environment, click in the circle to the left of **Run Git from the Windows Command Prompt**.
 
 
-
-
+## Initial Setup
 
 If you have never used git before, you need to do some setup first.  Run the following
 commands so that git knows your name and email.  The commands are all issued in the
-Terminal (MAC) or at the command prompt of Git Bash (Windows).  The Terminal 
-application is usually found in `/applications/Utilities`.  To open Git Bash, click on the 
-Windows icon -> ??? finish this in class.  The third line adds pretty command line colors.  
+Terminal (Mac) or at the command prompt of Git Bash (Windows).  The Terminal 
+application is usually found in `/applications/Utilities`. A quick way to open a 
+**terminal** window is by clicking on the magnifying glass icon and typing *terminal* in spotlight.  
 
+<img class=center src="./images/Spotlight.png" height='200'/>
+
+By clicking on the Terminal application, a Terminal window will open.
+
+<img class=center src="./images/TerminalWindow.png" height='150'/>
+
+To open Git Bash, click on the *Windows icon -> Git -> Git Bash*.  The program is most likely located in the Git directory within your Start Menu (or the directory into which Git was installed).
+
+<img class=center src="./images/WindowsProgramGitBash.png" height='400'/>
+
+By clicking on the Git Bash icon, a window similar to the one below will open.
+
+<img class=center src="./images/GitBashWindow.png" height='150'/>
+
+## Run these commands
 
 
 ```bash
@@ -31,7 +61,33 @@ git config --global color.ui true
 
 If you do not want to type your username and password every time you work with a remote server, you will to install the credential helper.  See the article [Set Up Git](https://help.github.com/articles/set-up-git#platform-all) for additional details on setting up the credential helper.
 
+To confirm your username and email, type `git config --list` at the $ prompt.
 
+
+```bash
+git config --list
+```
+
+```
+user.name=Alan Arnholt
+user.email=arnholtat@appstate.edu
+credential.helper=osxkeychain
+color.ui=true
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=false
+remote.origin.url=https://github.com/alanarnholt/STT4870.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+```
+
+
+From the third line of the previous output, one can see the `credential.helper` is 
+being used. 
 
 ### Creating a GitHub Account
 
