@@ -6,7 +6,7 @@ DT <- format(Sys.time(), "%A, %B %d, %Y - %X")
 ```
 
 ```{r label = SETUP, echo = FALSE}
-opts_chunk$set(comment = NA, engine = "sh", fig.align="center", fig.height = 4, fig.width = 4, dev ="png", cache = TRUE)
+opts_chunk$set(comment = NA, engine = "bash", fig.align="center", fig.height = 4, fig.width = 4, dev ="png", cache = TRUE)
 ```
 
 Last compiled `r DT`.
