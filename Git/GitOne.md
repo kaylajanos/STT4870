@@ -7,7 +7,7 @@
 
 
 
-Last compiled Wednesday, February 05, 2014 - 09:37:00.
+Last compiled Wednesday, February 05, 2014 - 09:41:10.
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
@@ -154,10 +154,13 @@ git status
 #   (use "git add <file>..." to update what will be committed)
 #   (use "git checkout -- <file>..." to discard changes in working directory)
 #
-#	modified:   GitOne.Rmd
 #	modified:   GitOne.html
 #	modified:   GitOne.md
 #
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	custom.css
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
@@ -173,8 +176,9 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master 8b68e17] staging all files
- 3 files changed, 42 insertions(+), 40 deletions(-)
+[master eb87352] staging all files
+ 3 files changed, 60 insertions(+), 45 deletions(-)
+ create mode 100644 Git/custom.css
 ```
 
 
@@ -215,6 +219,12 @@ git log  -3
 ```
 
 ```
+commit eb873523a17b492a309a52fe0dd765f493b54908
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Wed Feb 5 09:41:10 2014 -0500
+
+    staging all files
+
 commit 8b68e172ed90a68365ef98ea7e28e7c7baa86c79
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Wed Feb 5 09:37:00 2014 -0500
@@ -224,12 +234,6 @@ Date:   Wed Feb 5 09:37:00 2014 -0500
 commit 1a0f584c0f52a41d5d7707d60a007c2a946ebd77
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Wed Feb 5 09:33:32 2014 -0500
-
-    staging all files
-
-commit 40fe0656467163b6dcdfc1d7d311e7f0dbb0dd5a
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Wed Feb 5 09:33:01 2014 -0500
 
     staging all files
 ```
@@ -243,9 +247,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+eb873523a17b492a309a52fe0dd765f493b54908 staging all files
 8b68e172ed90a68365ef98ea7e28e7c7baa86c79 staging all files
 1a0f584c0f52a41d5d7707d60a007c2a946ebd77 staging all files
-40fe0656467163b6dcdfc1d7d311e7f0dbb0dd5a staging all files
 ```
 
 
@@ -257,9 +261,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+eb87352 Wed Feb 5 09:41:10 2014 -0500- staging all files [Alan Arnholt]
 8b68e17 Wed Feb 5 09:37:00 2014 -0500- staging all files [Alan Arnholt]
 1a0f584 Wed Feb 5 09:33:32 2014 -0500- staging all files [Alan Arnholt]
-40fe065 Wed Feb 5 09:33:01 2014 -0500- staging all files [Alan Arnholt]
 ```
 
 
@@ -271,6 +275,12 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+eb87352 Wed Feb 5 09:41:10 2014 -0500- staging all files [Alan Arnholt]
+ Git/GitOne.html | 46 ++++++++++++++++++++++------------------------
+ Git/GitOne.md   | 40 +++++++++++++++++++---------------------
+ Git/custom.css  | 19 +++++++++++++++++++
+ 3 files changed, 60 insertions(+), 45 deletions(-)
+
 8b68e17 Wed Feb 5 09:37:00 2014 -0500- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  |  4 ++--
  Git/GitOne.html | 43 ++++++++++++++++++++++---------------------
@@ -282,12 +292,6 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
  Git/GitOne.html | 49 ++++++++++++++++++++++---------------------------
  Git/GitOne.md   | 41 ++++++++++++++++++-----------------------
  3 files changed, 41 insertions(+), 51 deletions(-)
-
-40fe065 Wed Feb 5 09:33:01 2014 -0500- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  |  2 +-
- Git/GitOne.html | 67 ++++++++++++++++++++++++++++++++++-----------------------
- Git/GitOne.md   | 59 ++++++++++++++++++++++++++++++--------------------
- 3 files changed, 77 insertions(+), 51 deletions(-)
 ```
 
 
