@@ -13,7 +13,7 @@ Last compiled `r DT`.
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
-<img class=center src="./images/GitDownload.png" height='480'/>
+<img align="middle" src="./images/GitDownload.png" height='480'/>
 
 ## Mac Users
 Install the downloaded file by clicking on the downloaded `*.dmg` file then clicking on the `*.pkg` file. 

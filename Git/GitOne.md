@@ -7,7 +7,7 @@
 
 
 
-Last compiled Wednesday, February 05, 2014 - 09:26:52.
+Last compiled Wednesday, February 05, 2014 - 09:28:18.
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
@@ -101,8 +101,8 @@ branch.master.merge=refs/heads/master
 ```
 
 
-From the third line of the previous output, one can see the `credential.helper` is 
-being used (when I run this with OSX, but not from home.) 
+From the third line of the previous output, one can see the 
+`credential.helper` is being used.
 
 ### Creating a GitHub Account
 
@@ -150,7 +150,17 @@ git status
 
 ```
 # On branch master
-nothing to commit (working directory clean)
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   GitOne.Rmd
+#	modified:   GitOne.html
+#	modified:   GitOne.md
+#	modified:   figure/Rgraph.png
+#	modified:   figure/ggplot2Graphs.png
+#
+no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 The `git status` shows us what files are not staged for a commit.  Before files can be
@@ -165,8 +175,10 @@ git commit  -m "staging all files"
 ```
 
 ```
-# On branch master
-nothing to commit (working directory clean)
+[master 9b811b6] staging all files
+ 5 files changed, 65 insertions(+), 125 deletions(-)
+ rewrite Git/figure/Rgraph.png (98%)
+ rewrite Git/figure/ggplot2Graphs.png (99%)
 ```
 
 
@@ -178,6 +190,8 @@ git status
 
 ```
 # On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
 nothing to commit (working directory clean)
 ```
 
@@ -205,6 +219,12 @@ git log  -3
 ```
 
 ```
+commit 9b811b6897fc460b1da866626df8a657d422d01b
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Wed Feb 5 09:28:18 2014 -0500
+
+    staging all files
+
 commit c3ea31798239b3d90ac26729101870cbb413ab69
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Tue Feb 4 20:47:04 2014 -0500
@@ -214,12 +234,6 @@ Date:   Tue Feb 4 20:47:04 2014 -0500
 commit 9f345316fb7a42140f106cb28dcc3ff5f6843776
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Tue Feb 4 20:45:22 2014 -0500
-
-    staging all files
-
-commit 9c783ea910108bbbbad5d379c98cde558e19bf4e
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Tue Feb 4 20:43:45 2014 -0500
 
     staging all files
 ```
@@ -233,9 +247,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+9b811b6897fc460b1da866626df8a657d422d01b staging all files
 c3ea31798239b3d90ac26729101870cbb413ab69 add bash check
 9f345316fb7a42140f106cb28dcc3ff5f6843776 staging all files
-9c783ea910108bbbbad5d379c98cde558e19bf4e staging all files
 ```
 
 
@@ -247,9 +261,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+9b811b6 Wed Feb 5 09:28:18 2014 -0500- staging all files [Alan Arnholt]
 c3ea317 Tue Feb 4 20:47:04 2014 -0500- add bash check [Alan Arnholt]
 9f34531 Tue Feb 4 20:45:22 2014 -0500- staging all files [Alan Arnholt]
-9c783ea Tue Feb 4 20:43:45 2014 -0500- staging all files [Alan Arnholt]
 ```
 
 
@@ -261,6 +275,14 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+9b811b6 Wed Feb 5 09:28:18 2014 -0500- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd               |   4 +-
+ Git/GitOne.html              | 100 +++++++++++++++----------------------------
+ Git/GitOne.md                |  86 ++++++++++++-------------------------
+ Git/figure/Rgraph.png        | Bin 3696 -> 17781 bytes
+ Git/figure/ggplot2Graphs.png | Bin 6426 -> 32780 bytes
+ 5 files changed, 65 insertions(+), 125 deletions(-)
+
 c3ea317 Tue Feb 4 20:47:04 2014 -0500- add bash check [Alan Arnholt]
  Git/GitOne.html | 62 +++++++++++++++++++++++++--------------------------------
  Git/GitOne.md   | 54 +++++++++++++++++++++----------------------------
@@ -272,15 +294,6 @@ c3ea317 Tue Feb 4 20:47:04 2014 -0500- add bash check [Alan Arnholt]
  Git/GitOne.md                |  58 ++++++++++++++++++++++++------------
  Git/figure/ggplot2Graphs.png | Bin 6492 -> 6426 bytes
  4 files changed, 85 insertions(+), 45 deletions(-)
-
-9c783ea Tue Feb 4 20:43:45 2014 -0500- staging all files [Alan Arnholt]
- Git/GitOne.Rmd                                     |   2 +-
- Git/GitOne.html                                    |  79 +++++++++++----------
- Git/GitOne.md                                      |  72 +++++++++++--------
- ...ashCheck_3a4552886a749e14bd443de33a754ec2.RData | Bin 0 -> 176 bytes
- .../BashCheck_3a4552886a749e14bd443de33a754ec2.rdx | Bin 0 -> 113 bytes
- Git/figure/ggplot2Graphs.png                       | Bin 6426 -> 6492 bytes
- 6 files changed, 85 insertions(+), 68 deletions(-)
 ```
 
 
