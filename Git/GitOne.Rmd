@@ -6,7 +6,7 @@ DT <- format(Sys.time(), "%A, %B %d, %Y - %X")
 ```
 
 ```{r label = SETUP, echo = FALSE}
-opts_chunk$set(comment = NA, engine = "bash", fig.align="center", fig.height = 4, fig.width = 4, dev ="png", cache = TRUE)
+opts_chunk$set(comment = NA, engine = "bash", fig.align="center", fig.height = 4, fig.width = 4, dev ="png", cache = FALSE)
 ```
 
 Last compiled `r DT`.
@@ -69,7 +69,7 @@ git config --list
 ```
 
 From the third line of the previous output, one can see the `credential.helper` is 
-being used. 
+being used (when I run this with OSX, but not from home.) 
 
 ### Creating a GitHub Account
 

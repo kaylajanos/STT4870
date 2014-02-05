@@ -7,7 +7,7 @@
 
 
 
-Last compiled Tuesday, February 04, 2014 - 8:26:45 PM.
+Last compiled Tuesday, February 04, 2014 - 8:33:00 PM.
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
@@ -99,7 +99,7 @@ branch.master.merge=refs/heads/master
 
 
 From the third line of the previous output, one can see the `credential.helper` is 
-being used. 
+being used (when I run this with OSX, but not from home.) 
 
 ### Creating a GitHub Account
 
