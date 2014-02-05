@@ -7,7 +7,7 @@
 
 
 
-Last compiled Wednesday, February 05, 2014 - 09:33:01.
+Last compiled Wednesday, February 05, 2014 - 09:33:31.
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
@@ -16,7 +16,7 @@ Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 ## Mac Users
 Install the downloaded file by clicking on the downloaded `*.dmg` file then clicking on the `*.pkg` file. 
 
-<img class=center src="./images/MacGitDownload.png" height='200'/>
+<img align="middle" src="./images/MacGitDownload.png" height='200'/>
 
 If you get a message indicating the file is from an untrusted source, ignore the warning and click on the **Open** button.  If there is no option to **Open**, hold down the CTRL key, select `*.pkg` file, then choose *Open With -> Installer (default)*.
 
@@ -173,8 +173,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master 40fe065] staging all files
- 3 files changed, 77 insertions(+), 51 deletions(-)
+[master 1a0f584] staging all files
+ 3 files changed, 41 insertions(+), 51 deletions(-)
 ```
 
 
@@ -215,6 +215,12 @@ git log  -3
 ```
 
 ```
+commit 1a0f584c0f52a41d5d7707d60a007c2a946ebd77
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Wed Feb 5 09:33:32 2014 -0500
+
+    staging all files
+
 commit 40fe0656467163b6dcdfc1d7d311e7f0dbb0dd5a
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Wed Feb 5 09:33:01 2014 -0500
@@ -226,12 +232,6 @@ Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Wed Feb 5 09:28:18 2014 -0500
 
     staging all files
-
-commit c3ea31798239b3d90ac26729101870cbb413ab69
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Tue Feb 4 20:47:04 2014 -0500
-
-    add bash check
 ```
 
 
@@ -243,9 +243,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+1a0f584c0f52a41d5d7707d60a007c2a946ebd77 staging all files
 40fe0656467163b6dcdfc1d7d311e7f0dbb0dd5a staging all files
 9b811b6897fc460b1da866626df8a657d422d01b staging all files
-c3ea31798239b3d90ac26729101870cbb413ab69 add bash check
 ```
 
 
@@ -257,9 +257,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+1a0f584 Wed Feb 5 09:33:32 2014 -0500- staging all files [Alan Arnholt]
 40fe065 Wed Feb 5 09:33:01 2014 -0500- staging all files [Alan Arnholt]
 9b811b6 Wed Feb 5 09:28:18 2014 -0500- staging all files [Alan Arnholt]
-c3ea317 Tue Feb 4 20:47:04 2014 -0500- add bash check [Alan Arnholt]
 ```
 
 
@@ -271,6 +271,12 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+1a0f584 Wed Feb 5 09:33:32 2014 -0500- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  |  2 +-
+ Git/GitOne.html | 49 ++++++++++++++++++++++---------------------------
+ Git/GitOne.md   | 41 ++++++++++++++++++-----------------------
+ 3 files changed, 41 insertions(+), 51 deletions(-)
+
 40fe065 Wed Feb 5 09:33:01 2014 -0500- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  |  2 +-
  Git/GitOne.html | 67 ++++++++++++++++++++++++++++++++++-----------------------
@@ -284,11 +290,6 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
  Git/figure/Rgraph.png        | Bin 3696 -> 17781 bytes
  Git/figure/ggplot2Graphs.png | Bin 6426 -> 32780 bytes
  5 files changed, 65 insertions(+), 125 deletions(-)
-
-c3ea317 Tue Feb 4 20:47:04 2014 -0500- add bash check [Alan Arnholt]
- Git/GitOne.html | 62 +++++++++++++++++++++++++--------------------------------
- Git/GitOne.md   | 54 +++++++++++++++++++++----------------------------
- 2 files changed, 50 insertions(+), 66 deletions(-)
 ```
 
 

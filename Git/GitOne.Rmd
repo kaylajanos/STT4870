@@ -13,12 +13,12 @@ Last compiled `r DT`.
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
-<img align="middle" src="./images/GitDownload.png" height='480'/>
+<img class=center src="./images/GitDownload.png" height='480'/>
 
 ## Mac Users
 Install the downloaded file by clicking on the downloaded `*.dmg` file then clicking on the `*.pkg` file. 
 
-<img align="middle" src="./images/MacGitDownload.png" height='200'/>
+<img class=center src="./images/MacGitDownload.png" height='200'/>
 
 If you get a message indicating the file is from an untrusted source, ignore the warning and click on the **Open** button.  If there is no option to **Open**, hold down the CTRL key, select `*.pkg` file, then choose *Open With -> Installer (default)*.
 
