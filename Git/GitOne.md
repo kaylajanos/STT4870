@@ -7,7 +7,7 @@
 
 
 
-Last compiled Tuesday, February 04, 2014 - 8:09:28 PM.
+Last compiled Tuesday, February 04, 2014 - 8:15:14 PM.
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
@@ -22,8 +22,10 @@ If you get a message indicating the file is from an untrusted source, ignore the
 
 ## Windows users
 
-Once the downloaded is complete, right click on the downloaded file to install it as administrator.  Use the default options at each step of the installation if you are unsure 
-what you are doing.  When the installation arrives at the screen adjusting your PATH environment, click in the circle to the left of **Run Git from the Windows Command Prompt**.
+Once the download is complete, right click on the downloaded file to install it as an 
+administrator.  Use the default options at each step of the installation if you are unsure 
+what you are doing.  When the installation arrives at the screen adjusting your PATH 
+environment, click in the circle to the left of **Run Git from the Windows Command Prompt**.
 
 
 ## Initial Setup
@@ -80,9 +82,9 @@ type a username in the `Pick a username` box (please use `firstlast`, for exampl
 ### Creating a GitHub Repository
 
 In order to push your local work to a remote repository, you will first need to create
-the remote repository. Log into your GitHub account, click the `New repository` button,
+the remote repository. Log in to your GitHub account, click the `New repository` button,
 then give your repository a name and optionally a description.  When you finish, click 
-the `Create repository` button and your GitHub repository will be created.  
+the `Create repository` button, and your GitHub repository will be created.  
 ![AlansGitRepo](./images/CreateGitRepo.png)
 
 
@@ -118,8 +120,8 @@ git status
 The `git status` shows us what files are not staged for a commit.  Before files can be
 committed, they must be added to the staging area.  Files are added to the stating area
 with the command `git add file_name`.  To add all files in the working directory, one
-can use `git add .`  Next all files are added to the staging area and a snapshot is 
-taken of the commit with the message "staging all files".
+can use `git add .`  Next, all files are added to the staging area, and a snapshot is 
+taken of the commit with the message "staging all files."
 
 ```sh
 git add .
@@ -160,7 +162,7 @@ git log --pretty=oneline -3
 ```
 
 
-The previous output was to brief for my likes.  Let us try some further formatting.
+The previous output was to brief to suit me.  Let us try some further formatting.
 
 
 ```sh
