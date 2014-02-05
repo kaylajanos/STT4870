@@ -7,7 +7,7 @@
 
 
 
-Last compiled Tuesday, February 04, 2014 - 8:43:44 PM.
+Last compiled Tuesday, February 04, 2014 - 8:45:22 PM.
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
@@ -26,7 +26,7 @@ Once the download is complete, right click on the downloaded file to install it 
 administrator.  Use the default options at each step of the installation if you are unsure 
 what you are doing.  When the installation arrives at the screen adjusting your PATH 
 environment, click in the circle to the left of **Run Git from the Windows Command Prompt**.
-You may need to manually add the path to where the **bash.exe** resides.  Run the 
+You may need to manually add the path to where the `bash.exe` resides.  Run the 
 following at the `R` prompt to make sure `R` knows where to find `bash`.
 
 
@@ -39,7 +39,7 @@ Sys.which("bash")
 "C:\\PROGRA~2\\Git\\bin\\bash.exe" 
 ```
 
-If the output does not specify the path to **bash** you have a problem.
+If the output does not specify the path to `bash`, the path to `bash` is not properly configured.
 
 
 ## Initial Setup
@@ -161,7 +161,7 @@ git status
 
 ```
 On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
+Your branch is ahead of 'origin/master' by 2 commits.
   (use "git push" to publish your local commits)
 
 Changes not staged for commit:
@@ -172,13 +172,6 @@ Changes not staged for commit:
 	modified:   GitOne.html
 	modified:   GitOne.md
 	modified:   figure/ggplot2Graphs.png
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
-	cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
-	cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -195,11 +188,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master 9c783ea] staging all files
- 7 files changed, 85 insertions(+), 68 deletions(-)
- create mode 100644 Git/cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
- create mode 100644 Git/cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
- create mode 100644 Git/cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
+[master 9f34531] staging all files
+ 4 files changed, 85 insertions(+), 45 deletions(-)
  rewrite Git/figure/ggplot2Graphs.png (99%)
 ```
 
@@ -212,7 +202,7 @@ git status
 
 ```
 On branch master
-Your branch is ahead of 'origin/master' by 2 commits.
+Your branch is ahead of 'origin/master' by 3 commits.
   (use "git push" to publish your local commits)
 
 nothing to commit, working directory clean
@@ -232,7 +222,7 @@ git status
 
 ```
 On branch master
-Your branch is ahead of 'origin/master' by 2 commits.
+Your branch is ahead of 'origin/master' by 3 commits.
   (use "git push" to publish your local commits)
 
 nothing to commit, working directory clean
@@ -245,6 +235,12 @@ git log  -3
 ```
 
 ```
+commit 9f345316fb7a42140f106cb28dcc3ff5f6843776
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Tue Feb 4 20:45:22 2014 -0500
+
+    staging all files
+
 commit 9c783ea910108bbbbad5d379c98cde558e19bf4e
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Tue Feb 4 20:43:45 2014 -0500
@@ -256,12 +252,6 @@ Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Tue Feb 4 20:43:11 2014 -0500
 
     staging all files
-
-commit 0d97de05231716b46e5ef8ce6daf095e647f21e8
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Tue Feb 4 20:35:35 2014 -0500
-
-    just change time stamp
 ```
 
 
@@ -273,9 +263,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+9f345316fb7a42140f106cb28dcc3ff5f6843776 staging all files
 9c783ea910108bbbbad5d379c98cde558e19bf4e staging all files
 45a14d5cec5e7dd77b9f3a06eb6382c35689c5f0 staging all files
-0d97de05231716b46e5ef8ce6daf095e647f21e8 just change time stamp
 ```
 
 
@@ -287,9 +277,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+9f34531 Tue Feb 4 20:45:22 2014 -0500- staging all files [Alan Arnholt]
 9c783ea Tue Feb 4 20:43:45 2014 -0500- staging all files [Alan Arnholt]
 45a14d5 Tue Feb 4 20:43:11 2014 -0500- staging all files [Alan Arnholt]
-0d97de0 Tue Feb 4 20:35:35 2014 -0500- just change time stamp [Alan Arnholt]
 ```
 
 
@@ -301,6 +291,13 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+9f34531 Tue Feb 4 20:45:22 2014 -0500- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd               |   4 +--
+ Git/GitOne.html              |  68 ++++++++++++++++++++++++++++---------------
+ Git/GitOne.md                |  58 ++++++++++++++++++++++++------------
+ Git/figure/ggplot2Graphs.png | Bin 6492 -> 6426 bytes
+ 4 files changed, 85 insertions(+), 45 deletions(-)
+
 9c783ea Tue Feb 4 20:43:45 2014 -0500- staging all files [Alan Arnholt]
  Git/GitOne.Rmd                                     |   2 +-
  Git/GitOne.html                                    |  79 +++++++++++----------
@@ -314,11 +311,6 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 45a14d5 Tue Feb 4 20:43:11 2014 -0500- staging all files [Alan Arnholt]
  Git/GitOne.Rmd | 7 +++++++
  1 file changed, 7 insertions(+)
-
-0d97de0 Tue Feb 4 20:35:35 2014 -0500- just change time stamp [Alan Arnholt]
- Git/GitOne.html | 103 +++++++++++++-------------------------------------------
- Git/GitOne.md   |  95 +++++++++++----------------------------------------
- 2 files changed, 42 insertions(+), 156 deletions(-)
 ```
 
 
