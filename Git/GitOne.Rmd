@@ -18,7 +18,7 @@ Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 ## Mac Users
 Install the downloaded file by clicking on the downloaded `*.dmg` file then clicking on the `*.pkg` file. 
 
-<img class=center src="./images/MacGitDownload.png" height='200'/>
+<img align="middle" src="./images/MacGitDownload.png" height='200'/>
 
 If you get a message indicating the file is from an untrusted source, ignore the warning and click on the **Open** button.  If there is no option to **Open**, hold down the CTRL key, select `*.pkg` file, then choose *Open With -> Installer (default)*.
 
