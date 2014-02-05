@@ -7,7 +7,7 @@
 
 
 
-Last compiled Tuesday, February 04, 2014 - 4:44:54 PM.
+Last compiled Tuesday, February 04, 2014 - 8:09:28 PM.
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
@@ -51,7 +51,7 @@ By clicking on the Git Bash icon, a window similar to the one below will open.
 ## Run these commands
 
 
-```bash
+```sh
 git config --global user.name "Your Name"
 git config --global user.email "your_email@whatever.com"
 git config --global color.ui true
@@ -63,25 +63,8 @@ If you do not want to type your username and password every time you work with a
 To confirm your username and email, type `git config --list` at the $ prompt.
 
 
-```bash
+```sh
 git config --list
-```
-
-```
-user.name=Alan Arnholt
-user.email=arnholtat@appstate.edu
-credential.helper=osxkeychain
-color.ui=true
-core.repositoryformatversion=0
-core.filemode=true
-core.bare=false
-core.logallrefupdates=true
-core.ignorecase=true
-core.precomposeunicode=false
-remote.origin.url=https://github.com/alanarnholt/STT4870.git
-remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
-branch.master.remote=origin
-branch.master.merge=refs/heads/master
 ```
 
 
@@ -128,52 +111,8 @@ In the next window that appears, which is shown below, enter the URL for the rep
 
 To check the current status of your repository type:
 
-```bash
+```sh
 git status
-```
-
-```
-# On branch master
-# Changes not staged for commit:
-#   (use "git add/rm <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   GitOne.html
-#	modified:   GitOne.md
-#	deleted:    cache/ADD_37d613968d89bfc0fc573bd5f4d62239.RData
-#	deleted:    cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdb
-#	deleted:    cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdx
-#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.RData
-#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.rdb
-#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.rdx
-#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.RData
-#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.rdb
-#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.rdx
-#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.RData
-#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.rdb
-#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.rdx
-#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.RData
-#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.rdb
-#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.rdx
-#	deleted:    cache/PUSH_4a4f909daa6525f7416b0e0df208f325.RData
-#	deleted:    cache/PUSH_4a4f909daa6525f7416b0e0df208f325.rdb
-#	deleted:    cache/PUSH_4a4f909daa6525f7416b0e0df208f325.rdx
-#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.RData
-#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.rdb
-#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.rdx
-#	deleted:    cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.RData
-#	deleted:    cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdb
-#	deleted:    cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdx
-#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.RData
-#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.rdb
-#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.rdx
-#	deleted:    cache/STATUS_c084c907b84567e22073c1b7e27f7062.RData
-#	deleted:    cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdb
-#	deleted:    cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdx
-#	modified:   cache/__packages
-#	deleted:    figure/Rgraph.png
-#
-no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 The `git status` shows us what files are not staged for a commit.  Before files can be
@@ -182,185 +121,58 @@ with the command `git add file_name`.  To add all files in the working directory
 can use `git add .`  Next all files are added to the staging area and a snapshot is 
 taken of the commit with the message "staging all files".
 
-```bash
+```sh
 git add .
 git commit  -m "staging all files"
-```
-
-```
-[master 3d5bf25] staging all files
- 4 files changed, 3 insertions(+), 4 deletions(-)
- rewrite Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.RData (100%)
 ```
 
 
 Check the status after the last commit.
 
-```bash
+```sh
 git status
-```
-
-```
-# On branch master
-# Your branch is ahead of 'origin/master' by 1 commit.
-#   (use "git push" to publish your local commits)
-#
-# Changes not staged for commit:
-#   (use "git add/rm <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   cache/ADD_37d613968d89bfc0fc573bd5f4d62239.RData
-#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.RData
-#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.rdb
-#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.rdx
-#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.RData
-#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.rdb
-#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.rdx
-#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.RData
-#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.rdb
-#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.rdx
-#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.RData
-#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.rdb
-#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.rdx
-#	deleted:    cache/PUSH_4a4f909daa6525f7416b0e0df208f325.RData
-#	deleted:    cache/PUSH_4a4f909daa6525f7416b0e0df208f325.rdb
-#	deleted:    cache/PUSH_4a4f909daa6525f7416b0e0df208f325.rdx
-#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.RData
-#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.rdb
-#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.rdx
-#	deleted:    cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.RData
-#	deleted:    cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdb
-#	deleted:    cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdx
-#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.RData
-#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.rdb
-#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.rdx
-#	deleted:    figure/Rgraph.png
-#
-no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 Push changes to the remote repository. 
 
-```bash
+```sh
 git push
 ```
 
 See if there is anything left to do.
 
-```bash
+```sh
 git status
-```
-
-```
-# On branch master
-# Changes not staged for commit:
-#   (use "git add/rm <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   cache/ADD_37d613968d89bfc0fc573bd5f4d62239.RData
-#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.RData
-#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.rdb
-#	deleted:    cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.rdx
-#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.RData
-#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.rdb
-#	deleted:    cache/LOGP3_ad807c34590b81f628e6cb6032102919.rdx
-#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.RData
-#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.rdb
-#	deleted:    cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.rdx
-#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.RData
-#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.rdb
-#	deleted:    cache/LOG_087011b0f8f69f16e2c2e5605086c615.rdx
-#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.RData
-#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.rdb
-#	deleted:    cache/Rgraph_8ff4435448e1c897d42aaa6cf87ae77b.rdx
-#	modified:   cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.RData
-#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.RData
-#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.rdb
-#	deleted:    cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.rdx
-#	deleted:    figure/Rgraph.png
-#
-no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 Show the last three commits with
 
-```bash
+```sh
 git log  -3
-```
-
-```
-commit 3d5bf25b532410058b38ccdb85afa31d2e880187
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Sun Feb 2 11:00:51 2014 -0500
-
-    staging all files
-
-commit c5ae08f2243ff819da31165c4e65479397908084
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Sun Feb 2 10:57:46 2014 -0500
-
-    update time stamp
-
-commit f621e528e029803fa0da13f337897d3e1915979b
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Sun Feb 2 10:42:19 2014 -0500
-
-    update time stamp is all
 ```
 
 
 That was ugly. Let us try some formatting.
 
 
-```bash
+```sh
 git log --pretty=oneline -3
-```
-
-```
-3d5bf25b532410058b38ccdb85afa31d2e880187 staging all files
-c5ae08f2243ff819da31165c4e65479397908084 update time stamp
-f621e528e029803fa0da13f337897d3e1915979b update time stamp is all
 ```
 
 
 The previous output was to brief for my likes.  Let us try some further formatting.
 
 
-```bash
+```sh
 git log --pretty=format:"%h %ad- %s [%an]" -3
-```
-
-```
-3d5bf25 Sun Feb 2 11:00:51 2014 -0500- staging all files [Alan Arnholt]
-c5ae08f Sun Feb 2 10:57:46 2014 -0500- update time stamp [Alan Arnholt]
-f621e52 Sun Feb 2 10:42:19 2014 -0500- update time stamp is all [Alan Arnholt]
 ```
 
 
 Maybe even some statistics?
 
 
-```bash
+```sh
 git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
-```
-
-```
-3d5bf25 Sun Feb 2 11:00:51 2014 -0500- staging all files [Alan Arnholt]
- Git/GitOne.html                                         |   4 ++--
- Git/GitOne.md                                           |   2 +-
- Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.RData | Bin 336 -> 699 bytes
- Git/cache/__packages                                    |   1 -
- 4 files changed, 3 insertions(+), 4 deletions(-)
-
-c5ae08f Sun Feb 2 10:57:46 2014 -0500- update time stamp [Alan Arnholt]
- Git/GitOne.html | 2 +-
- Git/GitOne.md   | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
-
-f621e52 Sun Feb 2 10:42:19 2014 -0500- update time stamp is all [Alan Arnholt]
- Git/GitOne.html | 2 +-
- Git/GitOne.md   | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
 ```
 
 
