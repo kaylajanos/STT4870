@@ -31,7 +31,7 @@ environment, click in the circle to the left of **Run Git from the Windows Comma
 You may need to manually add the path to where the **bash.exe** resides.  Run the 
 following at the `R` prompt to make sure `R` knows where to find `bash`.
 
-```{r label= BashCheck, engine="R"}
+```{r label= BashCheck, engine="R", cache = TRUE}
 Sys.which("bash")
 ```
 If the output does not specify the path to **bash** you have a problem.
