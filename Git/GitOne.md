@@ -7,7 +7,7 @@
 
 
 
-Last compiled Tuesday, February 04, 2014 - 8:33:00 PM.
+Last compiled Tuesday, February 04, 2014 - 8:33:21 PM.
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
@@ -150,26 +150,12 @@ On branch master
 Your branch is up-to-date with 'origin/master'.
 
 Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
+  (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
 	modified:   GitOne.Rmd
-	deleted:    cache/GITsetup_b0c970510ef94c7a948b007d4995e2c2.RData
-	deleted:    cache/GITsetup_b0c970510ef94c7a948b007d4995e2c2.rdb
-	deleted:    cache/GITsetup_b0c970510ef94c7a948b007d4995e2c2.rdx
-	deleted:    cache/verify_f81c0bc60aa03951091d1db4b41e9fca.RData
-	deleted:    cache/verify_f81c0bc60aa03951091d1db4b41e9fca.rdb
-	deleted:    cache/verify_f81c0bc60aa03951091d1db4b41e9fca.rdx
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	cache/GITsetup_1e85974789856654fd6170253d9fcbe2.RData
-	cache/GITsetup_1e85974789856654fd6170253d9fcbe2.rdb
-	cache/GITsetup_1e85974789856654fd6170253d9fcbe2.rdx
-	cache/verify_2d584a4c99894e4c308ba44967920be7.RData
-	cache/verify_2d584a4c99894e4c308ba44967920be7.rdb
-	cache/verify_2d584a4c99894e4c308ba44967920be7.rdx
+	modified:   GitOne.html
+	modified:   GitOne.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -186,17 +172,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master a254aa7] staging all files
- 10 files changed, 1 insertion(+), 1 deletion(-)
- create mode 100644 Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.RData
- create mode 100644 Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.rdb
- create mode 100644 Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.rdx
- create mode 100644 Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.RData
- create mode 100644 Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdb
- create mode 100644 Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdx
- create mode 100644 Git/cache/verify_2d584a4c99894e4c308ba44967920be7.RData
- create mode 100644 Git/cache/verify_2d584a4c99894e4c308ba44967920be7.rdb
- create mode 100644 Git/cache/verify_2d584a4c99894e4c308ba44967920be7.rdx
+[master c8a1e52] staging all files
+ 3 files changed, 6 insertions(+), 6 deletions(-)
 ```
 
 
@@ -211,31 +188,7 @@ On branch master
 Your branch is ahead of 'origin/master' by 1 commit.
   (use "git push" to publish your local commits)
 
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	deleted:    cache/ADD_540999b9c1daaa4c31ccd2c535b3e499.RData
-	deleted:    cache/ADD_540999b9c1daaa4c31ccd2c535b3e499.rdb
-	deleted:    cache/ADD_540999b9c1daaa4c31ccd2c535b3e499.rdx
-	deleted:    cache/GITsetup_b0c970510ef94c7a948b007d4995e2c2.RData
-	deleted:    cache/GITsetup_b0c970510ef94c7a948b007d4995e2c2.rdb
-	deleted:    cache/GITsetup_b0c970510ef94c7a948b007d4995e2c2.rdx
-	deleted:    cache/STATUS_c69090ea171fdc61120b83150e1ec346.RData
-	deleted:    cache/STATUS_c69090ea171fdc61120b83150e1ec346.rdb
-	deleted:    cache/STATUS_c69090ea171fdc61120b83150e1ec346.rdx
-	deleted:    cache/verify_f81c0bc60aa03951091d1db4b41e9fca.RData
-	deleted:    cache/verify_f81c0bc60aa03951091d1db4b41e9fca.rdb
-	deleted:    cache/verify_f81c0bc60aa03951091d1db4b41e9fca.rdx
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.RData
-	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdb
-	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdx
-
-no changes added to commit (use "git add" and/or "git commit -a")
+nothing to commit, working directory clean
 ```
 
 Push changes to the remote repository. 
@@ -255,43 +208,7 @@ On branch master
 Your branch is ahead of 'origin/master' by 1 commit.
   (use "git push" to publish your local commits)
 
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	deleted:    cache/ADD_540999b9c1daaa4c31ccd2c535b3e499.RData
-	deleted:    cache/ADD_540999b9c1daaa4c31ccd2c535b3e499.rdb
-	deleted:    cache/ADD_540999b9c1daaa4c31ccd2c535b3e499.rdx
-	deleted:    cache/GITsetup_b0c970510ef94c7a948b007d4995e2c2.RData
-	deleted:    cache/GITsetup_b0c970510ef94c7a948b007d4995e2c2.rdb
-	deleted:    cache/GITsetup_b0c970510ef94c7a948b007d4995e2c2.rdx
-	deleted:    cache/PUSH_ccaa07cffd798cbbde965296b32e8be8.RData
-	deleted:    cache/PUSH_ccaa07cffd798cbbde965296b32e8be8.rdb
-	deleted:    cache/PUSH_ccaa07cffd798cbbde965296b32e8be8.rdx
-	deleted:    cache/STATUS2_5e0c7941154f2f6f6d64705c7f833e80.RData
-	deleted:    cache/STATUS2_5e0c7941154f2f6f6d64705c7f833e80.rdb
-	deleted:    cache/STATUS2_5e0c7941154f2f6f6d64705c7f833e80.rdx
-	deleted:    cache/STATUS_c69090ea171fdc61120b83150e1ec346.RData
-	deleted:    cache/STATUS_c69090ea171fdc61120b83150e1ec346.rdb
-	deleted:    cache/STATUS_c69090ea171fdc61120b83150e1ec346.rdx
-	deleted:    cache/verify_f81c0bc60aa03951091d1db4b41e9fca.RData
-	deleted:    cache/verify_f81c0bc60aa03951091d1db4b41e9fca.rdb
-	deleted:    cache/verify_f81c0bc60aa03951091d1db4b41e9fca.rdx
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.RData
-	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdb
-	cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdx
-	cache/PUSH_4a4f909daa6525f7416b0e0df208f325.RData
-	cache/PUSH_4a4f909daa6525f7416b0e0df208f325.rdb
-	cache/PUSH_4a4f909daa6525f7416b0e0df208f325.rdx
-	cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.RData
-	cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdb
-	cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdx
-
-no changes added to commit (use "git add" and/or "git commit -a")
+nothing to commit, working directory clean
 ```
 
 Show the last three commits with
@@ -301,23 +218,23 @@ git log  -3
 ```
 
 ```
+commit c8a1e5299f04a1314ed9b6c7762f2d33f6033bce
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Tue Feb 4 20:33:21 2014 -0500
+
+    staging all files
+
+commit 59d1bd3e72f7edca47d35b1820416359d197e857
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Tue Feb 4 20:30:42 2014 -0500
+
+    note no spaces in path between "paths"...because no the machine finds "bash"!
+
 commit a254aa74912df2f0585b0228fc5ae5fdd7dec68d
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Tue Feb 4 20:26:46 2014 -0500
 
     staging all files
-
-commit 750534b273512236cc04de715f01bff1a1eafdd5
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Tue Feb 4 20:16:26 2014 -0500
-
-    running engine = "sh" from home because my machine can not find "bash" ---UGH!---rerun at office with engine = "bash"
-
-commit b609bf0da0ef7a7d4eedc4874e35515c1c2c4678
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Tue Feb 4 20:12:01 2014 -0500
-
-    who knows
 ```
 
 
@@ -329,9 +246,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+c8a1e5299f04a1314ed9b6c7762f2d33f6033bce staging all files
+59d1bd3e72f7edca47d35b1820416359d197e857 note no spaces in path between "paths"...because no the machine finds "bash"!
 a254aa74912df2f0585b0228fc5ae5fdd7dec68d staging all files
-750534b273512236cc04de715f01bff1a1eafdd5 running engine = "sh" from home because my machine can not find "bash" ---UGH!---rerun at office with engine = "bash"
-b609bf0da0ef7a7d4eedc4874e35515c1c2c4678 who knows
 ```
 
 
@@ -343,9 +260,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+c8a1e52 Tue Feb 4 20:33:21 2014 -0500- staging all files [Alan Arnholt]
+59d1bd3 Tue Feb 4 20:30:42 2014 -0500- note no spaces in path between "paths"...because no the machine finds "bash"! [Alan Arnholt]
 a254aa7 Tue Feb 4 20:26:46 2014 -0500- staging all files [Alan Arnholt]
-750534b Tue Feb 4 20:16:26 2014 -0500- running engine = "sh" from home because my machine can not find "bash" ---UGH!---rerun at office with engine = "bash" [Alan Arnholt]
-b609bf0 Tue Feb 4 20:12:01 2014 -0500- who knows [Alan Arnholt]
 ```
 
 
@@ -357,6 +274,74 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+c8a1e52 Tue Feb 4 20:33:21 2014 -0500- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  | 4 ++--
+ Git/GitOne.html | 4 ++--
+ Git/GitOne.md   | 4 ++--
+ 3 files changed, 6 insertions(+), 6 deletions(-)
+
+59d1bd3 Tue Feb 4 20:30:42 2014 -0500- note no spaces in path between "paths"...because no the machine finds "bash"! [Alan Arnholt]
+ Git/GitOne.html                                    | 248 +++++++++++++++++++-
+ Git/GitOne.md                                      | 257 ++++++++++++++++++++-
+ .../ADD_37d613968d89bfc0fc573bd5f4d62239.RData     | Bin 0 -> 355 bytes
+ Git/cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdb |   0
+ Git/cache/ADD_37d613968d89bfc0fc573bd5f4d62239.rdx | Bin 0 -> 113 bytes
+ .../ADD_540999b9c1daaa4c31ccd2c535b3e499.RData     | Bin 149 -> 0 bytes
+ Git/cache/ADD_540999b9c1daaa4c31ccd2c535b3e499.rdb |   0
+ Git/cache/ADD_540999b9c1daaa4c31ccd2c535b3e499.rdx | Bin 113 -> 0 bytes
+ ...GITsetup_b0c970510ef94c7a948b007d4995e2c2.RData | Bin 196 -> 0 bytes
+ .../GITsetup_b0c970510ef94c7a948b007d4995e2c2.rdb  |   0
+ .../GITsetup_b0c970510ef94c7a948b007d4995e2c2.rdx  | Bin 113 -> 0 bytes
+ .../LOGP2_0930b13cd33e07882e62208756650246.RData   | Bin 157 -> 0 bytes
+ .../LOGP2_0930b13cd33e07882e62208756650246.rdb     |   0
+ .../LOGP2_0930b13cd33e07882e62208756650246.rdx     | Bin 113 -> 0 bytes
+ .../LOGP2_faf1a7fcf18137324c7c98647d730ea6.RData   | Bin 0 -> 333 bytes
+ .../LOGP2_faf1a7fcf18137324c7c98647d730ea6.rdb     |   0
+ .../LOGP2_faf1a7fcf18137324c7c98647d730ea6.rdx     | Bin 0 -> 113 bytes
+ .../LOGP3_659c34076beb625769e9c295d213ece7.RData   | Bin 164 -> 0 bytes
+ .../LOGP3_659c34076beb625769e9c295d213ece7.rdb     |   0
+ .../LOGP3_659c34076beb625769e9c295d213ece7.rdx     | Bin 113 -> 0 bytes
+ .../LOGP3_ad807c34590b81f628e6cb6032102919.RData   | Bin 0 -> 974 bytes
+ .../LOGP3_ad807c34590b81f628e6cb6032102919.rdb     |   0
+ .../LOGP3_ad807c34590b81f628e6cb6032102919.rdx     | Bin 0 -> 113 bytes
+ .../LOGP_85b7cbcb21a72630e78bd3b750ea156f.RData    | Bin 0 -> 329 bytes
+ .../LOGP_85b7cbcb21a72630e78bd3b750ea156f.rdb      |   0
+ .../LOGP_85b7cbcb21a72630e78bd3b750ea156f.rdx      | Bin 0 -> 113 bytes
+ .../LOGP_cd45074def45e6f242a15e5d861bc924.RData    | Bin 138 -> 0 bytes
+ .../LOGP_cd45074def45e6f242a15e5d861bc924.rdb      |   0
+ .../LOGP_cd45074def45e6f242a15e5d861bc924.rdx      | Bin 113 -> 0 bytes
+ .../LOG_087011b0f8f69f16e2c2e5605086c615.RData     | Bin 0 -> 408 bytes
+ Git/cache/LOG_087011b0f8f69f16e2c2e5605086c615.rdb |   0
+ Git/cache/LOG_087011b0f8f69f16e2c2e5605086c615.rdx | Bin 0 -> 113 bytes
+ .../LOG_5e9c536809b42ad3cb23e4fa1a84bd45.RData     | Bin 121 -> 0 bytes
+ Git/cache/LOG_5e9c536809b42ad3cb23e4fa1a84bd45.rdb |   0
+ Git/cache/LOG_5e9c536809b42ad3cb23e4fa1a84bd45.rdx | Bin 113 -> 0 bytes
+ .../PUSH_4a4f909daa6525f7416b0e0df208f325.RData    | Bin 0 -> 121 bytes
+ .../PUSH_4a4f909daa6525f7416b0e0df208f325.rdb      |   0
+ .../PUSH_4a4f909daa6525f7416b0e0df208f325.rdx      | Bin 0 -> 113 bytes
+ .../PUSH_ccaa07cffd798cbbde965296b32e8be8.RData    | Bin 119 -> 0 bytes
+ .../PUSH_ccaa07cffd798cbbde965296b32e8be8.rdb      |   0
+ .../PUSH_ccaa07cffd798cbbde965296b32e8be8.rdx      | Bin 113 -> 0 bytes
+ .../STATUS2_5e0c7941154f2f6f6d64705c7f833e80.RData | Bin 124 -> 0 bytes
+ .../STATUS2_5e0c7941154f2f6f6d64705c7f833e80.rdb   |   0
+ .../STATUS2_5e0c7941154f2f6f6d64705c7f833e80.rdx   | Bin 113 -> 0 bytes
+ .../STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.RData | Bin 0 -> 580 bytes
+ .../STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdb   |   0
+ .../STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdx   | Bin 0 -> 113 bytes
+ .../STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.RData | Bin 0 -> 729 bytes
+ .../STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.rdb   |   0
+ .../STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.rdx   | Bin 0 -> 113 bytes
+ .../STATUS3_d5fbd0803a466f8b6e8890bfd4fc3513.RData | Bin 124 -> 0 bytes
+ .../STATUS3_d5fbd0803a466f8b6e8890bfd4fc3513.rdb   |   0
+ .../STATUS3_d5fbd0803a466f8b6e8890bfd4fc3513.rdx   | Bin 113 -> 0 bytes
+ .../STATUS_c69090ea171fdc61120b83150e1ec346.RData  | Bin 123 -> 0 bytes
+ .../STATUS_c69090ea171fdc61120b83150e1ec346.rdb    |   0
+ .../STATUS_c69090ea171fdc61120b83150e1ec346.rdx    | Bin 113 -> 0 bytes
+ .../verify_f81c0bc60aa03951091d1db4b41e9fca.RData  | Bin 130 -> 0 bytes
+ .../verify_f81c0bc60aa03951091d1db4b41e9fca.rdb    |   0
+ .../verify_f81c0bc60aa03951091d1db4b41e9fca.rdx    | Bin 113 -> 0 bytes
+ 59 files changed, 481 insertions(+), 24 deletions(-)
+
 a254aa7 Tue Feb 4 20:26:46 2014 -0500- staging all files [Alan Arnholt]
  Git/GitOne.Rmd                                            |   2 +-
  Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.RData | Bin 0 -> 199 bytes
@@ -369,45 +354,6 @@ a254aa7 Tue Feb 4 20:26:46 2014 -0500- staging all files [Alan Arnholt]
  Git/cache/verify_2d584a4c99894e4c308ba44967920be7.rdb     |   0
  Git/cache/verify_2d584a4c99894e4c308ba44967920be7.rdx     | Bin 0 -> 113 bytes
  10 files changed, 1 insertion(+), 1 deletion(-)
-
-750534b Tue Feb 4 20:16:26 2014 -0500- running engine = "sh" from home because my machine can not find "bash" ---UGH!---rerun at office with engine = "bash" [Alan Arnholt]
- Git/GitOne.Rmd  | 16 +++++++++-------
- Git/GitOne.html | 18 ++++++++++--------
- Git/GitOne.md   | 18 ++++++++++--------
- 3 files changed, 29 insertions(+), 23 deletions(-)
-
-b609bf0 Tue Feb 4 20:12:01 2014 -0500- who knows [Alan Arnholt]
- Git/cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.RData   | Bin 273 -> 0 bytes
- Git/cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.rdb     |   0
- Git/cache/LOGP2_faf1a7fcf18137324c7c98647d730ea6.rdx     | Bin 113 -> 0 bytes
- Git/cache/LOGP3_ad807c34590b81f628e6cb6032102919.RData   | Bin 437 -> 0 bytes
- Git/cache/LOGP3_ad807c34590b81f628e6cb6032102919.rdb     |   0
- Git/cache/LOGP3_ad807c34590b81f628e6cb6032102919.rdx     | Bin 113 -> 0 bytes
- Git/cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.RData    | Bin 267 -> 0 bytes
- Git/cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.rdb      |   0
- Git/cache/LOGP_85b7cbcb21a72630e78bd3b750ea156f.rdx      | Bin 113 -> 0 bytes
- Git/cache/LOG_087011b0f8f69f16e2c2e5605086c615.RData     | Bin 343 -> 0 bytes
- Git/cache/LOG_087011b0f8f69f16e2c2e5605086c615.rdb       |   0
- Git/cache/LOG_087011b0f8f69f16e2c2e5605086c615.rdx       | Bin 113 -> 0 bytes
- Git/cache/PUSH_4a4f909daa6525f7416b0e0df208f325.RData    | Bin 121 -> 0 bytes
- Git/cache/PUSH_4a4f909daa6525f7416b0e0df208f325.rdb      |   0
- Git/cache/PUSH_4a4f909daa6525f7416b0e0df208f325.rdx      | Bin 113 -> 0 bytes
- Git/cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.RData | Bin 687 -> 0 bytes
- Git/cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdb   |   0
- Git/cache/STATUS2_8ac7feaeff926fc5b62fe3cb6b50f859.rdx   | Bin 113 -> 0 bytes
- Git/cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.RData | Bin 589 -> 0 bytes
- Git/cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.rdb   |   0
- Git/cache/STATUS3_12105d35cf1bc9dd32a9a4e2704fe895.rdx   | Bin 113 -> 0 bytes
- Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.RData  | Bin 699 -> 0 bytes
- Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdb    |   0
- Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdx    | Bin 113 -> 0 bytes
- Git/cache/Systime_7b042452f5d04aa760cf4ad34f0b08ee.RData | Bin 104 -> 0 bytes
- Git/cache/Systime_7b042452f5d04aa760cf4ad34f0b08ee.rdb   | Bin 73 -> 0 bytes
- Git/cache/Systime_7b042452f5d04aa760cf4ad34f0b08ee.rdx   | Bin 130 -> 0 bytes
- Git/cache/verify_2d584a4c99894e4c308ba44967920be7.RData  | Bin 368 -> 0 bytes
- Git/cache/verify_2d584a4c99894e4c308ba44967920be7.rdb    |   0
- Git/cache/verify_2d584a4c99894e4c308ba44967920be7.rdx    | Bin 113 -> 0 bytes
- 30 files changed, 0 insertions(+), 0 deletions(-)
 ```
 
 
