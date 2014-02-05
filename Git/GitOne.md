@@ -7,7 +7,7 @@
 
 
 
-Last compiled Tuesday, February 04, 2014 - 8:45:22 PM.
+Last compiled Wednesday, February 05, 2014 - 09:26:52.
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
@@ -84,29 +84,18 @@ git config --list
 ```
 
 ```
-core.symlinks=false
-core.autocrlf=true
-color.diff=auto
-color.status=auto
-color.branch=auto
-color.interactive=true
-pack.packsizelimit=2g
-help.format=html
-http.sslcainfo=/bin/curl-ca-bundle.crt
-sendemail.smtpserver=/bin/msmtp.exe
-diff.astextplain.textconv=astextplain
-rebase.autosquash=true
 user.name=Alan Arnholt
 user.email=arnholtat@appstate.edu
+credential.helper=osxkeychain
+color.ui=true
 core.repositoryformatversion=0
-core.filemode=false
+core.filemode=true
 core.bare=false
 core.logallrefupdates=true
-core.symlinks=false
 core.ignorecase=true
-core.hidedotfiles=dotGitOnly
-remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+core.precomposeunicode=false
 remote.origin.url=https://github.com/alanarnholt/STT4870.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 branch.master.remote=origin
 branch.master.merge=refs/heads/master
 ```
@@ -160,20 +149,8 @@ git status
 ```
 
 ```
-On branch master
-Your branch is ahead of 'origin/master' by 2 commits.
-  (use "git push" to publish your local commits)
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	modified:   GitOne.Rmd
-	modified:   GitOne.html
-	modified:   GitOne.md
-	modified:   figure/ggplot2Graphs.png
-
-no changes added to commit (use "git add" and/or "git commit -a")
+# On branch master
+nothing to commit (working directory clean)
 ```
 
 The `git status` shows us what files are not staged for a commit.  Before files can be
@@ -188,9 +165,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master 9f34531] staging all files
- 4 files changed, 85 insertions(+), 45 deletions(-)
- rewrite Git/figure/ggplot2Graphs.png (99%)
+# On branch master
+nothing to commit (working directory clean)
 ```
 
 
@@ -201,11 +177,8 @@ git status
 ```
 
 ```
-On branch master
-Your branch is ahead of 'origin/master' by 3 commits.
-  (use "git push" to publish your local commits)
-
-nothing to commit, working directory clean
+# On branch master
+nothing to commit (working directory clean)
 ```
 
 Push changes to the remote repository. 
@@ -221,11 +194,8 @@ git status
 ```
 
 ```
-On branch master
-Your branch is ahead of 'origin/master' by 3 commits.
-  (use "git push" to publish your local commits)
-
-nothing to commit, working directory clean
+# On branch master
+nothing to commit (working directory clean)
 ```
 
 Show the last three commits with
@@ -235,6 +205,12 @@ git log  -3
 ```
 
 ```
+commit c3ea31798239b3d90ac26729101870cbb413ab69
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Tue Feb 4 20:47:04 2014 -0500
+
+    add bash check
+
 commit 9f345316fb7a42140f106cb28dcc3ff5f6843776
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Tue Feb 4 20:45:22 2014 -0500
@@ -244,12 +220,6 @@ Date:   Tue Feb 4 20:45:22 2014 -0500
 commit 9c783ea910108bbbbad5d379c98cde558e19bf4e
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Tue Feb 4 20:43:45 2014 -0500
-
-    staging all files
-
-commit 45a14d5cec5e7dd77b9f3a06eb6382c35689c5f0
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Tue Feb 4 20:43:11 2014 -0500
 
     staging all files
 ```
@@ -263,9 +233,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+c3ea31798239b3d90ac26729101870cbb413ab69 add bash check
 9f345316fb7a42140f106cb28dcc3ff5f6843776 staging all files
 9c783ea910108bbbbad5d379c98cde558e19bf4e staging all files
-45a14d5cec5e7dd77b9f3a06eb6382c35689c5f0 staging all files
 ```
 
 
@@ -277,9 +247,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+c3ea317 Tue Feb 4 20:47:04 2014 -0500- add bash check [Alan Arnholt]
 9f34531 Tue Feb 4 20:45:22 2014 -0500- staging all files [Alan Arnholt]
 9c783ea Tue Feb 4 20:43:45 2014 -0500- staging all files [Alan Arnholt]
-45a14d5 Tue Feb 4 20:43:11 2014 -0500- staging all files [Alan Arnholt]
 ```
 
 
@@ -291,6 +261,11 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+c3ea317 Tue Feb 4 20:47:04 2014 -0500- add bash check [Alan Arnholt]
+ Git/GitOne.html | 62 +++++++++++++++++++++++++--------------------------------
+ Git/GitOne.md   | 54 +++++++++++++++++++++----------------------------
+ 2 files changed, 50 insertions(+), 66 deletions(-)
+
 9f34531 Tue Feb 4 20:45:22 2014 -0500- staging all files [Alan Arnholt]
  Git/GitOne.Rmd               |   4 +--
  Git/GitOne.html              |  68 ++++++++++++++++++++++++++++---------------
@@ -303,14 +278,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
  Git/GitOne.html                                    |  79 +++++++++++----------
  Git/GitOne.md                                      |  72 +++++++++++--------
  ...ashCheck_3a4552886a749e14bd443de33a754ec2.RData | Bin 0 -> 176 bytes
- .../BashCheck_3a4552886a749e14bd443de33a754ec2.rdb |   0
  .../BashCheck_3a4552886a749e14bd443de33a754ec2.rdx | Bin 0 -> 113 bytes
  Git/figure/ggplot2Graphs.png                       | Bin 6426 -> 6492 bytes
- 7 files changed, 85 insertions(+), 68 deletions(-)
-
-45a14d5 Tue Feb 4 20:43:11 2014 -0500- staging all files [Alan Arnholt]
- Git/GitOne.Rmd | 7 +++++++
- 1 file changed, 7 insertions(+)
+ 6 files changed, 85 insertions(+), 68 deletions(-)
 ```
 
 

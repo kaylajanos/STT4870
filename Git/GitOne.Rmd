@@ -75,8 +75,8 @@ To confirm your username and email, type `git config --list` at the $ prompt.
 git config --list
 ```
 
-From the third line of the previous output, one can see the `credential.helper` is 
-being used (when I run this with OSX, but not from home.) 
+From the third line of the previous output, one can see the 
+`credential.helper` is being used.
 
 ### Creating a GitHub Account
 
