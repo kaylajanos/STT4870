@@ -183,7 +183,7 @@ hljs.initHighlightingOnLoad();
 
 <h3>Alan T. Arnholt</h3>
 
-<p>Last compiled Tuesday, February 04, 2014 - 8:43:10 PM.</p>
+<p>Last compiled Tuesday, February 04, 2014 - 8:43:44 PM.</p>
 
 <p>Download and install the lastest version of <a href="http://git-scm.com/downloads">Git.</a></p>
 
@@ -322,13 +322,24 @@ to click on File -&gt; New Project </p>
 </code></pre>
 
 <pre><code>On branch master
-Your branch is up-to-date with &#39;origin/master&#39;.
+Your branch is ahead of &#39;origin/master&#39; by 1 commit.
+  (use &quot;git push&quot; to publish your local commits)
 
 Changes not staged for commit:
   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
 
     modified:   GitOne.Rmd
+    modified:   GitOne.html
+    modified:   GitOne.md
+    modified:   figure/ggplot2Graphs.png
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
+    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
+    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
 
 no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
 </code></pre>
@@ -343,8 +354,12 @@ taken of the commit with the message &ldquo;staging all files.&rdquo;</p>
 git commit  -m &quot;staging all files&quot;
 </code></pre>
 
-<pre><code>[master 45a14d5] staging all files
- 1 file changed, 7 insertions(+)
+<pre><code>[master 9c783ea] staging all files
+ 7 files changed, 85 insertions(+), 68 deletions(-)
+ create mode 100644 Git/cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
+ create mode 100644 Git/cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
+ create mode 100644 Git/cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
+ rewrite Git/figure/ggplot2Graphs.png (99%)
 </code></pre>
 
 <p>Check the status after the last commit.</p>
@@ -353,7 +368,7 @@ git commit  -m &quot;staging all files&quot;
 </code></pre>
 
 <pre><code>On branch master
-Your branch is ahead of &#39;origin/master&#39; by 1 commit.
+Your branch is ahead of &#39;origin/master&#39; by 2 commits.
   (use &quot;git push&quot; to publish your local commits)
 
 nothing to commit, working directory clean
@@ -370,7 +385,7 @@ nothing to commit, working directory clean
 </code></pre>
 
 <pre><code>On branch master
-Your branch is ahead of &#39;origin/master&#39; by 1 commit.
+Your branch is ahead of &#39;origin/master&#39; by 2 commits.
   (use &quot;git push&quot; to publish your local commits)
 
 nothing to commit, working directory clean
@@ -381,7 +396,13 @@ nothing to commit, working directory clean
 <pre><code class="bash">git log  -3
 </code></pre>
 
-<pre><code>commit 45a14d5cec5e7dd77b9f3a06eb6382c35689c5f0
+<pre><code>commit 9c783ea910108bbbbad5d379c98cde558e19bf4e
+Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
+Date:   Tue Feb 4 20:43:45 2014 -0500
+
+    staging all files
+
+commit 45a14d5cec5e7dd77b9f3a06eb6382c35689c5f0
 Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
 Date:   Tue Feb 4 20:43:11 2014 -0500
 
@@ -392,12 +413,6 @@ Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
 Date:   Tue Feb 4 20:35:35 2014 -0500
 
     just change time stamp
-
-commit 7efffa7f8d78fbbb20c0a62f07fe44b2337799b3
-Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
-Date:   Tue Feb 4 20:34:56 2014 -0500
-
-    staging all files
 </code></pre>
 
 <p>That was ugly. Let us try some formatting.</p>
@@ -405,9 +420,9 @@ Date:   Tue Feb 4 20:34:56 2014 -0500
 <pre><code class="bash">git log --pretty=oneline -3
 </code></pre>
 
-<pre><code>45a14d5cec5e7dd77b9f3a06eb6382c35689c5f0 staging all files
+<pre><code>9c783ea910108bbbbad5d379c98cde558e19bf4e staging all files
+45a14d5cec5e7dd77b9f3a06eb6382c35689c5f0 staging all files
 0d97de05231716b46e5ef8ce6daf095e647f21e8 just change time stamp
-7efffa7f8d78fbbb20c0a62f07fe44b2337799b3 staging all files
 </code></pre>
 
 <p>The previous output was to brief to suit me.  Let us try some further formatting.</p>
@@ -415,9 +430,9 @@ Date:   Tue Feb 4 20:34:56 2014 -0500
 <pre><code class="bash">git log --pretty=format:&quot;%h %ad- %s [%an]&quot; -3
 </code></pre>
 
-<pre><code>45a14d5 Tue Feb 4 20:43:11 2014 -0500- staging all files [Alan Arnholt]
+<pre><code>9c783ea Tue Feb 4 20:43:45 2014 -0500- staging all files [Alan Arnholt]
+45a14d5 Tue Feb 4 20:43:11 2014 -0500- staging all files [Alan Arnholt]
 0d97de0 Tue Feb 4 20:35:35 2014 -0500- just change time stamp [Alan Arnholt]
-7efffa7 Tue Feb 4 20:34:56 2014 -0500- staging all files [Alan Arnholt]
 </code></pre>
 
 <p>Maybe even some statistics?</p>
@@ -425,7 +440,17 @@ Date:   Tue Feb 4 20:34:56 2014 -0500
 <pre><code class="bash">git log --pretty=format:&quot;%h %ad- %s [%an]&quot; -3 --stat
 </code></pre>
 
-<pre><code>45a14d5 Tue Feb 4 20:43:11 2014 -0500- staging all files [Alan Arnholt]
+<pre><code>9c783ea Tue Feb 4 20:43:45 2014 -0500- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd                                     |   2 +-
+ Git/GitOne.html                                    |  79 +++++++++++----------
+ Git/GitOne.md                                      |  72 +++++++++++--------
+ ...ashCheck_3a4552886a749e14bd443de33a754ec2.RData | Bin 0 -&gt; 176 bytes
+ .../BashCheck_3a4552886a749e14bd443de33a754ec2.rdb |   0
+ .../BashCheck_3a4552886a749e14bd443de33a754ec2.rdx | Bin 0 -&gt; 113 bytes
+ Git/figure/ggplot2Graphs.png                       | Bin 6426 -&gt; 6492 bytes
+ 7 files changed, 85 insertions(+), 68 deletions(-)
+
+45a14d5 Tue Feb 4 20:43:11 2014 -0500- staging all files [Alan Arnholt]
  Git/GitOne.Rmd | 7 +++++++
  1 file changed, 7 insertions(+)
 
@@ -433,11 +458,6 @@ Date:   Tue Feb 4 20:34:56 2014 -0500
  Git/GitOne.html | 103 +++++++++++++-------------------------------------------
  Git/GitOne.md   |  95 +++++++++++----------------------------------------
  2 files changed, 42 insertions(+), 156 deletions(-)
-
-7efffa7 Tue Feb 4 20:34:56 2014 -0500- staging all files [Alan Arnholt]
- Git/GitOne.html | 56 ++++++++++++++++++++++++--------------------------------
- Git/GitOne.md   | 48 ++++++++++++++++++++----------------------------
- 2 files changed, 44 insertions(+), 60 deletions(-)
 </code></pre>
 
 <p>Now, just to show how cool this is, we will mix in a little <code>R</code>.</p>
@@ -452,7 +472,7 @@ ggplot(data = CO2, aes(x = Type, y = uptake, fill = Type)) + geom_boxplot() +
 <p>I love graphs!  The following graph created with <code>ggplot2</code> uses Greek letters in
 the facet panels.  </p>
 
-<p><img src="data:image/png;base64,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" title="plot of chunk ggplot2Graphs" alt="plot of chunk ggplot2Graphs" style="display: block; margin: auto;" /></p>
+<p><img src="data:image/png;base64,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" title="plot of chunk ggplot2Graphs" alt="plot of chunk ggplot2Graphs" style="display: block; margin: auto;" /></p>
 
 <h3>So you want to collaborate?</h3>
 
