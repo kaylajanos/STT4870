@@ -7,7 +7,7 @@
 
 
 
-Last compiled Tuesday, February 04, 2014 - 8:33:21 PM.
+Last compiled Tuesday, February 04, 2014 - 8:34:28 PM.
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
@@ -147,13 +147,13 @@ git status
 
 ```
 On branch master
-Your branch is up-to-date with 'origin/master'.
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   GitOne.Rmd
 	modified:   GitOne.html
 	modified:   GitOne.md
 
@@ -172,8 +172,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master c8a1e52] staging all files
- 3 files changed, 6 insertions(+), 6 deletions(-)
+[master fffc0a5] staging all files
+ 2 files changed, 179 insertions(+), 287 deletions(-)
 ```
 
 
@@ -185,7 +185,7 @@ git status
 
 ```
 On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
+Your branch is ahead of 'origin/master' by 2 commits.
   (use "git push" to publish your local commits)
 
 nothing to commit, working directory clean
@@ -205,7 +205,7 @@ git status
 
 ```
 On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
+Your branch is ahead of 'origin/master' by 2 commits.
   (use "git push" to publish your local commits)
 
 nothing to commit, working directory clean
@@ -218,6 +218,12 @@ git log  -3
 ```
 
 ```
+commit fffc0a52f633f32d32b8b4b2aece08a6d43382a3
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Tue Feb 4 20:34:28 2014 -0500
+
+    staging all files
+
 commit c8a1e5299f04a1314ed9b6c7762f2d33f6033bce
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Tue Feb 4 20:33:21 2014 -0500
@@ -229,12 +235,6 @@ Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Tue Feb 4 20:30:42 2014 -0500
 
     note no spaces in path between "paths"...because no the machine finds "bash"!
-
-commit a254aa74912df2f0585b0228fc5ae5fdd7dec68d
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Tue Feb 4 20:26:46 2014 -0500
-
-    staging all files
 ```
 
 
@@ -246,9 +246,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+fffc0a52f633f32d32b8b4b2aece08a6d43382a3 staging all files
 c8a1e5299f04a1314ed9b6c7762f2d33f6033bce staging all files
 59d1bd3e72f7edca47d35b1820416359d197e857 note no spaces in path between "paths"...because no the machine finds "bash"!
-a254aa74912df2f0585b0228fc5ae5fdd7dec68d staging all files
 ```
 
 
@@ -260,9 +260,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+fffc0a5 Tue Feb 4 20:34:28 2014 -0500- staging all files [Alan Arnholt]
 c8a1e52 Tue Feb 4 20:33:21 2014 -0500- staging all files [Alan Arnholt]
 59d1bd3 Tue Feb 4 20:30:42 2014 -0500- note no spaces in path between "paths"...because no the machine finds "bash"! [Alan Arnholt]
-a254aa7 Tue Feb 4 20:26:46 2014 -0500- staging all files [Alan Arnholt]
 ```
 
 
@@ -274,6 +274,11 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+fffc0a5 Tue Feb 4 20:34:28 2014 -0500- staging all files [Alan Arnholt]
+ Git/GitOne.html | 236 ++++++++++++++++++++++----------------------------------
+ Git/GitOne.md   | 230 +++++++++++++++++++++---------------------------------
+ 2 files changed, 179 insertions(+), 287 deletions(-)
+
 c8a1e52 Tue Feb 4 20:33:21 2014 -0500- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  | 4 ++--
  Git/GitOne.html | 4 ++--
@@ -341,19 +346,6 @@ c8a1e52 Tue Feb 4 20:33:21 2014 -0500- staging all files [Alan Arnholt]
  .../verify_f81c0bc60aa03951091d1db4b41e9fca.rdb    |   0
  .../verify_f81c0bc60aa03951091d1db4b41e9fca.rdx    | Bin 113 -> 0 bytes
  59 files changed, 481 insertions(+), 24 deletions(-)
-
-a254aa7 Tue Feb 4 20:26:46 2014 -0500- staging all files [Alan Arnholt]
- Git/GitOne.Rmd                                            |   2 +-
- Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.RData | Bin 0 -> 199 bytes
- Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.rdb   |   0
- Git/cache/GITsetup_1e85974789856654fd6170253d9fcbe2.rdx   | Bin 0 -> 113 bytes
- Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.RData   | Bin 0 -> 537 bytes
- Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdb     |   0
- Git/cache/STATUS_c084c907b84567e22073c1b7e27f7062.rdx     | Bin 0 -> 113 bytes
- Git/cache/verify_2d584a4c99894e4c308ba44967920be7.RData   | Bin 0 -> 498 bytes
- Git/cache/verify_2d584a4c99894e4c308ba44967920be7.rdb     |   0
- Git/cache/verify_2d584a4c99894e4c308ba44967920be7.rdx     | Bin 0 -> 113 bytes
- 10 files changed, 1 insertion(+), 1 deletion(-)
 ```
 
 
