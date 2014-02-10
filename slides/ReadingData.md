@@ -113,3 +113,21 @@ wrestNPDP[1:3, 1:7]
 ```
 
  
+Using source_data() - Example 5
+==========================================================================
+Consider a *.csv file downloaded from [http://www.londonair.org.uk/](http://www.londonair.org.uk/) and stored in a public folder on Dropbox [https://dl.dropboxusercontent.com/u/134274843/data/LaqnData.csv](https://dl.dropboxusercontent.com/u/134274843/data/LaqnData.csv).  Read the data in to `R`.
+
+
+```r
+site <- paste("https://dl.dropboxusercontent", ".com/u/134274843/data/LaqnData.csv", sep = "")
+AD <- repmis::source_data(site)
+AD[1:2, 1:5]
+```
+
+```
+  Site Species ReadingDateTime Value  Units
+1  HG4      NO   1/1/2013 0:00    NA ug m-3
+2  HG4      NO   1/1/2013 0:15     2 ug m-3
+```
+
+
