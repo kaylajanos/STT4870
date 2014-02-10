@@ -16,10 +16,6 @@ wrestMMScsv <- read.csv(textConnection(DataUrl))
 ###
 head(repmis::source_data("http://www1.appstate.edu/~arnholta/Data/NCBirths2004.csv"))
 
-
-
-
-
 head(wrestMMS)
 head(wrestMMScsv)
 #### Download data from:

@@ -74,3 +74,21 @@ AD <- repmis::source_data(site)
 AD[1:2, 1:5]
 ```
 
+Example 5 - continued
+============================================================================
+
+```{r fig.align = 'center', fig.width =9, fig.height = 5}
+library(ggplot2)
+ggplot(data = AD, aes(x = ReadingDateTime, y = Value, group = Species, color = Species)) + geom_line() + labs(x = "", y = "")
+```
+
+Example 6 - Same data from Github
+==============================================================================
+Read the same data store on Github ([https://raw2.github.com/alanarnholt/SEMINAR/master/Alan/summaries/data/LaqnData.csv](https://raw2.github.com/alanarnholt/SEMINAR/master/Alan/summaries/data/LaqnData.csv).)
+
+
+```{r fig.align = 'center', fig.width =9, fig.height = 3}
+site <- paste("https://raw2.github.com/", "alanarnholt/SEMINAR/master/Alan/", "summaries/data/LaqnData.csv", sep ="")
+AD2 <- repmis::source_data(site)
+ggplot(data = AD2, aes(x = ReadingDateTime, y = Value, group = Species, color = Species)) + geom_line() + labs(x = "", y = "")
+```

@@ -131,3 +131,29 @@ AD[1:2, 1:5]
 ```
 
 
+Example 5 - continued
+============================================================================
+
+
+```r
+library(ggplot2)
+ggplot(data = AD, aes(x = ReadingDateTime, y = Value, group = Species, color = Species)) + geom_line() + labs(x = "", y = "")
+```
+
+<img src="ReadingData-figure/unnamed-chunk-7.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" style="display: block; margin: auto;" />
+
+
+Example 6 - Same data from Github
+==============================================================================
+Read the same data store on Github ([https://raw2.github.com/alanarnholt/SEMINAR/master/Alan/summaries/data/LaqnData.csv](https://raw2.github.com/alanarnholt/SEMINAR/master/Alan/summaries/data/LaqnData.csv).)
+
+
+
+```r
+site <- paste("https://raw2.github.com/", "alanarnholt/SEMINAR/master/Alan/", "summaries/data/LaqnData.csv", sep ="")
+AD2 <- repmis::source_data(site)
+ggplot(data = AD2, aes(x = ReadingDateTime, y = Value, group = Species, color = Species)) + geom_line() + labs(x = "", y = "")
+```
+
+<img src="ReadingData-figure/unnamed-chunk-8.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" style="display: block; margin: auto;" />
+
