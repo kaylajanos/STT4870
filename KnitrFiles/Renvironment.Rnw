@@ -2,8 +2,13 @@
 \usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue, linktocpage=true, breaklinks=true]{hyperref}
 \usepackage{geometry}[0.5in]
 \usepackage{amsthm}
+\newtheoremstyle{rcode}{1pt}{1pt}{}{}{\bfseries}{}{.5em}{}
+\theoremstyle{rcode}
 \newtheorem{rcode}{R Code}[section]
 \newtheorem{GIT}{GIT Example}[section]
+% User Commands
+\newcommand{\noind}{\setlength{\parindent}{0pt}}
+\newcommand{\reind}{\setlength{\parindent}{15pt}}
 
 \title{Using the Example Environment with \textbf{knitr}}
 \author{Alan's Modifications and Notes}
@@ -19,11 +24,15 @@ knit_hooks$set(GIT = function(before, options, envir) {
 })
 ## Global chunk options next
 opts_chunk$set(comment = NA, cache = TRUE, fig.align = 'center', fig.height = 4, fig.width = 4, dev = 'tikz')
+## data time
+DT <- format(Sys.time(), "%A, %B %d, %Y - %X")
 @
+
 
 \section{Introduction}
 
-This is a test of the \texttt{R} Example environment.
+This is a test of the \texttt{R} Code and GIT Example environments.  By the way,
+this document was last compiled \Sexpr{DT}.
 
 \subsection{Simple Arithmetic}
 
@@ -37,13 +46,13 @@ This is a test of the \texttt{R} Example environment.
 <<test-b, rcode = TRUE>>=
 x <- rnorm(1000)
 @
-\noindent
+\noind
 Find the standard deviation of \texttt{x}.
 
 <<test-c, rcode = TRUE>>=
 sd(x) # standard deviation
 @
-\noindent
+
 How about \texttt{R} Examples \ref{test-b} and \ref{test-c}?  The standard deviation of \texttt{x} is \Sexpr{sd(x)}.
 
 \clearpage
@@ -65,7 +74,7 @@ library(ggplot2)
 ggplot(data = mtcars) + 
   geom_density(aes(x = mpg), fill = "pink") + 
   theme_bw() + 
-  labs(x = "miles per gallon", y = "")
+  labs(x = "miles per gallon", y = "", title = "$\\alpha + \\beta = \\delta$")
 @
 
 \begin{figure}[h]
@@ -75,13 +84,17 @@ ggplot(data = mtcars) +
 \caption{This is where you explain your graph \label{graphDude}}
 \end{figure}
 
-\noindent
+
 When working with OSX, one may want to change \texttt{engine = `sh'} to \texttt{engine = `bash'}.
 
-<<GIT, engine = 'sh', GIT = TRUE, comment = NA>>=
+<<GITlabel, engine = 'sh', GIT = TRUE>>=
 git config --list
 @
-\noindent
-Look at \texttt{R} Code \ref{test-a} to add $1 + 1$ and get the answer \Sexpr{1 + 1}.
+
+Look at \texttt{R} Code \ref{test-a} to add $1 + 1$ and get the answer \Sexpr{1 + 1}. The output from GIT Example \ref{GITlabel} shows how my machine is configured. GIT Example \ref{gitlog} shows the log.
+
+<<gitlog, engine = 'sh', GIT = TRUE>>=
+git log --pretty=oneline -3
+@
 
 \end{document}
