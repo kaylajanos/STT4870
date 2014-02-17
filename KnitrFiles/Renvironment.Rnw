@@ -133,8 +133,16 @@ p + stat_function(fun = f) +
 <<base, echo = FALSE>>=
 library(ggplot2)
 p <- ggplot(data = mpg, aes(x = cty, y = hwy))
-p + geom_point(size = 1, color = "blue") + theme_bw() + geom_smooth(method = "lm") + 
+p + geom_point(size = 1, color = "blue") + 
+  theme_bw() +
+  geom_smooth(method = "lm") + 
   labs(title = "$\\hat{\\beta}=(X'X)^{-1}X'Y$") 
 @
+
+<<Info, results='asis', echo = FALSE>>=
+toLatex(sessionInfo(), locale = TRUE)
+@
+
+
 
 \end{document}

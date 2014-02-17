@@ -73,7 +73,7 @@
 \section{Introduction}
 
 This is a test of the \textbf{R Code} and \textbf{Git Example} environments.  By the way,
-this document was last compiled Monday, February 17, 2014 - 14:08:23.
+this document was last compiled Monday, February 17, 2014 - 6:42:28 PM.
 
 \subsection{Simple Arithmetic}
 
@@ -107,7 +107,7 @@ Find the standard deviation of \texttt{x}.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{rcode}\label{test-c}\hfill{}\begin{alltt}
-\hlkwd{sd}\hlstd{(x)} \hlcom{# standard deviation   }
+\hlkwd{sd}\hlstd{(x)}  \hlcom{# standard deviation   }
 \end{alltt}
 \begin{verbatim}
 [1] 0.9508
@@ -145,10 +145,8 @@ with a separate code chunk.  Note that Figure \vref{graphDude} is hyperlinked!
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{rcode}\label{Graph}\hfill{}\begin{alltt}
 \hlkwd{library}\hlstd{(ggplot2)}
-\hlkwd{ggplot}\hlstd{(}\hlkwc{data} \hlstd{= mtcars)} \hlopt{+}
-  \hlkwd{geom_density}\hlstd{(}\hlkwd{aes}\hlstd{(}\hlkwc{x} \hlstd{= mpg),} \hlkwc{fill} \hlstd{=} \hlstr{"pink"}\hlstd{)} \hlopt{+}
-  \hlkwd{theme_bw}\hlstd{()} \hlopt{+}
-  \hlkwd{labs}\hlstd{(}\hlkwc{x} \hlstd{=} \hlstr{"miles per gallon"}\hlstd{,} \hlkwc{y} \hlstd{=} \hlstr{""}\hlstd{,} \hlkwc{title} \hlstd{=} \hlstr{"$\textbackslash{}\textbackslash{}alpha + \textbackslash{}\textbackslash{}beta = \textbackslash{}\textbackslash{}delta$"}\hlstd{)}
+\hlkwd{ggplot}\hlstd{(}\hlkwc{data} \hlstd{= mtcars)} \hlopt{+} \hlkwd{geom_density}\hlstd{(}\hlkwd{aes}\hlstd{(}\hlkwc{x} \hlstd{= mpg),} \hlkwc{fill} \hlstd{=} \hlstr{"pink"}\hlstd{)} \hlopt{+} \hlkwd{theme_bw}\hlstd{()} \hlopt{+}
+    \hlkwd{labs}\hlstd{(}\hlkwc{x} \hlstd{=} \hlstr{"miles per gallon"}\hlstd{,} \hlkwc{y} \hlstd{=} \hlstr{""}\hlstd{,} \hlkwc{title} \hlstd{=} \hlstr{"$\textbackslash{}\textbackslash{}alpha + \textbackslash{}\textbackslash{}beta = \textbackslash{}\textbackslash{}delta$"}\hlstd{)}
 \end{alltt}
 \end{rcode}\end{kframe}
 \end{knitrout}
@@ -175,47 +173,58 @@ with a separate code chunk.  Note that Figure \vref{graphDude} is hyperlinked!
 
 When working with OSX, one may want to change \texttt{engine = `sh'} to \texttt{engine = `bash'}.
 
-\begin{knitrout}
+\begin{GIT}\label{GITlabel}\hfill{}\begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{GIT}\label{GITlabel}\hfill{}\begin{alltt}
+\begin{alltt}
 git config --list
 \end{alltt}
 
 \begin{verbatim}
+core.symlinks=false
+core.autocrlf=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+pack.packsizelimit=2g
+help.format=html
+http.sslcainfo=/bin/curl-ca-bundle.crt
+sendemail.smtpserver=/bin/msmtp.exe
+diff.astextplain.textconv=astextplain
+rebase.autosquash=true
 user.name=Alan Arnholt
 user.email=arnholtat@appstate.edu
-credential.helper=osxkeychain
-color.ui=true
 core.repositoryformatversion=0
-core.filemode=true
+core.filemode=false
 core.bare=false
 core.logallrefupdates=true
+core.symlinks=false
 core.ignorecase=true
-core.precomposeunicode=false
-remote.origin.url=https://github.com/alanarnholt/STT4870.git
+core.hidedotfiles=dotGitOnly
 remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+remote.origin.url=https://github.com/alanarnholt/STT4870.git
 branch.master.remote=origin
 branch.master.merge=refs/heads/master
 \end{verbatim}
-\end{GIT}\end{kframe}
-\end{knitrout}
+\end{kframe}
+\end{knitrout}\end{GIT}
 
 
 Look at \textbf{R Code} \vref{test-a} to add $1 + 1$ and get the answer 2. The output from \textbf{Git Example} \vref{GITlabel} shows how my machine is configured. \textbf{Git Example} \vref{gitlog} shows the log.
 
-\begin{knitrout}
+\begin{GIT}\label{gitlog}\hfill{}\begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{GIT}\label{gitlog}\hfill{}\begin{alltt}
+\begin{alltt}
 git log --pretty=oneline -3
 \end{alltt}
 
 \begin{verbatim}
-dfc8679773fbf6e3ec493dde9cc72e4e9acbc67a minor changes
-a723332bfe0574aaa6cc71a3391a9d1a5110be08 initial commit
-716228d8dfeb1d139c29badd85184971d90471cd add chapter 7 modifications
+b0d54b91c0631f111c2c28818c80599ae4a1abc9 add S history link
+c75781a14cea468fd4c7a4d3950e70c7a764e2fd more latex
+70d81ae9c6b00e0a4b1eaddf038f730227849fbc fixed geometry
 \end{verbatim}
-\end{GIT}\end{kframe}
-\end{knitrout}
+\end{kframe}
+\end{knitrout}\end{GIT}
 
 
 \clearpage
@@ -262,6 +271,25 @@ How about some more \LaTeX{} in a \texttt{ggplot2} graph.
 
 
 \end{knitrout}
+
+
+\begin{itemize}\raggedright
+  \item R version 3.0.2 (2013-09-25), \verb|x86_64-w64-mingw32|
+  \item Locale: \verb|LC_COLLATE=English_United States.1252|, \verb|LC_CTYPE=English_United States.1252|, \verb|LC_MONETARY=English_United States.1252|, \verb|LC_NUMERIC=C|, \verb|LC_TIME=English_United States.1252|
+  \item Base packages: base, datasets, graphics, grDevices,
+    methods, stats, utils
+  \item Other packages: filehash~2.2-2, ggplot2~0.9.3.1,
+    knitr~1.5, tikzDevice~0.7.0
+  \item Loaded via a namespace (and not attached):
+    colorspace~1.2-4, dichromat~2.0-0, digest~0.6.4,
+    evaluate~0.5.1, formatR~0.10, grid~3.0.2, gtable~0.1.2,
+    highr~0.3, labeling~0.2, MASS~7.3-29, munsell~0.4.2, plyr~1.8,
+    proto~0.3-10, RColorBrewer~1.0-5, reshape2~1.2.2,
+    scales~0.2.3, stringr~0.6.2, tools~3.0.2
+\end{itemize}
+
+
+
 
 
 \end{document}

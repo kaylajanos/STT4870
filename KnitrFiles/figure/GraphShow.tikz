@@ -1,4 +1,4 @@
-% Created by tikzDevice version 0.7.0 on 2014-02-17 12:14:38
+% Created by tikzDevice version 0.7.0 on 2014-02-17 18:13:54
 % !TEX encoding = UTF-8 Unicode
 \documentclass{article}
 \nonstopmode
@@ -17,9 +17,9 @@
 
 
 \usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue, linktocpage=true, breaklinks=true]{hyperref}
-\usepackage{geometry}[0.5in]
-\usepackage{amsthm}
+\usepackage[margin = 1in]{geometry}
 \usepackage{varioref}  % adds page to references use \vref{} vs \ref{}
+\usepackage{amsthm}
 \newtheoremstyle{rcode}{1pt}{1pt}{}{}{\bfseries}{}{.5em}{}
 \theoremstyle{rcode}
 \newtheorem{rcode}{R Code}[section]
@@ -28,7 +28,7 @@
 \newcommand{\noind}{\setlength{\parindent}{0pt}}
 \newcommand{\reind}{\setlength{\parindent}{15pt}}
 
-\title{Using the \texttt{R} Code and Git Example Environments with \textbf{knitr}}
+\title{Using the \textbf{R Code} and {\bfseries{Git Example}} Environments with \textbf{knitr}}
 \author{Alan's Modifications and Notes}
 
 \begin{document}
