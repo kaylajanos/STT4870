@@ -23,10 +23,10 @@ knit_hooks$set(rcode = function(before, options, envir) {
 knit_hooks$set(GIT = function(before, options, envir) {
   if (before) sprintf('\\begin{GIT}\\label{%s}\\hfill{}', options$label) else '\\end{GIT}'
 })
-## Global chunk options next
-opts_chunk$set(comment = NA, cache = TRUE, fig.align = 'center', fig.height = 4, fig.width = 4, dev = 'tikz')
 ## data time
 DT <- format(Sys.time(), "%A, %B %d, %Y - %X")
+## Global chunk options next
+opts_chunk$set(comment = NA, cache = TRUE, fig.align = 'center', fig.height = 4, fig.width = 4, dev = 'tikz')
 @
 
 
