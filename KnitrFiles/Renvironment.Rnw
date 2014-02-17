@@ -1,8 +1,8 @@
 \documentclass{article}
 \usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue, linktocpage=true, breaklinks=true]{hyperref}
-\usepackage{geometry}[0.5in]
-\usepackage{amsthm}
+\usepackage[margin = 1in]{geometry}
 \usepackage{varioref}  % adds page to references use \vref{} vs \ref{}
+\usepackage{amsthm}
 \newtheoremstyle{rcode}{1pt}{1pt}{}{}{\bfseries}{}{.5em}{}
 \theoremstyle{rcode}
 \newtheorem{rcode}{R Code}[section]
@@ -89,6 +89,8 @@ ggplot(data = mtcars) +
 
 \clearpage
 
+\section{Git Stuff}
+
 When working with OSX, one may want to change \texttt{engine = `sh'} to \texttt{engine = `bash'}.
 
 <<GITlabel, engine = 'sh', GIT = TRUE>>=
@@ -99,6 +101,33 @@ Look at \textbf{R Code} \vref{test-a} to add $1 + 1$ and get the answer \Sexpr{1
 
 <<gitlog, engine = 'sh', GIT = TRUE>>=
 git log --pretty=oneline -3
+@
+
+\clearpage
+
+\section{Using \LaTeX{} in Graphs}
+
+How about some more \LaTeX{} in a \texttt{ggplot2} graph.
+
+<<molatex, tidy = FALSE, eval = FALSE, rcode = TRUE>>=
+f <- function(x){sqrt(2/(x - 1))*gamma(x/2)/gamma((x - 1)/2)}
+library(ggplot2)
+p <- ggplot(data.frame(x = c(2, 50)), aes(x = x))
+p + stat_function(fun = f) + 
+  labs(x = "$n$", y = "$\\frac{\\sqrt{2}\\Gamma\\left(\\frac{n}{2}\\right)}
+       {\\sqrt{n-1}\\Gamma\\left(\\frac{n-1}{2}\\right)}$\n") + 
+  theme_bw() + 
+  geom_hline(yintercept = 1, lty = "dashed")
+@
+
+<<molatexFIG, echo = FALSE, out.width='1.0\\textwidth'>>=
+f <- function(x){sqrt(2/(x - 1))*gamma(x/2)/gamma((x - 1)/2)}
+library(ggplot2)
+p <- ggplot(data.frame(x = c(2, 50)), aes(x = x))
+p + stat_function(fun = f) + 
+  labs(x = "$n$", y = "$\\frac{\\sqrt{2}\\Gamma\\left(\\frac{n}{2}\\right)}{\\sqrt{n-1}\\Gamma\\left(\\frac{n-1}{2}\\right)}$\n") + 
+  theme_bw() + 
+  geom_hline(yintercept = 1, lty = "dashed")
 @
 
 \end{document}

@@ -49,9 +49,9 @@
 
 \usepackage{alltt}
 \usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue, linktocpage=true, breaklinks=true]{hyperref}
-\usepackage{geometry}[0.5in]
-\usepackage{amsthm}
+\usepackage[margin = 1in]{geometry}
 \usepackage{varioref}  % adds page to references use \vref{} vs \ref{}
+\usepackage{amsthm}
 \newtheoremstyle{rcode}{1pt}{1pt}{}{}{\bfseries}{}{.5em}{}
 \theoremstyle{rcode}
 \newtheorem{rcode}{R Code}[section]
@@ -73,7 +73,7 @@
 \section{Introduction}
 
 This is a test of the \textbf{R Code} and \textbf{Git Example} environments.  By the way,
-this document was last compiled Monday, February 17, 2014 - 12:22:15.
+this document was last compiled Monday, February 17, 2014 - 13:46:13.
 
 \subsection{Simple Arithmetic}
 
@@ -171,6 +171,8 @@ with a separate code chunk.  Note that Figure \vref{graphDude} is hyperlinked!
 
 \clearpage
 
+\section{Git Stuff}
+
 When working with OSX, one may want to change \texttt{engine = `sh'} to \texttt{engine = `bash'}.
 
 \begin{knitrout}
@@ -213,6 +215,40 @@ a723332bfe0574aaa6cc71a3391a9d1a5110be08 initial commit
 716228d8dfeb1d139c29badd85184971d90471cd add chapter 7 modifications
 \end{verbatim}
 \end{GIT}\end{kframe}
+\end{knitrout}
+
+
+\clearpage
+
+\section{Using \LaTeX{} in Graphs}
+
+How about some more \LaTeX{} in a \texttt{ggplot2} graph.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{rcode}\label{molatex}\hfill{}\begin{alltt}
+\hlstd{f} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{x}\hlstd{)\{}\hlkwd{sqrt}\hlstd{(}\hlnum{2}\hlopt{/}\hlstd{(x} \hlopt{-} \hlnum{1}\hlstd{))}\hlopt{*}\hlkwd{gamma}\hlstd{(x}\hlopt{/}\hlnum{2}\hlstd{)}\hlopt{/}\hlkwd{gamma}\hlstd{((x} \hlopt{-} \hlnum{1}\hlstd{)}\hlopt{/}\hlnum{2}\hlstd{)\}}
+\hlkwd{library}\hlstd{(ggplot2)}
+\hlstd{p} \hlkwb{<-} \hlkwd{ggplot}\hlstd{(}\hlkwd{data.frame}\hlstd{(}\hlkwc{x} \hlstd{=} \hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{50}\hlstd{)),} \hlkwd{aes}\hlstd{(}\hlkwc{x} \hlstd{= x))}
+\hlstd{p} \hlopt{+} \hlkwd{stat_function}\hlstd{(}\hlkwc{fun} \hlstd{= f)} \hlopt{+}
+  \hlkwd{labs}\hlstd{(}\hlkwc{x} \hlstd{=} \hlstr{"$n$"}\hlstd{,} \hlkwc{y} \hlstd{=} \hlstr{"$\textbackslash{}\textbackslash{}frac\{\textbackslash{}\textbackslash{}sqrt\{2\}\textbackslash{}\textbackslash{}Gamma\textbackslash{}\textbackslash{}left(\textbackslash{}\textbackslash{}frac\{n\}\{2\}\textbackslash{}\textbackslash{}right)\}
+       \{\textbackslash{}\textbackslash{}sqrt\{n-1\}\textbackslash{}\textbackslash{}Gamma\textbackslash{}\textbackslash{}left(\textbackslash{}\textbackslash{}frac\{n-1\}\{2\}\textbackslash{}\textbackslash{}right)\}$\textbackslash{}n"}\hlstd{)} \hlopt{+}
+  \hlkwd{theme_bw}\hlstd{()} \hlopt{+}
+  \hlkwd{geom_hline}\hlstd{(}\hlkwc{yintercept} \hlstd{=} \hlnum{1}\hlstd{,} \hlkwc{lty} \hlstd{=} \hlstr{"dashed"}\hlstd{)}
+\end{alltt}
+\end{rcode}\end{kframe}
+\end{knitrout}
+
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=1.0\textwidth]{figure/molatexFIG} 
+
+}
+
+
+
 \end{knitrout}
 
 

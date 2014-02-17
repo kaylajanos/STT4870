@@ -1,0 +1,37 @@
+% Created by tikzDevice version 0.7.0 on 2014-02-17 13:41:06
+% !TEX encoding = UTF-8 Unicode
+\documentclass{article}
+\nonstopmode
+
+\usepackage{tikz}
+
+\usepackage[active,tightpage,psfixbb]{preview}
+
+\PreviewEnvironment{pgfpicture}
+
+\setlength\PreviewBorder{0pt}
+
+\newcommand{\SweaveOpts}[1]{}  % do not interfere with LaTeX
+\newcommand{\SweaveInput}[1]{} % because they are not real TeX commands
+\newcommand{\Sexpr}[1]{}       % will only be parsed by R
+
+
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue, linktocpage=true, breaklinks=true]{hyperref}
+\usepackage[margin = 1in]{geometry}
+\usepackage{varioref}  % adds page to references use \vref{} vs \ref{}
+\usepackage{amsthm}
+\newtheoremstyle{rcode}{1pt}{1pt}{}{}{\bfseries}{}{.5em}{}
+\theoremstyle{rcode}
+\newtheorem{rcode}{R Code}[section]
+\newtheorem{GIT}{Git Example}[section]
+% User Commands
+\newcommand{\noind}{\setlength{\parindent}{0pt}}
+\newcommand{\reind}{\setlength{\parindent}{15pt}}
+
+\title{Using the \textbf{R Code} and {\bfseries{Git Example}} Environments with \textbf{knitr}}
+\author{Alan's Modifications and Notes}
+
+\begin{document}
+
+
+\end{document}
