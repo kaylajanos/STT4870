@@ -60,7 +60,7 @@
 \newcommand{\noind}{\setlength{\parindent}{0pt}}
 \newcommand{\reind}{\setlength{\parindent}{15pt}}
 
-\title{Using the \texttt{R} Code and Git Example Environments with \textbf{knitr}}
+\title{Using the \textbf{R Code} and {\bfseries{Git Example}} Environments with \textbf{knitr}}
 \author{Alan's Modifications and Notes}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
@@ -72,8 +72,8 @@
 
 \section{Introduction}
 
-This is a test of the {\bfseries{R Code}} and {\bfseries{Git Example}} environments.  By the way,
-this document was last compiled Monday, February 17, 2014 - 12:10:46.
+This is a test of the \textbf{R Code} and \textbf{Git Example} environments.  By the way,
+this document was last compiled Monday, February 17, 2014 - 12:22:15.
 
 \subsection{Simple Arithmetic}
 
@@ -95,7 +95,8 @@ this document was last compiled Monday, February 17, 2014 - 12:10:46.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{rcode}\label{test-b}\hfill{}\begin{alltt}
-\hlstd{x} \hlkwb{<-} \hlkwd{rnorm}\hlstd{(}\hlnum{1000}\hlstd{)}
+\hlkwd{set.seed}\hlstd{(}\hlnum{13}\hlstd{)}
+\hlstd{x} \hlkwb{<-} \hlkwd{rnorm}\hlstd{(}\hlnum{100}\hlstd{)}
 \end{alltt}
 \end{rcode}\end{kframe}
 \end{knitrout}
@@ -106,16 +107,16 @@ Find the standard deviation of \texttt{x}.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{rcode}\label{test-c}\hfill{}\begin{alltt}
-\hlkwd{sd}\hlstd{(x)} \hlcom{# standard deviation}
+\hlkwd{sd}\hlstd{(x)} \hlcom{# standard deviation   }
 \end{alltt}
 \begin{verbatim}
-[1] 0.9728
+[1] 0.9508
 \end{verbatim}
 \end{rcode}\end{kframe}
 \end{knitrout}
 
 
-How about {\bfseries{R Code}} \vref{test-b} and \vref{test-c}?  The standard deviation of \texttt{x} is 0.9728.
+Note that \textbf{R Code} \vref{test-b} and \vref{test-c} are hyperlinked!  The standard deviation of \texttt{x} is computed in \textbf{R Code} \vref{test-c} and is 0.9508.
 
 \clearpage
 \subsection{Graphs and Environments}
@@ -123,18 +124,19 @@ How about {\bfseries{R Code}} \vref{test-b} and \vref{test-c}?  The standard dev
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{rcode}\label{plot1}\hfill{}\begin{alltt}
+\hlkwd{set.seed}\hlstd{(}\hlnum{41}\hlstd{)}
 \hlstd{junk} \hlkwb{<-} \hlkwd{rnorm}\hlstd{(}\hlnum{10000}\hlstd{)}
 \hlstd{MEAN} \hlkwb{<-} \hlkwd{mean}\hlstd{(junk)}
 \hlstd{MEAN}
 \end{alltt}
 \begin{verbatim}
-[1] 0.01513
+[1] 0.006227
 \end{verbatim}
 \end{rcode}\end{kframe}
 \end{knitrout}
 
 
-The mean of the junk is 0.0151.  Note: It seems that an error is thrown if
+The mean of the junk is 0.0062.  Note: It seems that an error is thrown if
 a code chunk with a graph and \texttt{rcode} is executed at the same time.  Work around is
 as shown below.  That is, hide the figure when showing the code...then show the figure
 with a separate code chunk.  Note that Figure \vref{graphDude} is hyperlinked!
@@ -156,7 +158,7 @@ with a separate code chunk.  Note that Figure \vref{graphDude} is hyperlinked!
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 
-{\centering \includegraphics[width=\maxwidth]{figure/GraphShow} 
+{\centering \includegraphics[width=.5\textwidth]{figure/GraphShow} 
 
 }
 
@@ -167,6 +169,7 @@ with a separate code chunk.  Note that Figure \vref{graphDude} is hyperlinked!
 \caption{This is where you explain your graph \label{graphDude}}
 \end{figure}
 
+\clearpage
 
 When working with OSX, one may want to change \texttt{engine = `sh'} to \texttt{engine = `bash'}.
 
@@ -196,7 +199,7 @@ branch.master.merge=refs/heads/master
 \end{knitrout}
 
 
-Look at {\bfseries{R Code}} \vref{test-a} to add $1 + 1$ and get the answer 2. The output from {\bfseries{Git Example}} \vref{GITlabel} shows how my machine is configured. {\bfseries{Git Example}} \vref{gitlog} shows the log.
+Look at \textbf{R Code} \vref{test-a} to add $1 + 1$ and get the answer 2. The output from \textbf{Git Example} \vref{GITlabel} shows how my machine is configured. \textbf{Git Example} \vref{gitlog} shows the log.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}

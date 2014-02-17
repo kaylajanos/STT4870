@@ -11,7 +11,7 @@
 \newcommand{\noind}{\setlength{\parindent}{0pt}}
 \newcommand{\reind}{\setlength{\parindent}{15pt}}
 
-\title{Using the \texttt{R} Code and Git Example Environments with \textbf{knitr}}
+\title{Using the \textbf{R Code} and {\bfseries{Git Example}} Environments with \textbf{knitr}}
 \author{Alan's Modifications and Notes}
 \begin{document}
 \maketitle
@@ -32,7 +32,7 @@ opts_chunk$set(comment = NA, cache = TRUE, fig.align = 'center', fig.height = 4,
 
 \section{Introduction}
 
-This is a test of the {\bfseries{R Code}} and {\bfseries{Git Example}} environments.  By the way,
+This is a test of the \textbf{R Code} and \textbf{Git Example} environments.  By the way,
 this document was last compiled \Sexpr{DT}.
 
 \subsection{Simple Arithmetic}
@@ -45,21 +45,23 @@ this document was last compiled \Sexpr{DT}.
 \subsection{Generate Random Data}
 
 <<test-b, rcode = TRUE>>=
-x <- rnorm(1000)
+set.seed(13)
+x <- rnorm(100)
 @
 \noind
 Find the standard deviation of \texttt{x}.
 
 <<test-c, rcode = TRUE>>=
-sd(x) # standard deviation
+sd(x) # standard deviation   
 @
 
-How about {\bfseries{R Code}} \vref{test-b} and \vref{test-c}?  The standard deviation of \texttt{x} is \Sexpr{sd(x)}.
+Note that \textbf{R Code} \vref{test-b} and \vref{test-c} are hyperlinked!  The standard deviation of \texttt{x} is computed in \textbf{R Code} \vref{test-c} and is \Sexpr{sd(x)}.
 
 \clearpage
 \subsection{Graphs and Environments}
 
 <<plot1, rcode = TRUE>>=
+set.seed(41)
 junk <- rnorm(10000)
 MEAN <- mean(junk)
 MEAN
@@ -79,12 +81,13 @@ ggplot(data = mtcars) +
 @
 
 \begin{figure}[h]
-<<GraphShow, echo = FALSE, fig.width = 3, fig.height = 3>>=
+<<GraphShow, echo = FALSE, fig.width =3.5, fig.height = 3.5, out.width='.5\\textwidth'>>=
 <<Graph>>
 @
 \caption{This is where you explain your graph \label{graphDude}}
 \end{figure}
 
+\clearpage
 
 When working with OSX, one may want to change \texttt{engine = `sh'} to \texttt{engine = `bash'}.
 
@@ -92,7 +95,7 @@ When working with OSX, one may want to change \texttt{engine = `sh'} to \texttt{
 git config --list
 @
 
-Look at {\bfseries{R Code}} \vref{test-a} to add $1 + 1$ and get the answer \Sexpr{1 + 1}. The output from {\bfseries{Git Example}} \vref{GITlabel} shows how my machine is configured. {\bfseries{Git Example}} \vref{gitlog} shows the log.
+Look at \textbf{R Code} \vref{test-a} to add $1 + 1$ and get the answer \Sexpr{1 + 1}. The output from \textbf{Git Example} \vref{GITlabel} shows how my machine is configured. \textbf{Git Example} \vref{gitlog} shows the log.
 
 <<gitlog, engine = 'sh', GIT = TRUE>>=
 git log --pretty=oneline -3
