@@ -10,6 +10,7 @@
 * [An Introduction to R](http://cran.r-project.org/doc/manuals/r-release/R-intro.html)
 * [*Advanced R Development* by Hadley Wickham](http://adv-r.had.co.nz/)
 * [Free Code School intro R Course](https://www.codeschool.com/courses/try-r)
+* [John Chambers recounts the history of S and R](http://blog.revolutionanalytics.com/2014/01/john-chambers-recounts-the-history-of-s-and-r.html)
 
 ## Graphics
 * [`ggplot2` documentation](http://docs.ggplot2.org/current/)
