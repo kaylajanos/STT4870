@@ -51,15 +51,16 @@
 \usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue, linktocpage=true, breaklinks=true]{hyperref}
 \usepackage{geometry}[0.5in]
 \usepackage{amsthm}
+\usepackage{varioref}  % adds page to references use \vref{} vs \ref{}
 \newtheoremstyle{rcode}{1pt}{1pt}{}{}{\bfseries}{}{.5em}{}
 \theoremstyle{rcode}
 \newtheorem{rcode}{R Code}[section]
-\newtheorem{GIT}{GIT Example}[section]
+\newtheorem{GIT}{Git Example}[section]
 % User Commands
 \newcommand{\noind}{\setlength{\parindent}{0pt}}
 \newcommand{\reind}{\setlength{\parindent}{15pt}}
 
-\title{Using the Example Environment with \textbf{knitr}}
+\title{Using the \texttt{R} Code and Git Example Environments with \textbf{knitr}}
 \author{Alan's Modifications and Notes}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
@@ -71,8 +72,8 @@
 
 \section{Introduction}
 
-This is a test of the \texttt{R} Code and GIT Example environments.  By the way,
-this document was last compiled Monday, February 17, 2014 - 11:51:09.
+This is a test of the {\bfseries{R Code}} and {\bfseries{Git Example}} environments.  By the way,
+this document was last compiled Monday, February 17, 2014 - 12:08:20.
 
 \subsection{Simple Arithmetic}
 
@@ -114,7 +115,7 @@ Find the standard deviation of \texttt{x}.
 \end{knitrout}
 
 
-How about \texttt{R} Examples \ref{test-b} and \ref{test-c}?  The standard deviation of \texttt{x} is 0.9728.
+How about {\bfseries{R Code}} \vref{test-b} and \vref{test-c}?  The standard deviation of \texttt{x} is 0.9728.
 
 \clearpage
 \subsection{Graphs and Environments}
@@ -136,7 +137,7 @@ How about \texttt{R} Examples \ref{test-b} and \ref{test-c}?  The standard devia
 The mean of the junk is 0.0151.  Note: It seems that an error is thrown if
 a code chunk with a graph and \texttt{rcode} is executed at the same time.  Work around is
 as shown below.  That is, hide the figure when showing the code...then show the figure
-with a separate code chunk.  Note that Figure \ref{graphDude} is hyperlinked!
+with a separate code chunk.  Note that Figure \vref{graphDude} is hyperlinked!
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
@@ -195,7 +196,7 @@ branch.master.merge=refs/heads/master
 \end{knitrout}
 
 
-Look at \texttt{R} Code \ref{test-a} to add $1 + 1$ and get the answer 2. The output from GIT Example \ref{GITlabel} shows how my machine is configured. GIT Example \ref{gitlog} shows the log.
+Look at {\bfseries{R Code}} \vref{test-a} to add $1 + 1$ and get the answer 2. The output from {\bfseries{Git Example}} \vref{GITlabel} shows how my machine is configured. {\bfseries{Git Example}} \vref{gitlog} shows the log.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
