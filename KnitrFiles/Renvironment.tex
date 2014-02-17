@@ -1,0 +1,185 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue, linktocpage=true, breaklinks=true]{hyperref}
+\usepackage{geometry}[0.5in]
+\usepackage{amsthm}
+\newtheorem{rcode}{R Code}[section]
+\newtheorem{GIT}{GIT Example}[section]
+
+\title{Using the Example Environment with \textbf{knitr}}
+\author{Alan's Modifications and Notes}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+\maketitle
+
+
+
+
+\section{Introduction}
+
+This is a test of the \texttt{R} Example environment.
+
+\subsection{Simple Arithmetic}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{rcode}\label{test-a}\hfill{}\begin{alltt}
+\hlnum{1} \hlopt{+} \hlnum{1}
+\end{alltt}
+\begin{verbatim}
+[1] 2
+\end{verbatim}
+\end{rcode}\end{kframe}
+\end{knitrout}
+
+
+
+\subsection{Generate Random Data}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{rcode}\label{test-b}\hfill{}\begin{alltt}
+\hlstd{x} \hlkwb{<-} \hlkwd{rnorm}\hlstd{(}\hlnum{1000}\hlstd{)}
+\end{alltt}
+\end{rcode}\end{kframe}
+\end{knitrout}
+
+\noindent
+Find the standard deviation of \texttt{x}.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{rcode}\label{test-c}\hfill{}\begin{alltt}
+\hlkwd{sd}\hlstd{(x)} \hlcom{# standard deviation}
+\end{alltt}
+\begin{verbatim}
+[1] 0.9728
+\end{verbatim}
+\end{rcode}\end{kframe}
+\end{knitrout}
+
+\noindent
+How about \texttt{R} Examples \ref{test-b} and \ref{test-c}?  The standard deviation of \texttt{x} is 0.9728.
+
+\clearpage
+\subsection{Graphs and Environments}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{rcode}\label{plot1}\hfill{}\begin{alltt}
+\hlstd{junk} \hlkwb{<-} \hlkwd{rnorm}\hlstd{(}\hlnum{10000}\hlstd{)}
+\hlstd{MEAN} \hlkwb{<-} \hlkwd{mean}\hlstd{(junk)}
+\hlstd{MEAN}
+\end{alltt}
+\begin{verbatim}
+[1] 0.01513
+\end{verbatim}
+\end{rcode}\end{kframe}
+\end{knitrout}
+
+
+The mean of the junk is 0.0151.  Note: It seems that an error is thrown if
+a code chunk with a graph and \texttt{rcode} is executed at the same time.  Work around is
+as shown below.  That is, hide the figure when showing the code...then show the figure
+with a separate code chunk.  Note that Figure \ref{graphDude} is hyperlinked!
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{rcode}\label{Graph}\hfill{}\begin{alltt}
+\hlkwd{library}\hlstd{(ggplot2)}
+\hlkwd{ggplot}\hlstd{(}\hlkwc{data} \hlstd{= mtcars)} \hlopt{+}
+  \hlkwd{geom_density}\hlstd{(}\hlkwd{aes}\hlstd{(}\hlkwc{x} \hlstd{= mpg),} \hlkwc{fill} \hlstd{=} \hlstr{"pink"}\hlstd{)} \hlopt{+}
+  \hlkwd{theme_bw}\hlstd{()} \hlopt{+}
+  \hlkwd{labs}\hlstd{(}\hlkwc{x} \hlstd{=} \hlstr{"miles per gallon"}\hlstd{,} \hlkwc{y} \hlstd{=} \hlstr{""}\hlstd{)}
+\end{alltt}
+\end{rcode}\end{kframe}
+\end{knitrout}
+
+
+\begin{figure}[h]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/GraphShow} 
+
+}
+
+
+
+\end{knitrout}
+
+\caption{This is where you explain your graph \label{graphDude}}
+\end{figure}
+
+When working with OSX, one may want to change \texttt{engine = `sh'} to \texttt{engine = `bash'} 
+and output from git will follow.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{GIT}\label{GIT}\hfill{}\begin{alltt}
+git status
+\end{alltt}
+
+\begin{verbatim}
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	./
+nothing added to commit but untracked files present (use "git add" to track)
+\end{verbatim}
+\end{GIT}\end{kframe}
+\end{knitrout}
+
+
+Look at \texttt{R} Code \ref{test-a} to add $1 + 1$ and get the answer 2.
+
+\end{document}

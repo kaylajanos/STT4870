@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue, linktocpage=true, breaklinks=true]{hyperref}
+\usepackage{geometry}[0.5in]
+\usepackage{amsthm}
+\newtheorem{rcode}{R Code}[section]
+\newtheorem{GIT}{GIT Example}[section]
+
+\title{Using the Example Environment with \textbf{knitr}}
+\author{Alan's Modifications and Notes}
+\begin{document}
+\maketitle
+
+<<setup, include=FALSE>>=
+knit_hooks$set(rcode = function(before, options, envir) {
+  if (before) sprintf('\\begin{rcode}\\label{%s}\\hfill{}', options$label) else '\\end{rcode}'
+})
+knit_hooks$set(GIT = function(before, options, envir) {
+  if (before) sprintf('\\begin{GIT}\\label{%s}\\hfill{}', options$label) else '\\end{GIT}'
+})
+## Global chunk options next
+opts_chunk$set(comment = NA, cache = TRUE, fig.align = 'center', fig.height = 4, fig.width = 4, dev = 'tikz')
+@
+
+\section{Introduction}
+
+This is a test of the \texttt{R} Example environment.
+
+\subsection{Simple Arithmetic}
+
+<<test-a, rcode = TRUE>>=
+1 + 1
+@
+
+
+\subsection{Generate Random Data}
+
+<<test-b, rcode = TRUE>>=
+x <- rnorm(1000)
+@
+\noindent
+Find the standard deviation of \texttt{x}.
+
+<<test-c, rcode = TRUE>>=
+sd(x) # standard deviation
+@
+\noindent
+How about \texttt{R} Examples \ref{test-b} and \ref{test-c}?  The standard deviation of \texttt{x} is \Sexpr{sd(x)}.
+
+\clearpage
+\subsection{Graphs and Environments}
+
+<<plot1, rcode = TRUE>>=
+junk <- rnorm(10000)
+MEAN <- mean(junk)
+MEAN
+@
+
+The mean of the junk is \Sexpr{MEAN}.  Note: It seems that an error is thrown if
+a code chunk with a graph and \texttt{rcode} is executed at the same time.  Work around is
+as shown below.  That is, hide the figure when showing the code...then show the figure
+with a separate code chunk.  Note that Figure \ref{graphDude} is hyperlinked!
+
+<<Graph, rcode = TRUE, fig.show='hide'>>=
+library(ggplot2)
+ggplot(data = mtcars) + 
+  geom_density(aes(x = mpg), fill = "pink") + 
+  theme_bw() + 
+  labs(x = "miles per gallon", y = "")
+@
+
+\begin{figure}[h]
+<<GraphShow, echo = FALSE, fig.width = 3, fig.height = 3>>=
+<<Graph>>
+@
+\caption{This is where you explain your graph \label{graphDude}}
+\end{figure}
+
+When working with OSX, one may want to change \texttt{engine = `sh'} to \texttt{engine = `bash'} 
+and output from git will follow.
+
+<<GIT, engine = 'sh', GIT = TRUE, comment = NA>>=
+git status
+@
+
+Look at \texttt{R} Code \ref{test-a} to add $1 + 1$ and get the answer \Sexpr{1 + 1}.
+
+\end{document}
