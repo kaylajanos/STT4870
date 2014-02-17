@@ -2,3 +2,8 @@
 .Rhistory
 .RData
 *.Rproj
+*.Rdata
+*.rdb
+*.rdx
+*.log
+*.tex
