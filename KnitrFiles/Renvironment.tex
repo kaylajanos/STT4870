@@ -159,27 +159,35 @@ with a separate code chunk.  Note that Figure \ref{graphDude} is hyperlinked!
 \caption{This is where you explain your graph \label{graphDude}}
 \end{figure}
 
-When working with OSX, one may want to change \texttt{engine = `sh'} to \texttt{engine = `bash'} 
-and output from git will follow.
+\noindent
+When working with OSX, one may want to change \texttt{engine = `sh'} to \texttt{engine = `bash'}.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{GIT}\label{GIT}\hfill{}\begin{alltt}
-git status
+git config --list
 \end{alltt}
 
 \begin{verbatim}
-# On branch master
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	./
-nothing added to commit but untracked files present (use "git add" to track)
+user.name=Alan Arnholt
+user.email=arnholtat@appstate.edu
+credential.helper=osxkeychain
+color.ui=true
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=false
+remote.origin.url=https://github.com/alanarnholt/STT4870.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
 \end{verbatim}
 \end{GIT}\end{kframe}
 \end{knitrout}
 
-
+\noindent
 Look at \texttt{R} Code \ref{test-a} to add $1 + 1$ and get the answer 2.
 
 \end{document}

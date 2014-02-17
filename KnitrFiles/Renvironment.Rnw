@@ -75,13 +75,13 @@ ggplot(data = mtcars) +
 \caption{This is where you explain your graph \label{graphDude}}
 \end{figure}
 
-When working with OSX, one may want to change \texttt{engine = `sh'} to \texttt{engine = `bash'} 
-and output from git will follow.
+\noindent
+When working with OSX, one may want to change \texttt{engine = `sh'} to \texttt{engine = `bash'}.
 
 <<GIT, engine = 'sh', GIT = TRUE, comment = NA>>=
-git status
+git config --list
 @
-
+\noindent
 Look at \texttt{R} Code \ref{test-a} to add $1 + 1$ and get the answer \Sexpr{1 + 1}.
 
 \end{document}

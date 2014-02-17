@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.17)  17 FEB 2014 11:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.17)  17 FEB 2014 11:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -355,18 +355,18 @@ Package color Info: Redefining color shadecolor on input line 166.
 
  <./figure/GraphShow.pdf>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 183.
+(Font)              <7> on input line 191.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 183.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 185.
+(Font)              <5> on input line 191.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 193.
  [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 185.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
  (./Renvironment.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 185.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 185.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
 Package rerunfilecheck Info: File `Renvironment.out' has not changed.
 (rerunfilecheck)             Checksum: D18F6F281DC27CD2F7D0F7A7CE35C6DA;254.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 185.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
  ) 
 Here is how much of TeX's memory you used:
  5758 strings out of 493311
@@ -383,7 +383,7 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Renvironment.pdf (3 pages, 102215 bytes).
+Output written on Renvironment.pdf (3 pages, 102701 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream
