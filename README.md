@@ -32,6 +32,7 @@
 * [Using RMarkdown](https://support.rstudio.com/hc/en-us/sections/200149716-R-Markdown)
 * [Markdown](http://daringfireball.net/projects/markdown/)
 * [Getting started with R Markdown Blog](http://jeromyanglim.blogspot.com.au/2012/05/getting-started-with-r-markdown-knitr.html)
+* [xtable and Rmarkdown](http://rpubs.com/Thell/xtable)
   
 ## LaTeX  
 
