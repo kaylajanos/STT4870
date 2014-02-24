@@ -36,7 +36,7 @@
   
 ## LaTeX  
 
-* [Downnload LaTeX for Macs (TeXLive)](http://tug.org/mactex/)
+* [Download LaTeX for Macs (TeXLive)](http://tug.org/mactex/)
 * [Download LaTeX for Windows (MikTeX)](http://miktex.org/)
 * [More Math into LaTeX](http://www.ctan.org/pkg/math-into-latex-4)
 * [Getting started with LaTeX](http://www.tug.org/begin.html)
