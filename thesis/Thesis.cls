@@ -20,7 +20,8 @@
 %% generated with the docstrip utility.
 %%
 %% Created by Steve R. Gunn, modified by Sunil Patel: www.sunilpatel.co.uk
-%% Further modified by www.latextemplates.com
+%% Further modified by www.latextemplates.com 
+%% Modified some more by Alan T. Arnholt
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -74,10 +75,10 @@
 %----------------------------------------------------------------------------------------
 %	MARGINS
 %----------------------------------------------------------------------------------------
-\setmarginsrb  { 1.5in}  % left margin
-                        { 0.6in}  % top margin
+\setmarginsrb  { 1.25in}  % left margin
+                        { 1.0in}  % top margin
                         { 1.0in}  % right margin
-                        { 0.8in}  % bottom margin
+                        { 1.0in}  % bottom margin
                         {  20pt}  % head height
                         {0.25in}  % head sep
                         {   9pt}  % foot height
@@ -181,15 +182,15 @@
 %	defined as \examname above so you cite it as \examname
 %----------------------------------------------------------------------------------------
 
-\thesistitle{Thesis Title} % Your thesis title - this is used in the title and abstract
+\thesistitle{Reproducible Research} % Your thesis title - this is used in the title and abstract
 %-------------------------------------------------  
-\supervisor{Dr. James \textsc{Smith}} % You supervisor's name - this is used in the title page
+\supervisor{Dr. Alan T. Arnholt} % You supervisor's name - this is used in the title page
 %-------------------------------------------------   
 \examiner{} % Your examiner's name - this is not currently used anywhere in the template, cite it with \examname if you want it
 %-------------------------------------------------   
-\degree{Doctor of Philosophy} % Your degree name - this is currently used in the title page and abstract
+\degree{Batchelor of Science} % Your degree name - this is currently used in the title page and abstract
 %-------------------------------------------------   
-\authors{John \textsc{Smith}} % Your name - this is used in the title page and abstract
+\authors{Your Name} % Your name - this is used in the title page and abstract
 %-------------------------------------------------   
 \addresses{} % Your address - this is not currently used anywhere in the template, cite it with \addressnames if you want it
 %-------------------------------------------------   
@@ -197,17 +198,17 @@
 %-------------------------------------------------   
 \keywords{} % Keywords for your thesis - this is not currently used anywhere in the template, cite it with \keywordnames if you want it
 %-------------------------------------------------   
-\university{\texorpdfstring{\href{http://www.university.com} % Your university's URL
-                {University Name}} % Your university's name - this is currently used in the title page
+\university{\texorpdfstring{\href{http://www.appstate.edu} % Your university's URL
+                {Appalachian State Univeristy}} % Your university's name - this is currently used in the title page
                 {University Name}}
 %-------------------------------------------------   
-\UNIVERSITY{\texorpdfstring{\href{University Web Site URL Here (include http://)} % Your university's URL
-                {UNIVERSITY NAME (IN BLOCK CAPITALS)}} % Your university's name in capitals - this is currently used in the abstract page
-                {UNIVERSITY NAME (IN BLOCK CAPITALS)}}
+\UNIVERSITY{\texorpdfstring{\href{http://www.appstate.edu} % Your university's URL
+                {APPALACHIAN STATE UNIVERSITY}} % Your university's name in capitals - this is currently used in the abstract page
+                {APPALACHIAN STATE UNIVERSITY}}
 %-------------------------------------------------                
-\department{\texorpdfstring{\href{Department or School Web Site URL Here (include http://)} % Your department's URL
-                {Department or School Name}} % Your department's name - used in the title page and abstract
-                {Department or School Name}}
+\department{\texorpdfstring{\href{http://www.mathsci.appstate.edu} % Your department's URL
+                {Department of Mathematical Sciences}} % Your department's name - used in the title page and abstract
+                {Department of Mathematical Sciences}}
 %-------------------------------------------------                
 \DEPARTMENT{\texorpdfstring{\href{Department or School Web Site URL Here (include http://)} % Your department's URL
                 {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}} % Your department's name in capitals - this is not currently used anywhere in the template, cite it with \DEPTNAME if you want it
