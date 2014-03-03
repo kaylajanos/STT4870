@@ -35,5 +35,6 @@
 \contentsline {section}{\numberline {1.9}In Closing}{12}{section.43}
 \contentsline {chapter}{\numberline {2}How to Use Git}{14}{chapter.44}
 \vspace {2em}
+\contentsline {chapter}{\numberline {A}Appendix Title Here}{15}{appendix.46}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{15}{dummy.46}
+\contentsline {chapter}{Bibliography}{16}{dummy.47}
