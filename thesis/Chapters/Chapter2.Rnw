@@ -1,0 +1,15 @@
+% Chapter 2
+
+\chapter{How to Use Git} % Main chapter title
+\label{GIT} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+\lhead{Chapter 2. \emph{How to Use Git}} % This is for the header on each page - perhaps a shortened title
+
+A graph perhaps?  Look at \fref{graph1}.
+
+\begin{figure}[!ht]
+<<G1, comment = NA, out.width=".5\\linewidth",fig.align='center', echo = FALSE>>=
+junk <- rnorm(10000)
+hist(junk, col = "red", breaks = "Scott", freq = FALSE)
+@
+\caption{Something goes here \label{graph1}}
+\end{figure}
