@@ -34,6 +34,6 @@
 \contentsline {section}{\numberline {1.8}Sectioning and Subsectioning}{12}{section.42}
 \contentsline {section}{\numberline {1.9}In Closing}{12}{section.43}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Appendix Title Here}{14}{appendix.44}
+\contentsline {chapter}{\numberline {A}Appendix Title Here}{13}{appendix.44}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{15}{dummy.45}
+\contentsline {chapter}{Bibliography}{14}{dummy.45}
