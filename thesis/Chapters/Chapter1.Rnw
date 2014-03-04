@@ -273,5 +273,7 @@ Good luck and have lots of fun!
 
 \begin{flushright}
 Guide written by ---\\
-Sunil Patel: \href{http://www.sunilpatel.co.uk}{www.sunilpatel.co.uk}
+Sunil Patel: \href{http://www.sunilpatel.co.uk}{www.sunilpatel.co.uk}\\
+Modified by ---\\
+Alan T. Arnholt: \href{http://www1.appstate.edu/~arnholta}{www1.appstate.edu/$\sim$arnholta}
 \end{flushright}

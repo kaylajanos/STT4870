@@ -40,7 +40,7 @@
   \if@tempswa \else \PassOptionsToClass{#1}{\baseclass}\fi
 }
 \@checkoptions{11pt}{{10pt}{11pt}{12pt}}
-\PassOptionsToClass{a4paper}{\baseclass}
+\PassOptionsToClass{letterpaper}{\baseclass}  % changed a4paper to letterpaper
 \ProcessOptions\relax
 \LoadClass{\baseclass}
 \newcommand\bhrule{\typeout{------------------------------------------------------------------------------}}
@@ -182,7 +182,7 @@
 %	defined as \examname above so you cite it as \examname
 %----------------------------------------------------------------------------------------
 
-\thesistitle{Reproducible Research} % Your thesis title - this is used in the title and abstract
+\thesistitle{Writing a Reproducible Thesis} % Your thesis title - this is used in the title and abstract
 %-------------------------------------------------  
 \supervisor{Dr. Alan \textsc{Arnholt}} % You supervisor's name - this is used in the title page
 %-------------------------------------------------   
@@ -190,7 +190,8 @@
 %-------------------------------------------------   
 \degree{Bachelor of Science} % Your degree name - this is currently used in the title page and abstract
 %-------------------------------------------------   
-\authors{Your \textsc{Name}} % Your name - this is used in the title page and abstract
+\authors{Erin \textsc{Kreling}, Andrew \textsc{Kryzanek}, Kayla \textsc{Janos}, 
+Maureen \textsc{O'Donnell}, and Brain \textsc{Pham}} % Your name - this is used in the title page and abstract
 %-------------------------------------------------   
 \addresses{} % Your address - this is not currently used anywhere in the template, cite it with \addressnames if you want it
 %-------------------------------------------------   
@@ -219,8 +220,8 @@
                 {Statistics Group}}
 %-------------------------------------------------                
 \GROUP{\texorpdfstring{\href{Statistics Group} % Your research group's URL
-                {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}} % Your research group's name in capitals - this is not currently used anywhere in the template, cite it with \GROUPNAME if you want it
-                {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
+                {SENIOR SEMINAR}} % Your research group's name in capitals - this is not currently used anywhere in the template, cite it with \GROUPNAME if you want it
+                {SENIOR SEMINAR}}
 %-------------------------------------------------                
 \faculty{\texorpdfstring{\href{http://www1.appstate.edu/~arnholta/} % Your faculty's URL
                 {Alan T. Arnholt}} % Your faculty's name - this is currently used in the abstract page

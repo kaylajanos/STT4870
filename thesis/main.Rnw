@@ -71,13 +71,13 @@
 \begin{minipage}{0.4\textwidth}
 \begin{flushleft} \large
 \emph{Author:}\\
-\href{http://www.johnsmith.com}{\authornames} % Author name - remove the \href bracket to remove the link
+\href{https://github.com/alanarnholt/SEMINAR}{\authornames} % Author name - remove the \href bracket to remove the link
 \end{flushleft}
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
 \emph{Supervisor:} \\
-\href{http://www.jamessmith.com}{\supname} % Supervisor name - remove the \href bracket to remove the link  
+\href{http://www1.appstate.edu/~arnholta/}{\supname} % Supervisor name - remove the \href bracket to remove the link  
 \end{flushright}
 \end{minipage}\\[3cm]
  
