@@ -48,6 +48,7 @@
 % ATA to fix letterpaper problem with pdftex
 % other stuff ATA added as well 03/04/14
 \usepackage[letterpaper]{geometry}
+\geometry{top=1.0in, bottom=1.0in, left=1.25in, right=1.0in}
 
 \newcommand\Declaration[1]{
 \btypeout{Declaration of Authorship}
