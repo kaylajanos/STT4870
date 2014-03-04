@@ -53,6 +53,44 @@
 \hypersetup{pdfsubject=\subjectname}
 \hypersetup{pdfauthor=\authornames}
 \hypersetup{pdfkeywords=\keywordnames}
+%
+% Set up style...ATA 03/04/14
+\newtheoremstyle{EX}{2ex}{}{\upshape}{}{\bfseries}{}{1em}{\thmname{#1}\thmnumber{ #2}\thmnote{\hspace{1em}\textcolor{excolor}{$\boldsymbol{\rhd}\!$ \itshape #3 $\!\boldsymbol{\lhd}$}}}
+\theoremstyle{EX}
+%  knitr stuff ATA 03/04/14
+\theoremstyle{EX}  % Note this line must appear before the hook to number the R Code labels!
+\newtheorem{rcode}{R Code}[chapter]
+<<RcodeHOOK, echo = FALSE>>=
+knit_hooks$set(rcode = function(before, options, envir){
+  if(before){
+    sprintf("\\begin{rcode}\\label{%s}\\hfill{}", options$label)
+  } else "\\end{rcode}"
+})
+@
+
+<<RpdfcropHOOK, echo = FALSE>>=
+knit_hooks$set(crop = hook_pdfcrop)
+@
+
+%%%%%% add medskip for tabular environment 03/04/14 ATA
+<<MEDskip, echo = FALSE>>=
+knit_hooks$set(document = function(x){
+gsub("\\begin{tabular}", "\\medskip{}\\begin{tabular}", x, fixed = TRUE)
+})
+@
+%%%%%% add margin hook 03/04/14 ATA
+<<MARGINoption, echo = FALSE>>=
+knit_hooks$set(margin = function(before, options, envir){
+  if(before){
+    m <- options$margin
+    if(is.numeric(m) && length(m) == 4L){
+      par(mar = m)
+    }
+  } else NULL
+})
+@
+%%%%%%%%%%% End knitr hooks %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE

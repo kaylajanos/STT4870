@@ -22,3 +22,19 @@ hist(RVS, col = "green", breaks = "Scott", freq = FALSE)
 @
 \caption{Something goes here \label{graph2}}
 \end{figure}
+
+See \rref{SomeCode}
+
+<<SomeCode, comment = NA, rcode = TRUE>>=
+set.seed(13)
+stuff <- rnorm(100, 100, 10)
+qs <- qnorm(seq(0, 1, by =0.1), 100, 10)
+OB <- cut(stuff, breaks = qs)
+T1 <- xtabs(~OB)
+OBS <- as.vector(T1)
+EXP <- rep(10, 10)
+X2 <- sum((OBS - EXP)^2/EXP)
+X2
+pvalue <- pchisq(X2, 9, lower = FALSE)
+pvalue
+@

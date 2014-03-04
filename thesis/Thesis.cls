@@ -45,6 +45,10 @@
 \LoadClass{\baseclass}
 \newcommand\bhrule{\typeout{------------------------------------------------------------------------------}}
 
+% ATA to fix letterpaper problem with pdftex
+% other stuff ATA added as well 03/04/14
+\usepackage[letterpaper]{geometry}
+
 \newcommand\Declaration[1]{
 \btypeout{Declaration of Authorship}
 \addtotoc{Declaration of Authorship}
@@ -124,6 +128,7 @@
 \newcommand{\cref}[1]{Chapter~\vref{#1}}
 \newcommand{\sref}[1]{Section~\vref{#1}}
 \newcommand{\aref}[1]{Appendix~\vref{#1}}
+\newcommand{\rref}[1]{R Code~\vref{#1}}
 \renewcommand{\topfraction}{0.85}
 \renewcommand{\bottomfraction}{.85}
 \renewcommand{\textfraction}{0.1}
@@ -182,7 +187,7 @@
 %	defined as \examname above so you cite it as \examname
 %----------------------------------------------------------------------------------------
 
-\thesistitle{Writing a Reproducible Thesis} % Your thesis title - this is used in the title and abstract
+\thesistitle{Writing a Reproducible Thesis with \texttt{knitr}} % Your thesis title - this is used in the title and abstract
 %-------------------------------------------------  
 \supervisor{Dr. Alan \textsc{Arnholt}} % You supervisor's name - this is used in the title page
 %-------------------------------------------------   
