@@ -4,12 +4,21 @@
 \label{GIT} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 \lhead{Chapter 2. \emph{How to Use Git}} % This is for the header on each page - perhaps a shortened title
 
-A graph perhaps?  Look at \fref{graph1}.
+A graph perhaps?  Look at \fref{graph1} and \fref{graph2}.
 
 \begin{figure}[!ht]
 <<G1, comment = NA, out.width=".5\\linewidth",fig.align='center', echo = FALSE>>=
-junk <- rnorm(10000)
-hist(junk, col = "red", breaks = "Scott", freq = FALSE)
+set.seed(13)
+RVS <- rnorm(10000)
+hist(RVS, col = "red", breaks = "Scott", freq = FALSE)
 @
 \caption{Something goes here \label{graph1}}
+\end{figure}
+
+
+\begin{figure}[!ht]
+<<G2, comment = NA, out.width=".95\\linewidth",fig.align='center', echo = FALSE>>=
+hist(RVS, col = "green", breaks = "Scott", freq = FALSE)
+@
+\caption{Something goes here \label{graph2}}
 \end{figure}
