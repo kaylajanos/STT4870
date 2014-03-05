@@ -140,7 +140,7 @@ Open the file and scroll down, past all the `$\backslash$\texttt{newcommand}\ldo
 
 Fill out the information about your group and institution and ensure you keep to block capitals where it asks you to. You can also insert web links, if you do, make sure you use the full URL, including the `\texttt{http://}' for this.
 
-The last item you should need to fill in is the Faculty Name (in block capitals). When you have done this, save the file and recompile `\texttt{Thesis.tex}'. All the information you filled in should now be in the PDF, complete with web links. You can now begin your thesis proper!
+The last item you should need to fill in is the Faculty Name (in block capitals). When you have done this, save the file and recompile `\texttt{main.Rnw}'. All the information you filled in should now be in the PDF, complete with web links. You can now begin your thesis proper!
 
 %----------------------------------------------------------------------------------------
 
@@ -180,22 +180,14 @@ The headers for the pages contain the page number on the right side (so it is ea
 
 The text is set to 11 point and a line spacing of 1.3. Generally, it is much more readable to have a smaller text size and wider gap between the lines than it is to have a larger text size and smaller gap. Again, you can tune the text size and spacing should you want or need to. The text size can be set in the options for the `$\backslash$\texttt{documentclass}' command at the top of the `\texttt{main.Rnw}' file and the spacing can be changed by setting a different value in the `$\backslash$\texttt{setstretch}' commands (scattered throughout the `\texttt{main.Rnw}' file).
 
-\subsection{Using US Letter Paper}
+\subsection{Using A4 Letter Paper}
 
-The paper size used in the template is A4, which is a common -- if not standard -- size in Europe. If you are using this thesis template elsewhere and particularly in the United States, then you may have to change the A4 paper size to the US Letter size. Unfortunately, this is not as simple as replacing instances of `\texttt{a4paper}' with `\texttt{letterpaper}'. 
-
-This is because the final PDF file is created directly from the \LaTeX{} source using a program called `\texttt{pdfTeX}' and in certain conditions, paper size commands are ignored and all documents are created with the paper size set to the size stated in the configuration file for pdfTeX (called `\texttt{pdftex.cfg}').
-
-What needs to be done is to change the paper size in the configuration file for \texttt{pdfTeX} to reflect the letter size. There is an excellent tutorial on how to do this here: \\
-\href{http://www.physics.wm.edu/~norman/latexhints/pdf_papersize.html}{\texttt{http://www.physics.wm.edu/$\sim$norman/latexhints/pdf\_papersize.html}}
-
-It may be sufficient just to replace the dimensions of the A4 paper size with the US Letter size in the \texttt{pdftex.cfg} file. Due to the differences in the paper size, the resulting margins may be different to what you like or require (as it is common for Institutions to dictate certain margin sizes). If this is the case, then the margin sizes can be tweaked by opening up the \texttt{Thesis.cls} file and searching for the line beginning with, `$\backslash$\texttt{setmarginsrb}' (not very far down from the top), there you will see the margins specified. Simply change those values to what you need (or what looks good) and save. Now your document should be set up for US Letter paper size with suitable margins.
-
-NOTE:  If you cloned the repository from \href{https://github.com/alanarnholt/STT4870.git}{https://github.com/alanarnholt/STT4870.git}, then you should be set to use \texttt{letterpaper}.  Alan has added the line 
+If you cloned the repository from \href{https://github.com/alanarnholt/STT4870.git}{https://github.com/alanarnholt/STT4870.git}, then the template is defined to use \texttt{letterpaper}. If you wish to use A4 paper, change line 30 of the \texttt{main.Rnw} file to
 \begin{verbatim}
-\usepackage[letterpaper]{geometry} 
+\usepackage[a4paper,includehead,includefoot]{geometry}
 \end{verbatim}
-to the \texttt{Thesis.cls} and replaced all references to \texttt{a4paper} with \texttt{letterpaper} which allows one to print to \texttt{letterpaper}.  
+The margins for the document regardless of papersize can be edited by changing the values in line 31 of the \texttt{main.Rnw} file.
+
 
 \subsection{References}
 
@@ -279,6 +271,6 @@ Good luck and have lots of fun!
 \begin{flushright}
 Guide written by ---\\
 Sunil Patel: \href{http://www.sunilpatel.co.uk}{www.sunilpatel.co.uk}\\
-Modified for \texttt{knitr} by ---\\
+Edited and modified for \texttt{knitr} by ---\\
 Alan T. Arnholt: \href{http://www1.appstate.edu/~arnholta}{www1.appstate.edu/$\sim$arnholta}
 \end{flushright}

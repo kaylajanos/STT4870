@@ -27,14 +27,14 @@
 \contentsline {section}{\numberline {1.6}The `\texttt {main.Rnw}' File Explained}{7}{section.32}
 \contentsline {section}{\numberline {1.7}Thesis Features and Conventions}{9}{section.33}
 \contentsline {subsection}{\numberline {1.7.1}Printing Format}{9}{subsection.34}
-\contentsline {subsection}{\numberline {1.7.2}Using US Letter Paper}{9}{subsection.35}
+\contentsline {subsection}{\numberline {1.7.2}Using A4 Letter Paper}{9}{subsection.35}
 \contentsline {subsection}{\numberline {1.7.3}References}{10}{subsection.36}
-\contentsline {subsection}{\numberline {1.7.4}Figures}{11}{subsection.38}
+\contentsline {subsection}{\numberline {1.7.4}Figures}{10}{subsection.38}
 \contentsline {subsection}{\numberline {1.7.5}Typesetting mathematics}{12}{subsection.40}
 \contentsline {section}{\numberline {1.8}Sectioning and Subsectioning}{13}{section.42}
-\contentsline {section}{\numberline {1.9}In Closing}{14}{section.43}
-\contentsline {chapter}{\numberline {2}How to Use Git}{15}{chapter.44}
+\contentsline {section}{\numberline {1.9}In Closing}{13}{section.43}
+\contentsline {chapter}{\numberline {2}How to Use Git}{14}{chapter.44}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Appendix Title Here}{18}{appendix.48}
+\contentsline {chapter}{\numberline {A}Appendix Title Here}{17}{appendix.48}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{19}{dummy.49}
+\contentsline {chapter}{Bibliography}{18}{dummy.49}

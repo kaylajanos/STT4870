@@ -1,8 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Thesis LaTeX Template - THESIS CLASS FILE
 %
-% This template has been downloaded from:
-% http://www.latextemplates.com
 %
 % This class file defines the structure and design of the template. 
 %
@@ -20,7 +18,7 @@
 %% generated with the docstrip utility.
 %%
 %% Created by Steve R. Gunn, modified by Sunil Patel: www.sunilpatel.co.uk
-%% Further modified by www.latextemplates.com
+%% modified by www.latextemplates.com, and further modified by Alan T. Arnholt
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -29,7 +27,24 @@
               [2007/22/02 v1.0
    LaTeX document class]
 \def\baseclass{book}
-%%%startpaste
+
+%%%commented out to check options:
+%\DeclareOption*{\PassOptionsToClass{\CurrentOption}{\basecla%ss}}
+%\def\@checkoptions#1#2{
+%  \edef\@curroptions{\@ptionlist{\@currname.\@currext}}
+%  \@tempswafalse
+%  \@tfor\@this:=#2\do{
+%    \@expandtwoargs\in@{,\@this,}{,\@curroptions,}
+%    \ifin@ \@tempswatrue \@break@tfor \fi}
+%  \let\@this\@empty
+%  \if@tempswa \else \PassOptionsToClass{#1}{\baseclass}\fi
+%}
+%\@checkoptions{11pt}{{10pt}{11pt}{12pt}}
+%\PassOptionsToClass{letterpaper}{\baseclass}  % changed %a4paper to letterpaper
+%\ProcessOptions\relax
+%\LoadClass{\baseclass}
+
+%%%% begin paste
 \newcommand\@ptsize{}
 \newif\if@restonecol
 \newif\if@titlepage
@@ -724,29 +739,11 @@
 \else
   \onecolumn
 \fi
-%%%%endpaste
+%%%% end paste
 
-%%%commented out to check options:
-%\DeclareOption*{\PassOptionsToClass{\CurrentOption}{\basecla%ss}}
-%\def\@checkoptions#1#2{
-%  \edef\@curroptions{\@ptionlist{\@currname.\@currext}}
-%  \@tempswafalse
-%  \@tfor\@this:=#2\do{
-%    \@expandtwoargs\in@{,\@this,}{,\@curroptions,}
-%    \ifin@ \@tempswatrue \@break@tfor \fi}
-%  \let\@this\@empty
-%  \if@tempswa \else \PassOptionsToClass{#1}{\baseclass}\fi
-%}
-%\@checkoptions{11pt}{{10pt}{11pt}{12pt}}
-%\PassOptionsToClass{letterpaper}{\baseclass}  % changed %a4paper to letterpaper
-%\ProcessOptions\relax
-%\LoadClass{\baseclass}
+
 \newcommand\bhrule{\typeout{------------------------------------------------------------------------------}}
 
-% ATA to fix letterpaper problem with pdftex
-% other stuff ATA added as well 03/04/14
-%\usepackage[paperwidth=8.5in,paperheight=11in]{geometry}
-%\geometry{top=1.0in, bottom=1.0in, left=1.25in, right=1.0in}
 
 \newcommand\Declaration[1]{
 \btypeout{Declaration of Authorship}
@@ -774,18 +771,6 @@
 
 \RequirePackage[utf8]{inputenc} % Allows the use of international characters (e.g. Umlauts)
 
-%----------------------------------------------------------------------------------------
-%	MARGINS  ----Do this with geometry (done above ...ATA)
-%----------------------------------------------------------------------------------------
-% \setmarginsrb { 1.25in}  % left margin
-%                        { 1.0in}  % top margin
-%                        { 1.0in}  % right margin
-%                        { 1.0in}  % bottom margin
-%                        {  20pt}  % head height
-%                        {0.25in}  % head sep
-%                        {   9pt}  % foot height
-%                        { 0.3in}  % foot sep
-%----------------------------------------------------------------------------------------
 \raggedbottom
 \setlength{\topskip}{1\topskip \@plus 5\p@}
 \doublehyphendemerits=10000       % No consecutive line hyphens.
@@ -797,7 +782,7 @@
 \lhead[\rm\thepage]{\fancyplain{}{\sl{\rightmark}}}
 \rhead[\fancyplain{}{\sl{\leftmark}}]{\rm\thepage}
 \chead{}\lfoot{}\rfoot{}\cfoot{}
-\pagestyle{fancy}
+%\pagestyle{fancy}  % Comment out as the line seems to apply to a4 paper ATA
 \renewcommand{\chaptermark}[1]{\btypeout{\thechapter\space #1}\markboth{\@chapapp\ \thechapter\ #1}{\@chapapp\ \thechapter\ #1}}
 \renewcommand{\sectionmark}[1]{}
 \renewcommand{\subsectionmark}[1]{}
@@ -827,7 +812,7 @@
 \newcommand{\cref}[1]{Chapter~\vref{#1}}
 \newcommand{\sref}[1]{Section~\vref{#1}}
 \newcommand{\aref}[1]{Appendix~\vref{#1}}
-\newcommand{\rref}[1]{R Code~\vref{#1}}
+\newcommand{\rref}[1]{R Code~\vref{#1}}  % ATA added
 \renewcommand{\topfraction}{0.85}
 \renewcommand{\bottomfraction}{.85}
 \renewcommand{\textfraction}{0.1}
