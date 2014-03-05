@@ -25,7 +25,11 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[11pt, letterpaper, oneside]{Thesis} % Paper size, default font size and one-sided paper  % change a4paper to letterpaper ATA
+\documentclass[11pt, letterpaper, oneside]{Thesis} % Paper size, default font size and one-sided paper  % change a4paper to letterpaper ATA letterpaper, 
+
+\usepackage[letterpaper,includehead,includefoot]{geometry}
+\geometry{top=2.0in, bottom=0.0in, left=2.25in, right=0.0in}
+\usepackage{pdfpages}
 
 %\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
 
@@ -33,7 +37,9 @@
 \hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
 \title{\ttitle} % Defines the thesis title - don't touch this
 
+
 \begin{document}
+ 
 
 \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
 
@@ -297,6 +303,7 @@ $\omega$ & angular frequency & rads$^{-1}$ \\
 %\input{Chapters/Chapter2}
 <<chapter2, child='./Chapters/Chapter2.Rnw', eval=TRUE>>= 
 @
+
 
 %\input{Chapters/Chapter3}
 %\input{Chapters/Chapter4} 
