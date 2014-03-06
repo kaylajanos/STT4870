@@ -30,3 +30,4 @@ RpointsLat <- sample(seq(RLat[1], RLat[2], length = 100), n, replace = TRUE)
 DF <- data.frame(RpointsLong, RpointsLat)
 head(DF)
 p1 + geom_point(data = DF, aes(x = RpointsLong, y = RpointsLat), col = "darkgreen")
+##### http://www.nceas.ucsb.edu/scicomp/usecases/GenerateConvexHullAndROIForPoints
