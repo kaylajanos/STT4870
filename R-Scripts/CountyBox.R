@@ -13,6 +13,7 @@ library(ggplot2)
 library(maps)     # package has maps
 library(mapproj)  # projections
 WC <- map_data('county','north carolina,watauga')
+head(WC)
 p <- ggplot(data = WC, aes(x = long, y = lat))
 p1 <- p + geom_polygon(fill = "lightgreen") + theme_bw() + 
   coord_map("polyconic") + coord_fixed() + labs(title = "Watauga County")
@@ -23,7 +24,7 @@ RLong
 RLat <- range(WC$lat)
 RLat
 ### Add some random points?
-n <- 50  # number of points
+n <- 500  # number of points
 set.seed(13)
 RpointsLong <- sample(seq(RLong[1], RLong[2], length = 100), n, replace = TRUE)
 RpointsLat <- sample(seq(RLat[1], RLat[2], length = 100), n, replace = TRUE)
