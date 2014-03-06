@@ -1,0 +1,11 @@
+Title
+========================================================
+
+We want some math: $\bar{x} = \frac{\sum_{i=1}^n X_i}{n}$
+
+1. Something
+2. Else
+
+```{r, echo = FALSE}
+hist(rnorm(1000), col = "red")
+```

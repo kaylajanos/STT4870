@@ -1,0 +1,12 @@
+\documentclass{article}
+
+\begin{document}
+
+Some Math
+
+<<>>=
+hist(rnorm(1000), col ="blue", main = "For Vicky")
+@
+
+
+\end{document}
