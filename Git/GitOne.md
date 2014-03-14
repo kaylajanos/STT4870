@@ -7,7 +7,7 @@
 
 
 
-Last compiled Friday, March 14, 2014 - 09:04:02.
+Last compiled Friday, March 14, 2014 - 09:21:49.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -29,7 +29,7 @@ One last thought before we talk about actually installing and using Git.  You ma
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
-<img class=center src="./images/GitDownload.png" height='480'/>
+<img class=center src="./images/SGitDownload.png" height='480'/>
 
 ## Mac Users
 Install the downloaded file by clicking on the downloaded `*.dmg` file then clicking on the `*.pkg` file. 
@@ -181,6 +181,11 @@ Changes not staged for commit:
 	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
 	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
 
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	images/SGitDownload.png
+
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
@@ -196,8 +201,9 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master 0b9e780] staging all files
- 3 files changed, 50 insertions(+), 36 deletions(-)
+[master 7910927] staging all files
+ 4 files changed, 43 insertions(+), 37 deletions(-)
+ create mode 100644 Git/images/SGitDownload.png
 ```
 
 
@@ -257,6 +263,12 @@ git log  -3
 ```
 
 ```
+commit 791092754327cab7fdc29b388701fafca434fbc2
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 09:21:49 2014 -0400
+
+    staging all files
+
 commit 0b9e780f2297647a42fa78a0c85a19433f6ccfcc
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 09:04:02 2014 -0400
@@ -266,12 +278,6 @@ Date:   Fri Mar 14 09:04:02 2014 -0400
 commit 303ab5eb3580d648dbe9abe6363773ed2b7faf4f
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 09:02:37 2014 -0400
-
-    staging all files
-
-commit 5d259eda57cec26a66dab47e9eb9c7163b0ddc36
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 08:50:47 2014 -0400
 
     staging all files
 ```
@@ -285,9 +291,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+791092754327cab7fdc29b388701fafca434fbc2 staging all files
 0b9e780f2297647a42fa78a0c85a19433f6ccfcc staging all files
 303ab5eb3580d648dbe9abe6363773ed2b7faf4f staging all files
-5d259eda57cec26a66dab47e9eb9c7163b0ddc36 staging all files
 ```
 
 
@@ -299,9 +305,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+7910927 Fri Mar 14 09:21:49 2014 -0400- staging all files [Alan Arnholt]
 0b9e780 Fri Mar 14 09:04:02 2014 -0400- staging all files [Alan Arnholt]
 303ab5e Fri Mar 14 09:02:37 2014 -0400- staging all files [Alan Arnholt]
-5d259ed Fri Mar 14 08:50:47 2014 -0400- staging all files [Alan Arnholt]
 ```
 
 
@@ -313,6 +319,13 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+7910927 Fri Mar 14 09:21:49 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd              |   2 +-
+ Git/GitOne.html             |  42 +++++++++++++++++++++++-------------------
+ Git/GitOne.md               |  36 +++++++++++++++++++-----------------
+ Git/images/SGitDownload.png | Bin 0 -> 463619 bytes
+ 4 files changed, 43 insertions(+), 37 deletions(-)
+
 0b9e780 Fri Mar 14 09:04:02 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  |  4 ++--
  Git/GitOne.html | 45 ++++++++++++++++++++++++++-------------------
@@ -324,12 +337,6 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
  Git/GitOne.html | 51 ++++++++++++++++++++++++---------------------------
  Git/GitOne.md   | 45 ++++++++++++++++++++++-----------------------
  3 files changed, 51 insertions(+), 51 deletions(-)
-
-5d259ed Fri Mar 14 08:50:47 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  |   4 +-
- Git/GitOne.html | 147 ++++++++++++++++++++++++++++++++++----------------------
- Git/GitOne.md   | 144 +++++++++++++++++++++++++++++++++---------------------
- 3 files changed, 181 insertions(+), 114 deletions(-)
 ```
 
 
