@@ -146,7 +146,8 @@ This document is stored in the repository [https://github.com/alanarnholt/STT487
 
 Once you have your remote repository created on GitHub, you will need to create a local
 copy of the remote repository on your computer so that you can make changes locally. 
-It is possible to set up a local repository using the command line or using GUI (drop, drag, etc.) commands.  We will start by first looking at typed command then looking at a GUI interface for Git.   
+It is possible to set up a local repository using the command line or using GUI (drop, drag, etc.) commands.  We start by first looking at typed commands then we examine a 
+GUI to Git.   
 
 Open either a Terminal (Mac) or Git Bash (Windows).  
 Create a directory on your computer where you will store your copy of the GitHub 
@@ -191,7 +192,9 @@ is a subfolder of my *USERNAME* directory.   If you clone a remote repository
 to your machine, you will not need to initialize your directory.
 
 ### Forking  a Repo
-Another common way to clone a repo is my first "forking" someone else's repo.   Forking a repo creates a remote (GitHub) copy of the forked repo.   To work on the forked repo, you first must clone the remote fork to your local  machine.  When a repository is cloned, it has a default remote called `origin` that points to your fork on GitHub, not the original repository it was forked from.
+Another common way to clone a repo is my first "forking" someone else's repo.   Forking a repo creates a remote (GitHub) copy of the forked repo.   To work on the forked repo, you first must clone the remote fork to your local  machine.  When a repository is cloned, it has a default remote called `origin` that points to your fork on GitHub, not the original repository it was forked from.  This means that updates the orignal repo owner makes will not automatically be added to your forked repo.
+
+### How to...
 
 
 ## GUI appraoch with RStudio
