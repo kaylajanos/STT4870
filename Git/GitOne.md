@@ -7,7 +7,7 @@
 
 
 
-Last compiled Friday, March 14, 2014 - 08:39:53.
+Last compiled Friday, March 14, 2014 - 08:50:47.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -18,7 +18,9 @@ a previous working (read un-hosed) version of your files.  You may be using a fo
 * chapter2-032312.tex
 
 You may even back up your files for major projects in many different places.  When working on book projects in the past, I would back up my files on three different 
-local machines and two servers.  That works fine until you start using the files from one location and forget that you updated the files on another machine and are using an old version for new updates.  Now you may have new material on old files and have generally wasted several weeks of work.  Expletives follow and you set to "un-hosing" your work.
+local machines and two servers.  That works fine until you start using the files from one location and forget that you updated the files on another machine and you are using an old version of a file for new updates.  Now you have new material on old files and may have overwritten several weeks of work.  Expletives follow and you set to "un-hosing" your work which may take longer than it took to write the original document.  Is this a real scenario?  Yes, and the problem only grows exponentially when working with colleagues who all have access to the same files on a major project.  
+
+
 
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
@@ -169,6 +171,8 @@ Changes not staged for commit:
   (use "git checkout -- <file>..." to discard changes in working directory)
 
 	modified:   GitOne.Rmd
+	modified:   GitOne.html
+	modified:   GitOne.md
 	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
 	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
 	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
@@ -188,8 +192,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master 84dee18] staging all files
- 1 file changed, 12 insertions(+)
+[master 5d259ed] staging all files
+ 3 files changed, 181 insertions(+), 114 deletions(-)
 ```
 
 
@@ -249,6 +253,12 @@ git log  -3
 ```
 
 ```
+commit 5d259eda57cec26a66dab47e9eb9c7163b0ddc36
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 08:50:47 2014 -0400
+
+    staging all files
+
 commit 84dee18dbbb18f61dc4516dcab9c9551ef17d18c
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 08:39:53 2014 -0400
@@ -261,12 +271,6 @@ Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 08:22:49 2014 -0400
 
     Merge branch 'master' of https://github.com/alanarnholt/STT4870
-
-commit 197d7a10ea0a2e04dd5afbcd060cfe079074f59e
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 08:22:36 2014 -0400
-
-    remove these deleted files?
 ```
 
 
@@ -278,9 +282,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+5d259eda57cec26a66dab47e9eb9c7163b0ddc36 staging all files
 84dee18dbbb18f61dc4516dcab9c9551ef17d18c staging all files
 c66c2ea4532c4cfd5b670a06a4f62272a993cd95 Merge branch 'master' of https://github.com/alanarnholt/STT4870
-197d7a10ea0a2e04dd5afbcd060cfe079074f59e remove these deleted files?
 ```
 
 
@@ -292,9 +296,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+5d259ed Fri Mar 14 08:50:47 2014 -0400- staging all files [Alan Arnholt]
 84dee18 Fri Mar 14 08:39:53 2014 -0400- staging all files [Alan Arnholt]
 c66c2ea Fri Mar 14 08:22:49 2014 -0400- Merge branch 'master' of https://github.com/alanarnholt/STT4870 [Alan Arnholt]
-197d7a1 Fri Mar 14 08:22:36 2014 -0400- remove these deleted files? [Alan Arnholt]
 ```
 
 
@@ -306,22 +310,17 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+5d259ed Fri Mar 14 08:50:47 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  |   4 +-
+ Git/GitOne.html | 147 ++++++++++++++++++++++++++++++++++----------------------
+ Git/GitOne.md   | 144 +++++++++++++++++++++++++++++++++---------------------
+ 3 files changed, 181 insertions(+), 114 deletions(-)
+
 84dee18 Fri Mar 14 08:39:53 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd | 12 ++++++++++++
  1 file changed, 12 insertions(+)
 
 c66c2ea Fri Mar 14 08:22:49 2014 -0400- Merge branch 'master' of https://github.com/alanarnholt/STT4870 [Alan Arnholt]
-197d7a1 Fri Mar 14 08:22:36 2014 -0400- remove these deleted files? [Alan Arnholt]
- figure/unnamed-chunk-1.pdf | Bin 4666 -> 0 bytes
- figure/unnamed-chunk-1.png | Bin 14509 -> 0 bytes
- junk.Rmd                   |  11 ---
- junk.html                  | 163 ---------------------------------------------
- junk.md                    |  10 ---
- mojunk.Rnw                 |  12 ----
- mojunk.aux                 |   1 -
- mojunk.pdf                 | Bin 32046 -> 0 bytes
- mojunk.synctex.gz          | Bin 1185 -> 0 bytes
- 9 files changed, 197 deletions(-)
 ```
 
 
