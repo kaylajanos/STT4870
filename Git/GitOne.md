@@ -7,7 +7,7 @@
 
 
 
-Last compiled Friday, March 14, 2014 - 10:14:04.
+Last compiled Friday, March 14, 2014 - 10:16:34.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -133,7 +133,7 @@ From the third line of the previous output, one can see the
 "GitHub is a web-based hosting service for software development projects that use the Git revision control system. GitHub offers both paid plans for private repositories, and free accounts for open source projects. The site was launched in 2008 by Tom Preston-Werner, Chris Wanstrath, and PJ Hyett."(http://en.wikipedia.org/wiki/GitHub)
 
 Qualified faculty members can request free private accounts to use with their classes.
-To request a discount, which actually pays the whole price for 10 private repositories for qualified faculty, click on the request a discount at [https://education.github.com](https://education.github.com).
+To request a discount, which actually pays the whole price for 10 private repositories for qualified faculty, click on the request a discount at [https://education.github.com](https://education.github.com).  A step-by-step guide for setting up your GitHub organization for classroom use can be found at [https://education.github.com/guide](https://education.github.com/guide).
 
 
 ## Creating a GitHub Account
@@ -210,8 +210,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master ff100fd] staging all files
- 3 files changed, 43 insertions(+), 39 deletions(-)
+[master d40da7c] staging all files
+ 3 files changed, 45 insertions(+), 38 deletions(-)
 ```
 
 
@@ -271,6 +271,12 @@ git log  -3
 ```
 
 ```
+commit d40da7c5e46934a5ae426639622acb0e61e19821
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 10:16:35 2014 -0400
+
+    staging all files
+
 commit ff100fd52f4fdd9288e588671820655e3f691697
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 10:14:04 2014 -0400
@@ -280,12 +286,6 @@ Date:   Fri Mar 14 10:14:04 2014 -0400
 commit f40dfb2d796f452a1953581c9d264c30d6988e27
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 10:01:56 2014 -0400
-
-    staging all files
-
-commit f8f75265c1a0c97a433d6a92134915e23d0b000f
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 10:01:32 2014 -0400
 
     staging all files
 ```
@@ -299,9 +299,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+d40da7c5e46934a5ae426639622acb0e61e19821 staging all files
 ff100fd52f4fdd9288e588671820655e3f691697 staging all files
 f40dfb2d796f452a1953581c9d264c30d6988e27 staging all files
-f8f75265c1a0c97a433d6a92134915e23d0b000f staging all files
 ```
 
 
@@ -313,9 +313,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+d40da7c Fri Mar 14 10:16:35 2014 -0400- staging all files [Alan Arnholt]
 ff100fd Fri Mar 14 10:14:04 2014 -0400- staging all files [Alan Arnholt]
 f40dfb2 Fri Mar 14 10:01:56 2014 -0400- staging all files [Alan Arnholt]
-f8f7526 Fri Mar 14 10:01:32 2014 -0400- staging all files [Alan Arnholt]
 ```
 
 
@@ -327,6 +327,12 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+d40da7c Fri Mar 14 10:16:35 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  |  2 +-
+ Git/GitOne.html | 43 +++++++++++++++++++++++--------------------
+ Git/GitOne.md   | 38 +++++++++++++++++++++-----------------
+ 3 files changed, 45 insertions(+), 38 deletions(-)
+
 ff100fd Fri Mar 14 10:14:04 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  |  4 ++++
  Git/GitOne.html | 42 +++++++++++++++++++++---------------------
@@ -338,12 +344,6 @@ f40dfb2 Fri Mar 14 10:01:56 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.html | 42 +++++++++++++++++++++---------------------
  Git/GitOne.md   | 36 ++++++++++++++++++------------------
  3 files changed, 40 insertions(+), 40 deletions(-)
-
-f8f7526 Fri Mar 14 10:01:32 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  |  2 +-
- Git/GitOne.html | 54 +++++++++++++++++++++++++++++-------------------------
- Git/GitOne.md   | 48 ++++++++++++++++++++++++++----------------------
- 3 files changed, 56 insertions(+), 48 deletions(-)
 ```
 
 
