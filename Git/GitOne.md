@@ -7,7 +7,7 @@
 
 
 
-Last compiled Friday, March 14, 2014 - 11:38:05.
+Last compiled Friday, March 14, 2014 - 11:39:58.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -141,8 +141,7 @@ To request a discount, which actually pays the whole price for 10 private reposi
 for qualified faculty, click on the request a discount at 
 [https://education.github.com](https://education.github.com).  A step-by-step guide 
 for setting up your GitHub organization for classroom use can be found at 
-[https://education.github.com/guide](https://education.github.com/guide).  
-Free private repositories for anyone can be created at 
+[https://education.github.com/guide](https://education.github.com/guide).   Free private repositories for anyone can be created at 
 [https://bitbucket.org](https://bitbucket.org).  Bitbucket, like GitHub, is a web 
 based hosting service that uses the Git revision control system.
 
@@ -283,8 +282,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master 7d2989d] staging all files
- 3 files changed, 244 insertions(+), 28 deletions(-)
+[master e3e27af] staging all files
+ 3 files changed, 52 insertions(+), 41 deletions(-)
 ```
 
 
@@ -344,6 +343,12 @@ git log  -3
 ```
 
 ```
+commit e3e27af1a9cee6d2af0cbecf9288668e54f6ed2c
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 11:39:58 2014 -0400
+
+    staging all files
+
 commit 7d2989dc3d552738930dbca7029083e4b7c03376
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 11:38:05 2014 -0400
@@ -353,12 +358,6 @@ Date:   Fri Mar 14 11:38:05 2014 -0400
 commit 8e60a7cb925209ffdcd650bc031753d63d0e946a
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 11:20:12 2014 -0400
-
-    staging all files
-
-commit 8539d488fd676b8bfcfc098a1bba79995c12f804
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 11:10:38 2014 -0400
 
     staging all files
 ```
@@ -372,9 +371,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+e3e27af1a9cee6d2af0cbecf9288668e54f6ed2c staging all files
 7d2989dc3d552738930dbca7029083e4b7c03376 staging all files
 8e60a7cb925209ffdcd650bc031753d63d0e946a staging all files
-8539d488fd676b8bfcfc098a1bba79995c12f804 staging all files
 ```
 
 
@@ -386,9 +385,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+e3e27af Fri Mar 14 11:39:58 2014 -0400- staging all files [Alan Arnholt]
 7d2989d Fri Mar 14 11:38:05 2014 -0400- staging all files [Alan Arnholt]
 8e60a7c Fri Mar 14 11:20:12 2014 -0400- staging all files [Alan Arnholt]
-8539d48 Fri Mar 14 11:10:38 2014 -0400- staging all files [Alan Arnholt]
 ```
 
 
@@ -400,6 +399,12 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+e3e27af Fri Mar 14 11:39:58 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  |  3 +--
+ Git/GitOne.html | 48 +++++++++++++++++++++++++++---------------------
+ Git/GitOne.md   | 42 ++++++++++++++++++++++++------------------
+ 3 files changed, 52 insertions(+), 41 deletions(-)
+
 7d2989d Fri Mar 14 11:38:05 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  |   8 ++-
  Git/GitOne.html |  59 +++++++++-------
@@ -411,12 +416,6 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
  Git/GitOne.html |  66 +++++++++++--------
  Git/GitOne.md   | 198 ++++----------------------------------------------------
  3 files changed, 63 insertions(+), 217 deletions(-)
-
-8539d48 Fri Mar 14 11:10:38 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  | 27 +++++++++++++++++++++------
- Git/GitOne.html | 47 +++++++++++++++++++++++++++--------------------
- Git/GitOne.md   | 44 +++++++++++++++++++++++++++-----------------
- 3 files changed, 75 insertions(+), 43 deletions(-)
 ```
 
 
