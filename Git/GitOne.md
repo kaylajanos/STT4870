@@ -7,7 +7,7 @@
 
 
 
-Last compiled Friday, March 14, 2014 - 10:28:15.
+Last compiled Friday, March 14, 2014 - 10:33:38.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -162,7 +162,7 @@ local machine.
 In order to push your local work to a remote repository, you will first need to create
 the remote repository. Log in to your GitHub account, click the `New repository` button,
 then give your repository a name and optionally a description.  When you finish, click 
-the `Create repository` button, and your GitHub repository will be created.  
+the `Create repository` button, and your GitHub repository will be created.  You should click in the box `Initialize this repository with a README` if you want GitHub to create a markdown README file.  
 ![AlansGitRepo](./images/CreateGitRepo.png)
 
 
@@ -225,8 +225,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master eb15827] staging all files
- 3 files changed, 56 insertions(+), 40 deletions(-)
+[master 6270a7f] staging all files
+ 3 files changed, 76 insertions(+), 44 deletions(-)
 ```
 
 
@@ -286,6 +286,12 @@ git log  -3
 ```
 
 ```
+commit 6270a7faa08150ba938e03b6751bfbcbc0bcad09
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 10:33:38 2014 -0400
+
+    staging all files
+
 commit eb1582756478113f1a10bddf2fda8a7172e9e60d
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 10:28:15 2014 -0400
@@ -295,12 +301,6 @@ Date:   Fri Mar 14 10:28:15 2014 -0400
 commit b90a7ce55947cb393a740d450e7940e803bf473a
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 10:20:52 2014 -0400
-
-    staging all files
-
-commit 3c1d6c7fdae37810bd991f50c1294b3eb2cf2589
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 10:18:24 2014 -0400
 
     staging all files
 ```
@@ -314,9 +314,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+6270a7faa08150ba938e03b6751bfbcbc0bcad09 staging all files
 eb1582756478113f1a10bddf2fda8a7172e9e60d staging all files
 b90a7ce55947cb393a740d450e7940e803bf473a staging all files
-3c1d6c7fdae37810bd991f50c1294b3eb2cf2589 staging all files
 ```
 
 
@@ -328,9 +328,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+6270a7f Fri Mar 14 10:33:38 2014 -0400- staging all files [Alan Arnholt]
 eb15827 Fri Mar 14 10:28:15 2014 -0400- staging all files [Alan Arnholt]
 b90a7ce Fri Mar 14 10:20:52 2014 -0400- staging all files [Alan Arnholt]
-3c1d6c7 Fri Mar 14 10:18:24 2014 -0400- staging all files [Alan Arnholt]
 ```
 
 
@@ -342,6 +342,12 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+6270a7f Fri Mar 14 10:33:38 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  |  2 +-
+ Git/GitOne.html | 62 ++++++++++++++++++++++++++++++++++++---------------------
+ Git/GitOne.md   | 56 ++++++++++++++++++++++++++++++++-------------------
+ 3 files changed, 76 insertions(+), 44 deletions(-)
+
 eb15827 Fri Mar 14 10:28:15 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  | 22 +++++++++++++++++++---
  Git/GitOne.html | 40 ++++++++++++++++++++--------------------
@@ -352,12 +358,6 @@ b90a7ce Fri Mar 14 10:20:52 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  |  2 +-
  Git/GitOne.html | 42 +++++++++++++++++++++---------------------
  Git/GitOne.md   | 37 ++++++++++++++++++-------------------
- 3 files changed, 40 insertions(+), 41 deletions(-)
-
-3c1d6c7 Fri Mar 14 10:18:24 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  |  3 +--
- Git/GitOne.html | 42 +++++++++++++++++++++---------------------
- Git/GitOne.md   | 36 ++++++++++++++++++------------------
  3 files changed, 40 insertions(+), 41 deletions(-)
 ```
 

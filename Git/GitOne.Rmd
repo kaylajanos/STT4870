@@ -140,9 +140,20 @@ the `Create repository` button, and your GitHub repository will be created.  You
 ![AlansGitRepo](./images/CreateGitRepo.png)
 
 
-This document is stored in the repository [https://github.com/alanarnholt/STT4870](https://github.com/alanarnholt/STT4870) in the folder [https://github.com/alanarnholt/STT4870/Git](https://github.com/alanarnholt/STT4870/Git). 
+This document is stored in the repository [https://github.com/alanarnholt/STT4870](https://github.com/alanarnholt/STT4870) in the folder [https://github.com/alanarnholt/STT4870/Git](https://github.com/alanarnholt/STT4870/Git).
+
 
 ## Local Repositories
+
+Once you have your remote repository created on GitHub, you will need to create a local
+copy of the remote repository on your computer so that you can make changes locally.  
+Open either a Terminal (Mac) or Git Bash (Windows).  
+Create a directory on your computer where you will store your copy of the GitHub 
+(remote) repository.
+
+```{r label = MKDIR, eval = FALSE}
+mkdir ~/PathToYourLocalRepo
+```
 
 It is possible to set up a local repository using GUI (drop, drag, etc.) commands or to
 use the command line.  I keep my repositories in a folder called *git_repositories* that
