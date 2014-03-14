@@ -7,7 +7,19 @@
 
 
 
-Last compiled Wednesday, February 05, 2014 - 09:41:10.
+Last compiled Friday, March 14, 2014 - 08:39:53.
+
+What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
+a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
+
+* YourNameCVJanuary2014.docx
+* YourNameCVMarch2014.docx
+* chapter1-012412.tex
+* chapter2-032312.tex
+
+You may even back up your files for major projects in many different places.  When working on book projects in the past, I would back up my files on three different 
+local machines and two servers.  That works fine until you start using the files from one location and forget that you updated the files on another machine and are using an old version for new updates.  Now you may have new material on old files and have generally wasted several weeks of work.  Expletives follow and you set to "un-hosing" your work.
+
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
@@ -35,8 +47,8 @@ Sys.which("bash")
 ```
 
 ```
-                              bash 
-"C:\\PROGRA~2\\Git\\bin\\bash.exe" 
+       bash 
+"/bin/bash" 
 ```
 
 If the output does not specify the path to `bash`, the path to `bash` is not properly configured.
@@ -149,18 +161,18 @@ git status
 ```
 
 ```
-# On branch master
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   GitOne.html
-#	modified:   GitOne.md
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	custom.css
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   GitOne.Rmd
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
+
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
@@ -176,9 +188,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master eb87352] staging all files
- 3 files changed, 60 insertions(+), 45 deletions(-)
- create mode 100644 Git/custom.css
+[master 84dee18] staging all files
+ 1 file changed, 12 insertions(+)
 ```
 
 
@@ -189,10 +200,19 @@ git status
 ```
 
 ```
-# On branch master
-# Your branch is ahead of 'origin/master' by 1 commit.
-#
-nothing to commit (working directory clean)
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
+
+no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 Push changes to the remote repository. 
@@ -208,8 +228,18 @@ git status
 ```
 
 ```
-# On branch master
-nothing to commit (working directory clean)
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
+
+no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 Show the last three commits with
@@ -219,23 +249,24 @@ git log  -3
 ```
 
 ```
-commit eb873523a17b492a309a52fe0dd765f493b54908
+commit 84dee18dbbb18f61dc4516dcab9c9551ef17d18c
 Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Wed Feb 5 09:41:10 2014 -0500
+Date:   Fri Mar 14 08:39:53 2014 -0400
 
     staging all files
 
-commit 8b68e172ed90a68365ef98ea7e28e7c7baa86c79
+commit c66c2ea4532c4cfd5b670a06a4f62272a993cd95
+Merge: 197d7a1 bd98e1b
 Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Wed Feb 5 09:37:00 2014 -0500
+Date:   Fri Mar 14 08:22:49 2014 -0400
 
-    staging all files
+    Merge branch 'master' of https://github.com/alanarnholt/STT4870
 
-commit 1a0f584c0f52a41d5d7707d60a007c2a946ebd77
+commit 197d7a10ea0a2e04dd5afbcd060cfe079074f59e
 Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Wed Feb 5 09:33:32 2014 -0500
+Date:   Fri Mar 14 08:22:36 2014 -0400
 
-    staging all files
+    remove these deleted files?
 ```
 
 
@@ -247,9 +278,9 @@ git log --pretty=oneline -3
 ```
 
 ```
-eb873523a17b492a309a52fe0dd765f493b54908 staging all files
-8b68e172ed90a68365ef98ea7e28e7c7baa86c79 staging all files
-1a0f584c0f52a41d5d7707d60a007c2a946ebd77 staging all files
+84dee18dbbb18f61dc4516dcab9c9551ef17d18c staging all files
+c66c2ea4532c4cfd5b670a06a4f62272a993cd95 Merge branch 'master' of https://github.com/alanarnholt/STT4870
+197d7a10ea0a2e04dd5afbcd060cfe079074f59e remove these deleted files?
 ```
 
 
@@ -261,9 +292,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
-eb87352 Wed Feb 5 09:41:10 2014 -0500- staging all files [Alan Arnholt]
-8b68e17 Wed Feb 5 09:37:00 2014 -0500- staging all files [Alan Arnholt]
-1a0f584 Wed Feb 5 09:33:32 2014 -0500- staging all files [Alan Arnholt]
+84dee18 Fri Mar 14 08:39:53 2014 -0400- staging all files [Alan Arnholt]
+c66c2ea Fri Mar 14 08:22:49 2014 -0400- Merge branch 'master' of https://github.com/alanarnholt/STT4870 [Alan Arnholt]
+197d7a1 Fri Mar 14 08:22:36 2014 -0400- remove these deleted files? [Alan Arnholt]
 ```
 
 
@@ -275,23 +306,22 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
-eb87352 Wed Feb 5 09:41:10 2014 -0500- staging all files [Alan Arnholt]
- Git/GitOne.html | 46 ++++++++++++++++++++++------------------------
- Git/GitOne.md   | 40 +++++++++++++++++++---------------------
- Git/custom.css  | 19 +++++++++++++++++++
- 3 files changed, 60 insertions(+), 45 deletions(-)
+84dee18 Fri Mar 14 08:39:53 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
 
-8b68e17 Wed Feb 5 09:37:00 2014 -0500- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  |  4 ++--
- Git/GitOne.html | 43 ++++++++++++++++++++++---------------------
- Git/GitOne.md   | 35 ++++++++++++++++++-----------------
- 3 files changed, 42 insertions(+), 40 deletions(-)
-
-1a0f584 Wed Feb 5 09:33:32 2014 -0500- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  |  2 +-
- Git/GitOne.html | 49 ++++++++++++++++++++++---------------------------
- Git/GitOne.md   | 41 ++++++++++++++++++-----------------------
- 3 files changed, 41 insertions(+), 51 deletions(-)
+c66c2ea Fri Mar 14 08:22:49 2014 -0400- Merge branch 'master' of https://github.com/alanarnholt/STT4870 [Alan Arnholt]
+197d7a1 Fri Mar 14 08:22:36 2014 -0400- remove these deleted files? [Alan Arnholt]
+ figure/unnamed-chunk-1.pdf | Bin 4666 -> 0 bytes
+ figure/unnamed-chunk-1.png | Bin 14509 -> 0 bytes
+ junk.Rmd                   |  11 ---
+ junk.html                  | 163 ---------------------------------------------
+ junk.md                    |  10 ---
+ mojunk.Rnw                 |  12 ----
+ mojunk.aux                 |   1 -
+ mojunk.pdf                 | Bin 32046 -> 0 bytes
+ mojunk.synctex.gz          | Bin 1185 -> 0 bytes
+ 9 files changed, 197 deletions(-)
 ```
 
 
@@ -300,8 +330,10 @@ Now, just to show how cool this is, we will mix in a little `R`.
 
 ```r
 library(ggplot2)
-ggplot(data = CO2, aes(x = Type, y = uptake, fill = Type)) + geom_boxplot() + 
-    facet_grid(Treatment ~ .) + theme_bw()
+ggplot(data = CO2, aes(x = Type, y = uptake, fill = Type)) + 
+  geom_boxplot() +
+  facet_grid(Treatment~.) +
+  theme_bw()
 ```
 
 <img src="figure/Rgraph.png" title="plot of chunk Rgraph" alt="plot of chunk Rgraph" style="display: block; margin: auto;" />

@@ -20,7 +20,9 @@ a previous working (read un-hosed) version of your files.  You may be using a fo
 * chapter2-032312.tex
 
 You may even back up your files for major projects in many different places.  When working on book projects in the past, I would back up my files on three different 
-local machines and two servers.  That works fine until you start using the files from one location and forget that you updated the files on another machine and are using an old version for new updates.  Now you may have new material on old files and have generally wasted several weeks of work.  Expletives follow and you set to "un-hosing" your work.
+local machines and two servers.  That works fine until you start using the files from one location and forget that you updated the files on another machine and you are using an old version of a file for new updates.  Now you have new material on old files and may have overwritten several weeks of work.  Expletives follow and you set to "un-hosing" your work which may take longer than it took to write the original document.  Is this a real scenario?  Yes, and the problem only grows exponentially when working with colleagues who all have access to the same files on a major project.  
+
+
 
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
