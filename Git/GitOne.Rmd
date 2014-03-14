@@ -136,7 +136,7 @@ local machine.
 In order to push your local work to a remote repository, you will first need to create
 the remote repository. Log in to your GitHub account, click the `New repository` button,
 then give your repository a name and optionally a description.  When you finish, click 
-the `Create repository` button, and your GitHub repository will be created.  
+the `Create repository` button, and your GitHub repository will be created.  You should click in the box `Initialize this repository with a README` if you want GitHub to create a markdown README file.  
 ![AlansGitRepo](./images/CreateGitRepo.png)
 
 
