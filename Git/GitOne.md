@@ -7,7 +7,7 @@
 
 
 
-Last compiled Friday, March 14, 2014 - 10:50:15.
+Last compiled Friday, March 14, 2014 - 10:53:57.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -183,6 +183,16 @@ mkdir ~/PathToYourLocalRepo
 ```
 
 
+The tilde (~) refers to your home directory.  In other words, `~/PathToYourLocalRepo`
+will create a directory called `PathToYourLocalRepo` in your home directory.  Navigate 
+to the new directory by typing
+
+
+```bash
+cd ~/PathToYourLocalRepo
+```
+
+
 It is possible to set up a local repository using GUI (drop, drag, etc.) commands or to
 use the command line.  I keep my repositories in a folder called *git_repositories* that
 is a subfolder of my *USERNAME* directory.  Once you have a local folder with files you
@@ -238,8 +248,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master 796a4b5] staging all files
- 3 files changed, 51 insertions(+), 40 deletions(-)
+[master 6a499be] staging all files
+ 3 files changed, 69 insertions(+), 39 deletions(-)
 ```
 
 
@@ -299,6 +309,12 @@ git log  -3
 ```
 
 ```
+commit 6a499bea0deb92bbe619093969f5ae680a7c49d4
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 10:53:57 2014 -0400
+
+    staging all files
+
 commit 796a4b5fb5a76049543e44af135809e517aaba1f
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 10:50:15 2014 -0400
@@ -308,12 +324,6 @@ Date:   Fri Mar 14 10:50:15 2014 -0400
 commit 6270a7faa08150ba938e03b6751bfbcbc0bcad09
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 10:33:38 2014 -0400
-
-    staging all files
-
-commit eb1582756478113f1a10bddf2fda8a7172e9e60d
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 10:28:15 2014 -0400
 
     staging all files
 ```
@@ -327,9 +337,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+6a499bea0deb92bbe619093969f5ae680a7c49d4 staging all files
 796a4b5fb5a76049543e44af135809e517aaba1f staging all files
 6270a7faa08150ba938e03b6751bfbcbc0bcad09 staging all files
-eb1582756478113f1a10bddf2fda8a7172e9e60d staging all files
 ```
 
 
@@ -341,9 +351,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+6a499be Fri Mar 14 10:53:57 2014 -0400- staging all files [Alan Arnholt]
 796a4b5 Fri Mar 14 10:50:15 2014 -0400- staging all files [Alan Arnholt]
 6270a7f Fri Mar 14 10:33:38 2014 -0400- staging all files [Alan Arnholt]
-eb15827 Fri Mar 14 10:28:15 2014 -0400- staging all files [Alan Arnholt]
 ```
 
 
@@ -355,6 +365,12 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+6a499be Fri Mar 14 10:53:57 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  |  8 ++++++++
+ Git/GitOne.html | 51 ++++++++++++++++++++++++++++++---------------------
+ Git/GitOne.md   | 49 +++++++++++++++++++++++++++++++------------------
+ 3 files changed, 69 insertions(+), 39 deletions(-)
+
 796a4b5 Fri Mar 14 10:50:15 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  | 13 ++++++++++++-
  Git/GitOne.html | 42 +++++++++++++++++++++---------------------
@@ -366,12 +382,6 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
  Git/GitOne.html | 62 ++++++++++++++++++++++++++++++++++++---------------------
  Git/GitOne.md   | 56 ++++++++++++++++++++++++++++++++-------------------
  3 files changed, 76 insertions(+), 44 deletions(-)
-
-eb15827 Fri Mar 14 10:28:15 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  | 22 +++++++++++++++++++---
- Git/GitOne.html | 40 ++++++++++++++++++++--------------------
- Git/GitOne.md   | 34 +++++++++++++++++-----------------
- 3 files changed, 56 insertions(+), 40 deletions(-)
 ```
 
 

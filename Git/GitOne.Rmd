@@ -146,7 +146,9 @@ This document is stored in the repository [https://github.com/alanarnholt/STT487
 ## Local Repositories
 
 Once you have your remote repository created on GitHub, you will need to create a local
-copy of the remote repository on your computer so that you can make changes locally.  
+copy of the remote repository on your computer so that you can make changes locally. 
+It is possible to set up a local repository using the command line or using GUI (drop, drag, etc.) commands.  We will start by first looking at typed command then looking at a GUI interface for Git.   
+
 Open either a Terminal (Mac) or Git Bash (Windows).  
 Create a directory on your computer where you will store your copy of the GitHub 
 (remote) repository.
@@ -163,12 +165,25 @@ to the new directory by typing
 cd ~/PathToYourLocalRepo
 ```
 
-It is possible to set up a local repository using GUI (drop, drag, etc.) commands or to
-use the command line.  I keep my repositories in a folder called *git_repositories* that
-is a subfolder of my *USERNAME* directory.  Once you have a local folder with files you
+Once you have a local directory with files you
 would like to place under version control, use the `git init` command from your working
-directory to track your files.  If you clone a remote repository to your machine, you 
-will not need to initialize your directory.  One way to clone this repo using `RStudio` is 
+directory to track your files. 
+
+
+```{r label = INIT, eval = FALSE}
+git init
+```
+
+Now we are ready to point our local repository to the remote repository on Github by typing
+
+```{r label = REMOTE, eval = FALSE}
+git remote add origin https://github.com/your-user-name/PathToYourLocalRepo.git
+```
+
+I keep my repositories in a folder called *git_repositories* that
+is a subfolder of my *USERNAME* directory.   If you clone a remote repository 
+to your machine, you will not need to initialize your directory.  
+One way to clone this repo using `RStudio` is 
 to click on File -> New Project 
 
 ![NewProject](./images/NewProject.png)
