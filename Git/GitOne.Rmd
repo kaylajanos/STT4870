@@ -56,13 +56,13 @@ Sys.which("bash")
 ```
 If the output does not specify the path to `bash`, the path to `bash` is not properly configured.
 
-To interact with Git, find the program named Git Bash.  Git Bash is the command line environment windows uses to interact with Git.  Git Bash should be located in the Git directory within your Start Menu provided you performed a default installation.
+To interact with Git, find the program named Git Bash.  Git Bash is the command line environment Windows uses to interact with Git.  Git Bash should be located in the Git directory within your Start Menu provided you performed a default installation.
 
 
 ## Initial Setup
 
 If you have never used git before, you need to do some setup first.  Run the following
-commands so that git knows your name and email.  The commands are all issued in the
+commands so that Git knows your name and email.  The commands are all issued in the
 Terminal (Mac) or at the command prompt of Git Bash (Windows).  The Terminal 
 application is usually found in `/applications/Utilities`. A quick way to open a 
 **terminal** window is by clicking on the magnifying glass icon and typing *terminal* in spotlight.  
