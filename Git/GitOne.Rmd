@@ -115,8 +115,7 @@ To request a discount, which actually pays the whole price for 10 private reposi
 for qualified faculty, click on the request a discount at 
 [https://education.github.com](https://education.github.com).  A step-by-step guide 
 for setting up your GitHub organization for classroom use can be found at 
-[https://education.github.com/guide](https://education.github.com/guide).  
-Free private repositories for anyone can be created at 
+[https://education.github.com/guide](https://education.github.com/guide).   Free private repositories for anyone can be created at 
 [https://bitbucket.org](https://bitbucket.org).  Bitbucket, like GitHub, is a web 
 based hosting service that uses the Git revision control system.
 
