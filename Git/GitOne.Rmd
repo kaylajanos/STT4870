@@ -43,16 +43,20 @@ If you get a message indicating the file is from an untrusted source, ignore the
 ## Windows users
 
 Once the download is complete, right click on the downloaded file to install it as an 
-administrator.  Use the default options at each step of the installation if you are unsure 
-what you are doing.  When the installation arrives at the screen adjusting your PATH 
-environment, click in the circle to the left of **Run Git from the Windows Command Prompt**.
+administrator.  Use the default options at each step of the installation if you are 
+unsure what you are doing.  When the installation arrives at the screen adjusting your 
+PATH environment, click in the circle to the left of 
+**Run Git from the Windows Command Prompt**.
 You may need to manually add the path to where the `bash.exe` resides.  Run the 
-following at the `R` prompt to make sure `R` knows where to find `bash`.
+following at the `R` prompt to make sure `R` knows where to find `bash`.  Note that the 
+path below will be dependent on the operating system you are using.
 
 ```{r label= BashCheck, engine="R", cache = TRUE}
 Sys.which("bash")
 ```
 If the output does not specify the path to `bash`, the path to `bash` is not properly configured.
+
+To interact with Git, find the program named Git Bash.  Git Bash is the command line environment windows uses to interact with Git.  Git Bash should be located in the Git directory within your Start Menu if you followed the default installation instructions.
 
 
 ## Initial Setup
