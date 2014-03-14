@@ -190,6 +190,7 @@ I keep my repositories in a folder called *git_repositories* that
 is a subfolder of my *USERNAME* directory.   If you clone a remote repository 
 to your machine, you will not need to initialize your directory.
 
+### Forking  a Repo
 Another common way to clone a repo is my first "forking" someone else's repo.   Forking a repo creates a remote (GitHub or Bitbucket) copy of the forked repo.   To work on the forked repo, you first must clone the remote fork to your local  machine.  When a repository is cloned, it has a default remote called `origin` that points to your fork on GitHub, not the original repository it was forked from.
 
 One way to clone this repo using `RStudio` is  to click on File -> New Project 

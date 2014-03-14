@@ -7,7 +7,7 @@
 
 
 
-Last compiled Friday, March 14, 2014 - 11:39:58.
+Last compiled Friday, March 14, 2014 - 11:41:21.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -226,14 +226,9 @@ I keep my repositories in a folder called *git_repositories* that
 is a subfolder of my *USERNAME* directory.   If you clone a remote repository 
 to your machine, you will not need to initialize your directory.
 
-Another common way to clone a repo is my first "forking" someone else's repo.  
-Forking a repo creates a remote (GitHub or Bitbucket) copy of the forked repo.  
-To work on the forked repo, you first must clone the remote fork to your local 
-machine.  When a repository is cloned, it has a default remote called `origin` 
-that points to your fork on GitHub, not the original repository it was forked from.
+Another common way to clone a repo is my first "forking" someone else's repo.   Forking a repo creates a remote (GitHub or Bitbucket) copy of the forked repo.   To work on the forked repo, you first must clone the remote fork to your local  machine.  When a repository is cloned, it has a default remote called `origin` that points to your fork on GitHub, not the original repository it was forked from.
 
-One way to clone this repo using `RStudio` is 
-to click on File -> New Project 
+One way to clone this repo using `RStudio` is  to click on File -> New Project 
 
 ![NewProject](./images/NewProject.png)
 
@@ -282,8 +277,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master e3e27af] staging all files
- 3 files changed, 52 insertions(+), 41 deletions(-)
+[master dea131d] staging all files
+ 3 files changed, 42 insertions(+), 49 deletions(-)
 ```
 
 
@@ -343,6 +338,12 @@ git log  -3
 ```
 
 ```
+commit dea131d27e1f05c2d9ac9fcf190b79592e123181
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 11:41:21 2014 -0400
+
+    staging all files
+
 commit e3e27af1a9cee6d2af0cbecf9288668e54f6ed2c
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 11:39:58 2014 -0400
@@ -352,12 +353,6 @@ Date:   Fri Mar 14 11:39:58 2014 -0400
 commit 7d2989dc3d552738930dbca7029083e4b7c03376
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 11:38:05 2014 -0400
-
-    staging all files
-
-commit 8e60a7cb925209ffdcd650bc031753d63d0e946a
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 11:20:12 2014 -0400
 
     staging all files
 ```
@@ -371,9 +366,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+dea131d27e1f05c2d9ac9fcf190b79592e123181 staging all files
 e3e27af1a9cee6d2af0cbecf9288668e54f6ed2c staging all files
 7d2989dc3d552738930dbca7029083e4b7c03376 staging all files
-8e60a7cb925209ffdcd650bc031753d63d0e946a staging all files
 ```
 
 
@@ -385,9 +380,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+dea131d Fri Mar 14 11:41:21 2014 -0400- staging all files [Alan Arnholt]
 e3e27af Fri Mar 14 11:39:58 2014 -0400- staging all files [Alan Arnholt]
 7d2989d Fri Mar 14 11:38:05 2014 -0400- staging all files [Alan Arnholt]
-8e60a7c Fri Mar 14 11:20:12 2014 -0400- staging all files [Alan Arnholt]
 ```
 
 
@@ -399,6 +394,12 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+dea131d Fri Mar 14 11:41:21 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  | 11 +++--------
+ Git/GitOne.html | 43 +++++++++++++++++++++----------------------
+ Git/GitOne.md   | 37 ++++++++++++++++++-------------------
+ 3 files changed, 42 insertions(+), 49 deletions(-)
+
 e3e27af Fri Mar 14 11:39:58 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  |  3 +--
  Git/GitOne.html | 48 +++++++++++++++++++++++++++---------------------
@@ -410,12 +411,6 @@ e3e27af Fri Mar 14 11:39:58 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.html |  59 +++++++++-------
  Git/GitOne.md   | 205 +++++++++++++++++++++++++++++++++++++++++++++++++++++++-
  3 files changed, 244 insertions(+), 28 deletions(-)
-
-8e60a7c Fri Mar 14 11:20:12 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  |  16 +++--
- Git/GitOne.html |  66 +++++++++++--------
- Git/GitOne.md   | 198 ++++----------------------------------------------------
- 3 files changed, 63 insertions(+), 217 deletions(-)
 ```
 
 
