@@ -183,7 +183,7 @@ hljs.initHighlightingOnLoad();
 
 <h3>Alan T. Arnholt</h3>
 
-<p>Last compiled Friday, March 14, 2014 - 10:01:55.</p>
+<p>Last compiled Friday, March 14, 2014 - 10:14:04.</p>
 
 <p>What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:</p>
@@ -301,6 +301,9 @@ branch.master.merge=refs/heads/master
 
 <p>&ldquo;GitHub is a web-based hosting service for software development projects that use the Git revision control system. GitHub offers both paid plans for private repositories, and free accounts for open source projects. The site was launched in 2008 by Tom Preston-Werner, Chris Wanstrath, and PJ Hyett.&rdquo;(<a href="http://en.wikipedia.org/wiki/GitHub">http://en.wikipedia.org/wiki/GitHub</a>)</p>
 
+<p>Qualified faculty members can request free private accounts to use with their classes.
+To request a discount, which actually pays the whole price for 10 private repositories for qualified faculty, click on the request a discount at <a href="https://education.github.com">https://education.github.com</a>.</p>
+
 <h2>Creating a GitHub Account</h2>
 
 <p>Point your browser to <a href="https://github.com">https://github.com</a>,
@@ -368,8 +371,8 @@ taken of the commit with the message &ldquo;staging all files.&rdquo;</p>
 git commit  -m &quot;staging all files&quot;
 </code></pre>
 
-<pre><code>[master f40dfb2] staging all files
- 3 files changed, 40 insertions(+), 40 deletions(-)
+<pre><code>[master ff100fd] staging all files
+ 3 files changed, 43 insertions(+), 39 deletions(-)
 </code></pre>
 
 <p>Check the status after the last commit.</p>
@@ -421,7 +424,13 @@ no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&q
 <pre><code class="bash">git log  -3
 </code></pre>
 
-<pre><code>commit f40dfb2d796f452a1953581c9d264c30d6988e27
+<pre><code>commit ff100fd52f4fdd9288e588671820655e3f691697
+Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
+Date:   Fri Mar 14 10:14:04 2014 -0400
+
+    staging all files
+
+commit f40dfb2d796f452a1953581c9d264c30d6988e27
 Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
 Date:   Fri Mar 14 10:01:56 2014 -0400
 
@@ -432,12 +441,6 @@ Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
 Date:   Fri Mar 14 10:01:32 2014 -0400
 
     staging all files
-
-commit d1a91dbcfd1276e2e53ac5f7cc408fb07a752a7d
-Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
-Date:   Fri Mar 14 10:00:49 2014 -0400
-
-    staging all files
 </code></pre>
 
 <p>That was ugly. Let us try some formatting.</p>
@@ -445,9 +448,9 @@ Date:   Fri Mar 14 10:00:49 2014 -0400
 <pre><code class="bash">git log --pretty=oneline -3
 </code></pre>
 
-<pre><code>f40dfb2d796f452a1953581c9d264c30d6988e27 staging all files
+<pre><code>ff100fd52f4fdd9288e588671820655e3f691697 staging all files
+f40dfb2d796f452a1953581c9d264c30d6988e27 staging all files
 f8f75265c1a0c97a433d6a92134915e23d0b000f staging all files
-d1a91dbcfd1276e2e53ac5f7cc408fb07a752a7d staging all files
 </code></pre>
 
 <p>The previous output was to brief to suit me.  Let us try some further formatting.</p>
@@ -455,9 +458,9 @@ d1a91dbcfd1276e2e53ac5f7cc408fb07a752a7d staging all files
 <pre><code class="bash">git log --pretty=format:&quot;%h %ad- %s [%an]&quot; -3
 </code></pre>
 
-<pre><code>f40dfb2 Fri Mar 14 10:01:56 2014 -0400- staging all files [Alan Arnholt]
+<pre><code>ff100fd Fri Mar 14 10:14:04 2014 -0400- staging all files [Alan Arnholt]
+f40dfb2 Fri Mar 14 10:01:56 2014 -0400- staging all files [Alan Arnholt]
 f8f7526 Fri Mar 14 10:01:32 2014 -0400- staging all files [Alan Arnholt]
-d1a91db Fri Mar 14 10:00:49 2014 -0400- staging all files [Alan Arnholt]
 </code></pre>
 
 <p>Maybe even some statistics?</p>
@@ -465,7 +468,13 @@ d1a91db Fri Mar 14 10:00:49 2014 -0400- staging all files [Alan Arnholt]
 <pre><code class="bash">git log --pretty=format:&quot;%h %ad- %s [%an]&quot; -3 --stat
 </code></pre>
 
-<pre><code>f40dfb2 Fri Mar 14 10:01:56 2014 -0400- staging all files [Alan Arnholt]
+<pre><code>ff100fd Fri Mar 14 10:14:04 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  |  4 ++++
+ Git/GitOne.html | 42 +++++++++++++++++++++---------------------
+ Git/GitOne.md   | 36 ++++++++++++++++++------------------
+ 3 files changed, 43 insertions(+), 39 deletions(-)
+
+f40dfb2 Fri Mar 14 10:01:56 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  |  2 +-
  Git/GitOne.html | 42 +++++++++++++++++++++---------------------
  Git/GitOne.md   | 36 ++++++++++++++++++------------------
@@ -476,12 +485,6 @@ f8f7526 Fri Mar 14 10:01:32 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.html | 54 +++++++++++++++++++++++++++++-------------------------
  Git/GitOne.md   | 48 ++++++++++++++++++++++++++----------------------
  3 files changed, 56 insertions(+), 48 deletions(-)
-
-d1a91db Fri Mar 14 10:00:49 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  | 14 +++++++++-----
- Git/GitOne.html | 43 +++++++++++++++++++++----------------------
- Git/GitOne.md   | 37 ++++++++++++++++++-------------------
- 3 files changed, 48 insertions(+), 46 deletions(-)
 </code></pre>
 
 <p>Now, just to show how cool this is, we will mix in a little <code>R</code>.</p>
