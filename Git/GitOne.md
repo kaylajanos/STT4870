@@ -7,7 +7,7 @@
 
 
 
-Last compiled Friday, March 14, 2014 - 11:45:27.
+Last compiled Friday, March 14, 2014 - 11:55:34.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -172,7 +172,8 @@ This document is stored in the repository [https://github.com/alanarnholt/STT487
 
 Once you have your remote repository created on GitHub, you will need to create a local
 copy of the remote repository on your computer so that you can make changes locally. 
-It is possible to set up a local repository using the command line or using GUI (drop, drag, etc.) commands.  We will start by first looking at typed command then looking at a GUI interface for Git.   
+It is possible to set up a local repository using the command line or using GUI (drop, drag, etc.) commands.  We start by first looking at typed commands then we examine a 
+GUI to Git.   
 
 Open either a Terminal (Mac) or Git Bash (Windows).  
 Create a directory on your computer where you will store your copy of the GitHub 
@@ -227,7 +228,9 @@ is a subfolder of my *USERNAME* directory.   If you clone a remote repository
 to your machine, you will not need to initialize your directory.
 
 ### Forking  a Repo
-Another common way to clone a repo is my first "forking" someone else's repo.   Forking a repo creates a remote (GitHub) copy of the forked repo.   To work on the forked repo, you first must clone the remote fork to your local  machine.  When a repository is cloned, it has a default remote called `origin` that points to your fork on GitHub, not the original repository it was forked from.
+Another common way to clone a repo is my first "forking" someone else's repo.   Forking a repo creates a remote (GitHub) copy of the forked repo.   To work on the forked repo, you first must clone the remote fork to your local  machine.  When a repository is cloned, it has a default remote called `origin` that points to your fork on GitHub, not the original repository it was forked from.  This means that updates the orignal repo owner makes will not automatically be added to your forked repo.
+
+### How to...
 
 
 ## GUI appraoch with RStudio
@@ -256,15 +259,10 @@ On branch master
 Your branch is up-to-date with 'origin/master'.
 
 Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
+  (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
 	modified:   GitOne.Rmd
-	modified:   GitOne.html
-	modified:   GitOne.md
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -281,8 +279,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master 140f4f9] staging all files
- 3 files changed, 42 insertions(+), 39 deletions(-)
+[master 0b1af2b] staging all files
+ 1 file changed, 5 insertions(+), 2 deletions(-)
 ```
 
 
@@ -297,15 +295,7 @@ On branch master
 Your branch is ahead of 'origin/master' by 1 commit.
   (use "git push" to publish your local commits)
 
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
-
-no changes added to commit (use "git add" and/or "git commit -a")
+nothing to commit, working directory clean
 ```
 
 Push changes to the remote repository. 
@@ -324,15 +314,7 @@ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
 
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
-
-no changes added to commit (use "git add" and/or "git commit -a")
+nothing to commit, working directory clean
 ```
 
 Show the last three commits with
@@ -342,21 +324,21 @@ git log  -3
 ```
 
 ```
+commit 0b1af2b28a0dbdf4009391460569a0411210b2df
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 11:55:34 2014 -0400
+
+    staging all files
+
+commit a945e366ae2a6cfeee2f042999069da99ed36c41
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 11:50:06 2014 -0400
+
+    push
+
 commit 140f4f9854be0711954021ef46ea0ccd46211d59
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 11:45:27 2014 -0400
-
-    staging all files
-
-commit c47158c8dfdab06338b214da0935dc4ce7890a8d
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 11:42:27 2014 -0400
-
-    staging all files
-
-commit a3e774d572f7bf02434a9eb5c62ed043ef5165eb
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 11:41:49 2014 -0400
 
     staging all files
 ```
@@ -370,9 +352,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+0b1af2b28a0dbdf4009391460569a0411210b2df staging all files
+a945e366ae2a6cfeee2f042999069da99ed36c41 push
 140f4f9854be0711954021ef46ea0ccd46211d59 staging all files
-c47158c8dfdab06338b214da0935dc4ce7890a8d staging all files
-a3e774d572f7bf02434a9eb5c62ed043ef5165eb staging all files
 ```
 
 
@@ -384,9 +366,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+0b1af2b Fri Mar 14 11:55:34 2014 -0400- staging all files [Alan Arnholt]
+a945e36 Fri Mar 14 11:50:06 2014 -0400- push [Alan Arnholt]
 140f4f9 Fri Mar 14 11:45:27 2014 -0400- staging all files [Alan Arnholt]
-c47158c Fri Mar 14 11:42:27 2014 -0400- staging all files [Alan Arnholt]
-a3e774d Fri Mar 14 11:41:49 2014 -0400- staging all files [Alan Arnholt]
 ```
 
 
@@ -398,23 +380,23 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+0b1af2b Fri Mar 14 11:55:34 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+a945e36 Fri Mar 14 11:50:06 2014 -0400- push [Alan Arnholt]
+ Git/GitOne.html                                    |  42 +++++++++++----------
+ Git/GitOne.md                                      |  37 +++++++++---------
+ ...ashCheck_3a4552886a749e14bd443de33a754ec2.RData | Bin 176 -> 0 bytes
+ .../BashCheck_3a4552886a749e14bd443de33a754ec2.rdb |   0
+ .../BashCheck_3a4552886a749e14bd443de33a754ec2.rdx | Bin 113 -> 0 bytes
+ 5 files changed, 42 insertions(+), 37 deletions(-)
+
 140f4f9 Fri Mar 14 11:45:27 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  |  3 +++
  Git/GitOne.html | 42 +++++++++++++++++++++---------------------
  Git/GitOne.md   | 36 ++++++++++++++++++------------------
  3 files changed, 42 insertions(+), 39 deletions(-)
-
-c47158c Fri Mar 14 11:42:27 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  |  2 +-
- Git/GitOne.html | 42 ++++++++++++++++++++++--------------------
- Git/GitOne.md   | 35 ++++++++++++++++++-----------------
- 3 files changed, 41 insertions(+), 38 deletions(-)
-
-a3e774d Fri Mar 14 11:41:49 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  |  1 +
- Git/GitOne.html | 49 ++++++++++++++++++++++---------------------------
- Git/GitOne.md   | 43 +++++++++++++++++++------------------------
- 3 files changed, 42 insertions(+), 51 deletions(-)
 ```
 
 
