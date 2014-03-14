@@ -69,10 +69,12 @@ application is usually found in `/applications/Utilities`. A quick way to open a
 
 <img class=center src="./images/Spotlight.png" height='200'/>
 
+### Mac Users
 By clicking on the Terminal application, a Terminal window will open.
 
 <img class=center src="./images/TerminalWindow.png" height='150'/>
 
+### Windows Users
 To open Git Bash, click on the *Windows icon -> Git -> Git Bash*.  The program is most likely located in the Git directory within your Start Menu (or the directory into which Git was installed).
 
 <img class=center src="./images/WindowsProgramGitBash.png" height='400'/>
