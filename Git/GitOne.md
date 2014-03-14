@@ -7,7 +7,7 @@
 
 
 
-Last compiled Friday, March 14, 2014 - 09:49:12.
+Last compiled Friday, March 14, 2014 - 10:00:49.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -31,14 +31,14 @@ Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
 <img class=center src="./images/SGitDownload.png" height='480'/>
 
-## Mac Users
+### Mac Users
 Install the downloaded file by clicking on the downloaded `*.dmg` file then clicking on the `*.pkg` file. 
 
 <img class=center src="./images/MacGitDownload.png" height='200'/>
 
 If you get a message indicating the file is from an untrusted source, ignore the warning and click on the **Open** button.  If there is no option to **Open**, hold down the CTRL key, select `*.pkg` file, then choose *Open With -> Installer (default)*.
 
-## Windows users
+### Windows users
 
 Once the download is complete, right click on the downloaded file to install it as an 
 administrator.  Use the default options at each step of the installation if you are 
@@ -88,7 +88,7 @@ By clicking on the Git Bash icon, a window similar to the one below will open.
 
 <img class=center src="./images/GitBashWindow.png" height='150'/>
 
-## Run these commands
+### Run these commands
 
 
 ```bash
@@ -126,9 +126,13 @@ branch.master.merge=refs/heads/master
 
 
 From the third line of the previous output, one can see the 
-`credential.helper` is being used.  Now that Git is set up on your computer, we will provide instructions for setting up a remote repository on GitHub.
+`credential.helper` is being used.  Now that Git is set up on your computer, we provide instructions for setting up a remote repository on GitHub.
 
-### Creating a GitHub Account
+### What is GitHub?
+
+["GitHub is a web-based hosting service for software development projects that use the Git revision control system. GitHub offers both paid plans for private repositories, and free accounts for open source projects. The site was launched in 2008 by Tom Preston-Werner, Chris Wanstrath, and PJ Hyett."](http://en.wikipedia.org/wiki/GitHub)
+
+## Creating a GitHub Account
 
 Point your browser to [https://github.com](https://github.com),
 type a username in the `Pick a username` box (please use `firstlast`, for example my username is `alanarnholt`), enter your email (use your school email) in the `Your email` box, type in your password in the `Create a password` box. Then, click the `Sign up for GitHub` box and you will have a GitHub account.
@@ -202,8 +206,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master 296c7b7] staging all files
- 3 files changed, 44 insertions(+), 38 deletions(-)
+[master d1a91db] staging all files
+ 3 files changed, 48 insertions(+), 46 deletions(-)
 ```
 
 
@@ -263,6 +267,12 @@ git log  -3
 ```
 
 ```
+commit d1a91dbcfd1276e2e53ac5f7cc408fb07a752a7d
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 10:00:49 2014 -0400
+
+    staging all files
+
 commit 296c7b7af77d311cd41f0237a69795319845e8cf
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 09:49:12 2014 -0400
@@ -272,12 +282,6 @@ Date:   Fri Mar 14 09:49:12 2014 -0400
 commit dea24e20031e1a1506733e1584e5ef72fffc4f04
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 09:44:36 2014 -0400
-
-    staging all files
-
-commit 651f980768c532ff7ce6b0b8e3bac8e8a825dae3
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 09:42:32 2014 -0400
 
     staging all files
 ```
@@ -291,9 +295,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+d1a91dbcfd1276e2e53ac5f7cc408fb07a752a7d staging all files
 296c7b7af77d311cd41f0237a69795319845e8cf staging all files
 dea24e20031e1a1506733e1584e5ef72fffc4f04 staging all files
-651f980768c532ff7ce6b0b8e3bac8e8a825dae3 staging all files
 ```
 
 
@@ -305,9 +309,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+d1a91db Fri Mar 14 10:00:49 2014 -0400- staging all files [Alan Arnholt]
 296c7b7 Fri Mar 14 09:49:12 2014 -0400- staging all files [Alan Arnholt]
 dea24e2 Fri Mar 14 09:44:36 2014 -0400- staging all files [Alan Arnholt]
-651f980 Fri Mar 14 09:42:32 2014 -0400- staging all files [Alan Arnholt]
 ```
 
 
@@ -319,6 +323,12 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+d1a91db Fri Mar 14 10:00:49 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  | 14 +++++++++-----
+ Git/GitOne.html | 43 +++++++++++++++++++++----------------------
+ Git/GitOne.md   | 37 ++++++++++++++++++-------------------
+ 3 files changed, 48 insertions(+), 46 deletions(-)
+
 296c7b7 Fri Mar 14 09:49:12 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  |  2 +-
  Git/GitOne.html | 44 ++++++++++++++++++++++++--------------------
@@ -330,12 +340,6 @@ dea24e2 Fri Mar 14 09:44:36 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.html | 46 ++++++++++++++++++++++------------------------
  Git/GitOne.md   | 40 +++++++++++++++++++---------------------
  3 files changed, 43 insertions(+), 45 deletions(-)
-
-651f980 Fri Mar 14 09:42:32 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  |  4 ++--
- Git/GitOne.html | 48 +++++++++++++++++++++++++-----------------------
- Git/GitOne.md   | 40 +++++++++++++++++++++-------------------
- 3 files changed, 48 insertions(+), 44 deletions(-)
 ```
 
 
