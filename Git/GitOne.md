@@ -7,7 +7,7 @@
 
 
 
-Last compiled Friday, March 14, 2014 - 10:00:49.
+Last compiled Friday, March 14, 2014 - 10:01:32.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -130,7 +130,7 @@ From the third line of the previous output, one can see the
 
 ### What is GitHub?
 
-["GitHub is a web-based hosting service for software development projects that use the Git revision control system. GitHub offers both paid plans for private repositories, and free accounts for open source projects. The site was launched in 2008 by Tom Preston-Werner, Chris Wanstrath, and PJ Hyett."](http://en.wikipedia.org/wiki/GitHub)
+["GitHub] is a web-based hosting service for software development projects that use the Git revision control system. GitHub offers both paid plans for private repositories, and free accounts for open source projects. The site was launched in 2008 by Tom Preston-Werner, Chris Wanstrath, and PJ Hyett."(http://en.wikipedia.org/wiki/GitHub)
 
 ## Creating a GitHub Account
 
@@ -206,8 +206,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master d1a91db] staging all files
- 3 files changed, 48 insertions(+), 46 deletions(-)
+[master f8f7526] staging all files
+ 3 files changed, 56 insertions(+), 48 deletions(-)
 ```
 
 
@@ -267,6 +267,12 @@ git log  -3
 ```
 
 ```
+commit f8f75265c1a0c97a433d6a92134915e23d0b000f
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 10:01:32 2014 -0400
+
+    staging all files
+
 commit d1a91dbcfd1276e2e53ac5f7cc408fb07a752a7d
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 10:00:49 2014 -0400
@@ -276,12 +282,6 @@ Date:   Fri Mar 14 10:00:49 2014 -0400
 commit 296c7b7af77d311cd41f0237a69795319845e8cf
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 09:49:12 2014 -0400
-
-    staging all files
-
-commit dea24e20031e1a1506733e1584e5ef72fffc4f04
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 09:44:36 2014 -0400
 
     staging all files
 ```
@@ -295,9 +295,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+f8f75265c1a0c97a433d6a92134915e23d0b000f staging all files
 d1a91dbcfd1276e2e53ac5f7cc408fb07a752a7d staging all files
 296c7b7af77d311cd41f0237a69795319845e8cf staging all files
-dea24e20031e1a1506733e1584e5ef72fffc4f04 staging all files
 ```
 
 
@@ -309,9 +309,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+f8f7526 Fri Mar 14 10:01:32 2014 -0400- staging all files [Alan Arnholt]
 d1a91db Fri Mar 14 10:00:49 2014 -0400- staging all files [Alan Arnholt]
 296c7b7 Fri Mar 14 09:49:12 2014 -0400- staging all files [Alan Arnholt]
-dea24e2 Fri Mar 14 09:44:36 2014 -0400- staging all files [Alan Arnholt]
 ```
 
 
@@ -323,6 +323,12 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+f8f7526 Fri Mar 14 10:01:32 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  |  2 +-
+ Git/GitOne.html | 54 +++++++++++++++++++++++++++++-------------------------
+ Git/GitOne.md   | 48 ++++++++++++++++++++++++++----------------------
+ 3 files changed, 56 insertions(+), 48 deletions(-)
+
 d1a91db Fri Mar 14 10:00:49 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  | 14 +++++++++-----
  Git/GitOne.html | 43 +++++++++++++++++++++----------------------
@@ -334,12 +340,6 @@ d1a91db Fri Mar 14 10:00:49 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.html | 44 ++++++++++++++++++++++++--------------------
  Git/GitOne.md   | 36 +++++++++++++++++++-----------------
  3 files changed, 44 insertions(+), 38 deletions(-)
-
-dea24e2 Fri Mar 14 09:44:36 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  |  2 ++
- Git/GitOne.html | 46 ++++++++++++++++++++++------------------------
- Git/GitOne.md   | 40 +++++++++++++++++++---------------------
- 3 files changed, 43 insertions(+), 45 deletions(-)
 ```
 
 
