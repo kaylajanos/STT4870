@@ -183,7 +183,7 @@ hljs.initHighlightingOnLoad();
 
 <h3>Alan T. Arnholt</h3>
 
-<p>Last compiled Friday, March 14, 2014 - 09:44:36.</p>
+<p>Last compiled Friday, March 14, 2014 - 09:49:12.</p>
 
 <p>What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:</p>
@@ -295,7 +295,7 @@ branch.master.merge=refs/heads/master
 </code></pre>
 
 <p>From the third line of the previous output, one can see the 
-<code>credential.helper</code> is being used.</p>
+<code>credential.helper</code> is being used.  Now that Git is set up on your computer, we will provide instructions for setting up a remote repository on GitHub.</p>
 
 <h3>Creating a GitHub Account</h3>
 
@@ -364,8 +364,8 @@ taken of the commit with the message &ldquo;staging all files.&rdquo;</p>
 git commit  -m &quot;staging all files&quot;
 </code></pre>
 
-<pre><code>[master dea24e2] staging all files
- 3 files changed, 43 insertions(+), 45 deletions(-)
+<pre><code>[master 296c7b7] staging all files
+ 3 files changed, 44 insertions(+), 38 deletions(-)
 </code></pre>
 
 <p>Check the status after the last commit.</p>
@@ -417,7 +417,13 @@ no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&q
 <pre><code class="bash">git log  -3
 </code></pre>
 
-<pre><code>commit dea24e20031e1a1506733e1584e5ef72fffc4f04
+<pre><code>commit 296c7b7af77d311cd41f0237a69795319845e8cf
+Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
+Date:   Fri Mar 14 09:49:12 2014 -0400
+
+    staging all files
+
+commit dea24e20031e1a1506733e1584e5ef72fffc4f04
 Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
 Date:   Fri Mar 14 09:44:36 2014 -0400
 
@@ -428,12 +434,6 @@ Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
 Date:   Fri Mar 14 09:42:32 2014 -0400
 
     staging all files
-
-commit 40ebe573e380951f4ae13e744d6d880d3f94b9a1
-Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
-Date:   Fri Mar 14 09:40:17 2014 -0400
-
-    staging all files
 </code></pre>
 
 <p>That was ugly. Let us try some formatting.</p>
@@ -441,9 +441,9 @@ Date:   Fri Mar 14 09:40:17 2014 -0400
 <pre><code class="bash">git log --pretty=oneline -3
 </code></pre>
 
-<pre><code>dea24e20031e1a1506733e1584e5ef72fffc4f04 staging all files
+<pre><code>296c7b7af77d311cd41f0237a69795319845e8cf staging all files
+dea24e20031e1a1506733e1584e5ef72fffc4f04 staging all files
 651f980768c532ff7ce6b0b8e3bac8e8a825dae3 staging all files
-40ebe573e380951f4ae13e744d6d880d3f94b9a1 staging all files
 </code></pre>
 
 <p>The previous output was to brief to suit me.  Let us try some further formatting.</p>
@@ -451,9 +451,9 @@ Date:   Fri Mar 14 09:40:17 2014 -0400
 <pre><code class="bash">git log --pretty=format:&quot;%h %ad- %s [%an]&quot; -3
 </code></pre>
 
-<pre><code>dea24e2 Fri Mar 14 09:44:36 2014 -0400- staging all files [Alan Arnholt]
+<pre><code>296c7b7 Fri Mar 14 09:49:12 2014 -0400- staging all files [Alan Arnholt]
+dea24e2 Fri Mar 14 09:44:36 2014 -0400- staging all files [Alan Arnholt]
 651f980 Fri Mar 14 09:42:32 2014 -0400- staging all files [Alan Arnholt]
-40ebe57 Fri Mar 14 09:40:17 2014 -0400- staging all files [Alan Arnholt]
 </code></pre>
 
 <p>Maybe even some statistics?</p>
@@ -461,7 +461,13 @@ Date:   Fri Mar 14 09:40:17 2014 -0400
 <pre><code class="bash">git log --pretty=format:&quot;%h %ad- %s [%an]&quot; -3 --stat
 </code></pre>
 
-<pre><code>dea24e2 Fri Mar 14 09:44:36 2014 -0400- staging all files [Alan Arnholt]
+<pre><code>296c7b7 Fri Mar 14 09:49:12 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  |  2 +-
+ Git/GitOne.html | 44 ++++++++++++++++++++++++--------------------
+ Git/GitOne.md   | 36 +++++++++++++++++++-----------------
+ 3 files changed, 44 insertions(+), 38 deletions(-)
+
+dea24e2 Fri Mar 14 09:44:36 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  |  2 ++
  Git/GitOne.html | 46 ++++++++++++++++++++++------------------------
  Git/GitOne.md   | 40 +++++++++++++++++++---------------------
@@ -472,13 +478,6 @@ Date:   Fri Mar 14 09:40:17 2014 -0400
  Git/GitOne.html | 48 +++++++++++++++++++++++++-----------------------
  Git/GitOne.md   | 40 +++++++++++++++++++++-------------------
  3 files changed, 48 insertions(+), 44 deletions(-)
-
-40ebe57 Fri Mar 14 09:40:17 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd                |   2 +-
- Git/GitOne.html               |  55 ++++++++++++++++++++++--------------------
- Git/GitOne.md                 |  49 +++++++++++++++++++------------------
- Git/images/TerminalWindow.png | Bin 18306 -&gt; 23152 bytes
- 4 files changed, 56 insertions(+), 50 deletions(-)
 </code></pre>
 
 <p>Now, just to show how cool this is, we will mix in a little <code>R</code>.</p>

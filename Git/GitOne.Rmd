@@ -33,14 +33,14 @@ Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
 <img class=center src="./images/SGitDownload.png" height='480'/>
 
-## Mac Users
+### Mac Users
 Install the downloaded file by clicking on the downloaded `*.dmg` file then clicking on the `*.pkg` file. 
 
 <img class=center src="./images/MacGitDownload.png" height='200'/>
 
 If you get a message indicating the file is from an untrusted source, ignore the warning and click on the **Open** button.  If there is no option to **Open**, hold down the CTRL key, select `*.pkg` file, then choose *Open With -> Installer (default)*.
 
-## Windows users
+### Windows users
 
 Once the download is complete, right click on the downloaded file to install it as an 
 administrator.  Use the default options at each step of the installation if you are 
@@ -83,7 +83,7 @@ By clicking on the Git Bash icon, a window similar to the one below will open.
 
 <img class=center src="./images/GitBashWindow.png" height='150'/>
 
-## Run these commands
+### Run these commands
 
 ```{r label = GITsetup, eval = FALSE}
 git config --global user.name "Your Name"
@@ -100,9 +100,13 @@ git config --list
 ```
 
 From the third line of the previous output, one can see the 
-`credential.helper` is being used.  Now that Git is set up on your computer, we will provide instructions for setting up a remote repository on GitHub.
+`credential.helper` is being used.  Now that Git is set up on your computer, we provide instructions for setting up a remote repository on GitHub.
 
-### Creating a GitHub Account
+### What is GitHub?
+
+["GitHub is a web-based hosting service for software development projects that use the Git revision control system. GitHub offers both paid plans for private repositories, and free accounts for open source projects. The site was launched in 2008 by Tom Preston-Werner, Chris Wanstrath, and PJ Hyett."](http://en.wikipedia.org/wiki/GitHub)
+
+## Creating a GitHub Account
 
 Point your browser to [https://github.com](https://github.com),
 type a username in the `Pick a username` box (please use `firstlast`, for example my username is `alanarnholt`), enter your email (use your school email) in the `Your email` box, type in your password in the `Create a password` box. Then, click the `Sign up for GitHub` box and you will have a GitHub account.
