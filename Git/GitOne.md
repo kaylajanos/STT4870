@@ -7,7 +7,7 @@
 
 
 
-Last compiled Friday, March 14, 2014 - 09:02:37.
+Last compiled Friday, March 14, 2014 - 09:04:02.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -22,10 +22,10 @@ local machines and two servers.  That works fine until you start using the files
 
 I now use version control, specifically Git for virtually all of my work.  Notes for classes I am teaching have their own repositories (repos) and students and other interested parties can clone my repos.  If you have material that you would like to remain private, you can set up private repositories.  Thankfully, I have not lost a single file I could not recover since switching my work to Git.  
 
-One last thought before we talk about actually installing and using Git.  You may be thinking, I have never lost a file because I back up all of my files on an external hardrive.  Great; however, suppose you lose your machine and external hard drive to a catastrophic event.  Now what?  Well, if you are not using some form of version control, your work is most likely gone for good. If you were using version control, you just need to set up a new machine and continue your work where you left off.
+One last thought before we talk about actually installing and using Git.  You may be thinking, I have never lost a file because I back up all of my files on an external hardrive.  Great; however, suppose you lose your machine and external hard drive due to a catastrophic event.  Now what?  Well, if you are not using some form of version control, your work is most likely gone for good. If you were using version control, you just need to set up a new machine and continue your work where you left off.
 
 
-
+### Downloading Git
 
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
@@ -196,8 +196,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master 303ab5e] staging all files
- 3 files changed, 51 insertions(+), 51 deletions(-)
+[master 0b9e780] staging all files
+ 3 files changed, 50 insertions(+), 36 deletions(-)
 ```
 
 
@@ -257,6 +257,12 @@ git log  -3
 ```
 
 ```
+commit 0b9e780f2297647a42fa78a0c85a19433f6ccfcc
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 09:04:02 2014 -0400
+
+    staging all files
+
 commit 303ab5eb3580d648dbe9abe6363773ed2b7faf4f
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 09:02:37 2014 -0400
@@ -266,12 +272,6 @@ Date:   Fri Mar 14 09:02:37 2014 -0400
 commit 5d259eda57cec26a66dab47e9eb9c7163b0ddc36
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 08:50:47 2014 -0400
-
-    staging all files
-
-commit 84dee18dbbb18f61dc4516dcab9c9551ef17d18c
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 08:39:53 2014 -0400
 
     staging all files
 ```
@@ -285,9 +285,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+0b9e780f2297647a42fa78a0c85a19433f6ccfcc staging all files
 303ab5eb3580d648dbe9abe6363773ed2b7faf4f staging all files
 5d259eda57cec26a66dab47e9eb9c7163b0ddc36 staging all files
-84dee18dbbb18f61dc4516dcab9c9551ef17d18c staging all files
 ```
 
 
@@ -299,9 +299,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+0b9e780 Fri Mar 14 09:04:02 2014 -0400- staging all files [Alan Arnholt]
 303ab5e Fri Mar 14 09:02:37 2014 -0400- staging all files [Alan Arnholt]
 5d259ed Fri Mar 14 08:50:47 2014 -0400- staging all files [Alan Arnholt]
-84dee18 Fri Mar 14 08:39:53 2014 -0400- staging all files [Alan Arnholt]
 ```
 
 
@@ -313,6 +313,12 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+0b9e780 Fri Mar 14 09:04:02 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  |  4 ++--
+ Git/GitOne.html | 45 ++++++++++++++++++++++++++-------------------
+ Git/GitOne.md   | 37 ++++++++++++++++++++++---------------
+ 3 files changed, 50 insertions(+), 36 deletions(-)
+
 303ab5e Fri Mar 14 09:02:37 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  |  6 +++++-
  Git/GitOne.html | 51 ++++++++++++++++++++++++---------------------------
@@ -324,10 +330,6 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
  Git/GitOne.html | 147 ++++++++++++++++++++++++++++++++++----------------------
  Git/GitOne.md   | 144 +++++++++++++++++++++++++++++++++---------------------
  3 files changed, 181 insertions(+), 114 deletions(-)
-
-84dee18 Fri Mar 14 08:39:53 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd | 12 ++++++++++++
- 1 file changed, 12 insertions(+)
 ```
 
 
