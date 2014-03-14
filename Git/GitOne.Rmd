@@ -100,7 +100,7 @@ git config --list
 ```
 
 From the third line of the previous output, one can see the 
-`credential.helper` is being used.
+`credential.helper` is being used.  Now that Git is set up on your computer, we will provide instructions for setting up a remote repository on GitHub.
 
 ### Creating a GitHub Account
 
