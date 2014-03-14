@@ -107,7 +107,7 @@ From the third line of the previous output, one can see the
 "GitHub is a web-based hosting service for software development projects that use the Git revision control system. GitHub offers both paid plans for private repositories, and free accounts for open source projects. The site was launched in 2008 by Tom Preston-Werner, Chris Wanstrath, and PJ Hyett."(http://en.wikipedia.org/wiki/GitHub)
 
 Qualified faculty members can request free private accounts to use with their classes.
-To request a discount, which actually pays the whole price for 10 private repositories for qualified faculty, click on the request a discount at [https://education.github.com](https://education.github.com).  A step-by-step guide for setting up your GitHub organization for classroom use can be found at [https://education.github.com/guide](https://education.github.com/guide).  Free private repositories for anyone are available at [https://bitbucket.org](https://bitbucket.org).
+To request a discount, which actually pays the whole price for 10 private repositories for qualified faculty, click on the request a discount at [https://education.github.com](https://education.github.com).  A step-by-step guide for setting up your GitHub organization for classroom use can be found at [https://education.github.com/guide](https://education.github.com/guide).  Free private repositories for anyone can be created at [https://bitbucket.org](https://bitbucket.org).  Bitbucket, like GitHub, is a web based hosting service that uses the Git revision control system.
 
 ## Creating a GitHub Account
 
