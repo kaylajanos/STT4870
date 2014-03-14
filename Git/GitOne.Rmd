@@ -11,6 +11,18 @@ opts_chunk$set(comment = NA, engine = "bash", fig.align="center", fig.height = 4
 
 Last compiled `r DT`.
 
+What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
+a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
+
+* YourNameCVJanuary2014.docx
+* YourNameCVMarch2014.docx
+* chapter1-012412.tex
+* chapter2-032312.tex
+
+You may even back up your files for major projects in many different places.  When working on book projects in the past, I would back up my files on three different 
+local machines and two servers.  That works fine until you start using the files from one location and forget that you updated the files on another machine and are using an old version for new updates.  Now you may have new material on old files and have generally wasted several weeks of work.  Expletives follow and you set to "un-hosing" your work.
+
+
 Download and install the lastest version of [Git.](http://git-scm.com/downloads)
 
 <img class=center src="./images/GitDownload.png" height='480'/>
