@@ -7,7 +7,7 @@
 
 
 
-Last compiled Friday, March 14, 2014 - 11:19:58.
+Last compiled Friday, March 14, 2014 - 11:20:12.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -214,24 +214,227 @@ git remote add origin https://github.com/your-user-name/TestProject.git
 ```
 
 
+If you are working with a new repository and do not have an existing version on 
+your computer, you need to "clone" the GitHub repo to your computer.  From the working directory of your local machine type:
 
 
+```bash
+git clone https://github.com/your-user-name/TestProject.git
+```
 
 
+I keep my repositories in a folder called *git_repositories* that
+is a subfolder of my *USERNAME* directory.   If you clone a remote repository 
+to your machine, you will not need to initialize your directory.  
+
+One way to clone this repo using `RStudio` is 
+to click on File -> New Project 
+
+![NewProject](./images/NewProject.png)
+
+Click Version Control and a new window such as the one below will appear where you will select Git.
+
+![VersionControl](./images/VersionControl.png)
+
+In the next window that appears, which is shown below, enter the URL for the repository you are cloning.  Enter a project name and specify where you want the project to reside on your computer.  When you are finished, click the `Create Project` button and you will have cloned a remote repository.
+
+![ProjectVersionControl](./images/ProjectVersionControl.png)
 
 
+To check the current status of your repository type:
+
+```bash
+git status
+```
+
+```
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   GitOne.Rmd
+	modified:   GitOne.html
+	modified:   GitOne.md
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+The `git status` shows us what files are not staged for a commit.  Before files can be
+committed, they must be added to the staging area.  Files are added to the stating area
+with the command `git add file_name`.  To add all files in the working directory, one
+can use `git add .`  Next, all files are added to the staging area, and a snapshot is 
+taken of the commit with the message "staging all files."
+
+```bash
+git add .
+git commit  -m "staging all files"
+```
+
+```
+[master 8e60a7c] staging all files
+ 3 files changed, 63 insertions(+), 217 deletions(-)
+```
 
 
+Check the status after the last commit.
+
+```bash
+git status
+```
+
+```
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+Push changes to the remote repository. 
+
+```bash
+git push
+```
+
+See if there is anything left to do.
+
+```bash
+git status
+```
+
+```
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
+	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+Show the last three commits with
+
+```bash
+git log  -3
+```
+
+```
+commit 8e60a7cb925209ffdcd650bc031753d63d0e946a
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 11:20:12 2014 -0400
+
+    staging all files
+
+commit 8539d488fd676b8bfcfc098a1bba79995c12f804
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 11:10:38 2014 -0400
+
+    staging all files
+
+commit 6a499bea0deb92bbe619093969f5ae680a7c49d4
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 10:53:57 2014 -0400
+
+    staging all files
+```
 
 
+That was ugly. Let us try some formatting.
 
 
+```bash
+git log --pretty=oneline -3
+```
+
+```
+8e60a7cb925209ffdcd650bc031753d63d0e946a staging all files
+8539d488fd676b8bfcfc098a1bba79995c12f804 staging all files
+6a499bea0deb92bbe619093969f5ae680a7c49d4 staging all files
+```
 
 
+The previous output was to brief to suit me.  Let us try some further formatting.
 
 
+```bash
+git log --pretty=format:"%h %ad- %s [%an]" -3
+```
+
+```
+8e60a7c Fri Mar 14 11:20:12 2014 -0400- staging all files [Alan Arnholt]
+8539d48 Fri Mar 14 11:10:38 2014 -0400- staging all files [Alan Arnholt]
+6a499be Fri Mar 14 10:53:57 2014 -0400- staging all files [Alan Arnholt]
+```
 
 
+Maybe even some statistics?
 
 
+```bash
+git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
+```
 
+```
+8e60a7c Fri Mar 14 11:20:12 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  |  16 +++--
+ Git/GitOne.html |  66 +++++++++++--------
+ Git/GitOne.md   | 198 ++++----------------------------------------------------
+ 3 files changed, 63 insertions(+), 217 deletions(-)
+
+8539d48 Fri Mar 14 11:10:38 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  | 27 +++++++++++++++++++++------
+ Git/GitOne.html | 47 +++++++++++++++++++++++++++--------------------
+ Git/GitOne.md   | 44 +++++++++++++++++++++++++++-----------------
+ 3 files changed, 75 insertions(+), 43 deletions(-)
+
+6a499be Fri Mar 14 10:53:57 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  |  8 ++++++++
+ Git/GitOne.html | 51 ++++++++++++++++++++++++++++++---------------------
+ Git/GitOne.md   | 49 +++++++++++++++++++++++++++++++------------------
+ 3 files changed, 69 insertions(+), 39 deletions(-)
+```
+
+
+Now, just to show how cool this is, we will mix in a little `R`.
+
+
+```r
+library(ggplot2)
+ggplot(data = CO2, aes(x = Type, y = uptake, fill = Type)) + 
+  geom_boxplot() +
+  facet_grid(Treatment~.) +
+  theme_bw()
+```
+
+<img src="figure/Rgraph.png" title="plot of chunk Rgraph" alt="plot of chunk Rgraph" style="display: block; margin: auto;" />
+
+
+I love graphs!  The following graph created with `ggplot2` uses Greek letters in
+the facet panels.  
+
+<img src="figure/ggplot2Graphs.png" title="plot of chunk ggplot2Graphs" alt="plot of chunk ggplot2Graphs" style="display: block; margin: auto;" />
+
+
+### So you want to collaborate?
+
+At this point, you have forked a repo and would like to contribute to
+someone's project.  A great place to start is by reading [https://help.github.com/articles/using-pull-requests](https://help.github.com/articles/using-pull-requests).
