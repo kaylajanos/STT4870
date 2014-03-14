@@ -7,7 +7,7 @@
 
 
 
-Last compiled Friday, March 14, 2014 - 08:50:47.
+Last compiled Friday, March 14, 2014 - 09:02:37.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -18,7 +18,11 @@ a previous working (read un-hosed) version of your files.  You may be using a fo
 * chapter2-032312.tex
 
 You may even back up your files for major projects in many different places.  When working on book projects in the past, I would back up my files on three different 
-local machines and two servers.  That works fine until you start using the files from one location and forget that you updated the files on another machine and you are using an old version of a file for new updates.  Now you have new material on old files and may have overwritten several weeks of work.  Expletives follow and you set to "un-hosing" your work which may take longer than it took to write the original document.  Is this a real scenario?  Yes, and the problem only grows exponentially when working with colleagues who all have access to the same files on a major project.  
+local machines and two servers.  That works fine until you start using the files from one location and forget that you updated the files on another machine and you are using an old version of a file for new updates.  Now you have new material on old files and may have overwritten several weeks of work.  Expletives follow and you set to "un-hosing" your work which may take longer than it took to write the original document.  Is this a real scenario?  Yes, and the problem only grows exponentially when working with colleagues who all have access to the same files on a major project.
+
+I now use version control, specifically Git for virtually all of my work.  Notes for classes I am teaching have their own repositories (repos) and students and other interested parties can clone my repos.  If you have material that you would like to remain private, you can set up private repositories.  Thankfully, I have not lost a single file I could not recover since switching my work to Git.  
+
+One last thought before we talk about actually installing and using Git.  You may be thinking, I have never lost a file because I back up all of my files on an external hardrive.  Great; however, suppose you lose your machine and external hard drive to a catastrophic event.  Now what?  Well, if you are not using some form of version control, your work is most likely gone for good. If you were using version control, you just need to set up a new machine and continue your work where you left off.
 
 
 
@@ -192,8 +196,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master 5d259ed] staging all files
- 3 files changed, 181 insertions(+), 114 deletions(-)
+[master 303ab5e] staging all files
+ 3 files changed, 51 insertions(+), 51 deletions(-)
 ```
 
 
@@ -253,6 +257,12 @@ git log  -3
 ```
 
 ```
+commit 303ab5eb3580d648dbe9abe6363773ed2b7faf4f
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 09:02:37 2014 -0400
+
+    staging all files
+
 commit 5d259eda57cec26a66dab47e9eb9c7163b0ddc36
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 08:50:47 2014 -0400
@@ -264,13 +274,6 @@ Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 08:39:53 2014 -0400
 
     staging all files
-
-commit c66c2ea4532c4cfd5b670a06a4f62272a993cd95
-Merge: 197d7a1 bd98e1b
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 08:22:49 2014 -0400
-
-    Merge branch 'master' of https://github.com/alanarnholt/STT4870
 ```
 
 
@@ -282,9 +285,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+303ab5eb3580d648dbe9abe6363773ed2b7faf4f staging all files
 5d259eda57cec26a66dab47e9eb9c7163b0ddc36 staging all files
 84dee18dbbb18f61dc4516dcab9c9551ef17d18c staging all files
-c66c2ea4532c4cfd5b670a06a4f62272a993cd95 Merge branch 'master' of https://github.com/alanarnholt/STT4870
 ```
 
 
@@ -296,9 +299,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+303ab5e Fri Mar 14 09:02:37 2014 -0400- staging all files [Alan Arnholt]
 5d259ed Fri Mar 14 08:50:47 2014 -0400- staging all files [Alan Arnholt]
 84dee18 Fri Mar 14 08:39:53 2014 -0400- staging all files [Alan Arnholt]
-c66c2ea Fri Mar 14 08:22:49 2014 -0400- Merge branch 'master' of https://github.com/alanarnholt/STT4870 [Alan Arnholt]
 ```
 
 
@@ -310,6 +313,12 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+303ab5e Fri Mar 14 09:02:37 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  |  6 +++++-
+ Git/GitOne.html | 51 ++++++++++++++++++++++++---------------------------
+ Git/GitOne.md   | 45 ++++++++++++++++++++++-----------------------
+ 3 files changed, 51 insertions(+), 51 deletions(-)
+
 5d259ed Fri Mar 14 08:50:47 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  |   4 +-
  Git/GitOne.html | 147 ++++++++++++++++++++++++++++++++++----------------------
@@ -319,8 +328,6 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 84dee18 Fri Mar 14 08:39:53 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd | 12 ++++++++++++
  1 file changed, 12 insertions(+)
-
-c66c2ea Fri Mar 14 08:22:49 2014 -0400- Merge branch 'master' of https://github.com/alanarnholt/STT4870 [Alan Arnholt]
 ```
 
 
