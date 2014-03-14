@@ -157,12 +157,12 @@ Create a directory on your computer where you will store your copy of the GitHub
 mkdir ~/PathToYourLocalRepo
 ```
 
-The tilde (~) refers to your home directory.  In other words, `~/PathToYourLocalRepo`
-will create a directory called `PathToYourLocalRepo` in your home directory.  Navigate 
+The tilde (~) refers to your home directory.  In other words, `~/TestProject`
+will create a directory called `TestProject` in your home directory.  Navigate 
 to the new directory by typing
 
 ```{r label = CDdir, eval = FALSE}
-cd ~/PathToYourLocalRepo
+cd ~/TestProject
 ```
 
 Once you have a local directory with files you
@@ -177,12 +177,20 @@ git init
 Now we are ready to point our local repository to the remote repository on Github by typing
 
 ```{r label = REMOTE, eval = FALSE}
-git remote add origin https://github.com/your-user-name/PathToYourLocalRepo.git
+git remote add origin https://github.com/your-user-name/TestProject.git
+```
+
+If you are working with a new repository and do not have an existing version on 
+your computer, you need to "clone" the GitHub repo to your computer.  From the working directory of your local machine type:
+
+```{r label = CLONE, eval = FALSE}
+git clone https://github.com/your-user-name/TestProject.git
 ```
 
 I keep my repositories in a folder called *git_repositories* that
 is a subfolder of my *USERNAME* directory.   If you clone a remote repository 
 to your machine, you will not need to initialize your directory.  
+
 One way to clone this repo using `RStudio` is 
 to click on File -> New Project 
 

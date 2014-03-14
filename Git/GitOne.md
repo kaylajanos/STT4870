@@ -7,7 +7,7 @@
 
 
 
-Last compiled Friday, March 14, 2014 - 10:53:57.
+Last compiled Friday, March 14, 2014 - 11:19:58.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -172,7 +172,9 @@ This document is stored in the repository [https://github.com/alanarnholt/STT487
 ## Local Repositories
 
 Once you have your remote repository created on GitHub, you will need to create a local
-copy of the remote repository on your computer so that you can make changes locally.  
+copy of the remote repository on your computer so that you can make changes locally. 
+It is possible to set up a local repository using the command line or using GUI (drop, drag, etc.) commands.  We will start by first looking at typed command then looking at a GUI interface for Git.   
+
 Open either a Terminal (Mac) or Git Bash (Windows).  
 Create a directory on your computer where you will store your copy of the GitHub 
 (remote) repository.
@@ -183,229 +185,53 @@ mkdir ~/PathToYourLocalRepo
 ```
 
 
-The tilde (~) refers to your home directory.  In other words, `~/PathToYourLocalRepo`
-will create a directory called `PathToYourLocalRepo` in your home directory.  Navigate 
+The tilde (~) refers to your home directory.  In other words, `~/TestProject`
+will create a directory called `TestProject` in your home directory.  Navigate 
 to the new directory by typing
 
 
 ```bash
-cd ~/PathToYourLocalRepo
+cd ~/TestProject
 ```
 
 
-It is possible to set up a local repository using GUI (drop, drag, etc.) commands or to
-use the command line.  I keep my repositories in a folder called *git_repositories* that
-is a subfolder of my *USERNAME* directory.  Once you have a local folder with files you
+Once you have a local directory with files you
 would like to place under version control, use the `git init` command from your working
-directory to track your files.  If you clone a remote repository to your machine, you 
-will not need to initialize your directory.  One way to clone this repo using `RStudio` is 
-to click on File -> New Project 
+directory to track your files. 
 
-![NewProject](./images/NewProject.png)
-
-Click Version Control and a new window such as the one below will appear where you will select Git.
-
-![VersionControl](./images/VersionControl.png)
-
-In the next window that appears, which is shown below, enter the URL for the repository you are cloning.  Enter a project name and specify where you want the project to reside on your computer.  When you are finished, click the `Create Project` button and you will have cloned a remote repository.
-
-![ProjectVersionControl](./images/ProjectVersionControl.png)
-
-
-To check the current status of your repository type:
-
-```bash
-git status
-```
-
-```
-On branch master
-Your branch is up-to-date with 'origin/master'.
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	modified:   GitOne.Rmd
-	modified:   GitOne.html
-	modified:   GitOne.md
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
-
-no changes added to commit (use "git add" and/or "git commit -a")
-```
-
-The `git status` shows us what files are not staged for a commit.  Before files can be
-committed, they must be added to the staging area.  Files are added to the stating area
-with the command `git add file_name`.  To add all files in the working directory, one
-can use `git add .`  Next, all files are added to the staging area, and a snapshot is 
-taken of the commit with the message "staging all files."
-
-```bash
-git add .
-git commit  -m "staging all files"
-```
-
-```
-[master 6a499be] staging all files
- 3 files changed, 69 insertions(+), 39 deletions(-)
-```
-
-
-Check the status after the last commit.
-
-```bash
-git status
-```
-
-```
-On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
-  (use "git push" to publish your local commits)
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
-
-no changes added to commit (use "git add" and/or "git commit -a")
-```
-
-Push changes to the remote repository. 
-
-```bash
-git push
-```
-
-See if there is anything left to do.
-
-```bash
-git status
-```
-
-```
-On branch master
-Your branch is up-to-date with 'origin/master'.
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
-	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
-
-no changes added to commit (use "git add" and/or "git commit -a")
-```
-
-Show the last three commits with
-
-```bash
-git log  -3
-```
-
-```
-commit 6a499bea0deb92bbe619093969f5ae680a7c49d4
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 10:53:57 2014 -0400
-
-    staging all files
-
-commit 796a4b5fb5a76049543e44af135809e517aaba1f
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 10:50:15 2014 -0400
-
-    staging all files
-
-commit 6270a7faa08150ba938e03b6751bfbcbc0bcad09
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 10:33:38 2014 -0400
-
-    staging all files
-```
-
-
-That was ugly. Let us try some formatting.
 
 
 ```bash
-git log --pretty=oneline -3
-```
-
-```
-6a499bea0deb92bbe619093969f5ae680a7c49d4 staging all files
-796a4b5fb5a76049543e44af135809e517aaba1f staging all files
-6270a7faa08150ba938e03b6751bfbcbc0bcad09 staging all files
+git init
 ```
 
 
-The previous output was to brief to suit me.  Let us try some further formatting.
+Now we are ready to point our local repository to the remote repository on Github by typing
 
 
 ```bash
-git log --pretty=format:"%h %ad- %s [%an]" -3
-```
-
-```
-6a499be Fri Mar 14 10:53:57 2014 -0400- staging all files [Alan Arnholt]
-796a4b5 Fri Mar 14 10:50:15 2014 -0400- staging all files [Alan Arnholt]
-6270a7f Fri Mar 14 10:33:38 2014 -0400- staging all files [Alan Arnholt]
+git remote add origin https://github.com/your-user-name/TestProject.git
 ```
 
 
-Maybe even some statistics?
 
 
-```bash
-git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
-```
-
-```
-6a499be Fri Mar 14 10:53:57 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  |  8 ++++++++
- Git/GitOne.html | 51 ++++++++++++++++++++++++++++++---------------------
- Git/GitOne.md   | 49 +++++++++++++++++++++++++++++++------------------
- 3 files changed, 69 insertions(+), 39 deletions(-)
-
-796a4b5 Fri Mar 14 10:50:15 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  | 13 ++++++++++++-
- Git/GitOne.html | 42 +++++++++++++++++++++---------------------
- Git/GitOne.md   | 36 ++++++++++++++++++------------------
- 3 files changed, 51 insertions(+), 40 deletions(-)
-
-6270a7f Fri Mar 14 10:33:38 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  |  2 +-
- Git/GitOne.html | 62 ++++++++++++++++++++++++++++++++++++---------------------
- Git/GitOne.md   | 56 ++++++++++++++++++++++++++++++++-------------------
- 3 files changed, 76 insertions(+), 44 deletions(-)
-```
 
 
-Now, just to show how cool this is, we will mix in a little `R`.
 
 
-```r
-library(ggplot2)
-ggplot(data = CO2, aes(x = Type, y = uptake, fill = Type)) + 
-  geom_boxplot() +
-  facet_grid(Treatment~.) +
-  theme_bw()
-```
-
-<img src="figure/Rgraph.png" title="plot of chunk Rgraph" alt="plot of chunk Rgraph" style="display: block; margin: auto;" />
 
 
-I love graphs!  The following graph created with `ggplot2` uses Greek letters in
-the facet panels.  
-
-<img src="figure/ggplot2Graphs.png" title="plot of chunk ggplot2Graphs" alt="plot of chunk ggplot2Graphs" style="display: block; margin: auto;" />
 
 
-### So you want to collaborate?
 
-At this point, you have forked a repo and would like to contribute to
-someone's project.  A great place to start is by reading [https://help.github.com/articles/using-pull-requests](https://help.github.com/articles/using-pull-requests).
+
+
+
+
+
+
+
+
+
+
