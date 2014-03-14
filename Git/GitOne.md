@@ -7,7 +7,7 @@
 
 
 
-Last compiled Friday, March 14, 2014 - 09:24:13.
+Last compiled Friday, March 14, 2014 - 09:35:44.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -41,11 +41,13 @@ If you get a message indicating the file is from an untrusted source, ignore the
 ## Windows users
 
 Once the download is complete, right click on the downloaded file to install it as an 
-administrator.  Use the default options at each step of the installation if you are unsure 
-what you are doing.  When the installation arrives at the screen adjusting your PATH 
-environment, click in the circle to the left of **Run Git from the Windows Command Prompt**.
+administrator.  Use the default options at each step of the installation if you are 
+unsure what you are doing.  When the installation arrives at the screen adjusting your 
+PATH environment, click in the circle to the left of 
+**Run Git from the Windows Command Prompt**.
 You may need to manually add the path to where the `bash.exe` resides.  Run the 
-following at the `R` prompt to make sure `R` knows where to find `bash`.
+following at the `R` prompt to make sure `R` knows where to find `bash`.  Note that the 
+path below will be dependent on the operating system you are using.
 
 
 ```r
@@ -58,6 +60,8 @@ Sys.which("bash")
 ```
 
 If the output does not specify the path to `bash`, the path to `bash` is not properly configured.
+
+To interact with Git, find the program named Git Bash.  Git Bash is the command line environment windows uses to interact with Git.  Git Bash should be located in the Git directory within your Start Menu if you followed the default installation instructions.
 
 
 ## Initial Setup
@@ -174,12 +178,12 @@ Changes not staged for commit:
   (use "git add/rm <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
+	modified:   GitOne.Rmd
 	modified:   GitOne.html
 	modified:   GitOne.md
 	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.RData
 	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdb
 	deleted:    cache/BashCheck_3a4552886a749e14bd443de33a754ec2.rdx
-	modified:   images/MacGitDownload.png
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -196,9 +200,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master ece28bf] staging all files
- 3 files changed, 53 insertions(+), 39 deletions(-)
- rewrite Git/images/MacGitDownload.png (98%)
+[master 0c0ff3b] staging all files
+ 3 files changed, 50 insertions(+), 56 deletions(-)
 ```
 
 
@@ -258,6 +261,12 @@ git log  -3
 ```
 
 ```
+commit 0c0ff3b0b5d0610054686c17768ac5ebc10cd670
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 09:35:44 2014 -0400
+
+    staging all files
+
 commit ece28bfd664d5ca747c0ec8cdc0bc84b1ac57cd5
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 09:24:13 2014 -0400
@@ -267,12 +276,6 @@ Date:   Fri Mar 14 09:24:13 2014 -0400
 commit 791092754327cab7fdc29b388701fafca434fbc2
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 09:21:49 2014 -0400
-
-    staging all files
-
-commit 0b9e780f2297647a42fa78a0c85a19433f6ccfcc
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 09:04:02 2014 -0400
 
     staging all files
 ```
@@ -286,9 +289,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+0c0ff3b0b5d0610054686c17768ac5ebc10cd670 staging all files
 ece28bfd664d5ca747c0ec8cdc0bc84b1ac57cd5 staging all files
 791092754327cab7fdc29b388701fafca434fbc2 staging all files
-0b9e780f2297647a42fa78a0c85a19433f6ccfcc staging all files
 ```
 
 
@@ -300,9 +303,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+0c0ff3b Fri Mar 14 09:35:44 2014 -0400- staging all files [Alan Arnholt]
 ece28bf Fri Mar 14 09:24:13 2014 -0400- staging all files [Alan Arnholt]
 7910927 Fri Mar 14 09:21:49 2014 -0400- staging all files [Alan Arnholt]
-0b9e780 Fri Mar 14 09:04:02 2014 -0400- staging all files [Alan Arnholt]
 ```
 
 
@@ -314,6 +317,12 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+0c0ff3b Fri Mar 14 09:35:44 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  | 12 ++++++++----
+ Git/GitOne.html | 51 +++++++++++++++++++++++----------------------------
+ Git/GitOne.md   | 43 +++++++++++++++++++------------------------
+ 3 files changed, 50 insertions(+), 56 deletions(-)
+
 ece28bf Fri Mar 14 09:24:13 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.html               |  49 ++++++++++++++++++++++++------------------
  Git/GitOne.md                 |  43 ++++++++++++++++++++----------------
@@ -326,12 +335,6 @@ ece28bf Fri Mar 14 09:24:13 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.md               |  36 +++++++++++++++++++-----------------
  Git/images/SGitDownload.png | Bin 0 -> 463619 bytes
  4 files changed, 43 insertions(+), 37 deletions(-)
-
-0b9e780 Fri Mar 14 09:04:02 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  |  4 ++--
- Git/GitOne.html | 45 ++++++++++++++++++++++++++-------------------
- Git/GitOne.md   | 37 ++++++++++++++++++++++---------------
- 3 files changed, 50 insertions(+), 36 deletions(-)
 ```
 
 

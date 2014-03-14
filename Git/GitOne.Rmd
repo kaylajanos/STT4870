@@ -56,7 +56,7 @@ Sys.which("bash")
 ```
 If the output does not specify the path to `bash`, the path to `bash` is not properly configured.
 
-To interact with Git, find the program named Git Bash.  Git Bash is the command line environment windows uses to interact with Git.  Git Bash should be located in the Git directory within your Start Menu if you followed the default installation instructions.
+To interact with Git, find the program named Git Bash.  Git Bash is the command line environment windows uses to interact with Git.  Git Bash should be located in the Git directory within your Start Menu provided you performed a default installation.
 
 
 ## Initial Setup
