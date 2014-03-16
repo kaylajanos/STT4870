@@ -210,6 +210,9 @@ files type
 git fetch upstream  # you may need to add master after upstream
 ```
 
+When you fetch the upstream repository,  the upstream branches are stored
+in your local repository in a local branch named `upstream/master`.  Next, we need to merge the changes into our local branch to bring our local branch in sync with the upstream branch without losing any local changes.  Make sure you are on the master branch by typing `git checkout master`.  Then, enter `git merge upstream/master`.  Once your local branch is in sync with the upstream remote, you will want to push your local changes back to your forked repo on GitHub by typing `git push`. 
+
 Another approach is to use
 
 ```{r label = PULL2, eval = FALSE}
