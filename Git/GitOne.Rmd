@@ -197,7 +197,28 @@ to your machine, you will not need to initialize your directory.
 ### Forking  a Repo
 Another common way to clone a repo is my first "forking" someone else's repo.   Forking a repo creates a remote (GitHub) copy of the forked repo.   To work on the forked repo, you first must clone the remote fork to your local  machine.  When a repository is cloned, it has a default remote called `origin` that points to your fork on GitHub, not the original repository it was forked from.  This means that updates the orignal repo owner makes will not automatically be added to your forked repo.
 
-### How to pull in Upstream updates from a Forked Repo???
+To keep track of this repo, you need to add another remote named `upstream`.  This can be done by typing
+
+```{r label = UPSTREAM, eval = FALSE}
+git remote add upstream https://github.com/alanarnholt/STT4870.git
+```
+
+To pull in changes not present in your local repository, without modifying your
+files type
+
+```{r label = Fetch, eval = FALSE}
+git fetch upstream  # you may need to add master after upstream
+```
+
+Another approach is to use
+
+```{r label = PULL2, eval = FALSE}
+git pull upstream master
+```
+
+What is the difference?
+
+
 
 
 ## GUI appraoch with RStudio
