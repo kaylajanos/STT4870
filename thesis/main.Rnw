@@ -292,6 +292,15 @@ $\omega$ & angular frequency & rads$^{-1}$ \\
 
 \pagestyle{fancy} % Return the page headers back to the "fancy" style
 
+
+<<MAINsetup, echo = FALSE, results= 'hide', message = FALSE, warning = FALSE>>=
+options(width = 70)
+opts_chunk$set(comment = NA, fig.show='hold', fig.height=7, fig.width=7, 
+               highlight = TRUE, tidy = TRUE, tidy.opts=list(keep.blank.line=FALSE, width.cutoff= 55))
+@
+
+
+
 % Include the chapters of the thesis as separate files from the Chapters folder
 % Uncomment the lines as you write the chapters
 

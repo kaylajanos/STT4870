@@ -7,7 +7,7 @@
 
 
 
-Last compiled Sunday, March 16, 2014 - 12:30:25.
+Last compiled Sunday, March 16, 2014 - 14:46:55.
 
 What is version control, and why should you use it?  Version control is a way to track files over time.  By using version control, you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -110,18 +110,16 @@ git config --list  # shows your configuration
 ```
 user.name=Alan Arnholt
 user.email=arnholtat@appstate.edu
-push.default=simple
 credential.helper=osxkeychain
-filter.media.clean=git-media-clean %f
-filter.media.smudge=git-media-smudge %f
 color.ui=true
 core.repositoryformatversion=0
 core.filemode=true
 core.bare=false
 core.logallrefupdates=true
 core.ignorecase=true
-remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+core.precomposeunicode=false
 remote.origin.url=https://github.com/alanarnholt/STT4870.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 branch.master.remote=origin
 branch.master.merge=refs/heads/master
 ```
@@ -290,18 +288,9 @@ git status
 
 ```
 On branch master
-Your branch is ahead of 'origin/master' by 2 commits.
-  (use "git push" to publish your local commits)
+Your branch is up-to-date with 'origin/master'.
 
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	modified:   GitOne.Rmd
-	modified:   GitOne.html
-	modified:   GitOne.md
-
-no changes added to commit (use "git add" and/or "git commit -a")
+nothing to commit, working directory clean
 ```
 
 The `git status` shows us what files are not staged for a commit.  Before files can be
@@ -316,8 +305,10 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master c20aa67] staging all files
- 3 files changed, 119 insertions(+), 113 deletions(-)
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working directory clean
 ```
 
 
@@ -329,8 +320,7 @@ git status
 
 ```
 On branch master
-Your branch is ahead of 'origin/master' by 3 commits.
-  (use "git push" to publish your local commits)
+Your branch is up-to-date with 'origin/master'.
 
 nothing to commit, working directory clean
 ```
@@ -349,8 +339,7 @@ git status
 
 ```
 On branch master
-Your branch is ahead of 'origin/master' by 3 commits.
-  (use "git push" to publish your local commits)
+Your branch is up-to-date with 'origin/master'.
 
 nothing to commit, working directory clean
 ```
@@ -362,6 +351,12 @@ git log  -3
 ```
 
 ```
+commit 995bc3012ed275580d633e1890cd97d597d6d5c6
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Sun Mar 16 12:35:30 2014 -0400
+
+    Fix punctuation and spelling
+
 commit c20aa670ad25fade85d262efe07fccc1ad21f3e0
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Sun Mar 16 12:30:25 2014 -0400
@@ -371,12 +366,6 @@ Date:   Sun Mar 16 12:30:25 2014 -0400
 commit 0a7fa5235cd2b94976f5be0d47fabbf35feb620e
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Sun Mar 16 12:27:28 2014 -0400
-
-    staging all files
-
-commit a68c42b8181830df14f4988f2bb5f4b47e595414
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Sun Mar 16 12:05:24 2014 -0400
 
     staging all files
 ```
@@ -390,9 +379,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+995bc3012ed275580d633e1890cd97d597d6d5c6 Fix punctuation and spelling
 c20aa670ad25fade85d262efe07fccc1ad21f3e0 staging all files
 0a7fa5235cd2b94976f5be0d47fabbf35feb620e staging all files
-a68c42b8181830df14f4988f2bb5f4b47e595414 staging all files
 ```
 
 
@@ -404,9 +393,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+995bc30 Sun Mar 16 12:35:30 2014 -0400- Fix punctuation and spelling [Alan Arnholt]
 c20aa67 Sun Mar 16 12:30:25 2014 -0400- staging all files [Alan Arnholt]
 0a7fa52 Sun Mar 16 12:27:28 2014 -0400- staging all files [Alan Arnholt]
-a68c42b Sun Mar 16 12:05:24 2014 -0400- staging all files [Alan Arnholt]
 ```
 
 
@@ -418,6 +407,11 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+995bc30 Sun Mar 16 12:35:30 2014 -0400- Fix punctuation and spelling [Alan Arnholt]
+ Git/GitOne.html | 49 +++++++++++++++++++++++++------------------------
+ Git/GitOne.md   | 43 ++++++++++++++++++++++---------------------
+ 2 files changed, 47 insertions(+), 45 deletions(-)
+
 c20aa67 Sun Mar 16 12:30:25 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  |   4 +-
  Git/GitOne.html | 117 +++++++++++++++++++++++++++++---------------------------
@@ -429,11 +423,6 @@ c20aa67 Sun Mar 16 12:30:25 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.html | 43 +++++++++++++++++-----------------
  Git/GitOne.md   | 35 ++++++++++++++--------------
  3 files changed, 75 insertions(+), 74 deletions(-)
-
-a68c42b Sun Mar 16 12:05:24 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.html | 44 ++++++++++++++++++++++----------------------
- Git/GitOne.md   | 36 ++++++++++++++++++------------------
- 2 files changed, 40 insertions(+), 40 deletions(-)
 ```
 
 
@@ -442,8 +431,10 @@ Now, just to show how cool this is, we will mix in a little `R.`
 
 ```r
 library(ggplot2)
-ggplot(data = CO2, aes(x = Type, y = uptake, fill = Type)) + geom_boxplot() + 
-    facet_grid(Treatment ~ .) + theme_bw()
+ggplot(data = CO2, aes(x = Type, y = uptake, fill = Type)) + 
+  geom_boxplot() +
+  facet_grid(Treatment~.) +
+  theme_bw()
 ```
 
 <img src="figure/Rgraph.png" title="plot of chunk Rgraph" alt="plot of chunk Rgraph" style="display: block; margin: auto;" />

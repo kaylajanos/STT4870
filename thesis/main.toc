@@ -33,8 +33,23 @@
 \contentsline {subsection}{\numberline {1.7.5}Typesetting mathematics}{12}{subsection.40}
 \contentsline {section}{\numberline {1.8}Sectioning and Subsectioning}{13}{section.42}
 \contentsline {section}{\numberline {1.9}In Closing}{13}{section.43}
-\contentsline {chapter}{\numberline {2}How to Use Git}{14}{chapter.44}
+\contentsline {chapter}{\numberline {2}Using Git}{14}{chapter.44}
+\contentsline {section}{\numberline {2.1}Downloading Git}{15}{section.45}
+\contentsline {subsection}{\numberline {2.1.1}Mac Users}{15}{subsection.47}
+\contentsline {subsection}{\numberline {2.1.2}Windows Users}{17}{subsection.49}
+\contentsline {section}{\numberline {2.2}Initial Setup}{17}{section.50}
+\contentsline {subsection}{\numberline {2.2.1}Mac Users}{18}{subsection.52}
+\contentsline {subsection}{\numberline {2.2.2}Windows Users}{18}{subsection.54}
+\contentsline {subsection}{\numberline {2.2.3}Run these commands}{18}{subsection.57}
+\contentsline {section}{\numberline {2.3}GitHub}{20}{section.58}
+\contentsline {subsection}{\numberline {2.3.1}Creating a GitHub Account}{21}{subsection.60}
+\contentsline {subsection}{\numberline {2.3.2}Creating a GitHub Repository}{21}{subsection.61}
+\contentsline {subsection}{\numberline {2.3.3}Local Repositories}{22}{subsection.63}
+\contentsline {subsection}{\numberline {2.3.4}Forking a Repo}{23}{subsection.64}
+\contentsline {section}{\numberline {2.4}Using Git with RStudio}{24}{section.65}
+\contentsline {section}{\numberline {2.5}Using R}{31}{section.69}
+\contentsline {section}{\numberline {2.6}So you want to collaborate?}{34}{section.72}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Appendix Title Here}{17}{appendix.48}
+\contentsline {chapter}{\numberline {A}Appendix Title Here}{35}{appendix.73}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{18}{dummy.49}
+\contentsline {chapter}{Bibliography}{36}{dummy.74}
