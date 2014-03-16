@@ -96,7 +96,7 @@ If you do not want to type your username and password every time you work with a
 To confirm your username and email, type `git config --list` at the $ prompt.
 
 ```{r label=verify}
-git config --list
+git config --list  #shows your configuration
 ```
 
 From the third line of the previous output, one can see the 

@@ -7,7 +7,7 @@
 
 
 
-Last compiled Friday, March 14, 2014 - 11:55:34.
+Last compiled Sunday, March 16, 2014 - 05:48:06.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -110,16 +110,17 @@ git config --list
 ```
 user.name=Alan Arnholt
 user.email=arnholtat@appstate.edu
+push.default=simple
 credential.helper=osxkeychain
-color.ui=true
+filter.media.clean=git-media-clean %f
+filter.media.smudge=git-media-smudge %f
 core.repositoryformatversion=0
 core.filemode=true
 core.bare=false
 core.logallrefupdates=true
 core.ignorecase=true
-core.precomposeunicode=false
-remote.origin.url=https://github.com/alanarnholt/STT4870.git
 remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+remote.origin.url=https://github.com/alanarnholt/STT4870.git
 branch.master.remote=origin
 branch.master.merge=refs/heads/master
 ```
@@ -258,13 +259,7 @@ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
 
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	modified:   GitOne.Rmd
-
-no changes added to commit (use "git add" and/or "git commit -a")
+nothing to commit, working directory clean
 ```
 
 The `git status` shows us what files are not staged for a commit.  Before files can be
@@ -279,8 +274,10 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master 0b1af2b] staging all files
- 1 file changed, 5 insertions(+), 2 deletions(-)
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working directory clean
 ```
 
 
@@ -292,8 +289,7 @@ git status
 
 ```
 On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
-  (use "git push" to publish your local commits)
+Your branch is up-to-date with 'origin/master'.
 
 nothing to commit, working directory clean
 ```
@@ -324,6 +320,12 @@ git log  -3
 ```
 
 ```
+commit ff27a5778f5deff49bbea94040bbc3b8edeb18b9
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Fri Mar 14 11:56:47 2014 -0400
+
+    latest changes
+
 commit 0b1af2b28a0dbdf4009391460569a0411210b2df
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 11:55:34 2014 -0400
@@ -335,12 +337,6 @@ Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 11:50:06 2014 -0400
 
     push
-
-commit 140f4f9854be0711954021ef46ea0ccd46211d59
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 11:45:27 2014 -0400
-
-    staging all files
 ```
 
 
@@ -352,9 +348,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+ff27a5778f5deff49bbea94040bbc3b8edeb18b9 latest changes
 0b1af2b28a0dbdf4009391460569a0411210b2df staging all files
 a945e366ae2a6cfeee2f042999069da99ed36c41 push
-140f4f9854be0711954021ef46ea0ccd46211d59 staging all files
 ```
 
 
@@ -366,9 +362,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+ff27a57 Fri Mar 14 11:56:47 2014 -0400- latest changes [Alan Arnholt]
 0b1af2b Fri Mar 14 11:55:34 2014 -0400- staging all files [Alan Arnholt]
 a945e36 Fri Mar 14 11:50:06 2014 -0400- push [Alan Arnholt]
-140f4f9 Fri Mar 14 11:45:27 2014 -0400- staging all files [Alan Arnholt]
 ```
 
 
@@ -380,6 +376,11 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+ff27a57 Fri Mar 14 11:56:47 2014 -0400- latest changes [Alan Arnholt]
+ Git/GitOne.html | 92 +++++++++++++++++++++++----------------------------------
+ Git/GitOne.md   | 86 +++++++++++++++++++++--------------------------------
+ 2 files changed, 71 insertions(+), 107 deletions(-)
+
 0b1af2b Fri Mar 14 11:55:34 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd | 7 +++++--
  1 file changed, 5 insertions(+), 2 deletions(-)
@@ -391,12 +392,6 @@ a945e36 Fri Mar 14 11:50:06 2014 -0400- push [Alan Arnholt]
  .../BashCheck_3a4552886a749e14bd443de33a754ec2.rdb |   0
  .../BashCheck_3a4552886a749e14bd443de33a754ec2.rdx | Bin 113 -> 0 bytes
  5 files changed, 42 insertions(+), 37 deletions(-)
-
-140f4f9 Fri Mar 14 11:45:27 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd  |  3 +++
- Git/GitOne.html | 42 +++++++++++++++++++++---------------------
- Git/GitOne.md   | 36 ++++++++++++++++++------------------
- 3 files changed, 42 insertions(+), 39 deletions(-)
 ```
 
 
@@ -405,10 +400,8 @@ Now, just to show how cool this is, we will mix in a little `R`.
 
 ```r
 library(ggplot2)
-ggplot(data = CO2, aes(x = Type, y = uptake, fill = Type)) + 
-  geom_boxplot() +
-  facet_grid(Treatment~.) +
-  theme_bw()
+ggplot(data = CO2, aes(x = Type, y = uptake, fill = Type)) + geom_boxplot() + 
+    facet_grid(Treatment ~ .) + theme_bw()
 ```
 
 <img src="figure/Rgraph.png" title="plot of chunk Rgraph" alt="plot of chunk Rgraph" style="display: block; margin: auto;" />
