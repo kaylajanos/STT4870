@@ -183,7 +183,7 @@ hljs.initHighlightingOnLoad();
 
 <h3>Alan T. Arnholt</h3>
 
-<p>Last compiled Sunday, March 16, 2014 - 12:27:28.</p>
+<p>Last compiled Sunday, March 16, 2014 - 12:30:25.</p>
 
 <p>What is version control, and why should you use it?  Version control is a way to track files over time.  By using version control, you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:</p>
@@ -296,7 +296,7 @@ branch.master.remote=origin
 branch.master.merge=refs/heads/master
 </code></pre>
 
-<p>From the third line of the previous output, one can see the 
+<p>From the <code>credential.helper</code> line of the previous output, one can see the 
 <code>credential.helper</code> is being used.  Now that Git is set up on your computer, we provide instructions for setting up a remote repository on GitHub.</p>
 
 <h3>What is GitHub?</h3>
@@ -405,7 +405,7 @@ in your local repository in a local branch named <code>upstream/master.</code>  
 
 <p>What is the difference?</p>
 
-<h2>GUI appraoch with RStudio</h2>
+<h2>GUI approach with RStudio</h2>
 
 <p>One way to clone this repo using <code>RStudio</code> is  to click on File -&gt; New Project </p>
 
@@ -425,7 +425,7 @@ in your local repository in a local branch named <code>upstream/master.</code>  
 </code></pre>
 
 <pre><code>On branch master
-Your branch is ahead of &#39;origin/master&#39; by 1 commit.
+Your branch is ahead of &#39;origin/master&#39; by 2 commits.
   (use &quot;git push&quot; to publish your local commits)
 
 Changes not staged for commit:
@@ -449,8 +449,8 @@ taken of the commit with the message &ldquo;staging all files.&rdquo;</p>
 git commit  -m &quot;staging all files&quot;
 </code></pre>
 
-<pre><code>[master 0a7fa52] staging all files
- 3 files changed, 75 insertions(+), 74 deletions(-)
+<pre><code>[master c20aa67] staging all files
+ 3 files changed, 119 insertions(+), 113 deletions(-)
 </code></pre>
 
 <p>Check the status after the last commit.</p>
@@ -459,7 +459,7 @@ git commit  -m &quot;staging all files&quot;
 </code></pre>
 
 <pre><code>On branch master
-Your branch is ahead of &#39;origin/master&#39; by 2 commits.
+Your branch is ahead of &#39;origin/master&#39; by 3 commits.
   (use &quot;git push&quot; to publish your local commits)
 
 nothing to commit, working directory clean
@@ -476,7 +476,7 @@ nothing to commit, working directory clean
 </code></pre>
 
 <pre><code>On branch master
-Your branch is ahead of &#39;origin/master&#39; by 2 commits.
+Your branch is ahead of &#39;origin/master&#39; by 3 commits.
   (use &quot;git push&quot; to publish your local commits)
 
 nothing to commit, working directory clean
@@ -487,7 +487,13 @@ nothing to commit, working directory clean
 <pre><code class="bash">git log  -3
 </code></pre>
 
-<pre><code>commit 0a7fa5235cd2b94976f5be0d47fabbf35feb620e
+<pre><code>commit c20aa670ad25fade85d262efe07fccc1ad21f3e0
+Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
+Date:   Sun Mar 16 12:30:25 2014 -0400
+
+    staging all files
+
+commit 0a7fa5235cd2b94976f5be0d47fabbf35feb620e
 Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
 Date:   Sun Mar 16 12:27:28 2014 -0400
 
@@ -498,12 +504,6 @@ Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
 Date:   Sun Mar 16 12:05:24 2014 -0400
 
     staging all files
-
-commit c8a7422b90871dca98e9c3529d292f14e6a73926
-Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
-Date:   Sun Mar 16 08:32:00 2014 -0400
-
-    staging all files
 </code></pre>
 
 <p>That was ugly. Let us try some formatting.</p>
@@ -511,9 +511,9 @@ Date:   Sun Mar 16 08:32:00 2014 -0400
 <pre><code class="bash">git log --pretty=oneline -3
 </code></pre>
 
-<pre><code>0a7fa5235cd2b94976f5be0d47fabbf35feb620e staging all files
+<pre><code>c20aa670ad25fade85d262efe07fccc1ad21f3e0 staging all files
+0a7fa5235cd2b94976f5be0d47fabbf35feb620e staging all files
 a68c42b8181830df14f4988f2bb5f4b47e595414 staging all files
-c8a7422b90871dca98e9c3529d292f14e6a73926 staging all files
 </code></pre>
 
 <p>The previous output was too brief to suit me.  Let us try some further formatting.</p>
@@ -521,9 +521,9 @@ c8a7422b90871dca98e9c3529d292f14e6a73926 staging all files
 <pre><code class="bash">git log --pretty=format:&quot;%h %ad- %s [%an]&quot; -3
 </code></pre>
 
-<pre><code>0a7fa52 Sun Mar 16 12:27:28 2014 -0400- staging all files [Alan Arnholt]
+<pre><code>c20aa67 Sun Mar 16 12:30:25 2014 -0400- staging all files [Alan Arnholt]
+0a7fa52 Sun Mar 16 12:27:28 2014 -0400- staging all files [Alan Arnholt]
 a68c42b Sun Mar 16 12:05:24 2014 -0400- staging all files [Alan Arnholt]
-c8a7422 Sun Mar 16 08:32:00 2014 -0400- staging all files [Alan Arnholt]
 </code></pre>
 
 <p>Maybe even some statistics?</p>
@@ -531,7 +531,13 @@ c8a7422 Sun Mar 16 08:32:00 2014 -0400- staging all files [Alan Arnholt]
 <pre><code class="bash">git log --pretty=format:&quot;%h %ad- %s [%an]&quot; -3 --stat
 </code></pre>
 
-<pre><code>0a7fa52 Sun Mar 16 12:27:28 2014 -0400- staging all files [Alan Arnholt]
+<pre><code>c20aa67 Sun Mar 16 12:30:25 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  |   4 +-
+ Git/GitOne.html | 117 +++++++++++++++++++++++++++++---------------------------
+ Git/GitOne.md   | 111 +++++++++++++++++++++++++++--------------------------
+ 3 files changed, 119 insertions(+), 113 deletions(-)
+
+0a7fa52 Sun Mar 16 12:27:28 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  | 71 ++++++++++++++++++++++++++++-----------------------------
  Git/GitOne.html | 43 +++++++++++++++++-----------------
  Git/GitOne.md   | 35 ++++++++++++++--------------
@@ -541,11 +547,6 @@ a68c42b Sun Mar 16 12:05:24 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.html | 44 ++++++++++++++++++++++----------------------
  Git/GitOne.md   | 36 ++++++++++++++++++------------------
  2 files changed, 40 insertions(+), 40 deletions(-)
-
-c8a7422 Sun Mar 16 08:32:00 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.html | 61 ++++++++++++++++++++++++++++-----------------------------
- Git/GitOne.md   | 55 +++++++++++++++++++++++++--------------------------
- 2 files changed, 57 insertions(+), 59 deletions(-)
 </code></pre>
 
 <p>Now, just to show how cool this is, we will mix in a little <code>R.</code></p>
