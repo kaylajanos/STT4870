@@ -275,7 +275,7 @@ In the next window that appears, see \vref{CloneGRW}, enter the URL for the repo
 \caption{Clone Git Repository window\label{CloneGRW}}
 \end{figure}
 
-
+\clearpage
 
 To check the current status of your repository type:
 <<label = STATUS, engine = "bash">>=
@@ -335,6 +335,51 @@ Now, just to show how cool this is, we will mix in a little \texttt{R.}
 \clearpage
 \section{Using R}
 
+<<label = Rgraph, engine = 'R', fig.width = 8>>=
+library(ggplot2)
+ggplot(data = CO2, aes(x = Type, y = uptake, fill = Type)) + 
+  geom_boxplot() +
+  facet_grid(Treatment~.) +
+  theme_bw()
+@
+
+I love graphs!  The following graph created with \texttt{ggplot2} uses Greek letters in
+the facet panels.  
+
+<<label=ggplot2Graphs, engine = "R", fig.width = 8, fig.height = 8, echo = FALSE>>=
+x <- seq(0, 7, length = 500)
+y1 <- dweibull(x, 1, 1)
+y2 <- dweibull(x, 1, 2)
+y3 <- dweibull(x, 1, 3)
+y4 <- dweibull(x, 2, 1)
+y5 <- dweibull(x, 2, 2)
+y6 <- dweibull(x, 2, 3)
+y7 <- dweibull(x, 3, 1)
+y8 <- dweibull(x, 3, 2)
+y9 <- dweibull(x, 3, 3)
+DF <- data.frame(fx = c(y1, y2, y3, y4, y5, y6, y7, y8, y9))
+DF$a[1:1500] = "alpha == 1"
+DF$a[1501:3000] = "alpha == 2"
+DF$a[3001:4500] = "alpha == 3"
+DF$b[1:500] = "beta == 1"
+DF$b[501:1000] = "beta == 2"
+DF$b[1001:1500] = "beta == 3"
+DF$b[1501:2000] = "beta == 1"
+DF$b[2001:2500] = "beta == 2"
+DF$b[2501:3000] = "beta == 3"
+DF$b[3001:3500] = "beta == 1"
+DF$b[3501:4000] = "beta == 2"
+DF$b[4001:4500] = "beta == 3"
+DF$x = x
+#
+previous_theme <- theme_set(theme_bw()) # set black and white theme
+ggplot(data = DF, aes(x = x, y = fx)) + geom_area(fill = "skyblue3") + 
+  facet_grid(b~a, labeller = label_parsed) + 
+  labs(x = "x", y = "f(x)",labeller = label_parsed) + 
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) 
+theme_set(previous_theme) # Restore original theme 
+@
+
 \begin{figure}[!ht]
 <<G2, comment = NA, out.width=".95\\linewidth",fig.align='center', echo = FALSE>>=
 hist(rnorm(1000), col = "green", breaks = "Scott", freq = FALSE)
@@ -357,3 +402,13 @@ X2
 pvalue <- pchisq(X2, 9, lower = FALSE)
 pvalue
 @
+
+\section{So you want to collaborate?}
+
+At this point, you have forked a repo and would like to contribute to
+someone's project.  A great place to start is by reading \href{https://help.github.com/articles/using-pull-requests}{https://help.github.com/articles/using-pull-requests}.
+
+
+
+
+
