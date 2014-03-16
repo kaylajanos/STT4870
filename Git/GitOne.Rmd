@@ -154,7 +154,7 @@ Create a directory on your computer where you will store your copy of the GitHub
 (remote) repository.
 
 ```{r label = MKDIR, eval = FALSE}
-mkdir ~/PathToYourLocalRepo
+mkdir ~/TestProject
 ```
 
 The tilde (~) refers to your home directory.  In other words, `~/TestProject`
@@ -197,7 +197,7 @@ to your machine, you will not need to initialize your directory.
 ### Forking  a Repo
 Another common way to clone a repo is my first "forking" someone else's repo.   Forking a repo creates a remote (GitHub) copy of the forked repo.   To work on the forked repo, you first must clone the remote fork to your local  machine.  When a repository is cloned, it has a default remote called `origin` that points to your fork on GitHub, not the original repository it was forked from.  This means that updates the orignal repo owner makes will not automatically be added to your forked repo.
 
-### How to...
+### How to pull in Upstream updates from a Forked Repo???
 
 
 ## GUI appraoch with RStudio

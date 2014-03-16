@@ -183,7 +183,7 @@ hljs.initHighlightingOnLoad();
 
 <h3>Alan T. Arnholt</h3>
 
-<p>Last compiled Sunday, March 16, 2014 - 06:59:05.</p>
+<p>Last compiled Sunday, March 16, 2014 - 07:12:28.</p>
 
 <p>What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:</p>
@@ -275,7 +275,7 @@ git config --global color.ui true
 
 <p>To confirm your username and email, type <code>git config --list</code> at the $ prompt.</p>
 
-<pre><code class="bash">git config --list  #shows your configuration
+<pre><code class="bash">git config --list  # shows your configuration
 </code></pre>
 
 <pre><code>user.name=Alan Arnholt
@@ -365,10 +365,12 @@ directory to track your files. </p>
 <pre><code class="bash">git init
 </code></pre>
 
-<p>Now we are ready to point our local repository to the remote repository on Github by typing</p>
+<p>Now we are ready to point our local repository to the remote repository on GitHub by typing</p>
 
 <pre><code class="bash">git remote add origin https://github.com/your-user-name/TestProject.git
 </code></pre>
+
+<p>The last line needs some explanation!  The <code>add</code> creates the <em>new remote</em>, the <code>origin</code> is the name for the remote, and the url is the path to the remote.</p>
 
 <p>If you are working with a new repository and do not have an existing version on 
 your computer, you need to &ldquo;clone&rdquo; the GitHub repo to your computer.  From the working directory of your local machine type:</p>
@@ -429,8 +431,8 @@ taken of the commit with the message &ldquo;staging all files.&rdquo;</p>
 git commit  -m &quot;staging all files&quot;
 </code></pre>
 
-<pre><code>[master 6e0191d] staging all files
- 3 files changed, 58 insertions(+), 72 deletions(-)
+<pre><code>[master 108fa09] staging all files
+ 3 files changed, 71 insertions(+), 54 deletions(-)
 </code></pre>
 
 <p>Check the status after the last commit.</p>
@@ -466,7 +468,13 @@ nothing to commit, working directory clean
 <pre><code class="bash">git log  -3
 </code></pre>
 
-<pre><code>commit 6e0191d50867ead5ff8eec3e2f7737769e3737ba
+<pre><code>commit 108fa092849c9b16c79a22f2479d98bf25d1161e
+Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
+Date:   Sun Mar 16 07:12:28 2014 -0400
+
+    staging all files
+
+commit 6e0191d50867ead5ff8eec3e2f7737769e3737ba
 Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
 Date:   Sun Mar 16 06:59:06 2014 -0400
 
@@ -477,12 +485,6 @@ Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
 Date:   Fri Mar 14 11:56:47 2014 -0400
 
     latest changes
-
-commit 0b1af2b28a0dbdf4009391460569a0411210b2df
-Author: Alan Arnholt &lt;arnholtat@appstate.edu&gt;
-Date:   Fri Mar 14 11:55:34 2014 -0400
-
-    staging all files
 </code></pre>
 
 <p>That was ugly. Let us try some formatting.</p>
@@ -490,9 +492,9 @@ Date:   Fri Mar 14 11:55:34 2014 -0400
 <pre><code class="bash">git log --pretty=oneline -3
 </code></pre>
 
-<pre><code>6e0191d50867ead5ff8eec3e2f7737769e3737ba staging all files
+<pre><code>108fa092849c9b16c79a22f2479d98bf25d1161e staging all files
+6e0191d50867ead5ff8eec3e2f7737769e3737ba staging all files
 ff27a5778f5deff49bbea94040bbc3b8edeb18b9 latest changes
-0b1af2b28a0dbdf4009391460569a0411210b2df staging all files
 </code></pre>
 
 <p>The previous output was to brief to suit me.  Let us try some further formatting.</p>
@@ -500,9 +502,9 @@ ff27a5778f5deff49bbea94040bbc3b8edeb18b9 latest changes
 <pre><code class="bash">git log --pretty=format:&quot;%h %ad- %s [%an]&quot; -3
 </code></pre>
 
-<pre><code>6e0191d Sun Mar 16 06:59:06 2014 -0400- staging all files [Alan Arnholt]
+<pre><code>108fa09 Sun Mar 16 07:12:28 2014 -0400- staging all files [Alan Arnholt]
+6e0191d Sun Mar 16 06:59:06 2014 -0400- staging all files [Alan Arnholt]
 ff27a57 Fri Mar 14 11:56:47 2014 -0400- latest changes [Alan Arnholt]
-0b1af2b Fri Mar 14 11:55:34 2014 -0400- staging all files [Alan Arnholt]
 </code></pre>
 
 <p>Maybe even some statistics?</p>
@@ -510,7 +512,13 @@ ff27a57 Fri Mar 14 11:56:47 2014 -0400- latest changes [Alan Arnholt]
 <pre><code class="bash">git log --pretty=format:&quot;%h %ad- %s [%an]&quot; -3 --stat
 </code></pre>
 
-<pre><code>6e0191d Sun Mar 16 06:59:06 2014 -0400- staging all files [Alan Arnholt]
+<pre><code>108fa09 Sun Mar 16 07:12:28 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  |  7 +++++--
+ Git/GitOne.html | 63 ++++++++++++++++++++++++++++++++-------------------------
+ Git/GitOne.md   | 55 +++++++++++++++++++++++++++----------------------
+ 3 files changed, 71 insertions(+), 54 deletions(-)
+
+6e0191d Sun Mar 16 06:59:06 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd  |  4 ++--
  Git/GitOne.html | 67 ++++++++++++++++++++++++++-------------------------------
  Git/GitOne.md   | 59 ++++++++++++++++++++++----------------------------
@@ -520,10 +528,6 @@ ff27a57 Fri Mar 14 11:56:47 2014 -0400- latest changes [Alan Arnholt]
  Git/GitOne.html | 92 +++++++++++++++++++++++----------------------------------
  Git/GitOne.md   | 86 +++++++++++++++++++++--------------------------------
  2 files changed, 71 insertions(+), 107 deletions(-)
-
-0b1af2b Fri Mar 14 11:55:34 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd | 7 +++++--
- 1 file changed, 5 insertions(+), 2 deletions(-)
 </code></pre>
 
 <p>Now, just to show how cool this is, we will mix in a little <code>R</code>.</p>
