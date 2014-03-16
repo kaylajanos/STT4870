@@ -1,24 +1,343 @@
 % Chapter 2
 
-\chapter{How to Use Git} % Main chapter title
+\chapter{Using Git} % Main chapter title
 \label{GIT} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 \lhead{Chapter 2. \emph{How to Use Git}} % This is for the header on each page - perhaps a shortened title
 
-A graph perhaps?  Look at \fref{graph1} and \fref{graph2}.
+What is version control, and why should you use it?  Version control is a way to track files over time.  By using version control, you will be able to retrace your steps to
+a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
+
+\begin{itemize}
+\item YourNameCVJanuary2014.docx
+\item YourNameCVMarch2014.docx
+\item chapter1-012412.tex
+\item chapter2-032312.tex
+\end{itemize}
+
+You may even back up your files for major projects in many different places.  When working on book projects in the past, I would back up my files on three different 
+local machines and two servers.  That works fine until you start using the files from one location and forget that you updated the files on another machine, and you are using an old version of a file for new updates.  Now you have new material on old files and may have overwritten several weeks of work.  Expletives follow, and you set to "un-hosing" your work which may take longer than it took to write the original document.  Is this a real scenario?  Yes, and the problem only grows exponentially when working with colleagues who all have access to the same files on a major project.
+
+I now use version control, specifically Git, for virtually all of my work.  Notes for classes I am teaching have their own repositories (repos), and students and other interested parties can clone my repos.  If you have material that you would like to remain private, you can set up private repositories.  Thankfully, I have not lost a single file I could not recover since switching my work to Git.  
+
+One last thought before we talk about actually installing and using Git.  You may be thinking, I have never lost a file because I back up all of my files on an external hardrive.  Great; however, suppose you lose your machine and external hard drive due to a catastrophic event.  Now what?  Well, if you are not using some form of version control, your work is most likely gone for good. If you were using version control, you just need to set up a new machine and continue your work where you left off.
+
+\section{Downloading Git}
+
+Download and install the lastest version of Git from \href{http://git-scm.com/download}{http://git-scm.com/downloads}.  \fref{GITDLS} shows
+ what the site looks.
+
+ 
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = \textwidth]{../../Git/images/SGitDownload.png}
+\caption{Git Download site \label{GITDLS}}
+\end{figure}
+
+
+\subsection{Mac Users}
+Install the downloaded file by clicking on the downloaded \verb|*.dmg| file then clicking on the \verb|*.pkg| file.  \fref{GITFIF} shows the files in the Finder.   If you get a message indicating the file is from an untrusted source, ignore the warning and click on the \verb|Open| button.  If there is no option to \verb|Open|, hold down the CTRL key, select \verb|*.pkg| file, then choose \verb|Open With -> Installer (default)|.
+
 
 \begin{figure}[!ht]
-<<G1, comment = NA, out.width=".5\\linewidth",fig.align='center', echo = FALSE>>=
-set.seed(13)
-RVS <- rnorm(10000)
-hist(RVS, col = "red", breaks = "Scott", freq = FALSE)
+\centering
+\includegraphics[width = \textwidth]{../../Git/images/MacGitDownload.png}
+\caption{Files in Finder\label{GITFIF}}
+\end{figure}
+
+
+\subsection{Windows Users}
+
+Once the download is complete, right click on the downloaded file to install it as an 
+administrator.  Use the default options at each step of the installation if you are 
+unsure of what you are doing.  When the installation arrives at the screen adjusting your 
+PATH environment, click in the circle to the left of 
+\textbf{Run Git from the Windows Command Prompt}. You may need to add the path to where the \texttt{bash.exe} resides manually.  Run the 
+following at the \texttt{R} prompt to make sure \texttt{R} knows where to find \texttt{bash.}  Note that the 
+path below will be dependent on the operating system you are using.
+
+<<label= BashCheck, engine="R", cache = TRUE>>=
+Sys.which("bash")
 @
-\caption{Something goes here \label{graph1}}
+
+If the output does not specify the path to \texttt{bash,} the path to \texttt{bash} is not properly configured.
+
+To interact with Git, find the program named Git Bash.  Git Bash is the command line environment Windows uses to interact with Git.  Git Bash should be located in the Git directory within your Start Menu, provided you performed a default installation.
+
+
+\section{Initial Setup}
+
+If you have never used Git before, you need to do some setup first.  Run the following
+commands so that Git knows your name and email.  The commands are all issued in the
+Terminal (Mac) or at the command prompt of Git Bash (Windows).  The Terminal 
+application is usually found in \verb|/applications/Utilities.| A quick way to open a 
+\texttt{terminal} window is by clicking on the magnifying glass icon and typing \texttt{terminal} in spotlight (\fref{GITSL}.)  
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = .75\textwidth]{../../Git/images/Spotlight.png}
+\caption{Spotlight\label{GITSL}}
+\end{figure}
+
+\subsection{Mac Users}
+
+By clicking on the Terminal application, a Terminal window will open like the one in \fref{TW}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = 1\textwidth]{../../Git/images/TerminalWindow.png}
+\caption{Terminal window\label{TW}}
+\end{figure}
+
+\subsection{Windows Users}
+
+To open Git Bash, click on the \texttt{Windows icon -> Git -> Git Bash}.  The program is most likely located in the Git directory within your Start Menu (or the directory into which Git was installed).  By clicking on the Git Bash icon in \fref{WSM}, a window similar to \fref{WGB} will open.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = .5\textwidth]{../../Git/images/WindowsProgramGitBash.png}
+\caption{Windows Start Menu\label{WSM}}
 \end{figure}
 
 
 \begin{figure}[!ht]
+\centering
+\includegraphics[width = 1\textwidth]{../../Git/images/GitBashWindow.png}
+\caption{Git Bash Window\label{WGB}}
+\end{figure}
+
+\subsection{Run these commands}
+
+<<label = GITsetup, eval = FALSE, engine = "bash">>=
+git config --global user.name "Your Name"
+git config --global user.email "your_email@whatever.com"
+git config --global color.ui true
+@
+
+If you do not want to type your username and password every time you work with a remote server, you will need to install the credential helper.  See the article \href{https://help.github.com/articles/set-up-git#platform-all}{Set Up Git} for additional details on setting up the credential helper.
+
+To confirm your username and email, type \verb|git config --list| at the \verb|$| prompt.
+
+<<label=verify, engine = "bash">>=
+git config --list  # shows your configuration
+@
+
+From the \verb|credential.helper| line of the previous output, one can see the 
+\verb|credential.helper| is being used.  Now that Git is set up on your computer, we provide instructions for setting up a remote repository on GitHub.
+
+
+
+\section{GitHub}
+``GitHub is a web-based hosting service for software development projects that use 
+the Git revision control system. GitHub offers both paid plans for private 
+repositories and free accounts for open source projects. The site was launched 
+in 2008 by Tom Preston-Werner, Chris Wanstrath, and PJ Hyett.''\footnote{
+\href{http://en.wikipedia.org/wiki/GitHub}{http://en.wikipedia.org/wiki/GitHub}}
+
+Qualified faculty members can request free private accounts to use with their classes.
+To request a discount, which actually pays the whole price for 10 private repositories 
+for qualified faculty, click on the request a discount at 
+\href{https://education.github.com}{https://education.github.com}.  A step-by-step guide 
+for setting up your GitHub organization for classroom use can be found at 
+\href{https://education.github.com/guide}{https://education.github.com/guide}.   Free private repositories for anyone can be created at 
+\href{https://bitbucket.org}{https://bitbucket.org}.  Bitbucket, like GitHub, is a web 
+based hosting service that uses the Git revision control system.
+
+\subsection{Creating a GitHub Account}
+
+Point your browser to \href{https://github.com}{https://github.com};
+type a username in the \texttt{Pick a username} box (please use \texttt{firstlast}, for example my 
+username is \texttt{alanarnholt}); enter your email (use your school email) in the 
+\texttt{Your email} box; type in your password in the \texttt{Create a password} box. Then, 
+click the \texttt{Sign up for GitHub} box, and you will have a GitHub account.  You should 
+use the same name you used when you set up your \texttt{user.name} and \texttt{user.email} 
+on your local machine.
+
+
+\subsection{Creating a GitHub Repository}
+
+In order to push your local work to a remote repository, you will first need to create
+the remote repository. Log in to your GitHub account; click the \texttt{New repository} button;
+then, give your repository a name and optionally a description (\vref{CreateGR}.)  When you finish, click 
+the \texttt{Create repository} button, and your GitHub repository will be created.  You should click in the box \texttt{Initialize this repository with a README} if you want GitHub to create a markdown README file.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = 1\textwidth]{../../Git/images/CreateGitRepo.png}
+\caption{Create GitHub repository window\label{CreateGR}}
+\end{figure}
+
+This document is stored in the repository \href{https://github.com/alanarnholt/STT4870}{https://github.com/alanarnholt/STT4870} in the folder \href{https://github.com/alanarnholt/STT4870/Git}{https://github.com/alanarnholt/STT4870/thesis}.
+
+\subsection{Local Repositories}
+
+
+
+Once you have your remote repository created on GitHub, you will need to create a local
+copy of the remote repository on your computer so that you can make changes locally. 
+It is possible to set up a local repository using the command line or using GUI (drop, drag, etc.) commands.  We start by first looking at typed commands.  Then, we examine a 
+GUI to Git.   
+
+Open either a Terminal (Mac) or Git Bash (Windows).  Create a directory on your computer where you will store your copy of the GitHub 
+(remote) repository.
+
+<<label = MKDIR, eval = FALSE, engine = "bash">>=
+mkdir ~/TestProject
+@
+
+The tilde (\verb|~|) refers to your home directory.  In other words, \verb|~/TestProject|
+will create a directory called \texttt{TestProject} in your home directory.  Navigate 
+to the new directory by typing
+
+<<label = CDdir, eval = FALSE, engine = "bash">>=
+cd ~/TestProject
+@
+
+Once you have a local directory with files you
+would like to place under version control, use the \texttt{git init} command from your working
+directory to track your files. 
+
+
+<<label = INIT, eval = FALSE, engine = "bash">>=
+git init
+@
+
+Now, we are ready to point our local repository to the remote repository on GitHub by typing
+
+<<label = REMOTE, eval = FALSE, engine = "bash">>=
+git remote add origin https://github.com/your-user-name/TestProject.git
+@
+
+The last line needs some explanation!  The \texttt{add} creates the \textbf{new remote}; the \texttt{origin} is the name for the remote; and the url is the path to the remote.
+
+
+If you are working with a new repository and do not have an existing version on 
+your computer, you need to ``clone'' the GitHub repo to your computer.  From the working directory of your local machine, type:
+
+<<label = CLONE, eval = FALSE, engine = "bash">>=
+git clone https://github.com/your-user-name/TestProject.git
+@
+
+I keep my repositories in a folder called \verb|git_repositories| that
+is a subfolder of my \texttt{USERNAME} directory.   If you clone a remote repository 
+to your machine, you will not need to initialize your directory.
+
+\subsection{Forking a Repo}
+
+Another common way to clone a repo is by first ``forking'' someone else's repo.   Forking a repo creates a remote (GitHub) copy of the forked repo.   To work on the forked repo, you first must clone the remote fork to your local  machine.  When a repository is cloned, it has a default remote called \texttt{origin} that points to your fork on GitHub, not the original repository from which it was forked.  This means that updates the orignal repo owner makes will not automatically be added to your forked repo.
+
+To keep track of this repo, you need to add another remote named \texttt{upstream.}  This can be done by typing
+
+<<label = UPSTREAM, eval = FALSE, engine = "bash">>=
+git remote add upstream https://github.com/alanarnholt/STT4870.git
+@
+
+To pull in changes not present in your local repository without modifying your
+files, type
+
+<<label = Fetch, eval = FALSE, engine = "bash">>=
+git fetch upstream  
+@
+
+When you fetch the upstream repository,  the upstream branches are stored
+in your local repository in a local branch named \texttt{upstream/master.}  Next, you need to merge the changes into your local branch to bring your local branch in sync with the upstream branch without losing any local changes.  Make sure you are on the master branch by typing \texttt{git checkout master.}  Then, enter \texttt{git merge upstream/master.}  Once your local branch is in sync with the upstream remote, you will want to push your local changes back to your forked repo on GitHub by typing \texttt{git push.} 
+
+Another approach is to use
+
+<<label = PULL2, eval = FALSE, engine = "bash">>=
+git pull upstream master
+@
+
+What is the difference?
+
+\section{Using Git with RStudio}
+
+One way to clone this repo using \texttt{RStudio} is  to click on \verb|File -> New Project| (See \fref{NewProj}) 
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = .5\textwidth]{../../Git/images/NewProject.png}
+\caption{New Project window\label{NewProj}}
+\end{figure}
+
+Click Version Control, and a new window such as \vref{CreatePVC} will appear where you will select Git.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = .5\textwidth]{../../Git/images/VersionControl.png}
+\caption{Create Project form Version Control window\label{CreatePVC}}
+\end{figure}
+
+In the next window that appears, see \vref{CloneGRW}, enter the URL for the repository you are cloning.  Enter a project name, and specify where you want the project to reside on your computer.  When you are finished, click the \texttt{Create Project} button; and you will have cloned a remote repository.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = .5\textwidth]{../../Git/images/ProjectVersionControl.png}
+\caption{Clone Git Repository window\label{CloneGRW}}
+\end{figure}
+
+
+
+To check the current status of your repository type:
+<<label = STATUS, engine = "bash">>=
+git status
+@
+The \texttt{git status} shows us what files are not staged for a commit.  Before files can be
+committed, they must be added to the staging area.  Files are added to the stating area
+with the command \verb|git add file_name.|  To add all files in the working directory, one
+can use \verb|git add .| (The command includes the period.)  Next, all files are added to the staging area, and a snapshot is 
+taken of the commit with the message ``staging all files.''
+<<label = ADD, engine = "bash">>=
+git add .
+git commit  -m "staging all files"
+@
+
+Check the status after the last commit.
+<<label = STATUS2, engine = "bash">>=
+git status
+@
+
+Push changes to the remote repository. 
+<<label = PUSH, engine = "bash">>=
+git push
+@
+
+See if there is anything left to do.
+<<label = STATUS3, engine = "bash">>=
+git status
+@
+
+Show the last three commits with
+<<label = LOG, engine = "bash">>=
+git log  -3
+@
+
+That was ugly. Let us try some formatting.
+
+<<label = LOGP, engine = "bash">>=
+git log --pretty=oneline -3
+@
+
+The previous output was too brief to suit me.  Let us try some further formatting.
+
+<<label = LOGP2, engine = "bash">>=
+git log --pretty=format:"%h %ad- %s [%an]" -3
+@
+
+Maybe even some statistics?
+
+<<label = LOGP3, engine = "bash">>=
+git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
+@
+
+Now, just to show how cool this is, we will mix in a little \texttt{R.}
+
+
+\clearpage
+\section{Using R}
+
+\begin{figure}[!ht]
 <<G2, comment = NA, out.width=".95\\linewidth",fig.align='center', echo = FALSE>>=
-hist(RVS, col = "green", breaks = "Scott", freq = FALSE)
+hist(rnorm(1000), col = "green", breaks = "Scott", freq = FALSE)
 @
 \caption{Something goes here \label{graph2}}
 \end{figure}
