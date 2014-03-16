@@ -7,7 +7,7 @@
 
 
 
-Last compiled Sunday, March 16, 2014 - 08:32:00.
+Last compiled Sunday, March 16, 2014 - 12:05:23.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -315,8 +315,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master c8a7422] staging all files
- 2 files changed, 57 insertions(+), 59 deletions(-)
+[master a68c42b] staging all files
+ 2 files changed, 40 insertions(+), 40 deletions(-)
 ```
 
 
@@ -348,7 +348,8 @@ git status
 
 ```
 On branch master
-Your branch is up-to-date with 'origin/master'.
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
 
 nothing to commit, working directory clean
 ```
@@ -360,6 +361,12 @@ git log  -3
 ```
 
 ```
+commit a68c42b8181830df14f4988f2bb5f4b47e595414
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Sun Mar 16 12:05:24 2014 -0400
+
+    staging all files
+
 commit c8a7422b90871dca98e9c3529d292f14e6a73926
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Sun Mar 16 08:32:00 2014 -0400
@@ -371,12 +378,6 @@ Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Sun Mar 16 08:24:02 2014 -0400
 
     staging all files
-
-commit 4d033f91e034347edbe519dfc9628e00ae456513
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Sun Mar 16 07:43:27 2014 -0400
-
-    time changes
 ```
 
 
@@ -388,9 +389,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+a68c42b8181830df14f4988f2bb5f4b47e595414 staging all files
 c8a7422b90871dca98e9c3529d292f14e6a73926 staging all files
 c6c2236c2e95400c84f116a2a7150b296347769e staging all files
-4d033f91e034347edbe519dfc9628e00ae456513 time changes
 ```
 
 
@@ -402,9 +403,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+a68c42b Sun Mar 16 12:05:24 2014 -0400- staging all files [Alan Arnholt]
 c8a7422 Sun Mar 16 08:32:00 2014 -0400- staging all files [Alan Arnholt]
 c6c2236 Sun Mar 16 08:24:02 2014 -0400- staging all files [Alan Arnholt]
-4d033f9 Sun Mar 16 07:43:27 2014 -0400- time changes [Alan Arnholt]
 ```
 
 
@@ -416,6 +417,11 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+a68c42b Sun Mar 16 12:05:24 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.html | 44 ++++++++++++++++++++++----------------------
+ Git/GitOne.md   | 36 ++++++++++++++++++------------------
+ 2 files changed, 40 insertions(+), 40 deletions(-)
+
 c8a7422 Sun Mar 16 08:32:00 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.html | 61 ++++++++++++++++++++++++++++-----------------------------
  Git/GitOne.md   | 55 +++++++++++++++++++++++++--------------------------
@@ -424,11 +430,6 @@ c8a7422 Sun Mar 16 08:32:00 2014 -0400- staging all files [Alan Arnholt]
 c6c2236 Sun Mar 16 08:24:02 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd | 3 +++
  1 file changed, 3 insertions(+)
-
-4d033f9 Sun Mar 16 07:43:27 2014 -0400- time changes [Alan Arnholt]
- Git/GitOne.html | 40 +++++++++++++++++++---------------------
- Git/GitOne.md   | 34 ++++++++++++++++------------------
- 2 files changed, 35 insertions(+), 39 deletions(-)
 ```
 
 
