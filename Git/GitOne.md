@@ -7,9 +7,9 @@
 
 
 
-Last compiled Sunday, March 16, 2014 - 12:05:23.
+Last compiled Sunday, March 16, 2014 - 12:27:28.
 
-What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
+What is version control, and why should you use it?  Version control is a way to track files over time.  By using version control, you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
 
 * YourNameCVJanuary2014.docx
@@ -18,9 +18,9 @@ a previous working (read un-hosed) version of your files.  You may be using a fo
 * chapter2-032312.tex
 
 You may even back up your files for major projects in many different places.  When working on book projects in the past, I would back up my files on three different 
-local machines and two servers.  That works fine until you start using the files from one location and forget that you updated the files on another machine and you are using an old version of a file for new updates.  Now you have new material on old files and may have overwritten several weeks of work.  Expletives follow and you set to "un-hosing" your work which may take longer than it took to write the original document.  Is this a real scenario?  Yes, and the problem only grows exponentially when working with colleagues who all have access to the same files on a major project.
+local machines and two servers.  That works fine until you start using the files from one location and forget that you updated the files on another machine, and you are using an old version of a file for new updates.  Now you have new material on old files and may have overwritten several weeks of work.  Expletives follow, and you set to "un-hosing" your work which may take longer than it took to write the original document.  Is this a real scenario?  Yes, and the problem only grows exponentially when working with colleagues who all have access to the same files on a major project.
 
-I now use version control, specifically Git for virtually all of my work.  Notes for classes I am teaching have their own repositories (repos) and students and other interested parties can clone my repos.  If you have material that you would like to remain private, you can set up private repositories.  Thankfully, I have not lost a single file I could not recover since switching my work to Git.  
+I now use version control, specifically Git, for virtually all of my work.  Notes for classes I am teaching have their own repositories (repos), and students and other interested parties can clone my repos.  If you have material that you would like to remain private, you can set up private repositories.  Thankfully, I have not lost a single file I could not recover since switching my work to Git.  
 
 One last thought before we talk about actually installing and using Git.  You may be thinking, I have never lost a file because I back up all of my files on an external hardrive.  Great; however, suppose you lose your machine and external hard drive due to a catastrophic event.  Now what?  Well, if you are not using some form of version control, your work is most likely gone for good. If you were using version control, you just need to set up a new machine and continue your work where you left off.
 
@@ -42,11 +42,11 @@ If you get a message indicating the file is from an untrusted source, ignore the
 
 Once the download is complete, right click on the downloaded file to install it as an 
 administrator.  Use the default options at each step of the installation if you are 
-unsure what you are doing.  When the installation arrives at the screen adjusting your 
+unsure of what you are doing.  When the installation arrives at the screen adjusting your 
 PATH environment, click in the circle to the left of 
 **Run Git from the Windows Command Prompt**.
-You may need to manually add the path to where the `bash.exe` resides.  Run the 
-following at the `R` prompt to make sure `R` knows where to find `bash`.  Note that the 
+You may need to add the path to where the `bash.exe` resides manually.  Run the 
+following at the `R` prompt to make sure `R` knows where to find `bash.`  Note that the 
 path below will be dependent on the operating system you are using.
 
 
@@ -59,17 +59,17 @@ Sys.which("bash")
 "/bin/bash" 
 ```
 
-If the output does not specify the path to `bash`, the path to `bash` is not properly configured.
+If the output does not specify the path to `bash,` the path to `bash` is not properly configured.
 
-To interact with Git, find the program named Git Bash.  Git Bash is the command line environment Windows uses to interact with Git.  Git Bash should be located in the Git directory within your Start Menu provided you performed a default installation.
+To interact with Git, find the program named Git Bash.  Git Bash is the command line environment Windows uses to interact with Git.  Git Bash should be located in the Git directory within your Start Menu, provided you performed a default installation.
 
 
 ## Initial Setup
 
-If you have never used git before, you need to do some setup first.  Run the following
+If you have never used Git before, you need to do some setup first.  Run the following
 commands so that Git knows your name and email.  The commands are all issued in the
 Terminal (Mac) or at the command prompt of Git Bash (Windows).  The Terminal 
-application is usually found in `/applications/Utilities`. A quick way to open a 
+application is usually found in `/applications/Utilities.` A quick way to open a 
 **terminal** window is by clicking on the magnifying glass icon and typing *terminal* in spotlight.  
 
 <img class=center src="./images/Spotlight.png" height='200'/>
@@ -98,7 +98,7 @@ git config --global color.ui true
 ```
 
 
-If you do not want to type your username and password every time you work with a remote server, you will to install the credential helper.  See the article [Set Up Git](https://help.github.com/articles/set-up-git#platform-all) for additional details on setting up the credential helper.
+If you do not want to type your username and password every time you work with a remote server, you will need to install the credential helper.  See the article [Set Up Git](https://help.github.com/articles/set-up-git#platform-all) for additional details on setting up the credential helper.
 
 To confirm your username and email, type `git config --list` at the $ prompt.
 
@@ -134,7 +134,7 @@ From the third line of the previous output, one can see the
 
 "GitHub is a web-based hosting service for software development projects that use 
 the Git revision control system. GitHub offers both paid plans for private 
-repositories, and free accounts for open source projects. The site was launched 
+repositories and free accounts for open source projects. The site was launched 
 in 2008 by Tom Preston-Werner, Chris Wanstrath, and PJ Hyett."
 [http://en.wikipedia.org/wiki/GitHub](http://en.wikipedia.org/wiki/GitHub)
 
@@ -149,11 +149,11 @@ based hosting service that uses the Git revision control system.
 
 ## Creating a GitHub Account
 
-Point your browser to [https://github.com](https://github.com),
+Point your browser to [https://github.com](https://github.com);
 type a username in the `Pick a username` box (please use `firstlast`, for example my 
-username is `alanarnholt`), enter your email (use your school email) in the 
-`Your email` box, type in your password in the `Create a password` box. Then, 
-click the `Sign up for GitHub` box and you will have a GitHub account.  You should 
+username is `alanarnholt`); enter your email (use your school email) in the 
+`Your email` box; type in your password in the `Create a password` box. Then, 
+click the `Sign up for GitHub` box, and you will have a GitHub account.  You should 
 use the same name you used when you set up your `user.name` and `user.email` on your 
 local machine.
 
@@ -161,8 +161,8 @@ local machine.
 ### Creating a GitHub Repository
 
 In order to push your local work to a remote repository, you will first need to create
-the remote repository. Log in to your GitHub account, click the `New repository` button,
-then give your repository a name and optionally a description.  When you finish, click 
+the remote repository. Log in to your GitHub account; click the `New repository` button;
+then, give your repository a name and optionally a description.  When you finish, click 
 the `Create repository` button, and your GitHub repository will be created.  You should click in the box `Initialize this repository with a README` if you want GitHub to create a markdown README file.  
 ![AlansGitRepo](./images/CreateGitRepo.png)
 
@@ -174,11 +174,10 @@ This document is stored in the repository [https://github.com/alanarnholt/STT487
 
 Once you have your remote repository created on GitHub, you will need to create a local
 copy of the remote repository on your computer so that you can make changes locally. 
-It is possible to set up a local repository using the command line or using GUI (drop, drag, etc.) commands.  We start by first looking at typed commands then we examine a 
+It is possible to set up a local repository using the command line or using GUI (drop, drag, etc.) commands.  We start by first looking at typed commands.  Then, we examine a 
 GUI to Git.   
 
-Open either a Terminal (Mac) or Git Bash (Windows).  
-Create a directory on your computer where you will store your copy of the GitHub 
+Open either a Terminal (Mac) or Git Bash (Windows).  Create a directory on your computer where you will store your copy of the GitHub 
 (remote) repository.
 
 
@@ -208,7 +207,7 @@ git init
 ```
 
 
-Now we are ready to point our local repository to the remote repository on GitHub by typing
+Now, we are ready to point our local repository to the remote repository on GitHub by typing
 
 
 ```bash
@@ -216,11 +215,11 @@ git remote add origin https://github.com/your-user-name/TestProject.git
 ```
 
 
-The last line needs some explanation!  The `add` creates the *new remote*, the `origin` is the name for the remote, and the url is the path to the remote.
+The last line needs some explanation!  The `add` creates the *new remote*; the `origin` is the name for the remote; and the url is the path to the remote.
 
 
 If you are working with a new repository and do not have an existing version on 
-your computer, you need to "clone" the GitHub repo to your computer.  From the working directory of your local machine type:
+your computer, you need to "clone" the GitHub repo to your computer.  From the working directory of your local machine, type:
 
 
 ```bash
@@ -233,9 +232,9 @@ is a subfolder of my *USERNAME* directory.   If you clone a remote repository
 to your machine, you will not need to initialize your directory.
 
 ### Forking  a Repo
-Another common way to clone a repo is my first "forking" someone else's repo.   Forking a repo creates a remote (GitHub) copy of the forked repo.   To work on the forked repo, you first must clone the remote fork to your local  machine.  When a repository is cloned, it has a default remote called `origin` that points to your fork on GitHub, not the original repository it was forked from.  This means that updates the orignal repo owner makes will not automatically be added to your forked repo.
+Another common way to clone a repo is by first "forking" someone else's repo.   Forking a repo creates a remote (GitHub) copy of the forked repo.   To work on the forked repo, you first must clone the remote fork to your local  machine.  When a repository is cloned, it has a default remote called `origin` that points to your fork on GitHub, not the original repository from which it was forked.  This means that updates the orignal repo owner makes will not automatically be added to your forked repo.
 
-To keep track of this repo, you need to add another remote named `upstream`.  This can be done by typing
+To keep track of this repo, you need to add another remote named `upstream.`  This can be done by typing
 
 
 ```bash
@@ -243,17 +242,17 @@ git remote add upstream https://github.com/alanarnholt/STT4870.git
 ```
 
 
-To pull in changes not present in your local repository, without modifying your
-files type
+To pull in changes not present in your local repository without modifying your
+files, type
 
 
 ```bash
-git fetch upstream  # you may need to add master after upstream
+git fetch upstream  
 ```
 
 
 When you fetch the upstream repository,  the upstream branches are stored
-in your local repository in a local branch named `upstream/master`.  Next, we need to merge the changes into our local branch to bring our local branch in sync with the upstream branch without losing any local changes.  Make sure you are on the master branch by typing `git checkout master`.  Then, enter `git merge upstream/master`.  Once your local branch is in sync with the upstream remote, you will want to push your local changes back to your forked repo on GitHub by typing `git push`. 
+in your local repository in a local branch named `upstream/master.`  Next, you need to merge the changes into your local branch to bring your local branch in sync with the upstream branch without losing any local changes.  Make sure you are on the master branch by typing `git checkout master.`  Then, enter `git merge upstream/master.`  Once your local branch is in sync with the upstream remote, you will want to push your local changes back to your forked repo on GitHub by typing `git push.` 
 
 Another approach is to use
 
@@ -274,11 +273,11 @@ One way to clone this repo using `RStudio` is  to click on File -> New Project
 
 ![NewProject](./images/NewProject.png)
 
-Click Version Control and a new window such as the one below will appear where you will select Git.
+Click Version Control, and a new window such as the one below will appear where you will select Git.
 
 ![VersionControl](./images/VersionControl.png)
 
-In the next window that appears, which is shown below, enter the URL for the repository you are cloning.  Enter a project name and specify where you want the project to reside on your computer.  When you are finished, click the `Create Project` button and you will have cloned a remote repository.
+In the next window that appears, which is shown below, enter the URL for the repository you are cloning.  Enter a project name, and specify where you want the project to reside on your computer.  When you are finished, click the `Create Project` button; and you will have cloned a remote repository.
 
 ![ProjectVersionControl](./images/ProjectVersionControl.png)
 
@@ -291,12 +290,14 @@ git status
 
 ```
 On branch master
-Your branch is up-to-date with 'origin/master'.
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
+	modified:   GitOne.Rmd
 	modified:   GitOne.html
 	modified:   GitOne.md
 
@@ -305,8 +306,8 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 The `git status` shows us what files are not staged for a commit.  Before files can be
 committed, they must be added to the staging area.  Files are added to the stating area
-with the command `git add file_name`.  To add all files in the working directory, one
-can use `git add .`  Next, all files are added to the staging area, and a snapshot is 
+with the command `git add file_name.`  To add all files in the working directory, one
+can use `git add .` (The command includes the period.)  Next, all files are added to the staging area, and a snapshot is 
 taken of the commit with the message "staging all files."
 
 ```bash
@@ -315,8 +316,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-[master a68c42b] staging all files
- 2 files changed, 40 insertions(+), 40 deletions(-)
+[master 0a7fa52] staging all files
+ 3 files changed, 75 insertions(+), 74 deletions(-)
 ```
 
 
@@ -328,7 +329,7 @@ git status
 
 ```
 On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
+Your branch is ahead of 'origin/master' by 2 commits.
   (use "git push" to publish your local commits)
 
 nothing to commit, working directory clean
@@ -348,7 +349,7 @@ git status
 
 ```
 On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
+Your branch is ahead of 'origin/master' by 2 commits.
   (use "git push" to publish your local commits)
 
 nothing to commit, working directory clean
@@ -361,6 +362,12 @@ git log  -3
 ```
 
 ```
+commit 0a7fa5235cd2b94976f5be0d47fabbf35feb620e
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Sun Mar 16 12:27:28 2014 -0400
+
+    staging all files
+
 commit a68c42b8181830df14f4988f2bb5f4b47e595414
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Sun Mar 16 12:05:24 2014 -0400
@@ -370,12 +377,6 @@ Date:   Sun Mar 16 12:05:24 2014 -0400
 commit c8a7422b90871dca98e9c3529d292f14e6a73926
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Sun Mar 16 08:32:00 2014 -0400
-
-    staging all files
-
-commit c6c2236c2e95400c84f116a2a7150b296347769e
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Sun Mar 16 08:24:02 2014 -0400
 
     staging all files
 ```
@@ -389,13 +390,13 @@ git log --pretty=oneline -3
 ```
 
 ```
+0a7fa5235cd2b94976f5be0d47fabbf35feb620e staging all files
 a68c42b8181830df14f4988f2bb5f4b47e595414 staging all files
 c8a7422b90871dca98e9c3529d292f14e6a73926 staging all files
-c6c2236c2e95400c84f116a2a7150b296347769e staging all files
 ```
 
 
-The previous output was to brief to suit me.  Let us try some further formatting.
+The previous output was too brief to suit me.  Let us try some further formatting.
 
 
 ```bash
@@ -403,9 +404,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+0a7fa52 Sun Mar 16 12:27:28 2014 -0400- staging all files [Alan Arnholt]
 a68c42b Sun Mar 16 12:05:24 2014 -0400- staging all files [Alan Arnholt]
 c8a7422 Sun Mar 16 08:32:00 2014 -0400- staging all files [Alan Arnholt]
-c6c2236 Sun Mar 16 08:24:02 2014 -0400- staging all files [Alan Arnholt]
 ```
 
 
@@ -417,6 +418,12 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+0a7fa52 Sun Mar 16 12:27:28 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  | 71 ++++++++++++++++++++++++++++-----------------------------
+ Git/GitOne.html | 43 +++++++++++++++++-----------------
+ Git/GitOne.md   | 35 ++++++++++++++--------------
+ 3 files changed, 75 insertions(+), 74 deletions(-)
+
 a68c42b Sun Mar 16 12:05:24 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.html | 44 ++++++++++++++++++++++----------------------
  Git/GitOne.md   | 36 ++++++++++++++++++------------------
@@ -426,14 +433,10 @@ c8a7422 Sun Mar 16 08:32:00 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.html | 61 ++++++++++++++++++++++++++++-----------------------------
  Git/GitOne.md   | 55 +++++++++++++++++++++++++--------------------------
  2 files changed, 57 insertions(+), 59 deletions(-)
-
-c6c2236 Sun Mar 16 08:24:02 2014 -0400- staging all files [Alan Arnholt]
- Git/GitOne.Rmd | 3 +++
- 1 file changed, 3 insertions(+)
 ```
 
 
-Now, just to show how cool this is, we will mix in a little `R`.
+Now, just to show how cool this is, we will mix in a little `R.`
 
 
 ```r

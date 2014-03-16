@@ -99,7 +99,7 @@ To confirm your username and email, type `git config --list` at the $ prompt.
 git config --list  # shows your configuration
 ```
 
-From the third line of the previous output, one can see the 
+From the `credential.helper` line of the previous output, one can see the 
 `credential.helper` is being used.  Now that Git is set up on your computer, we provide instructions for setting up a remote repository on GitHub.
 
 ### What is GitHub?
@@ -223,7 +223,7 @@ What is the difference?
 
 
 
-## GUI appraoch with RStudio
+## GUI approach with RStudio
 
 One way to clone this repo using `RStudio` is  to click on File -> New Project 
 
