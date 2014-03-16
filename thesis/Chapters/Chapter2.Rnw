@@ -29,7 +29,7 @@ Download and install the lastest version of Git from \href{http://git-scm.com/do
  
 \begin{figure}[!ht]
 \centering
-\includegraphics[width = \textwidth]{../../Git/images/SGitDownload.png}
+\includegraphics[width = \textwidth]{../Git/images/SGitDownload.png}
 \caption{Git Download site \label{GITDLS}}
 \end{figure}
 
