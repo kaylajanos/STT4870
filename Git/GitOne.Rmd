@@ -96,7 +96,7 @@ If you do not want to type your username and password every time you work with a
 To confirm your username and email, type `git config --list` at the $ prompt.
 
 ```{r label=verify}
-git config --list  #shows your configuration
+git config --list  # shows your configuration
 ```
 
 From the third line of the previous output, one can see the 
@@ -174,11 +174,14 @@ directory to track your files.
 git init
 ```
 
-Now we are ready to point our local repository to the remote repository on Github by typing
+Now we are ready to point our local repository to the remote repository on GitHub by typing
 
 ```{r label = REMOTE, eval = FALSE}
 git remote add origin https://github.com/your-user-name/TestProject.git
 ```
+
+The last line needs some explanation!  The `add` creates the *new remote*, the `origin` is the name for the remote, and the url is the path to the remote.
+
 
 If you are working with a new repository and do not have an existing version on 
 your computer, you need to "clone" the GitHub repo to your computer.  From the working directory of your local machine type:

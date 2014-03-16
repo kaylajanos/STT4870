@@ -7,7 +7,7 @@
 
 
 
-Last compiled Sunday, March 16, 2014 - 05:48:06.
+Last compiled Sunday, March 16, 2014 - 06:59:05.
 
 What is version control and why should you use it?  Version control is a way to track files over time.  By using version control you will be able to retrace your steps to
 a previous working (read un-hosed) version of your files.  You may be using a form of version control now with files named like the following:
@@ -104,7 +104,7 @@ To confirm your username and email, type `git config --list` at the $ prompt.
 
 
 ```bash
-git config --list
+git config --list  #shows your configuration
 ```
 
 ```
@@ -114,6 +114,8 @@ push.default=simple
 credential.helper=osxkeychain
 filter.media.clean=git-media-clean %f
 filter.media.smudge=git-media-smudge %f
+color.ui=true
+core.editor=RStudio
 core.repositoryformatversion=0
 core.filemode=true
 core.bare=false
@@ -259,7 +261,15 @@ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
 
-nothing to commit, working directory clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   GitOne.Rmd
+	modified:   GitOne.html
+	modified:   GitOne.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 The `git status` shows us what files are not staged for a commit.  Before files can be
@@ -274,10 +284,8 @@ git commit  -m "staging all files"
 ```
 
 ```
-On branch master
-Your branch is up-to-date with 'origin/master'.
-
-nothing to commit, working directory clean
+[master 6e0191d] staging all files
+ 3 files changed, 58 insertions(+), 72 deletions(-)
 ```
 
 
@@ -289,7 +297,8 @@ git status
 
 ```
 On branch master
-Your branch is up-to-date with 'origin/master'.
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
 
 nothing to commit, working directory clean
 ```
@@ -320,6 +329,12 @@ git log  -3
 ```
 
 ```
+commit 6e0191d50867ead5ff8eec3e2f7737769e3737ba
+Author: Alan Arnholt <arnholtat@appstate.edu>
+Date:   Sun Mar 16 06:59:06 2014 -0400
+
+    staging all files
+
 commit ff27a5778f5deff49bbea94040bbc3b8edeb18b9
 Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 11:56:47 2014 -0400
@@ -331,12 +346,6 @@ Author: Alan Arnholt <arnholtat@appstate.edu>
 Date:   Fri Mar 14 11:55:34 2014 -0400
 
     staging all files
-
-commit a945e366ae2a6cfeee2f042999069da99ed36c41
-Author: Alan Arnholt <arnholtat@appstate.edu>
-Date:   Fri Mar 14 11:50:06 2014 -0400
-
-    push
 ```
 
 
@@ -348,9 +357,9 @@ git log --pretty=oneline -3
 ```
 
 ```
+6e0191d50867ead5ff8eec3e2f7737769e3737ba staging all files
 ff27a5778f5deff49bbea94040bbc3b8edeb18b9 latest changes
 0b1af2b28a0dbdf4009391460569a0411210b2df staging all files
-a945e366ae2a6cfeee2f042999069da99ed36c41 push
 ```
 
 
@@ -362,9 +371,9 @@ git log --pretty=format:"%h %ad- %s [%an]" -3
 ```
 
 ```
+6e0191d Sun Mar 16 06:59:06 2014 -0400- staging all files [Alan Arnholt]
 ff27a57 Fri Mar 14 11:56:47 2014 -0400- latest changes [Alan Arnholt]
 0b1af2b Fri Mar 14 11:55:34 2014 -0400- staging all files [Alan Arnholt]
-a945e36 Fri Mar 14 11:50:06 2014 -0400- push [Alan Arnholt]
 ```
 
 
@@ -376,6 +385,12 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 ```
 
 ```
+6e0191d Sun Mar 16 06:59:06 2014 -0400- staging all files [Alan Arnholt]
+ Git/GitOne.Rmd  |  4 ++--
+ Git/GitOne.html | 67 ++++++++++++++++++++++++++-------------------------------
+ Git/GitOne.md   | 59 ++++++++++++++++++++++----------------------------
+ 3 files changed, 58 insertions(+), 72 deletions(-)
+
 ff27a57 Fri Mar 14 11:56:47 2014 -0400- latest changes [Alan Arnholt]
  Git/GitOne.html | 92 +++++++++++++++++++++++----------------------------------
  Git/GitOne.md   | 86 +++++++++++++++++++++--------------------------------
@@ -384,14 +399,6 @@ ff27a57 Fri Mar 14 11:56:47 2014 -0400- latest changes [Alan Arnholt]
 0b1af2b Fri Mar 14 11:55:34 2014 -0400- staging all files [Alan Arnholt]
  Git/GitOne.Rmd | 7 +++++--
  1 file changed, 5 insertions(+), 2 deletions(-)
-
-a945e36 Fri Mar 14 11:50:06 2014 -0400- push [Alan Arnholt]
- Git/GitOne.html                                    |  42 +++++++++++----------
- Git/GitOne.md                                      |  37 +++++++++---------
- ...ashCheck_3a4552886a749e14bd443de33a754ec2.RData | Bin 176 -> 0 bytes
- .../BashCheck_3a4552886a749e14bd443de33a754ec2.rdb |   0
- .../BashCheck_3a4552886a749e14bd443de33a754ec2.rdx | Bin 113 -> 0 bytes
- 5 files changed, 42 insertions(+), 37 deletions(-)
 ```
 
 
