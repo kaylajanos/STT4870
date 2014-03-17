@@ -161,8 +161,10 @@ on your local machine.
 
 In order to push your local work to a remote repository, you will first need to create
 the remote repository. Log in to your GitHub account; click the \texttt{New repository} button;
-then, give your repository a name and optionally a description (\vref{CreateGR}.)  When you finish, click 
-the \texttt{Create repository} button, and your GitHub repository will be created.  You should click in the box \texttt{Initialize this repository with a README} if you want GitHub to create a markdown README file.
+then, give your repository a name and optionally a description (\fref{CreateGR}.)  
+When you finish, click  the \texttt{Create repository} button, and your GitHub 
+repository will be created.  You should click in the box \texttt{Initialize this 
+repository with a README} if you want GitHub to create a markdown README file.
 
 \begin{figure}[!ht]
 \centering
