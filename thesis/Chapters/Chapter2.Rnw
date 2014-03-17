@@ -24,7 +24,7 @@ One last thought before we talk about actually installing and using Git.  You ma
 \section{Downloading Git}
 
 Download and install the lastest version of Git from \href{http://git-scm.com/download}{http://git-scm.com/downloads}.  \fref{GITDLS} shows
- what the site looks.
+ the Git download site.
 
  
 \begin{figure}[!ht]
@@ -104,6 +104,8 @@ To open Git Bash, click on the \texttt{Windows icon -> Git -> Git Bash}.  The pr
 \includegraphics[width = 1\textwidth]{../Git/images/GitBashWindow.png}
 \caption{Git Bash Window\label{WGB}}
 \end{figure}
+
+\clearpage
 
 \subsection{Run these commands}
 
