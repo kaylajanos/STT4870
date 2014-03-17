@@ -282,8 +282,8 @@ In the next window that appears, see \vref{CloneGRW}, enter the URL for the repo
 \end{figure}
 
 
-To check the current status of your repository type \texttt{git status} as shown in 
-\gref{STATUS}.
+To check the current status of your repository type \texttt{git status} as shown in Git Example 
+\vref{STATUS}.
 
 <<label = STATUS, engine = "bash", GIT = TRUE>>=
 git status
