@@ -382,7 +382,7 @@ theme_set(previous_theme) # Restore original theme
 @
 
 \begin{figure}[!ht]
-<<G2, comment = NA, out.width=".95\\linewidth",fig.align='center', echo = FALSE>>=
+<<G2, comment = NA, out.width=".65\\linewidth",fig.align='center', echo = FALSE, dev = "tikz">>=
 hist(rnorm(1000), col = "green", breaks = "Scott", freq = FALSE)
 @
 \caption{Something goes here \label{graph2}}
