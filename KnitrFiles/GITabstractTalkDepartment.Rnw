@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue, linktocpage=true, breaklinks=true]{hyperref}
+\usepackage[margin = 1in]{geometry}
+\usepackage{varioref}  % adds page to references use \vref{} vs \ref{}
+\usepackage{amsthm}
+\newtheoremstyle{rcode}{1pt}{1pt}{}{}{\bfseries}{}{.5em}{}
+\theoremstyle{rcode}
+\newtheorem{rcode}{R Code}[section]
+\newtheorem{GIT}{Git Example}[section]
+% User Commands
+\newcommand{\noind}{\setlength{\parindent}{0pt}}
+\newcommand{\reind}{\setlength{\parindent}{15pt}}
+
+\title{Using Version Control (Git)}
+\author{Alan Arnholt}
+\date{March 21, 2014}
+\begin{document}
+\maketitle
+
+<<setup, include=FALSE>>=
+knit_hooks$set(rcode = function(before, options, envir) {
+  if (before) sprintf('\\begin{rcode}\\label{%s}\\hfill{}', options$label) else '\\end{rcode}'
+})
+knit_hooks$set(GIT = function(before, options, envir) {
+  if (before) sprintf('\\begin{GIT}\\label{%s}\\hfill{}', options$label) else '\\end{GIT}'
+})
+## data time
+DT <- format(Sys.time(), "%A, %B %d, %Y - %X")
+## Global chunk options next
+opts_chunk$set(comment = NA, cache = TRUE, fig.align = 'center', fig.height = 4, fig.width = 4, dev = 'tikz')
+@
+
+We will talk about why anyone working on a ``large'' project, whether it is a thesis, a research paper, or a book should use version control.  The aim of the talk is to provide immediate tools so attendees can start using Git. To get the most out of our time, please bring a laptop.  If you do not have up-to-date versions of \href{https://www.tug.org/texlive/}{\LaTeX}, \href{http://www.git-scm.com}{Git}, \href{http://cran.us.r-project.org}{R}, and \href{https://www.rstudio.com/ide/download/desktop}{RStudio} on your laptop, please update or install them prior to coming.  If anyone encounters any type of problem installing or updating any software, we will fix that at the start of the talk.  If you do not have a laptop, do not worry as we will be meeting in a lab where most of the software is installed.      
+
+
+\end{document}

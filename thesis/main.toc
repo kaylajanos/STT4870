@@ -47,9 +47,9 @@
 \contentsline {subsection}{\numberline {2.3.3}Local Repositories}{22}{subsection.64}
 \contentsline {subsection}{\numberline {2.3.4}Forking a Repo}{23}{subsection.65}
 \contentsline {section}{\numberline {2.4}Using Git with RStudio}{24}{section.66}
-\contentsline {section}{\numberline {2.5}Using R}{33}{section.70}
-\contentsline {section}{\numberline {2.6}So you want to collaborate?}{36}{section.73}
+\contentsline {section}{\numberline {2.5}Using R}{32}{section.70}
+\contentsline {section}{\numberline {2.6}So you want to collaborate?}{35}{section.73}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Appendix Title Here}{37}{appendix.74}
+\contentsline {chapter}{\numberline {A}Appendix Title Here}{36}{appendix.74}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{38}{dummy.75}
+\contentsline {chapter}{Bibliography}{37}{dummy.75}
