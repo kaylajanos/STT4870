@@ -281,7 +281,6 @@ In the next window that appears, see \vref{CloneGRW}, enter the URL for the repo
 \caption{Clone Git Repository window\label{CloneGRW}}
 \end{figure}
 
-\clearpage
 
 To check the current status of your repository type:
 <<label = STATUS, engine = "bash">>=
