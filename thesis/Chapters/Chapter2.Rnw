@@ -121,7 +121,8 @@ To confirm your username and email, type \verb|git config --list| at the \verb|$
 git config --list  # shows your configuration
 @
 
-From the \verb|credential.helper| line in Git Examle \vref{verify}, one can see the 
+From the \verb|credential.helper| line in Git Example \vref{verify}, 
+one can see the 
 \verb|credential.helper| is being used.  Now that Git is set up on your computer, we provide instructions for setting up a remote repository on GitHub.
 
 
