@@ -117,11 +117,11 @@ If you do not want to type your username and password every time you work with a
 
 To confirm your username and email, type \verb|git config --list| at the \verb|$| prompt.
 
-<<label=verify, engine = "bash", GIT = TRUE>>=
+<<verify, engine = "sh", GIT = TRUE>>=
 git config --list  # shows your configuration
 @
 
-From the \verb|credential.helper| line in Git Code \vref{verify}, one can see the 
+From the \verb|credential.helper| line in Git Examle \vref{verify}, one can see the 
 \verb|credential.helper| is being used.  Now that Git is set up on your computer, we provide instructions for setting up a remote repository on GitHub.
 
 
