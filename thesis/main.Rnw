@@ -65,11 +65,17 @@
 %  knitr stuff ATA 03/04/14
 \theoremstyle{EX}  % Note this line must appear before the hook to number the R Code labels!
 \newtheorem{rcode}{R Code}[chapter]
-<<RcodeHOOK, echo = FALSE>>=
+\newtheorem{GIT}{Git Example}[chapter]
+<<Rcodehook, echo = FALSE>>=
 knit_hooks$set(rcode = function(before, options, envir){
   if(before){
     sprintf("\\begin{rcode}\\label{%s}\\hfill{}", options$label)
   } else "\\end{rcode}"
+})
+@
+<<GIThook, echo = FALSE>>=
+knit_hooks$set(GIT = function(before, options, envir) {
+  if (before) sprintf('\\begin{GIT}\\label{%s}\\hfill{}', options$label) else '\\end{GIT}'
 })
 @
 

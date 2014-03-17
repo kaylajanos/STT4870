@@ -1,0 +1,125 @@
+% Created by tikzDevice version 0.7.0 on 2014-03-16 20:20:39
+% !TEX encoding = UTF-8 Unicode
+
+
+\documentclass[11pt, oneside]{Thesis}
+\nonstopmode
+
+\usepackage{tikz}
+
+\usepackage[active,tightpage,psfixbb]{preview}
+
+\PreviewEnvironment{pgfpicture}
+
+\setlength\PreviewBorder{0pt}
+
+\newcommand{\SweaveOpts}[1]{}  % do not interfere with LaTeX
+\newcommand{\SweaveInput}[1]{} % because they are not real TeX commands
+\newcommand{\Sexpr}[1]{}       % will only be parsed by R
+
+ % Paper size, default font size and one-sided paper  
+
+\usepackage[letterpaper,includehead,includefoot]{geometry} % change letterpaper to a4paper for A4 paper size
+\geometry{top=2.0in, bottom=0.0in, left=2.25in, right=0.0in} % read geometry documentation for setting margins
+
+\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+
+\usepackage[square, numbers, comma, sort&compress]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+\title{\ttitle} % Defines the thesis title - don't touch this
+
+
+
+\begin{document}
+
+\begin{tikzpicture}[x=1pt,y=1pt]
+\definecolor[named]{fillColor}{rgb}{1.00,1.00,1.00}
+\path[use as bounding box,fill=fillColor,fill opacity=0.00] (0,0) rectangle (505.89,505.89);
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (505.89,505.89);
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,0.00}
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.31] at (266.14,473.88) {\bfseries Histogram of rnorm(1000)};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.09] at (266.14, 17.16) {rnorm(1000)};
+
+\node[text=drawColor,rotate= 90.00,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.09] at ( 11.88,259.55) {Density};
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (505.89,505.89);
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,0.00}
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 69.83, 67.32) -- (383.94, 67.32);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 69.83, 67.32) -- ( 69.83, 60.72);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] (174.53, 67.32) -- (174.53, 60.72);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] (279.23, 67.32) -- (279.23, 60.72);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] (383.94, 67.32) -- (383.94, 60.72);
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.09] at ( 69.83, 43.56) {-4};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.09] at (174.53, 43.56) {-2};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.09] at (279.23, 43.56) {0};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.09] at (383.94, 43.56) {2};
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 54.12, 81.56) -- ( 54.12,364.08);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 54.12, 81.56) -- ( 47.52, 81.56);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 54.12,175.73) -- ( 47.52,175.73);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 54.12,269.90) -- ( 47.52,269.90);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 54.12,364.08) -- ( 47.52,364.08);
+
+\node[text=drawColor,rotate= 90.00,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.09] at ( 38.28, 81.56) {0.0};
+
+\node[text=drawColor,rotate= 90.00,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.09] at ( 38.28,175.73) {0.1};
+
+\node[text=drawColor,rotate= 90.00,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.09] at ( 38.28,269.90) {0.2};
+
+\node[text=drawColor,rotate= 90.00,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.09] at ( 38.28,364.08) {0.3};
+\end{scope}
+\begin{scope}
+\path[clip] ( 54.12, 67.32) rectangle (478.17,451.77);
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,0.00}
+\definecolor[named]{fillColor}{rgb}{0.00,1.00,0.00}
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round,fill=fillColor] ( 69.83, 81.56) rectangle ( 96.00, 83.44);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round,fill=fillColor] ( 96.00, 81.56) rectangle (122.18, 85.33);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round,fill=fillColor] (122.18, 81.56) rectangle (148.35, 89.09);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round,fill=fillColor] (148.35, 81.56) rectangle (174.53,111.69);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round,fill=fillColor] (174.53, 81.56) rectangle (200.71,164.43);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round,fill=fillColor] (200.71, 81.56) rectangle (226.88,264.25);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round,fill=fillColor] (226.88, 81.56) rectangle (253.06,360.31);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round,fill=fillColor] (253.06, 81.56) rectangle (279.23,437.53);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round,fill=fillColor] (279.23, 81.56) rectangle (305.41,426.23);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round,fill=fillColor] (305.41, 81.56) rectangle (331.58,367.84);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round,fill=fillColor] (331.58, 81.56) rectangle (357.76,234.12);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round,fill=fillColor] (357.76, 81.56) rectangle (383.94,177.61);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round,fill=fillColor] (383.94, 81.56) rectangle (410.11,124.88);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round,fill=fillColor] (410.11, 81.56) rectangle (436.29, 96.63);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round,fill=fillColor] (436.29, 81.56) rectangle (462.46, 83.44);
+\end{scope}
+\end{tikzpicture}
+
+\end{document}
