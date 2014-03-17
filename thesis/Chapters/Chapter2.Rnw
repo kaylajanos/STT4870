@@ -40,7 +40,7 @@ Install the downloaded file by clicking on the downloaded \verb|*.dmg| file then
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width = \textwidth]{../../Git/images/MacGitDownload.png}
+\includegraphics[width = \textwidth]{../Git/images/MacGitDownload.png}
 \caption{Files in Finder\label{GITFIF}}
 \end{figure}
 
@@ -74,7 +74,7 @@ application is usually found in \verb|/applications/Utilities.| A quick way to o
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width = .75\textwidth]{../../Git/images/Spotlight.png}
+\includegraphics[width = .75\textwidth]{../Git/images/Spotlight.png}
 \caption{Spotlight\label{GITSL}}
 \end{figure}
 
@@ -84,7 +84,7 @@ By clicking on the Terminal application, a Terminal window will open like the on
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width = 1\textwidth]{../../Git/images/TerminalWindow.png}
+\includegraphics[width = 1\textwidth]{../Git/images/TerminalWindow.png}
 \caption{Terminal window\label{TW}}
 \end{figure}
 
@@ -94,14 +94,14 @@ To open Git Bash, click on the \texttt{Windows icon -> Git -> Git Bash}.  The pr
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width = .5\textwidth]{../../Git/images/WindowsProgramGitBash.png}
+\includegraphics[width = .5\textwidth]{../Git/images/WindowsProgramGitBash.png}
 \caption{Windows Start Menu\label{WSM}}
 \end{figure}
 
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width = 1\textwidth]{../../Git/images/GitBashWindow.png}
+\includegraphics[width = 1\textwidth]{../Git/images/GitBashWindow.png}
 \caption{Git Bash Window\label{WGB}}
 \end{figure}
 
@@ -162,7 +162,7 @@ the \texttt{Create repository} button, and your GitHub repository will be create
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width = 1\textwidth]{../../Git/images/CreateGitRepo.png}
+\includegraphics[width = 1\textwidth]{../Git/images/CreateGitRepo.png}
 \caption{Create GitHub repository window\label{CreateGR}}
 \end{figure}
 
@@ -255,7 +255,7 @@ One way to clone this repo using \texttt{RStudio} is  to click on \verb|File -> 
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width = .5\textwidth]{../../Git/images/NewProject.png}
+\includegraphics[width = .5\textwidth]{../Git/images/NewProject.png}
 \caption{New Project window\label{NewProj}}
 \end{figure}
 
@@ -263,7 +263,7 @@ Click Version Control, and a new window such as \vref{CreatePVC} will appear whe
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width = .5\textwidth]{../../Git/images/VersionControl.png}
+\includegraphics[width = .5\textwidth]{../Git/images/VersionControl.png}
 \caption{Create Project form Version Control window\label{CreatePVC}}
 \end{figure}
 
@@ -271,7 +271,7 @@ In the next window that appears, see \vref{CloneGRW}, enter the URL for the repo
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width = .5\textwidth]{../../Git/images/ProjectVersionControl.png}
+\includegraphics[width = .5\textwidth]{../Git/images/ProjectVersionControl.png}
 \caption{Clone Git Repository window\label{CloneGRW}}
 \end{figure}
 
