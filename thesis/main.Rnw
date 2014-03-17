@@ -318,8 +318,10 @@ opts_chunk$set(comment = NA, fig.show='hold', fig.height=7, fig.width=7,
 <<chapter2, child='./Chapters/Chapter2.Rnw', eval=TRUE>>= 
 @
 
-
 %\input{Chapters/Chapter3}
+<<chapter3, child='./Chapters/Chapter3.Rnw', eval=TRUE>>= 
+@
+
 %\input{Chapters/Chapter4} 
 %\input{Chapters/Chapter5} 
 %\input{Chapters/Chapter6} 
