@@ -123,9 +123,9 @@ To confirm your username and email, type \verb|git config --list| at the \verb|$
 git config --list  # shows your configuration
 @
 
-From the \verb|credential.helper| line in Git Example \vref{verify}, 
-one can see the 
-\verb|credential.helper| is being used.  Now that Git is set up on your computer, we provide instructions for setting up a remote repository on GitHub.
+From the \verb|credential.helper| line in Git Example \vref{verify},  one can see the 
+\verb|credential.helper| is being used.  Now that Git is set up on your computer, 
+we provide instructions for setting up a remote repository on GitHub.
 
 
 
@@ -140,8 +140,9 @@ Qualified faculty members can request free private accounts to use with their cl
 To request a discount, which actually pays the whole price for 10 private repositories 
 for qualified faculty, click on the request a discount at 
 \href{https://education.github.com}{https://education.github.com}.  A step-by-step guide 
-for setting up your GitHub organization for classroom use can be found at 
-\href{https://education.github.com/guide}{https://education.github.com/guide}.   Free private repositories for anyone can be created at 
+for setting up your GitHub account for classroom use can be found at 
+\href{https://education.github.com/guide}{https://education.github.com/guide}.   
+Free private repositories for anyone can be created at 
 \href{https://bitbucket.org}{https://bitbucket.org}.  Bitbucket, like GitHub, is a web 
 based hosting service that uses the Git revision control system.
 
