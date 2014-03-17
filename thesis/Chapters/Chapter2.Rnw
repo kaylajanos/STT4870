@@ -282,15 +282,20 @@ In the next window that appears, see \vref{CloneGRW}, enter the URL for the repo
 \end{figure}
 
 
-To check the current status of your repository type:
-<<label = STATUS, engine = "bash">>=
+To check the current status of your repository type \texttt{git status} as shown in 
+\gref{STATUS}.
+
+<<label = STATUS, engine = "bash", GIT = TRUE>>=
 git status
 @
-The \texttt{git status} shows us what files are not staged for a commit.  Before files can be
+The \texttt{git status} command shows us what files are not staged for a commit.  
+Before files can be
 committed, they must be added to the staging area.  Files are added to the stating area
 with the command \verb|git add file_name.|  To add all files in the working directory, one
-can use \verb|git add .| (The command includes the period.)  Next, all files are added to the staging area, and a snapshot is 
+can use \verb|git add .| (The command includes the period.)  Next, all files are 
+added to the staging area, and a snapshot is 
 taken of the commit with the message ``staging all files.''
+
 <<label = ADD, engine = "bash">>=
 git add .
 git commit  -m "staging all files"
