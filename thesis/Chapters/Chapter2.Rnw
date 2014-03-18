@@ -230,7 +230,19 @@ to your machine, you will not need to initialize your directory.
 
 \subsection{Forking a Repo}
 
-Another common way to clone a repo is by first ``forking'' someone else's repo.   Forking a repo creates a remote (GitHub) copy of the forked repo.   To work on the forked repo, you first must clone the remote fork to your local  machine.  When a repository is cloned, it has a default remote called \texttt{origin} that points to your fork on GitHub, not the original repository from which it was forked.  This means that updates the orignal repo owner makes will not automatically be added to your forked repo.
+Another common way to clone a repo is by first ``forking'' someone else's repo.   Forking a repo creates a remote (GitHub) copy of the forked repo.   To work on the forked repo, you first must clone the remote fork to your local  machine.  When a repository is cloned, it has a default remote called \texttt{origin} that points to your fork on GitHub, not the original repository from which it was forked.  This means that updates the orignal repo owner makes will not automatically be added to your forked repo.  To verify that your remote (\texttt{origin}) of a forked repo is set-up properly, type
+
+<<RepoCheck, engine = "bash", eval = FALSE, GIT = TRUE>>=
+git remote -v
+@
+
+The result from entering the code in \gref{RepoCheck} should have the following as a minimum:
+
+\begin{verbatim}
+origin  https://github.com/Your-User-Name/STT4870.git (fetch)
+origin	https://github.com/Your-User-Name/STT4870.git (push)
+\end{verbatim}
+
 
 To keep track of this repo, you need to add another remote named \texttt{upstream.}  This can be done by typing
 
