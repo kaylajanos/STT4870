@@ -236,7 +236,7 @@ Another common way to clone a repo is by first ``forking'' someone else's repo. 
 git remote -v
 @
 
-The result from entering the code in \gref{RepoCheck} should have the following as a minimum:
+The result from entering the code in \gref{RepoCheck} should return the following as a minimum.  That is, you may have 
 
 \begin{verbatim}
 origin  https://github.com/Your-User-Name/STT4870.git (fetch)
@@ -246,9 +246,18 @@ origin	https://github.com/Your-User-Name/STT4870.git (push)
 
 To keep track of this repo, you need to add another remote named \texttt{upstream.}  This can be done by typing
 
-<<label = UPSTREAM, eval = FALSE, engine = "bash">>=
+<<label = UPSTREAM, eval = FALSE, engine = "bash", GIT = TRUE>>=
 git remote add upstream https://github.com/alanarnholt/STT4870.git
 @
+
+Typing the code in \gref{RepoCheck} after adding the cod e in \gref{UPSTREAM} should return something similar to the following:
+
+\begin{verbatim}
+origin  https://github.com/Your-User-Name/STT4870.git (fetch)
+origin	https://github.com/Your-User-Name/STT4870.git (push)
+upstream	https://github.com/alanarnholt/STT4870.git (fetch)
+upstream	https://github.com/alanarnholt/STT4870.git (push)
+\end{verbatim}
 
 To pull in changes not present in your local repository without modifying your
 files, type
