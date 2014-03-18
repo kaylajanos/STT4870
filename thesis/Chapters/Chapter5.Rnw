@@ -1,0 +1,3 @@
+\chapter{Using Bib\TeX} % Main chapter title
+\label{bibtex} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+\lhead{Chapter 5. \emph{Using Bib\TeX}} % This is for the header on each page - perhaps a shortened title
