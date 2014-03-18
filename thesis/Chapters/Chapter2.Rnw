@@ -367,8 +367,6 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 @
 
 
-\clearpage
-
 
 \section{So you want to collaborate?}\label{SUWTC}
 
