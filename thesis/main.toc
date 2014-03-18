@@ -5,11 +5,11 @@
 \contentsline {chapter}{Acknowledgements}{iv}{dummy.3}
 \vspace {1em}
 \contentsline {chapter}{Contents}{v}{dummy.4}
-\contentsline {chapter}{List of Figures}{vii}{dummy.6}
-\contentsline {chapter}{List of Tables}{viii}{dummy.8}
-\contentsline {chapter}{Abbreviations}{ix}{dummy.10}
-\contentsline {chapter}{Physical Constants}{x}{dummy.13}
-\contentsline {chapter}{Symbols}{xi}{dummy.16}
+\contentsline {chapter}{List of Figures}{viii}{dummy.6}
+\contentsline {chapter}{List of Tables}{ix}{dummy.8}
+\contentsline {chapter}{Abbreviations}{x}{dummy.10}
+\contentsline {chapter}{Physical Constants}{xi}{dummy.13}
+\contentsline {chapter}{Symbols}{xii}{dummy.16}
 \vspace {2em}
 \contentsline {chapter}{\numberline {1}Introduction to \LaTeX }{1}{chapter.19}
 \contentsline {section}{\numberline {1.1}Welcome and Thank You}{1}{section.20}
@@ -41,15 +41,21 @@
 \contentsline {subsection}{\numberline {2.2.1}Mac Users}{18}{subsection.52}
 \contentsline {subsection}{\numberline {2.2.2}Windows Users}{18}{subsection.54}
 \contentsline {subsection}{\numberline {2.2.3}Run these commands}{20}{subsection.57}
-\contentsline {section}{\numberline {2.3}GitHub}{21}{section.59}
-\contentsline {subsection}{\numberline {2.3.1}Creating a GitHub Account}{21}{subsection.61}
-\contentsline {subsection}{\numberline {2.3.2}Creating a GitHub Repository}{21}{subsection.62}
-\contentsline {subsection}{\numberline {2.3.3}Local Repositories}{22}{subsection.64}
-\contentsline {subsection}{\numberline {2.3.4}Forking a Repo}{24}{subsection.65}
-\contentsline {section}{\numberline {2.4}Using Git with RStudio}{25}{section.66}
-\contentsline {section}{\numberline {2.5}So you want to collaborate?}{31}{section.71}
-\contentsline {chapter}{\numberline {3}Using R}{32}{chapter.72}
+\contentsline {section}{\numberline {2.3}GitHub}{21}{section.60}
+\contentsline {subsection}{\numberline {2.3.1}Creating a GitHub Account}{21}{subsection.62}
+\contentsline {subsection}{\numberline {2.3.2}Creating a GitHub Repository}{21}{subsection.63}
+\contentsline {subsection}{\numberline {2.3.3}Local Repositories}{22}{subsection.65}
+\contentsline {subsection}{\numberline {2.3.4}Forking a Repo}{24}{subsection.66}
+\contentsline {section}{\numberline {2.4}Using Git with RStudio}{26}{section.70}
+\contentsline {section}{\numberline {2.5}So you want to collaborate?}{32}{section.75}
+\contentsline {chapter}{\numberline {3}Using R}{33}{chapter.76}
+\contentsline {chapter}{\numberline {4}Using \texttt {xtable}}{37}{chapter.79}
+\contentsline {chapter}{\numberline {5}Using BibT\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m }{38}{chapter.80}
+\contentsline {section}{\numberline {5.1}Bibliographies with BibT\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m }{38}{section.81}
+\contentsline {section}{\numberline {5.2}How to use citations}{38}{section.82}
+\contentsline {section}{\numberline {5.3}Generating a BibT\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m {} file of R packages}{38}{section.83}
+\contentsline {section}{\numberline {5.4}Using BibDesk}{38}{section.84}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Appendix Title Here}{36}{appendix.75}
+\contentsline {chapter}{\numberline {A}Appendix Title Here}{39}{appendix.85}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{37}{dummy.76}
+\contentsline {chapter}{Bibliography}{40}{dummy.86}
