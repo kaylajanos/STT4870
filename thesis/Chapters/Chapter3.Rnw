@@ -4,7 +4,7 @@
 
 Now, just to show how cool this is, we will mix in a little \texttt{R.}  First, consider the following graph where the \texttt{R} code that creates the graph is shown to the reader.
 
-<<label = Rgraph, engine = 'R', fig.width = 5, fig.height = 3, out.width=".65\\textwidth", fig.align='center', rcode = TRUE>>=
+<<label = Rgraph, engine = 'R', fig.width = 5, fig.height = 3, out.width=".65\\textwidth", fig.align='center'>>=
 library(ggplot2)
 ggplot(data = CO2, aes(x = Type, y = uptake, fill = Type)) + 
   geom_boxplot() +
