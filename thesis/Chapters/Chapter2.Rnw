@@ -238,10 +238,10 @@ git remote -v
 
 The result from entering the code in \gref{RepoCheck} should return the following as a minimum.  That is, you may have 
 
-\begin{verbatim}
+<<repocheckANS, engine = "bash", eval = FALSE>>=
 origin  https://github.com/Your-User-Name/STT4870.git (fetch)
 origin	https://github.com/Your-User-Name/STT4870.git (push)
-\end{verbatim}
+@
 
 
 To keep track of this repo, you need to add another remote named \texttt{upstream.}  This can be done by typing
