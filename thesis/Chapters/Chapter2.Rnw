@@ -270,6 +270,8 @@ git fetch upstream
 When you fetch the upstream repository,  the upstream branches are stored
 in your local repository in a local branch named \texttt{upstream/master.}  Next, you need to merge the changes into your local branch to bring your local branch in sync with the upstream branch without losing any local changes.  Make sure you are on the master branch by typing \texttt{git checkout master.}  Then, enter \texttt{git merge upstream/master.}  Once your local branch is in sync with the upstream remote, you will want to push your local changes back to your forked repo on GitHub by typing \texttt{git push.} 
 
+Note that changes you make will not be made to the source repository unless the project maintainer ``pulls'' your changes after you make a pull request.  Pull requests are a way to notify the project maintainer about changes in your fork of their respository.
+
 Another approach is to use
 
 <<label = PULL2, eval = FALSE, engine = "bash">>=
@@ -277,6 +279,8 @@ git pull upstream master
 @
 
 What is the difference?
+
+
 
 \section{Using Git with RStudio}
 
