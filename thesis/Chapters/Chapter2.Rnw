@@ -250,14 +250,14 @@ To keep track of this repo, you need to add another remote named \texttt{upstrea
 git remote add upstream https://github.com/alanarnholt/STT4870.git
 @
 
-Typing the code in \gref{RepoCheck} after adding the cod e in \gref{UPSTREAM} should return something similar to the following:
+Typing the code in \gref{RepoCheck} after entering the code in \gref{UPSTREAM} should return something similar to the following:
 
-\begin{verbatim}
+<<label = OriginUpstream, engine = "bash", eval = FALSE>>=
 origin  https://github.com/Your-User-Name/STT4870.git (fetch)
 origin	https://github.com/Your-User-Name/STT4870.git (push)
 upstream	https://github.com/alanarnholt/STT4870.git (fetch)
 upstream	https://github.com/alanarnholt/STT4870.git (push)
-\end{verbatim}
+@
 
 To pull in changes not present in your local repository without modifying your
 files, type
