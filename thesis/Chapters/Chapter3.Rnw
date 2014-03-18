@@ -50,11 +50,13 @@ ggplot(data = DF, aes(x = x, y = fx)) + geom_area(fill = "skyblue3") +
 theme_set(previous_theme) # Restore original theme 
 @
 
-\fref{graph2} uses the \texttt{dev = "tikz"} option so that the fonts in the graph are in agreement with the document fonts.
+The graphs shown so far have fonts that do not match the font of the thesis.  To create graphs that have the same font as the thesis, use the \texttt{dev = "tikz"} option in the R code chunk.  \fref{graph2} uses the \texttt{dev = "tikz"} option so that the fonts in the graph are in agreement with the document fonts.
 
 \begin{figure}[!ht]
 <<G2, comment = NA, out.width=".65\\linewidth",fig.align='center', echo = FALSE, dev = "tikz",fig.height=5,fig.width=5>>=
-hist(rnorm(1000), col = "green", breaks = "Scott", freq = FALSE)
+set.seed(13)  # set seed
+hist(rnorm(1000), col = "green", breaks = "Scott", freq = FALSE, main = "", xlab = "", ylab = "")
+title(main = "$\\int_{-\\infty}^{\\infty}f(x)\,dx = 1$")
 @
 \caption{Something goes here \label{graph2}}
 \end{figure}
