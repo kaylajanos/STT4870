@@ -6,6 +6,6 @@
 
 \section{How to use citations}
 
-\section{Generating a Bib\TeX file of R packages}
+\section{Generating a Bib\TeX{} file of R packages}
 
 \section{Using BibDesk}
