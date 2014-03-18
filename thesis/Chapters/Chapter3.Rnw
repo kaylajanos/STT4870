@@ -56,7 +56,7 @@ The graphs shown so far have fonts that do not match the font of the thesis.  To
 <<G2, comment = NA, out.width=".65\\linewidth",fig.align='center', echo = FALSE, dev = "tikz",fig.height=5,fig.width=5>>=
 set.seed(13)  # set seed
 hist(rnorm(1000), col = "green", breaks = "Scott", freq = FALSE, main = "", xlab = "This font matches the document font!", ylab = "This font matches the document font!")
-title(main = "$\\int_{-\\infty}^{\\infty}f(x)\\,dx = 1$")
+title(main = paste("Math with good fonts:","$\\int_{-\\infty}^{\\infty}f(x)\\,dx = 1$"))
 @
 \caption{Something goes here \label{graph2}}
 \end{figure}
