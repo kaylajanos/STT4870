@@ -66,8 +66,9 @@ To interact with Git, find the program named Git Bash.  Git Bash is the command 
 
 \section{Initial Setup}
 
-If you have never used Git before, you need to do some setup first.  Run the following
-commands so that Git knows your name and email.  The commands are all issued in the
+If you have never used Git before, you need to do some setup first.  Run the 
+commands in \gref{GITsetup} so that Git knows your name and email.  
+The commands are all issued in the
 Terminal (Mac) or at the command prompt of Git Bash (Windows).  The Terminal 
 application is usually found in \verb|/applications/Utilities.| A quick way to open a 
 \texttt{terminal} window is by clicking on the magnifying glass icon and typing \texttt{terminal} in spotlight (\fref{GITSL}.)  
@@ -109,7 +110,7 @@ To open Git Bash, click on the \texttt{Windows icon -> Git -> Git Bash}.  The pr
 
 \subsection{Run these commands}
 
-<<label = GITsetup, eval = FALSE, engine = "bash">>=
+<<label = GITsetup, eval = FALSE, engine = "bash", GIT = TRUE>>=
 git config --global user.name "Your Name"
 git config --global user.email "your_email@whatever.com"
 git config --global color.ui true
