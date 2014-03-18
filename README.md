@@ -51,9 +51,6 @@
 
 ## Git
 * [GitHub Help Page](https://help.github.com/)
-
-## Git
-* [GitHub Help Page](https://help.github.com/)
 * [Git Tutorials (bitbucket)](https://www.atlassian.com/git/tutorial)
 * [Create a Project](http://gitimmersion.com/lab_03.html)
 * [Git Cheatsheet](http://www.ndpsoftware.com/git-cheatsheet.html)
