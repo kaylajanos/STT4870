@@ -312,8 +312,8 @@ What is the difference?
         name path=mainrepo,
         cloud, cloud puffs=13.7,
         minimum width=4cm,minimum height=2.5cm, draw,
-    ] (mainrepo) at (0,0) {Main Repo\\remote upstream};
-    \node at (0,-.7) {(\texttt{remote upstream})};
+    ] (mainrepo) at (0,0) {Main Repo};
+    \node at (0,-.3) {(\texttt{remote upstream})};
     \node[
         cloud, cloud puffs=13.7,
         minimum width=4cm, minimum height=2.5cm, draw,
