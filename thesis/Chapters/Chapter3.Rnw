@@ -12,7 +12,7 @@ ggplot(data = CO2, aes(x = Type, y = uptake, fill = Type)) +
   theme_bw()
 @
 
-I love graphs!  The following graph created with \texttt{ggplot2} uses 
+I love graphs!  The following graph created with \texttt{ggplot2} \citep{R-ggplot2} uses 
 Greek letters in
 the facet panels.  The \texttt{R} Code used to create the graph is not shown in the final document.  The code is hidden using the argument \texttt{echo = FALSE} in the \texttt{R} code chunk.   
 
