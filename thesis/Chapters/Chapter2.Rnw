@@ -152,13 +152,14 @@ based hosting service that uses the Git revision control system.
 
 \subsection{Creating a GitHub Account}
 
-Point your browser to \href{https://github.com}{https://github.com};
-type a username in the \texttt{Pick a username} box (please use \texttt{firstlast}, for example my 
+Point your browser to \href{https://github.com}{https://github.com}; clickon the green \texttt{Sign up for GitHub} button;
+type a username in the \texttt{Username} box (please use \texttt{firstlast}, for example my 
 username is \texttt{alanarnholt}); enter your email (use your school email) in the 
-\texttt{Your email} box; type in your password in the \texttt{Create a password} box. Then, 
-click the \texttt{Sign up for GitHub} box, and you will have a GitHub account.  You should 
-use the same name you used when you set up your \texttt{user.name} and \texttt{user.email} 
-on your local machine.
+\texttt{Email Address} box; type in your password in the \texttt{Password} box; 
+type your password again in the \texttt{Confirm your password} box. Then, 
+click the \texttt{Create an account} box, and you will have a GitHub account.  
+You should  use the same name you used when you set up your \texttt{user.name} 
+and \texttt{user.email} on your local machine.
 
 
 \subsection{Creating a GitHub Repository}
