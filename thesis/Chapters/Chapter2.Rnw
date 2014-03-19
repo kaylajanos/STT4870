@@ -234,23 +234,21 @@ Another common way to clone a repo is by first ``forking'' someone else's repo. 
 
 <<RepoCheck, engine = "bash", eval = FALSE, GIT = TRUE>>=
 git remote -v
-@
-
-The result from entering the code in \gref{RepoCheck} should return the following as a minimum.  That is, you may have 
-
-<<repocheckANS, engine = "bash", eval = FALSE>>=
 origin  https://github.com/Your-User-Name/STT4870.git (fetch)
-origin	https://github.com/Your-User-Name/STT4870.git (push)
+origin  https://github.com/Your-User-Name/STT4870.git (push)
 @
 
+The result from entering the first line of code in \gref{RepoCheck} should return
+the second and third lines with your user name in place of \texttt{Your-User-Name}.
 
-To keep track of this repo, you need to add another remote named \texttt{upstream.}  This can be done by typing
+To keep track of this repo, you need to add another remote named \texttt{upstream.}  
+This can be done by typing
 
 <<label = UPSTREAM, eval = FALSE, engine = "bash", GIT = TRUE>>=
 git remote add upstream https://github.com/alanarnholt/STT4870.git
 @
 
-Typing the code in \gref{RepoCheck} after entering the code in \gref{UPSTREAM} should return something similar to \gref{OriginUpstream}.
+Typing the first line of code in \gref{RepoCheck} after entering the code in \gref{UPSTREAM} should return something similar to \gref{OriginUpstream}.  That is, the second and third lines should have your user name where the url has \texttt{Your-User-Name}.
 
 <<label = OriginUpstream, engine = "bash", eval = FALSE, GIT = TRUE>>=
 git remote -v
