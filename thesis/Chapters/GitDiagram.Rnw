@@ -33,13 +33,13 @@
   \path[<-, blue, draw, ultra thick, name path= path1] (main) -- node[above]{Pull Requests} (fork) ;
   \path[ ->, red, draw,ultra thick, name path= path2] (main2) --node[above]{Fork} (fork2);
   
-  \path[ ->, drkgreen, draw, ultra thick, name path= path3] 
+  \path[ ->, blue, draw, ultra thick, name path= path3] 
             (0.5,-1.25) --node[above, rotate=300]{Fetch/Pull} (loc2);
             
   \path[ <-, draw, red, thick, name path= path4] (loc1) -- node[above, rotate=60]{Create new project}(fork3);
   \path[ <->,blue, draw, ultra thick, name path= path5] 
           (loc3) -- node[above, rotate=60]{Push} node[below, rotate=60]{Pull/Fetch} (fork4);
- \path[ <->,blue, draw, ultra thick, name path= path6] 
+ \path[ <->,drkgreen, draw, ultra thick, name path= path6] 
           (auth1) -- node[above, rotate=85]{Push} node[below, rotate=85]{Pull/Fetch} (main3);
     \node[
         name path=mainrepo,
