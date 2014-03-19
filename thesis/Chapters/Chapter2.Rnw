@@ -339,24 +339,24 @@ What is the difference?
 
 \section{Using Git with RStudio}
 
-One way to clone this repo using \texttt{RStudio} is  to click on \verb|File -> New Project| (See \fref{NewProj}) 
-
+One way to clone this repo using \texttt{RStudio} is  to click on \verb|File -> New Project| (see \fref{NewProj}) 
+%
 \begin{figure}[!ht]
 \centering
 \includegraphics[width = .5\textwidth]{../Git/images/NewProject.png}
 \caption{New Project window\label{NewProj}}
 \end{figure}
-
+%
 Click Version Control, and a new window such as \vref{CreatePVC} will appear where you will select Git.
-
+%
 \begin{figure}[!ht]
 \centering
 \includegraphics[width = .5\textwidth]{../Git/images/VersionControl.png}
 \caption{Create Project form Version Control window\label{CreatePVC}}
 \end{figure}
-
+%
 In the next window that appears, see \vref{CloneGRW}, enter the URL for the repository you are cloning.  Enter a project name, and specify where you want the project to reside on your computer.  When you are finished, click the \texttt{Create Project} button; and you will have cloned a remote repository.
-
+%
 \begin{figure}[!ht]
 \centering
 \includegraphics[width = .5\textwidth]{../Git/images/ProjectVersionControl.png}
