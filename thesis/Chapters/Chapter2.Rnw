@@ -138,9 +138,12 @@ in 2008 by Tom Preston-Werner, Chris Wanstrath, and PJ Hyett.''\footnote{
 \href{http://en.wikipedia.org/wiki/GitHub}{http://en.wikipedia.org/wiki/GitHub}}
 
 Qualified faculty members can request free private accounts to use with their classes.
-To request a discount, which actually pays the whole price for 10 private repositories 
+To request a discount, which actually pays the whole price for ten private repositories 
 for qualified faculty, click on the request a discount at 
-\href{https://education.github.com}{https://education.github.com}.  A step-by-step guide 
+\href{https://education.github.com}{https://education.github.com}.  Qualified students 
+can also request private accounts for their personal use.  Students are given five
+private repositories once approved that are free of charge until the student graduates.
+A step-by-step guide 
 for setting up your GitHub account for classroom use can be found at 
 \href{https://education.github.com/guide}{https://education.github.com/guide}.   
 Free private repositories for anyone can be created at 
