@@ -47,15 +47,15 @@
 \contentsline {subsection}{\numberline {2.3.3}Local Repositories}{23}{subsection.65}
 \contentsline {subsection}{\numberline {2.3.4}Forking a Repo}{24}{subsection.66}
 \contentsline {section}{\numberline {2.4}Using Git with RStudio}{26}{section.71}
-\contentsline {section}{\numberline {2.5}So you want to collaborate?}{34}{section.76}
-\contentsline {chapter}{\numberline {3}Using R}{35}{chapter.77}
-\contentsline {chapter}{\numberline {4}Using \texttt {xtable}}{39}{chapter.80}
-\contentsline {chapter}{\numberline {5}Using BibT\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m }{40}{chapter.81}
-\contentsline {section}{\numberline {5.1}Bibliographies with BibT\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m }{40}{section.82}
-\contentsline {section}{\numberline {5.2}How to use citations}{40}{section.83}
-\contentsline {section}{\numberline {5.3}Generating a BibT\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m {} file of R packages}{40}{section.84}
-\contentsline {section}{\numberline {5.4}Using BibDesk}{40}{section.85}
+\contentsline {section}{\numberline {2.5}So you want to collaborate?}{33}{section.76}
+\contentsline {chapter}{\numberline {3}Using R}{34}{chapter.77}
+\contentsline {chapter}{\numberline {4}Using \texttt {xtable}}{38}{chapter.80}
+\contentsline {chapter}{\numberline {5}Using BibT\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m }{39}{chapter.81}
+\contentsline {section}{\numberline {5.1}Bibliographies with BibT\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m }{39}{section.82}
+\contentsline {section}{\numberline {5.2}How to use citations}{39}{section.83}
+\contentsline {section}{\numberline {5.3}Generating a BibT\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m {} file of R packages}{39}{section.84}
+\contentsline {section}{\numberline {5.4}Using BibDesk}{39}{section.85}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Appendix Title Here}{41}{appendix.86}
+\contentsline {chapter}{\numberline {A}Appendix Title Here}{40}{appendix.86}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{42}{dummy.87}
+\contentsline {chapter}{Bibliography}{41}{dummy.87}

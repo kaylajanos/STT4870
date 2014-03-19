@@ -362,6 +362,7 @@ opts_chunk$set(comment = NA, fig.show='hold', fig.height=7, fig.width=7,
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
+\nocite{*}  % use this if you want all bib entries whether cited or not to appear in the Bib
 
 \label{Bibliography}
 
@@ -369,6 +370,6 @@ opts_chunk$set(comment = NA, fig.show='hold', fig.height=7, fig.width=7,
 
 \bibliographystyle{unsrtnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
 
-\bibliography{./Bibliography/Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+\bibliography{./Bibliography/Bibliography,./Bibliography/Rpkgs031914} % The references (bibliography) information are stored in the file named "Bibliography.bib"
 
 \end{document}  
