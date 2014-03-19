@@ -339,7 +339,7 @@ What is the difference?
 
 \section{Using Git with RStudio}
 
-One way to clone this repo using \texttt{RStudio} is  to click on \verb|File -> New Project| (see \fref{NewProj}) 
+One way to clone this repo using \texttt{RStudio} is  to click on \verb|File -> New Project| (see \fref{NewProj}.) 
 %
 \begin{figure}[!ht]
 \centering
@@ -362,7 +362,7 @@ In the next window that appears, see \vref{CloneGRW}, enter the URL for the repo
 \includegraphics[width = .5\textwidth]{../Git/images/ProjectVersionControl.png}
 \caption{Clone Git Repository window\label{CloneGRW}}
 \end{figure}
-
+\clearpage
 
 To check the current status of your repository type \texttt{git status} as shown in Git Example 
 \ref{STATUS}.
