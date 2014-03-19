@@ -30,6 +30,13 @@
 \usepackage[letterpaper,includehead,includefoot]{geometry} % change letterpaper to a4paper for A4 paper size
 \geometry{top=2.0in, bottom=0.0in, left=2.25in, right=0.0in} % read geometry documentation for setting margins
 
+\usepackage{color, xcolor}              
+\usepackage{tikz}                     % used for tikz graphs
+\usetikzlibrary{intersections}
+\usetikzlibrary{positioning, shapes}
+\definecolor{light-gray}{gray}{0.95}
+\definecolor{drkgreen}{RGB}{5,102,51}
+
 \graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
 
 \usepackage[square, numbers, comma, sort&compress]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
@@ -362,6 +369,6 @@ opts_chunk$set(comment = NA, fig.show='hold', fig.height=7, fig.width=7,
 
 \bibliographystyle{unsrtnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
 
-\bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+\bibliography{./Bibliography/Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
 
 \end{document}  

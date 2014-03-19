@@ -1,4 +1,4 @@
-% Created by tikzDevice version 0.7.0 on 2014-03-18 17:08:38
+% Created by tikzDevice version 0.7.0 on 2014-03-19 15:22:03
 % !TEX encoding = UTF-8 Unicode
 
 
@@ -21,6 +21,13 @@
 
 \usepackage[letterpaper,includehead,includefoot]{geometry} % change letterpaper to a4paper for A4 paper size
 \geometry{top=2.0in, bottom=0.0in, left=2.25in, right=0.0in} % read geometry documentation for setting margins
+
+\usepackage{color, xcolor}              
+\usepackage{tikz}                     % used for tikz graphs
+\usetikzlibrary{intersections}
+\usetikzlibrary{positioning, shapes}
+\definecolor{light-gray}{gray}{0.95}
+\definecolor{drkgreen}{RGB}{5,102,51}
 
 \graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
 
