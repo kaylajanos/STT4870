@@ -313,28 +313,27 @@ What is the difference?
         cloud, cloud puffs=13.7,
         minimum width=4cm,minimum height=2.5cm, draw,
     ] (mainrepo) at (0,0) {Main Repo};
-    \node at (0,-.5) {(\texttt{remote upstream})};
+    \node at (0,-.3) {(\texttt{remote upstream})};
     \node[
         cloud, cloud puffs=13.7,
         minimum width=4cm, minimum height=2.5cm, draw,
     ] (forked) at (6,0) {Forked Repo};
-    \node at (6,-.5) {(\texttt{remote origin})};
+    \node at (6,-.3) {(\texttt{remote origin})};
      \node[cloud, cloud puffs=18.7,
         minimum width=14cm,minimum height=6cm, draw,
     ] (git) at (3,0) {};
     \node at (3,2) {\Large{GitHub}};
     \node[rectangle,
         minimum width=3cm,text width=3cm,align=center, minimum height=2cm, draw,
-    ] (local) at (loc) {Local Machine (Contributor)};
+    ] (local) at (loc) {Local Machine \quad (Contributor)};
     
    \node[rectangle,
-        minimum width=3cm,text width=3cm,align=center, minimum height=2cm, draw,
-    ] (author) at (auth) {Local Machine\quad (Author)};
+        minimum width=3cm,text width=3cm, align=center, minimum height=2cm, draw,
+    ] (author) at (auth) {Local Machine \quad (Author)};
    
 \end{tikzpicture}
 \caption{GitHub flow chart\label{GitFC}}
 \end{figure}
-
 
 
 
