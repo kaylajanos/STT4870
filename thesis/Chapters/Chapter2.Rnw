@@ -253,7 +253,7 @@ git remote add upstream https://github.com/alanarnholt/STT4870.git
 
 Typing the first line of code in \gref{RepoCheck} after entering the code in \gref{UPSTREAM} should return something similar to \gref{OriginUpstream}.  That is, the second and third lines should have your user name where the url has \texttt{Your-User-Name}.
 
-<<label = OriginUpstream, engine = "bash", eval = FALSE, GIT = TRUE>>=
+<<label = OriginUpstream, engine = "bash", eval = FALSE, GIT = TRUE >>=
 git remote -v
 origin  https://github.com/Your-User-Name/STT4870.git (fetch)
 origin	https://github.com/Your-User-Name/STT4870.git (push)
