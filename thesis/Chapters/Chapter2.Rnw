@@ -325,11 +325,11 @@ What is the difference?
     \node at (3,2) {\Large{GitHub}};
     \node[rectangle,
         minimum width=3cm,text width=3cm, align=center, minimum height=2cm, draw,
-    ] (local) at (loc) {Local Machine \quad (Contributor)};
+    ] (local) at (loc) {Local Machine\\(Contributor)};
     
    \node[rectangle,
         minimum width=3cm, text width=3cm, align=center, minimum height=2cm, draw,
-    ] (author) at (auth) {Local Machine \\ (Author)};
+    ] (author) at (auth) {Local Machine\\(Author)};
    
 \end{tikzpicture}
 \caption{GitHub flow chart\label{GitFC}}
