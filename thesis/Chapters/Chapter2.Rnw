@@ -283,7 +283,7 @@ What is the difference?
 
 \begin{figure}[!ht]
 \centering
-\begin{tikzpicture}\sffamily
+\begin{tikzpicture}%\sffamily
   \coordinate (main) at (1.9,.5);
   \coordinate (main2) at (1.8,-.5);
   \coordinate(main3) at (-1,-1.25);
