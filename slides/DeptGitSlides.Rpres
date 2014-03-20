@@ -1,0 +1,35 @@
+Version Control (Git)
+========================================================
+author: Alan Arnholt
+date: 3/21/14
+
+Goals for Today
+========================================================
+
+* Install Git
+* Configure Git settings
+* Create a GitHub account
+* Fork a GitHub repository
+* Use `push` and `pull`
+
+
+Install Git
+========================================================
+If your machine does not have a recent version of Git,
+point your browser to [http://gitscm.com](http://gitscm.com) and install the latest binary for your operating system.
+
+Git Configurations
+========================================================
+
+```{r, engine = "bash", eval = FALSE}
+git config --global user.name "Your Name"
+git config --global user.email "Joe@appstate.edu"
+```
+
+
+My Git Configurations
+========================================================
+
+```{r, engine = "bash"}
+git config --list  # shows your configuration
+```
