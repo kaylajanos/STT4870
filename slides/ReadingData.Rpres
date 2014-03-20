@@ -8,10 +8,10 @@ Using source_data()
 
 The function `source_data()` from the `repmis` package can read data from both secure (https://) and unsecure (http://) sites.
 
-- Example 1 (reading from an unsecure web site) - could also use `read.table()`
-- Example 2 (reading from a Dropbox Public secure web site)  
-- Example 3 (reading from a Github secure web site)
-- Example 4 (reading from a Dropbox non-public secure web site)
+* Example 1 (reading from an unsecure web site) - could also use `read.table()`
+* Example 2 (reading from a Dropbox Public secure web site)  
+* Example 3 (reading from a Github secure web site)
+* Example 4 (reading from a Dropbox non-public secure web site)
 
 Example 1
 ========================================================
