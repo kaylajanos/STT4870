@@ -21,7 +21,7 @@ Why should you use version control?
 * chapter1-031409.tex
  
 
-
+Explain...
 
 
 Goals for Today
