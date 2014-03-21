@@ -84,10 +84,7 @@ git config --list  # shows your configuration
 ```
 
 ```
-user.name=Alan Arnholt
-user.email=arnholtat@appstate.edu
 credential.helper=osxkeychain
-color.ui=true
 core.repositoryformatversion=0
 core.filemode=true
 core.bare=false
@@ -98,6 +95,8 @@ remote.origin.url=https://github.com/alanarnholt/STT4870.git
 remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 branch.master.remote=origin
 branch.master.merge=refs/heads/master
+user.name=Alan Arnholt
+user.email=arnholtat@appstate.edu
 ```
 
 
