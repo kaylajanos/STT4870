@@ -1,4 +1,4 @@
-% Created by tikzDevice version 0.7.0 on 2014-03-25 06:58:32
+% Created by tikzDevice version 0.7.0 on 2014-03-25 07:36:19
 % !TEX encoding = UTF-8 Unicode
 
 
@@ -21,7 +21,7 @@
 
 \usepackage[letterpaper,includehead,includefoot]{geometry} % change letterpaper to a4paper for A4 paper size
 \geometry{top=2.0in, bottom=0.0in, left=2.25in, right=0.0in} % read geometry documentation for setting margins
-
+% \usepackage[round]{natbib}  %ATA 3/25/14
 \usepackage{color, xcolor}              
 \usepackage{tikz}                     % used for tikz graphs
 \usetikzlibrary{intersections}
