@@ -1,4 +1,4 @@
-% Created by tikzDevice version 0.7.0 on 2014-03-19 16:40:17
+% Created by tikzDevice version 0.7.0 on 2014-03-25 06:58:32
 % !TEX encoding = UTF-8 Unicode
 
 
@@ -28,6 +28,7 @@
 \usetikzlibrary{positioning, shapes}
 \definecolor{light-gray}{gray}{0.95}
 \definecolor{drkgreen}{RGB}{5,102,51}
+\definecolor{ltblue}{RGB}{100,149,237}
 
 \graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
 

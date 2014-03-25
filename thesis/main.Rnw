@@ -36,6 +36,7 @@
 \usetikzlibrary{positioning, shapes}
 \definecolor{light-gray}{gray}{0.95}
 \definecolor{drkgreen}{RGB}{5,102,51}
+\definecolor{ltblue}{RGB}{100,149,237}
 
 \graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
 
