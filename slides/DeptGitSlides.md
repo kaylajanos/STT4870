@@ -84,20 +84,28 @@ git config --list  # shows your configuration
 ```
 
 ```
+<<<<<<< HEAD
 user.name=Alan Arnholt
 user.email=arnholtat@appstate.edu
+push.default=simple
 credential.helper=osxkeychain
+filter.media.clean=git-media-clean %f
+filter.media.smudge=git-media-smudge %f
 color.ui=true
+=======
+credential.helper=osxkeychain
+>>>>>>> f4dcceb9d6b4099d524a1c603ff0767f615c1311
 core.repositoryformatversion=0
 core.filemode=true
 core.bare=false
 core.logallrefupdates=true
 core.ignorecase=true
-core.precomposeunicode=false
-remote.origin.url=https://github.com/alanarnholt/STT4870.git
 remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+remote.origin.url=https://github.com/alanarnholt/STT4870.git
 branch.master.remote=origin
 branch.master.merge=refs/heads/master
+user.name=Alan Arnholt
+user.email=arnholtat@appstate.edu
 ```
 
 
