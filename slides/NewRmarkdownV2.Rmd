@@ -1,0 +1,87 @@
+---
+title: "New Stuff"
+author: "Alan"
+date: "March 27, 2014"
+output:
+  beamer_presentation:
+    keep_tex: yes
+    theme: Madrid
+  ioslides_presentation: default
+  revealjs_presentation: default
+incremental: yes
+---
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see [http://rmarkdown.rstudio.com.](http://rmarkdown.rstudio.com)
+
+\pause
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets
+
+>- Bullet 1 --- say something
+>- Bullet 2 --- baffle us with more
+>- Bullet 3 --- you talk too much
+
+
+By the way, see \eqref{CDF}
+
+## Slide with R Code and Output
+
+```{r, comment = NA}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r, echo=FALSE}
+plot(cars, col = "red", pch = 19)
+```
+
+
+
+## Some Mathematics?
+
+\LaTeX is so cool ...
+
+\begin{equation}\label{CDF}
+F(x) = \int_{-\infty}^{x}f(x)\,dx
+\end{equation}
+
+\textbf{Now, we use the \LaTeX{} environment \texttt{enumerate}.}
+
+\begin{enumerate}
+\item Say something
+\pause
+\item Say some more
+\pause
+\item Shut up...you said too much
+\end{enumerate}
+
+## Mathematics and Inline Expressions
+
+This really rocks!  Suppose we want to compute
+
+$$\int_{1}^{1.5}\frac{2}{x^2}\,dx$$
+
+\pause
+
+```{r label = INTEGRAL, echo = TRUE, comment = NA}
+f <- function(x){2/x^2}
+ans <- integrate(f, 1, 1.5)$value
+ans
+```
+
+\pause
+
+$$\int_{1}^{1.5}\frac{2}{x^2}\,dx = `r ans`$$
+
+## \texttt{ggplot2} Graphs
+
+```{r echo = FALSE, comment = NA, message = FALSE, fig.height = 5}
+library(ggplot2)
+library(PASWR2)
+ggplot(data= VIT2005, aes( x= totalprice)) + geom_density(fill = "lightblue", alpha = .3) + theme_bw()
+```

@@ -1,0 +1,73 @@
+\documentclass[10 pt, titlepage]{article}
+\usepackage[left=1in, right=.75in,top=.5in,bottom=.65in]{geometry}
+\usepackage{color, xcolor}
+
+\usepackage{tikz}
+\usetikzlibrary{intersections}
+
+\usetikzlibrary{positioning, shapes}
+
+\definecolor{light-gray}{gray}{0.95}
+\definecolor{drkgreen}{RGB}{5,102,51}
+
+
+\begin{document}
+
+
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}\sffamily
+  \coordinate (main) at (1.9,.5);
+  \coordinate (main2) at (1.8,-.5);
+  \coordinate(main3) at (-1,-1.25);
+  \coordinate (fork) at (4.1,.5);
+  \coordinate (fork2) at (4,-.5);
+  \coordinate (fork3) at (5,-1.5);
+  \coordinate (fork4) at (6.,-1.75);
+  \coordinate (loc) at (3,-5.5);
+  \coordinate(loc1) at (3.5,-4.5);
+  \coordinate (loc2) at (2.25,-4.5);
+  \coordinate (loc3) at (4.5,-4.5);
+  \coordinate (auth) at (-1.5,-5.5);
+  \coordinate (auth1) at (-1.5,-4.5);
+  \path[<-, blue, draw, ultra thick, name path= path1] (main) -- node[above]{Pull Requests} (fork) ;
+  \path[ ->, red, draw,ultra thick, name path= path2] (main2) --node[above]{Fork} (fork2);
+  
+  \path[ ->, blue, draw, ultra thick, name path= path3] 
+            (0.5,-1.25) --node[above, rotate=300]{Fetch/Pull} (loc2);
+            
+  \path[ <-, draw, red, thick, name path= path4] (loc1) -- node[above, rotate=60]{Create new project}(fork3);
+  \path[ <->,blue, draw, ultra thick, name path= path5] 
+          (loc3) -- node[above, rotate=60]{Push} node[below, rotate=60]{Pull/Fetch} (fork4);
+ \path[ <->,drkgreen, draw, ultra thick, name path= path6] 
+          (auth1) -- node[above, rotate=85]{Push} node[below, rotate=85]{Pull/Fetch} (main3);
+    \node[
+        name path=mainrepo,
+        cloud, cloud puffs=13.7,
+        minimum width=4cm,minimum height=2.5cm, draw,
+    ] (mainrepo) at (0,0) {Main Repo};
+    \node at (0,-.3) {(\texttt{remote upstream})};
+    \node[
+        cloud, cloud puffs=13.7,
+        minimum width=4cm, minimum height=2.5cm, draw,
+    ] (forked) at (6,0) {Forked Repo};
+    \node at (6,-.3) {(\texttt{remote origin})};
+     \node[cloud, cloud puffs=18.7,
+        minimum width=14cm,minimum height=6cm, draw,
+    ] (git) at (3,0) {};
+    \node at (3,2) {\Large{GitHub}};
+    \node[rectangle,
+        minimum width=3cm,text width=3cm,align=center, minimum height=2cm, draw,
+    ] (local) at (loc) {Local Machine \quad (Contributor)};
+    
+   \node[rectangle,
+        minimum width=3cm,text width=3cm, align=center, minimum height=2cm, draw,
+    ] (author) at (auth) {Local Machine \quad (Author)};
+   
+\end{tikzpicture}
+\caption{GitHub flow chart\label{GitFC}}
+\end{figure}
+
+\end{document}
+
+

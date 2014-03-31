@@ -2,9 +2,9 @@
 \label{R} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 \lhead{Chapter 3. \emph{Using R}} % This is for the header on each page - perhaps a shortened title
 
-Now, just to show how cool this is, we will mix in a little \texttt{R.}  First, consider the following graph where the \texttt{R} code that created the graph is shown to the reader.
+Now, just to show how cool this is, we will mix in a little \texttt{R.}  First, consider the following graph where the \texttt{R} code that creates the graph is shown to the reader.
 
-<<label = Rgraph, engine = 'R', fig.width = 5, fig.height = 3, out.width=".5\\textwidth", fig.align='center'>>=
+<<label = Rgraph, engine = 'R', fig.width = 5, fig.height = 3, out.width=".75\\textwidth", fig.align='center'>>=
 library(ggplot2)
 ggplot(data = CO2, aes(x = Type, y = uptake, fill = Type)) + 
   geom_boxplot() +
@@ -12,7 +12,8 @@ ggplot(data = CO2, aes(x = Type, y = uptake, fill = Type)) +
   theme_bw()
 @
 
-I love graphs!  The following graph created with \texttt{ggplot2} uses Greek letters in
+I love graphs!  The following graph created with \texttt{ggplot2} \citep{R-ggplot2} uses 
+Greek letters in
 the facet panels.  The \texttt{R} Code used to create the graph is not shown in the final document.  The code is hidden using the argument \texttt{echo = FALSE} in the \texttt{R} code chunk.   
 
 <<label=ggplot2Graphs, engine = "R", fig.width = 8, fig.height = 8, echo = FALSE>>=
@@ -49,11 +50,13 @@ ggplot(data = DF, aes(x = x, y = fx)) + geom_area(fill = "skyblue3") +
 theme_set(previous_theme) # Restore original theme 
 @
 
-\fref{graph2} uses the \texttt{dev = "tikz"} option so that the fonts in the graph are in agreement with the document fonts.
+The graphs shown so far have fonts that do not match the font of the thesis.  To create graphs that have the same font as the thesis, use the \texttt{dev = "tikz"} option in the R code chunk.  \fref{graph2} uses the \texttt{dev = "tikz"} option so that the fonts in the graph are in agreement with the document fonts.
 
 \begin{figure}[!ht]
 <<G2, comment = NA, out.width=".65\\linewidth",fig.align='center', echo = FALSE, dev = "tikz",fig.height=5,fig.width=5>>=
-hist(rnorm(1000), col = "green", breaks = "Scott", freq = FALSE)
+set.seed(13)  # set seed
+hist(rnorm(1000), col = "green", breaks = "Scott", freq = FALSE, main = "", xlab = "This font matches the document font!", ylab = "This font matches the document font!")
+title(main = paste("Math with good fonts:","$\\int_{-\\infty}^{\\infty}f(x)\\,dx = 1$"))
 @
 \caption{Something goes here \label{graph2}}
 \end{figure}

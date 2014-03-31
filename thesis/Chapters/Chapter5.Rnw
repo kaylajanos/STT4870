@@ -1,0 +1,11 @@
+\chapter{Using Bib\TeX} % Main chapter title
+\label{bibtex} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+\lhead{Chapter 5. \emph{Using Bib\TeX}} % This is for the header on each page - perhaps a shortened title
+
+\section{Bibliographies with Bib\TeX}
+
+\section{How to use citations}
+
+\section{Generating a Bib\TeX{} file of R packages}
+
+\section{Using BibDesk}

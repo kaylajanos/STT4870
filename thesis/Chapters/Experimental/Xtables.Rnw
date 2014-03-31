@@ -1,0 +1,204 @@
+\documentclass{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{booktabs, xcolor, colortbl}
+\usepackage[pdftitle={Tables With knitr and xtable}, colorlinks=true, linkcolor=blue,
+citecolor=blue, urlcolor=blue, linktocpage=true, breaklinks=true]{hyperref}
+
+
+\begin{document}
+\title{Put Something Here}
+\author{Joe \TeX{}er}
+\maketitle
+
+<<MAINsetup, echo = FALSE, results= 'hide', message = FALSE, warning = FALSE>>=
+library(xtable)
+opts_chunk$set(comment = NA, fig.show='hold', fig.height=7, fig.width=7, 
+               highlight = TRUE, tidy = TRUE, tidy.opts=list(keep.blank.line=FALSE, width.cutoff= 55))
+@
+
+<<BS, comment = NA, echo = FALSE>>=
+rs <- c(3969, 3204, 2892)
+xstar1 <- rep(rs, each = 9)
+xstar2 <- rep(rep(rs, each = 3), 3)
+xstar3 <- rep(rs, 9)
+XD <- data.frame(xstar1, xstar2, xstar3)
+xbarstar <- apply(XD, 1, mean)
+BD <- cbind(XD, xbarstar)
+WD <- BD
+@
+
+<<BT, results='asis', echo =FALSE>>=
+colnames(WD) <- c("$x^*_1$", "$x^*_2$", "$x^*_3$", "$\\bar{x}^*$")
+print(xtable(WD, caption = "All possible Samples of Size 3 from 3969, 3204, and 2892", digits = 0, align ="ccccc"), hline.after=c(-1, -1, 0, 0, 27, 27), type = "latex", include.rownames=FALSE, sanitize.text.function=function(x){x})
+@
+
+<<BT2, results='asis', echo =FALSE>>=
+colnames(WD) <- c("$x^*_1$", "$x^*_2$", "$x^*_3$", "$\\bar{x}^*$")
+print(xtable(WD, caption = "All possible Samples of Size 3 from 3969, 3204, and 2892", digits = 0, align ="|c|c|c|c|c|"), hline.after=c(-1, -1, 0, 0, 27, 27), type = "latex", include.rownames=TRUE, sanitize.text.function=function(x){x})
+@
+
+Look at Table \ref{BT3}!
+
+<<BT3, results='asis', echo =FALSE>>=
+colnames(WD) <- c("$x^*_1$", "$x^*_2$", "$x^*_3$", "$\\bar{x}^*$")
+print(xtable(WD, caption = "All possible Samples of Size 3 from 3969, 3204, and 2892", digits = 0, align ="|c|c|c|c|c|", label = "BT3"), hline.after=c(-1, -1, 0, 0, 27, 27), type = "latex", include.rownames=TRUE, sanitize.text.function=function(x){x})
+@
+
+
+<<BT4, results='asis', echo =FALSE>>=
+colnames(WD) <- c("$x^*_1$", "$x^*_2$", "$x^*_3$", "$\\bar{x}^*$")
+rws <- c(0, 13, 26)
+col <- rep("\\rowcolor[gray]{0.90}", 3)
+print(xtable(WD, caption = "All possible Samples of Size 3 from 3969, 3204, and 2892", digits = 0, align ="|c|c|c|c|c|", label = "BT4"),  type = "latex", include.rownames=FALSE, sanitize.text.function=function(x){x}, add.to.row = list(pos = as.list(rws), command = col))
+@
+
+<<BT5, results='asis', echo =FALSE>>=
+colnames(WD) <- c("$x^*_1$", "$x^*_2$", "$x^*_3$", "$\\bar{x}^*$")
+rws <- c(0, 13, 26)
+col <- rep("\\rowcolor[gray]{0.90}", 3)
+print(xtable(WD, caption = "All possible Samples of Size 3 from 3969, 3204, and 2892", digits = 0, align ="|c|c|c|c|c|", label = "BT5"),  type = "latex", include.rownames=FALSE, sanitize.text.function=function(x){x}, add.to.row = list(pos = as.list(rws), command = col), booktabs = TRUE)
+@
+
+\clearpage
+
+<<ANOVA, warning = FALSE, message = FALSE, echo = FALSE>>=
+library(PASWR)
+mod <- lm(Wear ~ Treat + Block, data = TireWear)
+SMODAOV <- anova(mod)
+SMODAOV
+@
+
+<<results = "asis", echo = FALSE>>=
+print(xtable(SMODAOV, caption = "Default values for ANOVA table"))
+@
+
+<<results = "asis", echo = FALSE>>=
+print(xtable(SMODAOV, caption = "Digits = 7", digits = 7))
+@
+
+
+<<results = "asis", echo = FALSE>>=
+print(xtable(SMODAOV, caption = "Digits = Different", digits = c(0,0,4,4,4,7)))
+@
+
+
+<<results = "asis", echo = FALSE>>=
+print(xtable(SMODAOV, caption = "Digits and Display", digits = c(0,0,rep(3, 4)), display = c("f","f","f","f","f","g")))
+@
+
+
+<<results = "asis", echo = FALSE>>=
+colnames(SMODAOV) <- c("$df$", "$SS$", "$MS$", "$F$", "$\\wp$-value")
+print(xtable(SMODAOV, caption = "Digits and Display Fancy Stuff", digits = c(0,0,rep(3, 4)), display = c("f","f","f","f","f","g")), sanitize.text.function = function(x){x})
+@
+
+
+
+<<results = "asis", echo = FALSE>>=
+colnames(SMODAOV) <- c("$df$", "$SS$", "$MS$", "$F$", "$\\wp$-value")
+print(xtable(SMODAOV, caption = "Digits and Display Fancy Stuff More So", digits = c(0,0,rep(3, 4)), display = c("f","f","f","f","f","g"), align ="lccccc"), sanitize.text.function = function(x){x}, hline.after=c(-1,-1, 0, 3, 3))
+@
+
+
+<<results = "asis", echo = FALSE>>=
+colnames(SMODAOV) <- c("$df$", "$SS$", "$MS$", "$F$", "$\\wp$-value")
+print(xtable(SMODAOV, caption = "Digits and Display Fancy Stuff More So and Booktabs", digits = c(0,0,rep(3, 4)), display = c("f","f","f","f","f","g"), align ="lccccc"), sanitize.text.function = function(x){x}, booktabs = TRUE)
+@
+
+
+\clearpage
+
+<<results = "asis", echo = FALSE, message= FALSE, warning = FALSE>>=
+library(PASWR)
+print(xtable(xtabs(~Ease + Treatment, data = EPIDURALf), digits = 0), booktabs = FALSE)
+@
+
+<<results = "asis", echo = FALSE, message= FALSE, warning = FALSE>>=
+print(xtable(xtabs(~Ease + Treatment, data = EPIDURALf), digits = 0), booktabs = TRUE)
+@
+
+<<results = "asis", echo = FALSE, message= FALSE, warning = FALSE>>=
+print(xtable(xtabs(~Doctor + Ease, data = EPIDURALf), digits = 0), booktabs = TRUE)
+@
+
+\clearpage
+
+\begin{table}
+\centering
+\begin{tabular}{llr} 
+\hline
+First name & Last Name & Grade \\
+\hline
+John & Doe & $7.5$ \\ 
+Richard & Miles & $2$ \\ 
+\hline
+\end{tabular}
+\caption{Put something here ... \label{nobooktabs}}
+\end{table}
+
+
+\begin{table}
+\centering
+\begin{tabular}{llr} 
+\toprule 
+First name & Last Name & Grade \\ 
+\midrule 
+John & Doe & $7.5$ \\ 
+Richard & Miles & $2$ \\ 
+\bottomrule 
+\end{tabular}
+\caption{Put something here ... \label{booktabs}}
+\end{table}
+
+
+\begin{table}
+\centering
+\begin{tabular}{llr} 
+\toprule 
+Name \\ 
+\cmidrule(r){1-2} 
+First name & Last Name & Grade \\ 
+\midrule 
+John & Doe & $7.5$ \\ 
+Richard & Miles & $2$ \\ 
+\bottomrule 
+\end{tabular}
+\caption{Looking just OK}
+\end{table}
+
+
+
+
+
+\begin{table}
+\centering
+\begin{tabular}{llr} 
+\toprule 
+\multicolumn{2}{c}{Name} \\ 
+\cmidrule(r){1-2} 
+First name & Last Name & Grade \\ 
+\midrule 
+John & Doe & $7.5$ \\ 
+Richard & Miles & $2$ \\ 
+\bottomrule 
+\end{tabular}
+\caption{Looking Good!}
+\end{table}
+
+\clearpage
+
+
+
+
+
+<<results = "asis", echo = FALSE, message= FALSE, warning = FALSE>>=
+print(xtable(head(mtcars[, 1:6]), digits = 4), booktabs = FALSE)
+@
+
+<<results = "asis", echo = FALSE, message= FALSE, warning = FALSE>>=
+print(xtable(head(mtcars[, 1:6]), digits = 4), booktabs = TRUE)
+@
+
+
+
+\end{document}

@@ -16,7 +16,7 @@ a previous working (read un-hosed) version of your files.  You may be using a fo
 \end{itemize}
 
 You may even back up your files for major projects in many different places.  When working on book projects in the past, I would back up my files on three different 
-local machines and two servers.  That works fine until you start using the files from one location and forget that you updated the files on another machine, and you are using an old version of a file for new updates.  Now you have new material on old files and may have overwritten several weeks of work.  Expletives follow, and you set to "un-hosing" your work which may take longer than it took to write the original document.  Is this a real scenario?  Yes, and the problem only grows exponentially when working with colleagues who all have access to the same files on a major project.
+local machines and two servers.  That works fine until you start using the files from one location and forget that you updated the files on another machine, and you are using an old version of a file for new updates.  Now you have new material on old files and may have overwritten several weeks of work.  Expletives follow, and you set to ``un-hosing'' your work which may take longer than it took to write the original document.  Is this a real scenario?  Yes, and the problem only grows exponentially when working with colleagues who all have access to the same files on a major project.
 
 I now use version control, specifically Git, for virtually all of my work.  Notes for classes I am teaching have their own repositories (repos), and students and other interested parties can clone my repos.  If you have material that you would like to remain private, you can set up private repositories.  Thankfully, I have not lost a single file I could not recover since switching my work to Git.  
 
@@ -67,8 +67,9 @@ To interact with Git, find the program named Git Bash.  Git Bash is the command 
 
 \section{Initial Setup}
 
-If you have never used Git before, you need to do some setup first.  Run the following
-commands so that Git knows your name and email.  The commands are all issued in the
+If you have never used Git before, you need to do some setup first.  Run the 
+commands in \gref{GITsetup} so that Git knows your name and email.  
+The commands are all issued in the
 Terminal (Mac) or at the command prompt of Git Bash (Windows).  The Terminal 
 application is usually found in \verb|/applications/Utilities.| A quick way to open a 
 \texttt{terminal} window is by clicking on the magnifying glass icon and typing \texttt{terminal} in spotlight (\fref{GITSL}.)  
@@ -110,7 +111,7 @@ To open Git Bash, click on the \texttt{Windows icon -> Git -> Git Bash}.  The pr
 
 \subsection{Run these commands}
 
-<<label = GITsetup, eval = FALSE, engine = "bash">>=
+<<label = GITsetup, eval = FALSE, engine = "bash", GIT = TRUE>>=
 git config --global user.name "Your Name"
 git config --global user.email "your_email@whatever.com"
 git config --global color.ui true
@@ -138,9 +139,12 @@ in 2008 by Tom Preston-Werner, Chris Wanstrath, and PJ Hyett.''\footnote{
 \href{http://en.wikipedia.org/wiki/GitHub}{http://en.wikipedia.org/wiki/GitHub}}
 
 Qualified faculty members can request free private accounts to use with their classes.
-To request a discount, which actually pays the whole price for 10 private repositories 
+To request a discount, which actually pays the whole price for ten private repositories 
 for qualified faculty, click on the request a discount at 
-\href{https://education.github.com}{https://education.github.com}.  A step-by-step guide 
+\href{https://education.github.com}{https://education.github.com}.  Qualified students 
+can also request private accounts for their personal use.  Students are given five
+private repositories once approved that are free of charge until the student graduates.
+A step-by-step guide 
 for setting up your GitHub account for classroom use can be found at 
 \href{https://education.github.com/guide}{https://education.github.com/guide}.   
 Free private repositories for anyone can be created at 
@@ -149,13 +153,14 @@ based hosting service that uses the Git revision control system.
 
 \subsection{Creating a GitHub Account}
 
-Point your browser to \href{https://github.com}{https://github.com};
-type a username in the \texttt{Pick a username} box (please use \texttt{firstlast}, for example my 
+Point your browser to \href{https://github.com}{https://github.com}; clickon the green \texttt{Sign up for GitHub} button;
+type a username in the \texttt{Username} box (please use \texttt{firstlast}, for example my 
 username is \texttt{alanarnholt}); enter your email (use your school email) in the 
-\texttt{Your email} box; type in your password in the \texttt{Create a password} box. Then, 
-click the \texttt{Sign up for GitHub} box, and you will have a GitHub account.  You should 
-use the same name you used when you set up your \texttt{user.name} and \texttt{user.email} 
-on your local machine.
+\texttt{Email Address} box; type in your password in the \texttt{Password} box; 
+type your password again in the \texttt{Confirm your password} box. Then, 
+click the \texttt{Create an account} box, and you will have a GitHub account.  
+You should  use the same name you used when you set up your \texttt{user.name} 
+and \texttt{user.email} on your local machine.
 
 
 \subsection{Creating a GitHub Repository}
@@ -230,12 +235,32 @@ to your machine, you will not need to initialize your directory.
 
 \subsection{Forking a Repo}
 
-Another common way to clone a repo is by first ``forking'' someone else's repo.   Forking a repo creates a remote (GitHub) copy of the forked repo.   To work on the forked repo, you first must clone the remote fork to your local  machine.  When a repository is cloned, it has a default remote called \texttt{origin} that points to your fork on GitHub, not the original repository from which it was forked.  This means that updates the orignal repo owner makes will not automatically be added to your forked repo.
+Another common way to clone a repo is by first ``forking'' someone else's repo.   Forking a repo creates a remote (GitHub) copy of the forked repo.   To work on the forked repo, you first must clone the remote fork to your local  machine.  When a repository is cloned, it has a default remote called \texttt{origin} that points to your fork on GitHub, not the original repository from which it was forked.  This means that updates the orignal repo owner makes will not automatically be added to your forked repo.  To verify that your remote (\texttt{origin}) of a forked repo is set-up properly, type
 
-To keep track of this repo, you need to add another remote named \texttt{upstream.}  This can be done by typing
+<<RepoCheck, engine = "bash", eval = FALSE, GIT = TRUE>>=
+git remote -v
+origin  https://github.com/Your-User-Name/STT4870.git (fetch)
+origin  https://github.com/Your-User-Name/STT4870.git (push)
+@
 
-<<label = UPSTREAM, eval = FALSE, engine = "bash">>=
+The result from entering the first line of code in \gref{RepoCheck} should return
+the second and third lines with your user name in place of \texttt{Your-User-Name}.
+
+To keep track of this repo, you need to add another remote named \texttt{upstream.}  
+This can be done by typing
+
+<<label = UPSTREAM, eval = FALSE, engine = "bash", GIT = TRUE>>=
 git remote add upstream https://github.com/alanarnholt/STT4870.git
+@
+
+Typing the first line of code in \gref{RepoCheck} after entering the code in \gref{UPSTREAM} should return something similar to \gref{OriginUpstream}.  That is, the second and third lines should have your user name where the url has \texttt{Your-User-Name}.
+
+<<label = OriginUpstream, engine = "bash", eval = FALSE, GIT = TRUE>>=
+git remote -v
+origin  https://github.com/Your-User-Name/STT4870.git (fetch)
+origin	https://github.com/Your-User-Name/STT4870.git (push)
+upstream  https://github.com/alanarnholt/STT4870.git (fetch)
+upstream  https://github.com/alanarnholt/STT4870.git (push)
 @
 
 To pull in changes not present in your local repository without modifying your
@@ -248,6 +273,8 @@ git fetch upstream
 When you fetch the upstream repository,  the upstream branches are stored
 in your local repository in a local branch named \texttt{upstream/master.}  Next, you need to merge the changes into your local branch to bring your local branch in sync with the upstream branch without losing any local changes.  Make sure you are on the master branch by typing \texttt{git checkout master.}  Then, enter \texttt{git merge upstream/master.}  Once your local branch is in sync with the upstream remote, you will want to push your local changes back to your forked repo on GitHub by typing \texttt{git push.} 
 
+Note that changes you make will not be made to the source repository unless the project maintainer ``pulls'' your changes after you make a pull request.  Pull requests are a way to notify the project maintainer about changes in your fork of their respository.  To initiate a pull request see \sref{SUWTC}.  A graphical representation of the two major collaboration modes is depicted in \fref{GitFC}.
+
 Another approach is to use
 
 <<label = PULL2, eval = FALSE, engine = "bash">>=
@@ -256,32 +283,86 @@ git pull upstream master
 
 What is the difference?
 
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}%\sffamily
+  \coordinate (main) at (1.83,.5);
+  \coordinate (main2) at (1.82,-.5);
+  \coordinate (main3) at (-1,-1.05);
+  \coordinate (fork) at (4.17,.5);
+  \coordinate (fork2) at (4.17,-.5);
+  \coordinate (fork3) at (5.,-1.1);
+  \coordinate (fork4) at (6.,-1.25);
+  \coordinate (loc) at (3,-5.5);
+  \coordinate (loc1) at (3.5,-4.5);
+  \coordinate (loc2) at (2.25,-4.5);
+  \coordinate (loc3) at (4.5,-4.5);
+  \coordinate (auth) at (-1.5,-5.5);
+  \coordinate (auth1) at (-1.5,-4.5);
+  \path[<-, blue, draw, ultra thick, name path= path1] (main) -- node[above]{Pull Requests} (fork) ;
+  \path[ ->, red, draw,ultra thick, name path= path2] (main2) --node[above]{Fork} (fork2);
+
+  \path[ ->, blue, draw, ultra thick, name path= path3]
+            (0.5,-1.2) --node[above, rotate=298]{Fetch/Pull} (loc2);
+
+  \path[ <-, draw, red, ultra thick, name path= path4] (loc1) -- node[above, rotate=66]{Create new project}(fork3);
+  \path[ <->,blue, draw, ultra thick, name path= path5]
+          (loc3) -- node[above, rotate=66]{Push} node[below, rotate=66]{Pull/Fetch} (fork4);
+ \path[ <->,drkgreen, draw, ultra thick, name path= path6]
+          (auth1) -- node[above, rotate=85]{Push} node[below, rotate=85]{Pull/Fetch} (main3);
+    \node[cloud, cloud puffs=18.7,fill=ltblue,fill opacity=0.15,
+        minimum width=14cm,minimum height=6cm, draw,
+    ] (git) at (3,0) {};
+    \node[
+        name path=mainrepo,
+        ellipse, minimum width=4cm,minimum height=2.5cm, draw,fill=white,fill opacity =1,
+    ] (mainrepo) at (0,0) {Main Repo};
+    \node at (0,-.3) {(\texttt{remote upstream})};
+    \node[
+        ellipse, minimum width=4cm, minimum height=2.5cm, draw,fill=white,fill opacity=1,
+    ] (forked) at (6,0) {Forked Repo};
+    \node at (6,-.3) {(\texttt{remote origin})};
+
+    \node at (3,2) {\Large{GitHub}};
+    \node[rectangle,
+        minimum width=3cm,text width=3cm,align=center, minimum height=2cm, draw,
+    ] (local) at (loc) {Local Machine \quad (Contributor)};
+
+   \node[rectangle,
+        minimum width=3cm,text width=3cm, align=center, minimum height=2cm, draw,
+    ] (author) at (auth) {Local Machine \quad (Author)};
+
+\end{tikzpicture}
+\caption{GitHub flow chart\label{GitFC}}
+\end{figure}
+
+
 \section{Using Git with RStudio}
 
-One way to clone this repo using \texttt{RStudio} is  to click on \verb|File -> New Project| (See \fref{NewProj}) 
-
+One way to clone this repo using \texttt{RStudio} is  to click on \verb|File -> New Project| (see \fref{NewProj}.) 
+%
 \begin{figure}[!ht]
 \centering
 \includegraphics[width = .5\textwidth]{../Git/images/NewProject.png}
 \caption{New Project window\label{NewProj}}
 \end{figure}
-
+%
 Click Version Control, and a new window such as \vref{CreatePVC} will appear where you will select Git.
-
+%
 \begin{figure}[!ht]
 \centering
 \includegraphics[width = .5\textwidth]{../Git/images/VersionControl.png}
 \caption{Create Project form Version Control window\label{CreatePVC}}
 \end{figure}
-
+%
 In the next window that appears, see \vref{CloneGRW}, enter the URL for the repository you are cloning.  Enter a project name, and specify where you want the project to reside on your computer.  When you are finished, click the \texttt{Create Project} button; and you will have cloned a remote repository.
-
+%
 \begin{figure}[!ht]
 \centering
 \includegraphics[width = .5\textwidth]{../Git/images/ProjectVersionControl.png}
 \caption{Clone Git Repository window\label{CloneGRW}}
 \end{figure}
-
+\clearpage
 
 To check the current status of your repository type \texttt{git status} as shown in Git Example 
 \ref{STATUS}.
@@ -341,10 +422,8 @@ git log --pretty=format:"%h %ad- %s [%an]" -3 --stat
 @
 
 
-\clearpage
 
-
-\section{So you want to collaborate?}
+\section{So you want to collaborate?}\label{SUWTC}
 
 At this point, you have forked a repo and would like to contribute to
 someone's project.  A great place to start is by reading \href{https://help.github.com/articles/using-pull-requests}{https://help.github.com/articles/using-pull-requests}.
